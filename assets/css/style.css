@@ -1,1 +1,233 @@
-DSADAS
+
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ████████████████████████████  TEMA BASE  █████████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+*{
+	/*Texto Padrão*/
+	color: #EDEDED; /*Muted TextColor*/
+	font-family: Open Sans;
+	font-size: 0.6875rem;
+	text-align: center;
+	line-height: 1.4; /*Espaçamento entre linhas*/
+	margin-top: 1rem; /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+
+	/*Layout Padrão*/
+	margin: auto;
+}
+
+body{
+	background-color: #202430;
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ████████████████████████████  TIPOGRAFIA  ████████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+h1{
+	/*Texto*/
+	color: #FFFFFF; /*Primary TextColor*/
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: -0.02em;
+	line-height: 1.1; /*Espaçamento entre linhas*/
+	margin-top:1rem; /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+}
+
+h2{
+	/*Texto*/
+	color: #EDEDED; /*Muted TextColor*/
+	font-size: 0.875rem;
+	font-weight: bold;
+	letter-spacing: -0.01em;
+	line-height: 1.1; /*Espaçamento entre linhas*/
+	margin-top: 1rem; /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+
+}
+
+h3{
+	/*Texto*/
+	color: #EDEDED; /*Muted TextColor*/
+	font-size: 0.75rem;
+	font-weight: bold;
+	line-height: 1.1; /*Espaçamento entre linhas*/
+	margin-top: 1rem; /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+}
+
+h4{
+	/*Texto*/
+	color: #EDEDED; /*Muted TextColor*/
+	font-size: 0.6875rem;
+	font-weight: bold;
+	line-height: 1.1; /*Espaçamento entre linhas*/
+	margin-top: 1rem; /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ████████████████████████████  LAYOUT  ████████████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+.container-header{
+	/*Layout*/
+	display: flex;
+	flex-direction: row; /*Container pai é linha ou coluna*/
+	justify-content: space-between; /*Children distribuition on horizontal*/
+	align-items: center; /*Children distribuition on vertical*/
+}
+
+.container-nav{
+	display: flex;
+	flex-direction: row; /*Container pai: linha ou coluna*/
+	justify-content: flex-end; /*Children horizontal distribuition*/
+	align-items: center; /*Children vertical distribuition*/
+}
+
+.container-hero{
+	display: flex;
+	flex-direction: row; /*Container pai: linha ou coluna*/
+	justify-content: space-between; /*Children horizontal distribuition*/
+	align-items: center; /*Children vertical distribuition*/
+}
+
+.hero-left{
+	display: flex;
+	flex-direction: column; /*Container pai: linha ou coluna*/
+	justify-content: flex-start; /*Children horizontal distribuition*/
+	align-items: center; /*Children vertical distribuition*/
+}
+
+.hero-full-line{
+	display: flex;
+	flex-direction: row; /*Container pai: linha ou coluna*/
+	justify-content: flex-start; /*Children horizontal distribuition*/
+	align-items: center; /*Children vertical distribuition*/
+}
+
+.container-highlights{
+	display: flex;
+	flex-direction: row; /*Container pai: linha ou coluna*/
+	justify-content: flex-start; /*Children horizontal distribuition*/
+	align-items: center; /*Children vertical distribuition*/
+}
+
+.carousel-wrapper{
+	display: flex;
+	flex-direction: row; /*Container pai: linha ou coluna*/
+	justify-content: space-between; /*Children horizontal distribuition*/
+	align-items: center; /*Children vertical distribuition*/
+	
+	gap: 1.5rem; /*???*/
+	overflow: hidden; /* ??? */
+}
+
+.card{
+	background-color: #9CA3AF; /*TESTING!!! Secundary Color */
+
+	border-radius: 12px;
+
+	width: 280px; /* ???ajustar */
+	height: 360px; /* ???ajustar */
+	padding: 1rem; /* ??? */
+}
+
+.card-image{
+	height: 80%; /* ??? */
+	width: 100%; /* ??? */
+
+	object-fit: contain; /* ??? */
+	display: block; /* ??? */
+}
+
+.container-section{
+	display: flex;
+	flex-direction: row; /*Container pai: linha ou coluna*/
+	justify-content: space-between; /*Children horizontal distribuition*/
+	align-items: center; /*Children vertical distribuition*/
+
+}
+
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ███████████████████████████  BOTÕES (BEM)  ███████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+.btn-primary{
+	background-color: #1E3A8A; /*CTA Color*/
+
+	/*Configurações das animações do botão*/
+	transition:
+		transform 0.15s ease,
+		box-shadow 0.15s ease,
+		background-color 0.2s ease,
+		color 0.2s ease;
+
+}
+
+.btn-primary:hover{
+	background-color: #2563EB; /*Hover Elevated CTA Color*/
+	/*Fix size? maybe it is bigger than the text around*/
+	transform: translateY(-1px) /*Leve movimentação para baixo, muito melhor que animação com scale*/
+	box-shadow: 0 6px 16px rgba(0,0,0,0.15) /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
+}
+
+.btn-primary:active {
+	/*Feedback ao clicar enquanto mantem o hover*/
+	transform: translateY(0);
+	box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.btn-secundary{
+	/*Configurações das animações do botão*/
+	transition:
+		transform 0.15s ease,
+		box-shadow 0.15s ease,
+		background-color 0.2s ease,
+		color 0.2s ease;
+}
+
+.btn-secundary:hover{
+	transform: translateX(2px);
+}
+
+.btn-secundary:active{
+	/*Feedback ao clicar enquanto mantem o hover*/
+	transform: translateX(0px);
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ██████████████████████████  ELEMENTOS (BEM)  █████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+.logo{
+	height: 36px;
+	width: auto
+}
+
+.hero-image{
+  width: 100%; /*???*/
+  height: auto; /*???*/
+
+  display: block; /*???*/
+}
+
+.svgicon-small{
+	/*Size 16px*/
+	width: 1em; /*Fix size? maybe it is bigger than the text around*/
+	height: 1em; /*Fix size? maybe it is bigger than the text around*/
+}
+
+
+.divider-horizontal{
+	width: 100%;
+	height: 1px;
+
+	display: block; /*???*/
+	background-color: rgba(255, 255, 255, 0.15); /*???*/
+	margin: 2rem 0; /*???*/
+}
