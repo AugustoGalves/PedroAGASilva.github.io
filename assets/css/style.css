@@ -4,21 +4,21 @@
 /* ████████████████████████████  VARIÁVEIS  █████████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
-:root {
-/* Typography Colors */
---color-text-primary: #ffffff;   /* White */
---color-text-primary-muted: #ededed;     /* Off white */
---color-subtext: rgba(255, 255, 255, 0.6); /* Subtext */
+:root{
+	/* Typography Colors */
+	--color-text-primary: #ffffff;   /* White */
+	--color-text-primary-muted: #ededed;     /* Off white */
+	--color-subtext: rgba(255, 255, 255, 0.6); /* Subtext */
 
-/* Brand Colors */
---color-primary: #0b111d;
---color-secundary: #181e2b;
---color-accent1: #025bb0; /* CTA Button */
---color-accent1-hover: #0372db; /* CTA Button brighter*/
+	/* Brand Colors */
+	--color-primary: #0b111d;
+	--color-secundary: #181e2b;
+	--color-accent1: #025bb0; /* CTA Button */
+	--color-accent1-hover: #0372db; /* CTA Button brighter*/
 
-/* Feedback Colors */
---color-success: #10b981; 
---color-error: #ef4444;
+	/* Feedback Colors */
+	--color-success: #10b981; 
+	--color-error: #ef4444;
 }
 
 
