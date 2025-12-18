@@ -11,8 +11,6 @@
 	font-size: 0.6875rem;
 	text-align: left;
 	line-height: 1.4; /*Espaçamento entre linhas*/
-	margin-top: 1rem; /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
 
 	/*Layout Padrão*/
 	max-width: 1200px;
@@ -24,7 +22,8 @@ img{
 }
 
 body{
-	background-color: #202430;
+	background-color: #101215;
+	
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
@@ -99,6 +98,8 @@ nav li{
 }
 
 .container-header{
+	/*Sizes*/
+	width: 100%;
 	/*Layout*/
 	display: flex;
 	flex-direction: row; /*Container pai é linha ou coluna*/
@@ -167,6 +168,7 @@ nav li{
 }
 
 .container-footer-footer{
+	width: 100%;
 	/*Layout*/
 	display: flex;
 	flex-direction: row;
@@ -174,8 +176,24 @@ nav li{
 	align-items: center;
 }
 
+.card-highlight{
+	background-color: #202430; /*TESTING!!! Secundary Color */
+
+	border-radius: 12px;
+
+	width: 280px; /* ???ajustar */
+	height: 30px; /* ???ajustar */
+	padding: 1rem; /* ??? */
+	
+	/*Layout*/
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
 .card{
-	background-color: #303645; /*TESTING!!! Secundary Color */
+	background-color: #202430; /*TESTING!!! Secundary Color */
 
 	border-radius: 12px;
 
@@ -193,10 +211,10 @@ nav li{
 .card-image{
 	width: 100%;
 	height: auto;
+	border-top-left-radius: 12px; /* Arredondamento da borda superior esq. da imagem */
+	border-top-right-radius: 12px; /* Arredondamento da borda superior dir. da imagem */
 
-	margin: 0;
-	object-fit: contain; /* ??? */
-	display: block; /* ??? */
+	margin: -1rem; /* Remover o padding do container pai */
 }
 
 
@@ -206,7 +224,13 @@ nav li{
 
 .btn-primary{
 	background-color: #1E3A8A; /*CTA Color*/
-
+	
+	/*Layout*/
+	height: 48 px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
 	/*Configurações das animações do botão*/
 	transition:
 		transform 0.15s ease,
@@ -230,6 +254,13 @@ nav li{
 }
 
 .btn-secundary{
+	background-color: #202430; /*TESTING!!! Secundary Color */
+	/*Layout*/
+	height: 48 px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
 	/*Configurações das animações do botão*/
 	transition:
 		transform 0.15s ease,
@@ -239,6 +270,7 @@ nav li{
 }
 
 .btn-secundary:hover{
+	background-color: #D1D5DB; /*TESTING!!! Secundary Color */
 	transform: translateX(2px);
 }
 
