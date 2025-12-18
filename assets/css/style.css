@@ -4,6 +4,7 @@
 /* ████████████████████████████  VARIÁVEIS  █████████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+:root {
 /* Typography Colors */
 --color-text-primary: #ffffff;   /* White */
 --color-text-primary-muted: #ededed;     /* Off white */
@@ -18,7 +19,7 @@
 /* Feedback Colors */
 --color-success: #10b981; 
 --color-error: #ef4444;
-
+}
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
@@ -36,9 +37,6 @@
 	/*Layout Padrão*/
 	max-width: 1200px;
 	box-sizing: border-box; /*As propriedades Height and Width include the content, padding, and border as the value. But do not include the margin*/
-
-	/*Reset CSS*/
-	text-decoration: none;
 }
 
 img{
@@ -46,7 +44,7 @@ img{
 }
 
 body{
-	background-color: #101215;
+	background-color: var(--color-primary);
 }
 
 a:hover{
@@ -111,6 +109,7 @@ p{
 }
 
 a{
+	text-decoration: none;
 	color: var(--color-text-primary); /*Primary TextColor*/
 	font-size: 1rem;/*16px*/
 	font-weight: normal;
@@ -124,6 +123,11 @@ a{
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ████████████████████████████  LAYOUT  ████████████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
+
+section{
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
 
 nav ul{
 	list-style: none;
@@ -199,6 +203,7 @@ footer section ul{
 	flex-direction: row; /*Container pai: linha ou coluna*/
 	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
 	align-items: center; /*Children vertical distribuition if flex is row*/
+	gap: 5%; /*Margin entre itens*/
 }
 
 .container-highlights{
