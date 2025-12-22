@@ -154,9 +154,10 @@ footer section ul{
 
 .page-wrapper{
 	/*Sizing*/
-	max-width: 1200; /*Tamanho máximo da largura*/
+	max-width: 1200px; /*Tamanho máximo da largura*/
+	width: 100%;
 	/*Layout*/
-	margin-top: 0 auto;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column; /*Container pai: linha ou coluna*/
 	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
@@ -254,6 +255,7 @@ footer section ul{
 .container-footer-footer{
 	width: 100%;
 	/* Layout */
+	margin-bottom: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -311,7 +313,7 @@ footer section ul{
 
 .btn-primary{
 	/*Typography*/
-	font-size: 2em;
+	font-size: 1em;
 	/*Decoration*/
 	background-color: var(--color-accent1); /*CTA Color*/
 	border-radius: 8px;
@@ -345,7 +347,7 @@ footer section ul{
 
 .btn-secundary{
 	/*Typography*/
-	font-size: 2em;
+	font-size: 1em;
 	/*Decoration*/
 	background-color: rgba(0, 0, 0, 0.15); /* Transparent Color */
 	border-radius: 8px;
@@ -397,4 +399,5 @@ footer section ul{
 	width: 100%;
 	height: 1px;
 	background-color: rgba(255, 255, 255, 0.3);
+	margin: 0 1em;
 }
