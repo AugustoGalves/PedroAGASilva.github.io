@@ -4,21 +4,66 @@
 /* ████████████████████████████  VARIÁVEIS  █████████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+/* BEST COLOR PICKER WEBSITE: https://www.iamsajid.com/ui-colors/ */
+
 :root{
 	/* Typography Colors */
-	--color-text-primary: #ffffff;   /* White */
-	--color-text-primary-muted: #ededed;     /* Off white */
+	--color-text-primary: oklch(0.96 0.03 265);   /* White */
+	--color-text-primary-muted: oklch(0.76 0.03 265);     /* Off white */
 	--color-subtext: rgba(255, 255, 255, 0.6); /* Subtext */
 
 	/* Brand Colors */
-	--color-primary: #0b111d;
-	--color-secundary: #181e2b;
-	--color-accent1: #025bb0; /* CTA Button */
+	--color-bg-dark: oklch(0.1 0.015 265);   /* Plano de fundo */
+	--color-bg: oklch(0.15 0.015 265);   /* Plano de fundo */
+	--color-bg-light: oklch(0.2 0.015 265);
+	--color-accent1: #025bb0; /* CTA Button ou oklch(0.76 0.1 265)*/
 	--color-accent1-hover: #0372db; /* CTA Button brighter*/
+	--color-accent2: oklch(0.76 0.1 85); /* Hover amarelo */
 
 	/* Feedback Colors */
-	--color-success: #10b981; 
-	--color-error: #ef4444;
+	--color-success: oklch(0.7 0.05 160); 
+	--color-warning: oklch(0.7 0.05 100);
+	--color-danger: oklch(0.7 0.05 30);
+
+	/* Decoration Colors */
+	--color-highlight: oklch(0.5 0.03 265);
+	--color-border: oklch(0.4 0.03 265);
+	--color-border-muted: oklch(0.3 0.03 265);
+	--color-info: oklch(0.7 0.05 260);
+
+	/* Gradients */
+	--gradient: linear-gradient(0deg, var(--color-bg) 95%, var(--color-bg-light));
+	--gradient-hover: linear-gradient(0deg, var(--color-bg), var(--color-bg-light));
+
+	--shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
+	--shadow-hover: 0px 3px 3px hsla(0, 0%, 0%, 0.07), 0px 3px 3px hsla(0, 0%, 0%, 0.15);
+	--shadow-active: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 2px 2px hsla(0, 0%, 0%, 0.15);
+}
+
+body.light{
+	/* Typography Colors */
+	--color-text-primary: oklch(0.15 0.03 265);   /* White */
+	--color-text-primary-muted: oklch(0.4 0.03 265);     /* Off white */
+	--color-subtext: rgba(255, 255, 255, 0.6); /* Subtext */
+
+	/* Brand Colors */
+	--color-bg-dark: oklch(0.92 0.015 265);   /* Plano de fundo */
+	--color-bg: oklch(0.96 0.015 265);   /* Plano de fundo */
+	--color-bg-light: oklch(1 0.015 265);
+	--color-accent1: #025bb0; /* CTA Button ou oklch(0.4 0.1 265)*/
+	--color-accent1-hover: #0372db; /* CTA Button brighter*/
+	--color-accent2: oklch(0.4 0.1 85); /* Hover amarelo */
+
+	/* Feedback Colors */
+	--color-success: oklch(0.5 0.05 160); 
+	--color-warning: oklch(0.5 0.05 100);
+	--color-danger: oklch(0.5 0.05 30);
+
+	/* Decoration Colors */
+	--color-highlight: oklch(1 0.03 265);
+	--color-border: oklch(0.6 0.03 265);
+	--color-border-muted: oklch(0.7 0.03 265);
+	--color-info: oklch(0.5 0.05 260);
 }
 
 
@@ -33,9 +78,6 @@
 	font-size: 1rem; /*16px*/
 	text-align: left;
 	line-height: 1.4; /*Espaçamento entre linhas*/
-
-	/*Layout Padrão*/
-	box-sizing: border-box; /*As propriedades Height and Width include the content, padding, and border as the value. But do not include the margin*/
 }
 
 img{
@@ -43,7 +85,7 @@ img{
 }
 
 body{
-	background-color: var(--color-primary);
+	background-color: var(--color-bg-dark);
 }
 
 a:hover{
@@ -124,9 +166,10 @@ a{
 /* ────────────────────────────────────────────────────────────────────────── */
 
 .section{
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 }
+
 
 nav ul{
 	list-style: none;
@@ -164,7 +207,6 @@ footer section ul{
 	display: flex;
 	flex-direction: column; /*Container pai: linha ou coluna*/
 	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
-	align-items: center; /*Children vertical distribuition if flex is row*/
 }
 
 .container-header{
@@ -257,23 +299,20 @@ footer section ul{
 
 .card-highlight{
 	/* Decoration */
-	background-color: var(--color-secundary); /* Secundary Color */
-	border-radius: 8px;
-
+  background-color: var(--color-bg); /* Secundary Color */
+  border-radius: 0.5rem;
+  border: solid 1px var(--color-border);
+	border-top: solid 1px var(--color-highlight);
+  box-shadow: var(--shadow);
 	/* Sizing */
 	width: 30%;
 	min-height: 100px;
 	padding: 1rem;
-	
 	/* Layout */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 
-	/* Decoration */ /* ESTUDAR */
-  border: 1px solid rgba(255,255,255,0.04);
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.25);
   /* Animação */ /* ESTUDAR */
   transition:
     transform 0.25s ease,
@@ -282,8 +321,12 @@ footer section ul{
 }
 
 .card{
-	background-color: var(--color-secundary); /* Secundary Color */
-	border-radius: 8px;
+	/* Decoration */
+  background-color: var(--color-bg); /* Secundary Color */
+  border-radius: 0.5rem;
+  border: solid 1px var(--color-border);
+	border-top: solid 1px var(--color-highlight);
+  box-shadow: var(--shadow);
 	/* Sizing */
 	width: 30%;
 	min-height: 260px;
@@ -295,10 +338,6 @@ footer section ul{
 	justify-content: flex-start;
 	overflow: hidden; /* Esconde oq sair do container */
 
-	/* Decoration */ /* ESTUDAR */
-  border: 1px solid rgba(255,255,255,0.04);
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.25);
   /* Animação */ /* ESTUDAR */
   transition:
     transform 0.25s ease,
@@ -313,8 +352,8 @@ footer section ul{
 	margin: -1rem -1rem 0rem -1rem; /* Remover o padding do container pai, sentido do relogio, top right bottom left */
 
 	/*Decoration*/
-	border-top-left-radius: 12px; /* Arredondamento da borda superior esq. da imagem */
-	border-top-right-radius: 12px; /* Arredondamento da borda superior dir. da imagem */
+	border-top-left-radius: 0.5rem; /* Arredondamento da borda superior esq. da imagem */
+	border-top-right-radius: 0.5rem; /* Arredondamento da borda superior dir. da imagem */
 
 
 }
@@ -329,9 +368,10 @@ footer section ul{
 	font-size: 1em;
 	/*Decoration*/
 	background-color: var(--color-accent1); /*CTA Color*/
-	border-radius: 8px;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
 	/*Layout*/
-	height: 48px;
+	height: 1rem;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -349,13 +389,13 @@ footer section ul{
 	background-color: var(--color-accent1-hover); /*Hover Elevated CTA Color*/
 	/*Fix size? maybe it is bigger than the text around*/
 	transform: translateY(-1px); /*Leve movimentação para baixo, muito melhor que animação com scale*/
-	box-shadow: 0 6px 16px rgba(0,0,0,0.15); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
+	box-shadow: var(--shadow-hover);
 }
 
 .btn-primary:active {
 	/*Feedback ao clicar enquanto mantem o hover*/
 	transform: translateY(0);
-	box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+	box-shadow: var(--shadow-active);
 }
 
 .btn-secundary{
@@ -363,9 +403,10 @@ footer section ul{
 	font-size: 1em;
 	/*Decoration*/
 	background-color: rgba(0, 0, 0, 0.15); /* Transparent Color */
-	border-radius: 8px;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
 	/*Layout*/
-	height: 48px;
+	height: 1rem;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -379,7 +420,7 @@ footer section ul{
 }
 
 .btn-secundary:hover{
-	background-color: rgba(0, 0, 0, 0.30); /* Secundary Color */
+	background-color: rgba(0, 0, 0, 0.30); /* Transparent Secundary Color */
 	transform: translateX(2px);
 }
 
@@ -392,13 +433,24 @@ footer section ul{
 /* ██████████████████████████  SMALL FIXES (BEM)  █████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+/* Gambiarras no código, tentar remover depois */
 .margintop-small{
 	margin-top: 1em;
 }
 
 .widthmax{
-	width: 100%; /*!!!!!!!!!Gambiarra no codigo, remover dps*/
+	width: 100%; 
 }
+
+.nopaddingtop{
+	padding-top: 0;
+}
+
+.center-x{
+  display: flex;
+  justify-content: center;
+}
+
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ██████████████████████████  ELEMENTOS (BEM)  █████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
@@ -419,7 +471,7 @@ footer section ul{
   width: 40%;
   height: auto;
 	/*Layout*/
-  margin-right: -120px; /* Cortar a foto fora do container */
+  margin-right: -80px; /* Cortar a foto fora do container */
 }
 
 .hero-image::before{
