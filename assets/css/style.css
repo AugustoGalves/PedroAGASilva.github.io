@@ -538,6 +538,24 @@ footer section ul{
 /* ██████████████████████████  hamburguer menu - NÃO SEI OQ TA ACONTECENDO  █████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+.menu-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-primary);
+}
+
+.menu-close svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+}
 
 .offscreen-menu{
 	/*Decoration*/
@@ -564,7 +582,7 @@ body.menu-open {
 .offscreen-menu ul{
 	display: flex;
 	flex-direction: column;
-	gap: 24 px;
+	gap: 4 em;
 	margin-top: 80px;
 	padding: 0;
 	list-style: none;
