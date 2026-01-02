@@ -403,8 +403,8 @@ footer section ul{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0.6em 1.2em; /* vertical | horizontal */
-	min-height: 2.5rem; /* tamanho confortável */
+	padding: 0.5em 1.0em; /* vertical | horizontal */
+	min-height: 1.5rem; /* tamanho confortável */
 	white-space: nowrap;
 	/*Configurações das animações do botão*/
 	transition:
@@ -440,8 +440,8 @@ footer section ul{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0.6em 1.2em; /* vertical | horizontal */
-	min-height: 2.5rem; /* tamanho confortável */
+	padding: 0.5em 1.0em; /* vertical | horizontal */
+	min-height: 1.5rem; /* tamanho confortável */
 	white-space: nowrap;
 	/*Configurações das animações do botão*/
 	transition:
@@ -577,6 +577,7 @@ body.menu-open {
 
 .menu-toggle {
   display: none;
+  margin-right: 60 px;
 }
 
 .offscreen-menu {
@@ -586,7 +587,7 @@ body.menu-open {
 .offscreen-menu ul{
 	display: flex;
 	flex-direction: column;
-	gap: 4 em;
+	gap: 1em;
 	margin-top: 80px;
 	padding: 0;
 	list-style: none;
