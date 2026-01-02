@@ -52,7 +52,7 @@ body.light{
 	--color-bg-dark: oklch(0.92 0.015 265);   /* Plano de fundo */
 	--color-bg: oklch(0.96 0.015 265);   /* Plano de fundo */
 	--color-bg-light: oklch(1 0.015 265);
-	--color-accent1: #025bb0; /* CTA Button ou oklch(0.4 0.1 265)*/
+	--color-accent1: oklch(0.76 0.1 265); /* CTA Button, find #025bb0 for light mode later */
 	--color-accent1-hover: #0372db; /* CTA Button brighter*/
 	--color-accent2: oklch(0.4 0.1 85); /* Hover amarelo */
 
@@ -403,7 +403,9 @@ footer section ul{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1em; /*Usar rem ou em?*/
+	padding: 0.6em 1.2em; /* vertical | horizontal */
+	min-height: 2.5rem; /* tamanho confortável */
+	white-space: nowrap;
 	/*Configurações das animações do botão*/
 	transition:
 		transform 0.15s ease,
@@ -438,7 +440,9 @@ footer section ul{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1em;
+	padding: 0.6em 1.2em; /* vertical | horizontal */
+	min-height: 2.5rem; /* tamanho confortável */
+	white-space: nowrap;
 	/*Configurações das animações do botão*/
 	transition:
 		transform 0.15s ease,
@@ -634,6 +638,6 @@ body.menu-open {
   }
 
   .page-wrapper{
-  	padding: 12px;
+  	padding: 36px;
   }
 }
