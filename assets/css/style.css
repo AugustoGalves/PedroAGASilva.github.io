@@ -616,16 +616,16 @@ body.menu-open {
 /* ─── Mudanças tela pequena ──────────────────────────────────────────────────────── ✣ ─ */
 @media (max-width: 768px) {
   .page-wrapper {
-  	padding: 36px;
+  	padding: 32px;
   }
 
   hero-full-line {
-  	justify-content: center;
+  	justify-content: space-between;
   }
 
   .container-highlights, .carousel-wrapper {
   	flex-direction: column;
-  	gap: 2em;
+  	gap: 1em;
   }
 
   .card, .card-highlight{
@@ -650,11 +650,12 @@ body.menu-open {
   .hero-image {
     width: 100%;
     justify-content: center;
+    align-items: center;
   }
 
   .hero-image img {
     margin-right: 0;
-    max-width: 90%;
+    max-width: 50%;
     height: auto;
   }
 
