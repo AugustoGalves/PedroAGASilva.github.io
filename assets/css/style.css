@@ -214,6 +214,7 @@ a{
 	/*Sizing*/
 	max-width: 1200px; /*Tamanho máximo da largura*/
 	width: 100%;
+	box-sizing: border-box; /*Padding não vai auumentar o tamanho do page wrapper*/
 	/*Layout*/
 	margin: 0 auto;
 	display: flex;
@@ -351,7 +352,7 @@ footer section ul{
   box-shadow: var(--shadow);
 	/* Sizing */
 	width: 30%;
-	min-height: 100px;
+	min-height: 3em;
 	padding: 1rem;
 	/* Layout */
 	display: flex;
@@ -582,7 +583,6 @@ body.menu-open {
 
 .menu-toggle {
   display: none;
-  margin-right: 60px;
 }
 
 .offscreen-menu {
@@ -615,12 +615,21 @@ body.menu-open {
 
 /* ─── Mudanças tela pequena ──────────────────────────────────────────────────────── ✣ ─ */
 @media (max-width: 768px) {
-  .carousel-wrapper, .container-highlights {
+  .page-wrapper {
+  	padding: 36px;
+  }
+
+  hero-full-line {
+  	justify-content: center;
+  }
+
+  .container-highlights, .carousel-wrapper {
   	flex-direction: column;
+  	gap: 2em;
   }
 
   .card, .card-highlight{
-  	width: 100%;
+  	width: 85%;
   }
 
   .container-nav {
@@ -672,10 +681,6 @@ body.menu-open {
 		justify-content: flex-start;
 		align-items: center;
 		text-align: center;
-  }
-
-  .page-wrapper{
-  	padding: 36px;
   }
 }
 
