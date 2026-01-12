@@ -8,6 +8,20 @@
 
 :root{
 	/* Typography Colors */
+	--ff: "Open Sans", sans-serif;
+	--ff2: "Montserrat", sans-serif;
+	/* Spacing variables */
+	--spacing0: 0rem; /* 0 px */
+	--spacing1: 0.25rem; /* 4 px */
+	--spacing2: 0.5rem; /* 8 px */
+	--spacing3: 0.75rem; /* 12 px */
+	--spacing4: 1.0rem; /* 16 px */
+	--spacing5: 1.5rem; /* 24 px */
+	--spacing6: 2rem; /* 32 px */
+	--spacing7: 3rem; /* 48 px */
+	--spacing8: 6rem; /* 96 px */
+	--spacing9: 10rem; /* 160 px */
+	/* Typography Colors */
 	--color-text-primary: oklch(0.96 0.03 265); /* White */
 	--color-text-primary-muted: oklch(0.76 0.03 265); /* Off white */
 	--color-subtext: oklch(0.72 0.02 265); /* Subtext */
@@ -84,15 +98,24 @@ body.light .logo-header{
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* ████████████████████████    ✏️ RESET & BASE    ██████████████████████████ */
+/* ██████████████████    ✏️ RESET & GLOBAL STYLES    ███████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
 *{
-	/*Texto Padrão*/
+/*Layout Padrão*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+/*Texto Padrão*/
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
-	font-family: Open Sans;
+	font-family: var(--ff);
 	font-size: 1rem; /*16px*/
 	line-height: 1.4; /*Espaçamento entre linhas*/
+}
+
+html{
+	scroll-behavior: smooth;
 }
 
 img{
@@ -101,6 +124,7 @@ img{
 
 body{
 	background-color: var(--color-bg-dark);
+	text-wrap: balance;
 }
 
 a:hover{
@@ -119,7 +143,7 @@ button:hover{
 h1{
 	/*Texto*/
 	color: var(--color-text-primary); /*Primary TextColor*/
-	font-size: 3.052rem; /*48px*/
+	font-size: var(--spacing7); /*48px*/
 	font-weight: bold;
 	letter-spacing: -0.02em;
 	line-height: 1.1; /*Espaçamento entre linhas*/
@@ -134,19 +158,19 @@ h2{
 	font-weight: bold;
 	letter-spacing: -0.01em;
 	line-height: 1.1; /*Espaçamento entre linhas*/
-	margin-top: 1rem; /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
 
 }
 
 h3{
 	/*Texto*/
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
-	font-size: 2rem;/*32px*/
+	font-size: var(--spacing6);/*32px*/
 	font-weight: bold;
 	line-height: 1.1; /*Espaçamento entre linhas*/
-	margin-top: 1rem; /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
 }
 
 h4{
@@ -155,23 +179,23 @@ h4{
 	font-size: 1.5rem;/*24px*/
 	font-weight: bold;
 	line-height: 1.1; /*Espaçamento entre linhas*/
-	margin-top: 1rem; /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
 }
 
 p{
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
-	font-size: 1rem;/*16px*/
+	font-size: var(--spacing4);/*16px*/
 	font-weight: normal;
 	line-height: 1.4; /*Espaçamento entre linhas*/
-	margin-top: 1rem; /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
 }
 
 a{
 	text-decoration: none;
 	color: var(--color-text-primary); /*Primary TextColor*/
-	font-size: 1rem;/*16px*/
+	font-size: var(--spacing4);/*16px*/
 	font-weight: normal;
 	line-height: 1.4; /*Espaçamento entre linhas*/
 }
@@ -182,11 +206,48 @@ a{
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* ██████████████████████████   ⚙️ SMALL FIXES    ██████████████████████████ */
+/* ██████████████████████   ⚙️ UTILITY CLASSES     ██████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+.section{
+	padding-top: var(--spacing5);
+	padding-bottom: var(--spacing5);
+}
+
+.center-x{
+  justify-content: center;
+}
+
+.center-text{ 
+	text-align: center;
+}
+
+.hidden{
+	display: none;
+}
+
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacing4);
+	flex-wrap: wrap;
+}
+
+/* Estiliza os Childs do .flex */
+.flex > *{
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0;
+	min-width: 400px;
+}
+
+.reverse{
+	flex-direction: row-reverse;
+}
+
 .margintop-small{
-	margin-top: 1em;
+	margin-top: var(--spacing4);
 }
 
 .widthmax{
@@ -197,12 +258,80 @@ a{
 	padding-top: 0;
 }
 
-.center-x{
-  justify-content: center;
+.nopaddingbottom{
+	padding-bottom: 0;
 }
 
-.text-centralizer{ 
-	text-align: center;
+.padding1{
+	padding: var(--spacing1) 0;
+}
+
+.padding2{
+	padding: var(--spacing2) 0;
+}
+
+.padding3{
+	padding: var(--spacing3) 0;
+}
+
+.padding4{
+	padding: var(--spacing4) 0;
+}
+
+.padding5{
+	padding: var(--spacing5) 0;
+}
+
+.padding6{
+	padding: var(--spacing6) 0;
+}
+
+.padding7{
+	padding: var(--spacing7) 0;
+}
+
+.padding8{
+	padding: var(--spacing8) 0;
+}
+
+.padding9{
+	padding: var(--spacing9) 0;
+}
+
+.margin1{
+	margin: var(--spacing1) auto;
+}
+
+.margin2{
+	margin: var(--spacing2) auto;
+}
+
+.margin3{
+	margin: var(--spacing3) auto;
+}
+
+.margin4{
+	margin: var(--spacing4) auto;
+}
+
+.margin5{
+	margin: var(--spacing5) auto;
+}
+
+.margin6{
+	margin: var(--spacing6) auto;
+}
+
+.margin7{
+	margin: var(--spacing7) auto;
+}
+
+.margin8{
+	margin: var(--spacing8) auto;
+}
+
+.margin9{
+	margin: var(--spacing9) auto;
 }
 
 
@@ -214,17 +343,12 @@ a{
 	/*Sizing*/
 	max-width: 1200px; /*Tamanho máximo da largura*/
 	width: 100%;
-	box-sizing: border-box; /*Padding não vai auumentar o tamanho do page wrapper*/
+	box-sizing: border-box; /*Padding não vai aumentar o tamanho do page wrapper*/
 	/*Layout*/
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column; /*Container pai: linha ou coluna*/
 	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
-}
-
-.section{
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
 }
 
 
@@ -346,14 +470,14 @@ footer section ul{
 .card-highlight{
 	/* Decoration */
   background-color: var(--gradient-bg); /* Secundary Color */
-  border-radius: 0.5rem;
+  border-radius: var(--spacing2);
   border: var(--border);
 	border-top: solid 1px var(--color-highlight);
   box-shadow: var(--shadow);
 	/* Sizing */
 	width: 30%;
-	min-height: 3em;
-	padding: 1rem;
+	min-height: var(--spacing7);
+	padding: var(--spacing4);
 	/* Layout */
 	display: flex;
 	flex-direction: column;
@@ -374,14 +498,14 @@ footer section ul{
 .card{
 	/* Decoration */
   background-color: var(--gradient-bg); /* Secundary Color */
-  border-radius: 0.5rem;
+  border-radius: var(--spacing2);
   border: var(--border);
 	border-top: solid 1px var(--color-highlight);
   box-shadow: var(--shadow);
 	/* Sizing */
 	width: 30%;
 	min-height: 260px;
-	padding: 1rem;
+	padding: var(--spacing4);
 	gap: 1rem; /* Margin entre texto e imagem */
 	/* Layout */
 	display: flex;
@@ -408,8 +532,8 @@ footer section ul{
 	margin: -1rem -1rem 0rem -1rem; /* Remover o padding do container pai, sentido do relogio, top right bottom left */
 
 	/*Decoration*/
-	border-top-left-radius: 0.5rem; /* Arredondamento da borda superior esq. da imagem */
-	border-top-right-radius: 0.5rem; /* Arredondamento da borda superior dir. da imagem */
+	border-top-left-radius: var(--spacing2); /* Arredondamento da borda superior esq. da imagem */
+	border-top-right-radius: var(--spacing2); /* Arredondamento da borda superior dir. da imagem */
 
 
 }
@@ -422,18 +546,18 @@ footer section ul{
 /* ───  Button primary ──────────────────────────────────────────────────────── ✣ ─ */
 .btn-primary{
 	/*Typography*/
-	font-size: 1em;
+	font-size: 1rem;
 	/*Decoration*/
 	background-color: var(--color-accent1); /*CTA Color*/
-	border-radius: 0.5rem;
+	border-radius: var(--spacing2);
 	box-shadow: var(--shadow);
 	/*Layout*/
 	height: 1rem;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0.5em 1.0em; /* vertical | horizontal */
-	min-height: 2rem; /* tamanho confortável */
+	padding: var(--spacing2) var(--spacing4); /* vertical | horizontal */
+	min-height: var(--spacing6); /* tamanho confortável */
 	white-space: nowrap;
 	/*Configurações das animações do botão*/
 	transition:
@@ -459,17 +583,17 @@ footer section ul{
 /* ───  Button secundary ──────────────────────────────────────────────────────── ✣ ─ */
 .btn-secundary{
 	/*Typography*/
-	font-size: 1em;
+	font-size: 1rem;
 	/*Decoration*/
 	background-color: rgba(0, 0, 0, 0.15); /* Transparent Color */
-	border-radius: 0.5rem;
+	border-radius: var(--spacing2);
 	box-shadow: var(--shadow);
 	/*Layout*/
 	height: 1rem;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0.5em 1.0em; /* vertical | horizontal */
+	padding: var(--spacing2) var(--spacing3); /* vertical | horizontal */
 	min-height: 2rem; /* tamanho confortável */
 	white-space: nowrap;
 	/*Configurações das animações do botão*/
@@ -498,13 +622,13 @@ footer section ul{
 	width: 100%;
 	height: 1px;
 	background-color: var(--color-border-muted);
-	margin: 0.5em 0em 0.5em 0em;
+	margin: var(--spacing2) 0; /* vertical | horizontal */
 }
 
 .svgicon-small{
 	/*Size 32px*/
-	width: 2em;
-	height: 2em;
+	width: var(--spacing6);
+	height: var(--spacing6);
 	color: var(color-text-primary-muted);
 }
 
@@ -550,8 +674,8 @@ footer section ul{
 /* ─── Mudanças gerais ──────────────────────────────────────────────────────── ✣ ─ */
 .menu-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: var(--spacing4);
+  right: var(--spacing4);
   background: none;
   border: none;
   cursor: pointer;
@@ -559,8 +683,8 @@ footer section ul{
 }
 
 .menu-close svg {
-  width: 24px;
-  height: 24px;
+  width: var(--spacing5);
+  height: var(--spacing5);
   stroke: currentColor;
   stroke-width: 2;
   fill: none;
@@ -592,8 +716,8 @@ body.menu-open {
 .offscreen-menu ul{
 	display: flex;
 	flex-direction: column;
-	gap: 1em;
-	margin-top: 80px;
+	gap: var(--spacing4);
+	margin-top: var(--spacing8);
 	padding: 0;
 	list-style: none;
 	align-items: center;
@@ -606,8 +730,8 @@ body.menu-open {
 }
 
 .menu-toggle span {
-  width: 26px;
-  height: 3px;
+  width: var(--spacing5);
+  height: var(--spacing1);
   background-color: var(--color-text-primary);
   border-radius: 2px;
   transition: 0.3s;
@@ -616,7 +740,8 @@ body.menu-open {
 /* ─── Mudanças tela pequena ──────────────────────────────────────────────────────── ✣ ─ */
 @media (max-width: 768px) {
   .page-wrapper {
-  	padding: 32px;
+  	padding: var(--spacing6);
+  	box-sizing: border-box;
   }
 
   hero-full-line {
@@ -625,7 +750,7 @@ body.menu-open {
 
   .container-highlights, .carousel-wrapper {
   	flex-direction: column;
-  	gap: 1em;
+  	gap: var(--spacing4);
   }
 
   .card, .card-highlight{
