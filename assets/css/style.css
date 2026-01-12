@@ -5,11 +5,10 @@
 /* ────────────────────────────────────────────────────────────────────────── */
 
 /* BEST COLOR PICKER WEBSITE: https://www.iamsajid.com/ui-colors/ */
-
-:root{
+:root {
 	/* Typography Colors */
-	--ff: "Open Sans", sans-serif;
-	--ff2: "Montserrat", sans-serif;
+	--font-body: "Open Sans", sans-serif;
+	--font-headings: "Montserrat", sans-serif;
 	/* Spacing variables */
 	--spacing0: 0rem; /* 0 px */
 	--spacing1: 0.25rem; /* 4 px */
@@ -19,8 +18,13 @@
 	--spacing5: 1.5rem; /* 24 px */
 	--spacing6: 2rem; /* 32 px */
 	--spacing7: 3rem; /* 48 px */
-	--spacing8: 6rem; /* 96 px */
-	--spacing9: 10rem; /* 160 px */
+	--spacing8: 5rem; /* 80 px */
+	--spacing9: 6rem; /* 96 px */
+	--spacing10: 8rem; /* 128 px */
+	--spacing11: 10rem; /* 160 px */
+}
+
+:root[data-theme="dark"]{
 	/* Typography Colors */
 	--color-text-primary: oklch(0.96 0.03 265); /* White */
 	--color-text-primary-muted: oklch(0.76 0.03 265); /* Off white */
@@ -50,13 +54,13 @@
 	--gradient-bg-hover: linear-gradient(0deg, var(--color-bg), var(--color-bg-light));
 
 	/* Properties and Values */
-	--shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
-	--shadow-hover: 0px 3px 3px hsla(0, 0%, 0%, 0.07), 0px 3px 3px hsla(0, 0%, 0%, 0.15);
-	--shadow-active: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 2px 2px hsla(0, 0%, 0%, 0.15);
+	--shadow: 0px 2px 2px hsla(0, 0%, 100%, 0.07), 0px 4px 4px hsla(0, 0%, 100%, 0.15); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
+	--shadow-hover: 0px 3px 3px hsla(0, 0%, 100%, 0.07), 0px 3px 3px hsla(0, 0%, 100%, 0.15);
+	--shadow-active: 0px 2px 2px hsla(0, 0%, 100%, 0.07), 0px 2px 2px hsla(0, 0%, 100%, 0.15);
 	--border: solid 1px var(--color-border); /* Borda com cor de borda */
 }
 
-body.light{
+:root[data-theme="light"]{
 	/* Typography Colors */
 	--color-text-primary: oklch(0.15 0.03 265);   /* White */
 	--color-text-primary-muted: oklch(0.4 0.03 265);     /* Off white */
@@ -82,8 +86,8 @@ body.light{
 	--color-info: oklch(0.5 0.05 260);
 
 	/* Gradients */
-	--bg-gradient: linear-gradient(0deg, var(--color-bg) 95%, var(--color-bg-light));
-	--bg-gradient-hover: linear-gradient(0deg, var(--color-bg), var(--color-bg-light));
+	--gradient-bg: linear-gradient(0deg, var(--color-bg) 95%, var(--color-bg-light));
+	--gradient-bg-hover: linear-gradient(0deg, var(--color-bg), var(--color-bg-light));
 
 	/* Properties and Values*/
 	--shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
@@ -109,7 +113,7 @@ body.light .logo-header{
 
 /*Texto Padrão*/
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
-	font-family: var(--ff);
+	font-family: var(--font-body);
 	font-size: 1rem; /*16px*/
 	line-height: 1.4; /*Espaçamento entre linhas*/
 }
@@ -241,6 +245,11 @@ a{
 	flex-basis: 0;
 	min-width: 400px;
 }
+@media (max-width: 768px) {
+  .flex > * {
+    min-width: 100%;
+  }
+}
 
 .reverse{
 	flex-direction: row-reverse;
@@ -260,6 +269,10 @@ a{
 
 .nopaddingbottom{
 	padding-bottom: 0;
+}
+
+.gap8{
+	gap: var(--spacing8); /*Margin entre itens*/
 }
 
 .padding1{
@@ -298,6 +311,14 @@ a{
 	padding: var(--spacing9) 0;
 }
 
+.padding10{
+	padding: var(--spacing10) 0;
+}
+
+.padding11{
+	padding: var(--spacing11) 0;
+}
+
 .margin1{
 	margin: var(--spacing1) auto;
 }
@@ -332,6 +353,14 @@ a{
 
 .margin9{
 	margin: var(--spacing9) auto;
+}
+
+.margin10{
+	margin: var(--spacing10) auto;
+}
+
+.margin11{
+	margin: var(--spacing11) auto;
 }
 
 
@@ -370,42 +399,6 @@ footer section ul{
 	gap: 5%; /*Margin entre itens*/
 }
 
-.container{
-	/*Sizing*/
-	width: 100%;
-	/*Layout*/
-	display: flex;
-	flex-direction: column; /*Container pai: linha ou coluna*/
-	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
-}
-
-.container-header{
-	/*Sizing*/
-	width: 100%;
-	/*Layout*/
-	display: flex;
-	flex-direction: row; /*Container pai é linha ou coluna*/
-	justify-content: space-between; /*Children distribuition on horizontal if flex is row*/
-	align-items: center; /*Children distribuition on vertical if flex is row*/
-}
-
-.container-nav{
-	/*Layout*/
-	display: flex;
-	flex-direction: row; /*Container pai: linha ou coluna*/
-	justify-content: flex-end; /*Children horizontal distribuition if flex is row*/
-	align-items: center; /*Children vertical distribuition if flex is row*/
-}
-
-.container-hero{
-	width: 100%;
-	/*Layout*/
-	display: flex;
-	flex-direction: row; /*Container pai: linha ou coluna*/
-	justify-content: space-between; /*Children horizontal distribuition if flex is row*/
-	align-items: center; /*Children vertical distribuition if flex is row*/
-}
-
 .hero-left{
 	/*Layout*/
 	padding-right: 25%; /*Ocupar menos espaço do container*/
@@ -415,24 +408,38 @@ footer section ul{
 	align-items: start; /*Children vertical distribuition if flex is row*/
 }
 
-.hero-full-line{
-	/*Sizing*/
-	width: 100%;
-	/*Layout*/
-	display: flex;
-	flex-direction: row; /*Container pai: linha ou coluna*/
-	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
-	align-items: center; /*Children vertical distribuition if flex is row*/
-	gap: 5%; /*Margin entre itens*/
-}
-
-.container-highlights{
+.carousel-wrapper{
 	/*Layout*/
 	display: flex;
 	flex-direction: row; /*Container pai: linha ou coluna*/
 	justify-content: space-between; /*Children horizontal distribuition if flex is row*/
 	align-items: center; /*Children vertical distribuition if flex is row*/
+
+	/*Extras*/	
 	gap: 5%; /*Margin entre itens*/
+	overflow: hidden;
+}
+
+/* ─── CONTAINERS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.container{
+	/*Sizing*/
+	width: 100%;
+	/*Layout*/
+	display: flex;
+	flex-direction: column; /*Container pai: linha ou coluna*/
+	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
+	align-items: center;
+}
+
+.flex-row {flex-direction: row;}
+.flex-spacebetween{justify-content: space-between;}
+.flex-start{justify-content: flex-start;}
+.flex-end{justify-content: flex-end;}
+
+.container-nav{
+	/*Layout*/
+	flex-direction: row; /*Container pai: linha ou coluna*/
+	justify-content: flex-end; /*Children horizontal distribuition if flex is row*/
 }
 
 .container-full-line{
@@ -442,18 +449,6 @@ footer section ul{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-}
-
-.carousel-wrapper{
-	/*Layout*/
-	display: flex;
-	flex-direction: row; /*Container pai: linha ou coluna*/
-	justify-content: space-between; /*Children horizontal distribuition if flex is row*/
-	align-items: center; /*Children vertical distribuition if flex is row*/
-
-	/*SEI LA*/	
-	gap: 5%; /*Margin entre itens*/
-	overflow: hidden; /* ??? */
 }
 
 .container-footer-bottom{
@@ -466,10 +461,11 @@ footer section ul{
 	align-items: center;
 }
 
+
 /* ─── CARDS ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.card-highlight{
+.card{
 	/* Decoration */
-  background-color: var(--gradient-bg); /* Secundary Color */
+  background-color: var(--gradient-bg); /* Secondary Color */
   border-radius: var(--spacing2);
   border: var(--border);
 	border-top: solid 1px var(--color-highlight);
@@ -482,34 +478,27 @@ footer section ul{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
-  /* Animação */ /* ESTUDAR */
+  /* Animação */
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
 
-.card-highlight:hover{
+.card:hover{
 	/* Decoration */
-  background-color: var(--gradient-bg-hover); /* Secundary Color */
+  background-color: var(--gradient-bg-hover); /* Secondary Color */
 }
 
-.card{
-	/* Decoration */
-  background-color: var(--gradient-bg); /* Secundary Color */
-  border-radius: var(--spacing2);
-  border: var(--border);
-	border-top: solid 1px var(--color-highlight);
-  box-shadow: var(--shadow);
-	/* Sizing */
-	width: 30%;
-	min-height: 260px;
-	padding: var(--spacing4);
-	gap: 1rem; /* Margin entre texto e imagem */
+.card--emote{
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+/* O duplo traço no nome indica que é um modificador image para o elemento .card */
+.card--image{ 
+	gap: var(--spacing4); /* Margin entre texto e imagem */
 	/* Layout */
-	display: flex;
-	flex-direction: column;
 	justify-content: flex-start;
 	overflow: hidden; /* Esconde oq sair do container */
 
@@ -520,22 +509,16 @@ footer section ul{
     border-color 0.25s ease;
 }
 
-.card:hover{
-	/* Decoration */
-  background-color: var(--gradient-bg-hover); /* Secundary Color */
-}
-
-.card-image{
+/* O duplo underline no nome indica que é uma imagem dentro do elemento .card */
+.card__image{
 	/*Sizing*/
-	width: calc(100% + 2rem);
+	width: calc(100% + var(--spacing6));
 	height: auto;
 	margin: -1rem -1rem 0rem -1rem; /* Remover o padding do container pai, sentido do relogio, top right bottom left */
 
 	/*Decoration*/
 	border-top-left-radius: var(--spacing2); /* Arredondamento da borda superior esq. da imagem */
 	border-top-right-radius: var(--spacing2); /* Arredondamento da borda superior dir. da imagem */
-
-
 }
 
 
@@ -565,7 +548,6 @@ footer section ul{
 		box-shadow 0.15s ease,
 		background-color 0.2s ease,
 		color 0.2s ease;
-
 }
 
 .btn-primary:hover{
@@ -580,8 +562,8 @@ footer section ul{
 	transform: translateY(0);
 	box-shadow: var(--shadow-active);
 }
-/* ───  Button secundary ──────────────────────────────────────────────────────── ✣ ─ */
-.btn-secundary{
+/* ───  Button secondary ──────────────────────────────────────────────────────── ✣ ─ */
+.btn-secondary{
 	/*Typography*/
 	font-size: 1rem;
 	/*Decoration*/
@@ -604,12 +586,12 @@ footer section ul{
 		color 0.2s ease;
 }
 
-.btn-secundary:hover{
+.btn-secondary:hover{
 	background-color: rgba(0, 0, 0, 0.30); /* Transparent Secundary Color */
 	transform: translateX(2px);
 }
 
-.btn-secundary:active{
+.btn-secondary:active{
 	/*Feedback ao clicar enquanto mantem o hover*/
 	transform: translateX(0px);
 }
@@ -629,7 +611,7 @@ footer section ul{
 	/*Size 32px*/
 	width: var(--spacing6);
 	height: var(--spacing6);
-	color: var(color-text-primary-muted);
+	color: var(--color-text-primary-muted);
 }
 
 .logo-header{
@@ -814,9 +796,16 @@ body.menu-open {
 
 
 
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ████████████████████████  📱ACESSIBILIDADE   █████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
 
 
-
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
 
 
 
