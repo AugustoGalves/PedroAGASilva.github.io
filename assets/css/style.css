@@ -15,6 +15,7 @@
 	--spacing2: 0.5rem; /* 8 px */
 	--spacing3: 0.75rem; /* 12 px */
 	--spacing4: 1.0rem; /* 16 px */
+	--spacing45: 1.25rem; /* 20 px */
 	--spacing5: 1.5rem; /* 24 px */
 	--spacing6: 2rem; /* 32 px */
 	--spacing7: 3rem; /* 48 px */
@@ -54,9 +55,9 @@
 	--gradient-bg-hover: linear-gradient(0deg, var(--color-bg), var(--color-bg-light));
 
 	/* Properties and Values */
-	--shadow: 0px 2px 2px hsla(0, 0%, 100%, 0.07), 0px 4px 4px hsla(0, 0%, 100%, 0.15); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
-	--shadow-hover: 0px 3px 3px hsla(0, 0%, 100%, 0.07), 0px 3px 3px hsla(0, 0%, 100%, 0.15);
-	--shadow-active: 0px 2px 2px hsla(0, 0%, 100%, 0.07), 0px 2px 2px hsla(0, 0%, 100%, 0.15);
+	--shadow: 0px 2px 2px hsla(0, 0%, 50%, 0.07), 0px 4px 4px hsla(0, 0%, 50%, 0.15); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
+	--shadow-hover: 0px 3px 3px hsla(0, 0%, 50%, 0.07), 0px 3px 3px hsla(0, 0%, 50%, 0.15);
+	--shadow-active: 0px 2px 2px hsla(0, 0%, 50%, 0.07), 0px 2px 2px hsla(0, 0%, 50%, 0.15);
 	--border: solid 1px var(--color-border); /* Borda com cor de borda */
 }
 
@@ -271,8 +272,54 @@ a{
 	padding-bottom: 0;
 }
 
+.gap1{
+	gap: var(--spacing1); /*Margin entre itens*/
+}
+
+.gap2{
+	gap: var(--spacing2); /*Margin entre itens*/
+}
+
+.gap3{
+	gap: var(--spacing3); /*Margin entre itens*/
+}
+
+.gap4{
+	gap: var(--spacing4); /*Margin entre itens*/
+}
+
+.gap45{
+	gap: var(--spacing45); /*Margin entre itens*/
+}
+
+.gap5{
+	gap: var(--spacing5); /*Margin entre itens*/
+}
+
+.gap7{
+	gap: var(--spacing7); /*Margin entre itens*/
+}
+
 .gap8{
 	gap: var(--spacing8); /*Margin entre itens*/
+}
+
+.gap9{
+	gap: var(--spacing9); /*Margin entre itens*/
+}
+
+.gap10{
+	gap: var(--spacing10); /*Margin entre itens*/
+}
+
+.gap11{
+	gap: var(--spacing11); /*Margin entre itens*/
+}
+
+
+
+.padding0{
+	padding: 0;
 }
 
 .padding1{
@@ -289,6 +336,10 @@ a{
 
 .padding4{
 	padding: var(--spacing4) 0;
+}
+
+.padding45{
+	padding: var(--spacing45) 0;
 }
 
 .padding5{
@@ -319,6 +370,8 @@ a{
 	padding: var(--spacing11) 0;
 }
 
+
+
 .margin1{
 	margin: var(--spacing1) auto;
 }
@@ -333,6 +386,10 @@ a{
 
 .margin4{
 	margin: var(--spacing4) auto;
+}
+
+.margin45{
+	margin: var(--spacing45) auto;
 }
 
 .margin5{
@@ -401,7 +458,8 @@ footer section ul{
 
 .hero-left{
 	/*Layout*/
-	padding-right: 25%; /*Ocupar menos espaço do container*/
+	width: 75%;
+	padding-right: 20%; /*Ocupar menos espaço do container*/
 	display: flex;
 	flex-direction: column; /*Container pai: linha ou coluna*/
 	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
@@ -539,7 +597,7 @@ footer section ul{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: var(--spacing2) var(--spacing4); /* vertical | horizontal */
+	padding: var(--spacing45) var(--spacing4); /* vertical | horizontal */
 	min-height: var(--spacing6); /* tamanho confortável */
 	white-space: nowrap;
 	/*Configurações das animações do botão*/
@@ -575,7 +633,7 @@ footer section ul{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: var(--spacing2) var(--spacing3); /* vertical | horizontal */
+	padding: var(--spacing45) var(--spacing3); /* vertical | horizontal */
 	min-height: 2rem; /* tamanho confortável */
 	white-space: nowrap;
 	/*Configurações das animações do botão*/
@@ -629,9 +687,9 @@ footer section ul{
 
 .hero-image img{
 	/*Layout*/
-  margin-right: -80px; /* Cortar a foto fora do container */
   position: relative;
   z-index: 1;
+  width: 130%;
 }
 
 .hero-image::before{
@@ -721,31 +779,24 @@ body.menu-open {
 
 /* ─── Mudanças tela pequena ──────────────────────────────────────────────────────── ✣ ─ */
 @media (max-width: 768px) {
+  
+	/* ─── Elements ──────────────────────────────────────────────────────── ✣ ─ */
+  
   .page-wrapper {
   	padding: var(--spacing6);
   	box-sizing: border-box;
   }
 
-  hero-full-line {
+  .hero-full-line {
   	justify-content: space-between;
   }
 
-  .container-highlights, .carousel-wrapper {
-  	flex-direction: column;
-  	gap: var(--spacing4);
-  }
-
-  .card, .card-highlight{
+  .card{
   	width: 85%;
   }
 
   .container-nav {
     display: none;
-  }
-
-  .container-hero {
-    flex-direction: column;
-    align-items: center;
   }
 
   .hero-left {
@@ -766,6 +817,7 @@ body.menu-open {
     height: auto;
   }
 
+  /* ─── Hamburguer menu show ──────────────────────────────────────────────────────── ✣ ─ */
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -789,6 +841,16 @@ body.menu-open {
 		justify-content: flex-start;
 		align-items: center;
 		text-align: center;
+  }
+
+  /* ─── Utilities mobile ──────────────────────────────────────────────────────── ✣ ─ */
+  .flex-column-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gap4-mobile{
+  	gap: var(--spacing4);
   }
 }
 
