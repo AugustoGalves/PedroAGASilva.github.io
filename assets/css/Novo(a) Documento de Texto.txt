@@ -1,0 +1,8 @@
+	--spacing1: 4px;
+	--spacing2: 8px;
+	--spacing3: 16px;
+	--spacing4: 20px;
+	--spacing5: 32px; corrigir
+	--spacing6: 40px;
+	--spacing7: 80px;
+	--spacing8: 160px
