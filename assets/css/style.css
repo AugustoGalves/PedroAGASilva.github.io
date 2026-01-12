@@ -97,7 +97,7 @@
 	--border: solid 1px var(--color-bg); /* Borda na cor do bg */
 }
 
-body.light .logo-header{
+:root[data-theme="light"] .logo-header{
 	content: url("/assets/img/LogoDark_Pedro AGA Silva Engenheiro Mecânico.png");
 }
 
@@ -816,6 +816,10 @@ body.menu-open {
     max-width: 50%;
     height: auto;
   }
+
+  .hero-image::before{
+  background: none;
+	} 
 
   /* ─── Hamburguer menu show ──────────────────────────────────────────────────────── ✣ ─ */
   .menu-toggle {
