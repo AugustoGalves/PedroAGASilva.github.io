@@ -1,0 +1,54 @@
+{
+  "meta.title": "Pedro Augusto | Engenheiro Mecânico",
+  "meta.description": "Engenheiro mecânico com experiência em HVAC, manutenção industrial, transmissão de potência e projetos técnicos. Atuação nacional e internacional, coordenação técnica e engenharia aplicada.",
+  "meta.keywords": "engenheiro mecânico, engenharia mecânica, HVAC, climatização, manutenção industrial, transmissão de potência, correias de potência, engrenagens, projetos mecânicos, engenheiro HVAC, engenharia industrial, engenheiro CREA, engenheiro Brasil, engenheiro internacional",
+
+  "nav.home": "Início",
+  "nav.portfolio": "Portfólio",
+  "nav.resume": "Currículo",
+  "nav.blog": "Blog",
+  "nav.contact": "Contato",
+
+  "hero.name": "Pedro Augusto G. A. Silva",
+  "hero.role": "Engenheiro Mecânico e Desenvolvedor",
+  "hero.specialty": "Especialista em HVAC, projetos internacionais e sistemas de transmissão de potência",
+  "hero.cta": "Veja meu trabalho",
+
+  "highlights.card1.title": "Projetista HVAC",
+  "highlights.card1.desc": "Certificado + 2 anos de experiência",
+
+  "highlights.card2.title": "Projetos internacionais",
+  "highlights.card2.desc": "Gerenciamento no setor de reparos navais (EN)",
+
+  "highlights.card3.title": "Perfil multidisciplinar",
+  "highlights.card3.desc": "Programação, automação, IoT e elétrica",
+
+  "portfolio.title": "Portfólio",
+  "portfolio.subtitle": "Projetos em destaque",
+
+  "portfolio.card1.title": "Projetos de HVAC",
+  "portfolio.card1.desc": "Feito no AutoCAD",
+
+  "portfolio.card2.title": "Projetos de Elétrica Residencial",
+  "portfolio.card2.desc": "Feito no AutoCAD",
+
+  "portfolio.card3.title": "Software - Patente Pendente",
+  "portfolio.card3.desc": "Ultimate Belt Design and Analysis 2026",
+
+  "portfolio.cta": "Ver Portfólio Completo",
+
+  "footer.contact.title": "Entre em contato",
+  "footer.contact.subtitle": "Vamos trabalhar juntos em seu próximo projeto?",
+  "footer.contact.button": "Enviar Mensagem",
+
+  "footer.rights": "© 2026 Pedro Augusto G. A. Silva. Todos os direitos reservados",
+
+  "aria.menu.open": "Abrir menu",
+  "aria.menu.close": "Fechar menu",
+  "aria.theme.toggle": "Alternar tema",
+  "aria.email": "Endereço de email",
+  "aria.whatsapp": "Conversar via Whatsapp",
+  "aria.phone": "Ligar para telefone",
+  "aria.github": "Página do Github",
+  "aria.linkedin": "Perfil do Linkedin"
+}
