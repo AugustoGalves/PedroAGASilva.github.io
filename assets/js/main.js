@@ -1,5 +1,5 @@
 
-//INICIALIZAÇÃO AUTOMÁTICA
+//Inicialização automática
 document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem("lang") || "pt-BR";
   loadLanguage(saved);
