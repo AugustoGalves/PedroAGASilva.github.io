@@ -308,9 +308,11 @@
           menuToggle.setAttribute("aria-expanded", "false");
         }       
         // Toggle inteligente (abre e fecha com o mesmo botão)
-        menuToggle.addEventListener("click", () => {
+        menuToggle.addEventListener("click", (e) => {
+          e.stopPropagation();
           offscreenMenu.classList.contains("active") ? closeMenu() : openMenu();
-        });     
+        });    
+        
         // Botão X (com segurança)
         if (closeBtn) {
           closeBtn.addEventListener("click", closeMenu);
