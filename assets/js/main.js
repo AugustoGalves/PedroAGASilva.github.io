@@ -3,26 +3,26 @@
 // ==============================
 
 document.addEventListener("DOMContentLoaded", () => {
+  // 1. Carregar idioma salvo ou padrão
   const saved = localStorage.getItem("lang") || "pt-BR";
 
-  if (typeof loadLanguage === "function") {
-    loadLanguage(saved);
+  if (typeof window.loadLanguage === "function") {
+    window.loadLanguage(saved);
   } else {
-    console.error("loadLanguage não encontrado. i18n.js foi carregado?");
+    console.warn("Função loadLanguage não encontrada. Verifique se i18n.js foi carregado.");
   }
 
+  // 2. Iniciar Dropdown de idiomas
   setupLanguageDropdown();
 });
 
 
 // ==============================
-// Dropdown de idiomas
+// Lógica do Dropdown de Idiomas
 // ==============================
 
 function setupLanguageDropdown() {
   const selectors = document.querySelectorAll(".lang-selector");
-
-  if (!selectors.length) return;
 
   selectors.forEach(selector => {
     const toggle = selector.querySelector(".lang-toggle");
@@ -30,30 +30,38 @@ function setupLanguageDropdown() {
 
     if (!toggle) return;
 
-    // abrir / fechar
+    // Toggle (Abrir/Fechar) ao clicar no botão
     toggle.addEventListener("click", (e) => {
-      e.stopPropagation();
+      e.stopPropagation(); // Impede que o click feche o menu imediatamente
+      
+      // Fecha outros menus abertos antes de abrir este
+      document.querySelectorAll(".lang-selector.open").forEach(opened => {
+        if (opened !== selector) opened.classList.remove("open");
+      });
+
       selector.classList.toggle("open");
     });
 
-    // selecionar idioma
+    // Ação ao clicar em uma opção de idioma
     items.forEach(item => {
       item.addEventListener("click", () => {
         const lang = item.dataset.lang;
         if (!lang) return;
 
-        loadLanguage(lang);
+        // Carrega o novo idioma
+        if (typeof window.loadLanguage === "function") {
+          window.loadLanguage(lang);
+        }
 
-        toggle.textContent = `🌐 ${lang.toUpperCase()}`;
+        // Fecha o menu após selecionar
         selector.classList.remove("open");
       });
     });
   });
 
-  // fechar clicando fora
+  // Fechar qualquer dropdown ao clicar fora
   document.addEventListener("click", () => {
-    document.querySelectorAll(".lang-selector").forEach(sel => {
-      sel.classList.remove("open");
-    });
+    document.querySelectorAll(".lang-selector.open")
+      .forEach(el => el.classList.remove("open"));
   });
 }
