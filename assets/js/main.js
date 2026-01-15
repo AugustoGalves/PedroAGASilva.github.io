@@ -1,5 +1,3 @@
-
-
 // ==============================
 // main.js – Inicialização
 // ==============================
@@ -22,34 +20,40 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==============================
 
 function setupLanguageDropdown() {
-  const selector = document.querySelector(".lang-selector");
-  const toggle   = document.querySelector(".lang-toggle");
-  const items    = document.querySelectorAll(".lang-menu li");
+  const selectors = document.querySelectorAll(".lang-selector");
 
-  if (!selector || !toggle) return;
+  if (!selectors.length) return;
 
-  // abrir / fechar
-  toggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    selector.classList.toggle("open");
-  });
+  selectors.forEach(selector => {
+    const toggle = selector.querySelector(".lang-toggle");
+    const items  = selector.querySelectorAll(".lang-menu li");
 
-  // selecionar idioma
-  items.forEach(item => {
-    item.addEventListener("click", () => {
-      const lang = item.dataset.lang;
+    if (!toggle) return;
 
-      if (!lang) return;
+    // abrir / fechar
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      selector.classList.toggle("open");
+    });
 
-      loadLanguage(lang);
+    // selecionar idioma
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        const lang = item.dataset.lang;
+        if (!lang) return;
 
-      toggle.textContent = `🌐 ${lang.toUpperCase()}`;
-      selector.classList.remove("open");
+        loadLanguage(lang);
+
+        toggle.textContent = `🌐 ${lang.toUpperCase()}`;
+        selector.classList.remove("open");
+      });
     });
   });
 
   // fechar clicando fora
   document.addEventListener("click", () => {
-    selector.classList.remove("open");
+    document.querySelectorAll(".lang-selector").forEach(sel => {
+      sel.classList.remove("open");
+    });
   });
 }
