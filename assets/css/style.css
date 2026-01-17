@@ -668,27 +668,65 @@ footer section ul{
 /* ██████████████████████████  ELEMENTOS (BEM)  █████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+/* ─── Language Selector ──────────────────────────────────────────────────────── ✣ ─ */
 .lang-selector {
   position: relative;
+  display: inline-block;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing2); /* Espaço entre globo e texto */
+  
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid rgba(0,0,0, 0.1); /* Borda sutil */
+  padding: var(--spacing2) var(--spacing4);
+  border-radius: var(--spacing45); /* Formato Pílula */
+  
+  font-size: var(--spacing4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-toggle:hover,
+.lang-selector.open .lang-toggle {
+    border-color: var(--color-text-primary);
+    background-color: rgba(0,0,0, 0.02);
+    box-shadow: var(--shadow-hover);
 }
 
 .lang-menu {
+  /* Layout */
   display: none;
-  position: absolute;
-  top: 110%;
+  gap: var(--spacing1);
+  top: calc(100% + var(--spacing2)); /* 0.5rem abaixo do botão */
   right: 0;
-  background: var(--color-bg);
-  border: var(--border);
-  list-style: none;
   padding: 0;
   margin: 0;
   min-width: 140px;
+  padding: var(--spacing2);
   z-index: 999;
+  /* Decoration */
+  background-color: var(--color-bg-light);
+  border: var(--border);
+  list-style: none;
+  box-shadow: var(--shadow);
+  /* Extras */
+  transition: all 0.2s ease;
 }
 
 .lang-menu li {
+  /* Layout */
   padding: 0.5rem 0.75rem;
+  text-align: left;
+  /* Decoration */
   cursor: pointer;
+  border-radius: var(--spacing2);
+  color: var(--color-text-primary);
+  /* Extras */
+  transition: background 0.2s;
 }
 
 .lang-menu li:hover {
@@ -697,8 +735,12 @@ footer section ul{
 
 .lang-selector.open .lang-menu {
   display: block;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
 }
 
+/* ─── Geral ──────────────────────────────────────────────────────── ✣ ─ */
 .divider-horizontal{
 	width: 100%;
 	height: 1px;
@@ -758,13 +800,28 @@ footer section ul{
 
 /* ─── Mudanças gerais ──────────────────────────────────────────────────────── ✣ ─ */
 .menu-close {
+  /*Layout Self*/
   position: absolute;
   top: var(--spacing4);
   right: var(--spacing4);
-  background: none;
+  padding: var(--spacing2);
+  /*Layout Child*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*Decoration*/
+  background: transparent;
+  color: var(--color-text-primary);
   border: none;
   cursor: pointer;
-  color: var(--color-text-primary);
+  /*Extras*/
+  border-radius: 50%; /* Deixa o hover circular */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.menu-close:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Círculo sutil no fundo */
+    transform: rotate(90deg); /* Pequena animação de rotação */
 }
 
 .menu-close svg {
@@ -774,6 +831,7 @@ footer section ul{
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 body.menu-open {
@@ -920,6 +978,23 @@ body.menu-open::before {
 		/*Animation*/
 		transition: right 0.3s ease;
   }
+  /* ─── Language Selector ──────────────────────────────────────────────────────── ✣ ─ */
+  .lang-selector {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .lang-menu {
+    /* No mobile, centraliza o dropdown */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  
+  .lang-selector.open .lang-menu {
+    transform: translateX(-50%) translateY(0);
+  }
+
 
   /* ─── Utilities mobile ──────────────────────────────────────────────────────── ✣ ─ */
   .flex-column-mobile {
@@ -931,8 +1006,6 @@ body.menu-open::before {
   	gap: var(--spacing4);
   }
 }
-
-
 
 
 
