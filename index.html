@@ -296,49 +296,52 @@
     <script>
         const menuToggle = document.querySelector(".menu-toggle");
         const offscreenMenu = document.querySelector(".offscreen-menu");
-        const closeBtn = document.querySelector(".menu-close");     
+        const closeBtn = document.querySelector(".menu-close");
+    
         function openMenu() {
-          offscreenMenu.classList.add("active");
-          document.body.classList.add("menu-open");
-          menuToggle.setAttribute("aria-expanded", "true");
-        }       
+            offscreenMenu.classList.add("active");
+            document.body.classList.add("menu-open");
+            menuToggle.setAttribute("aria-expanded", "true");
+        }
+    
         function closeMenu() {
-          offscreenMenu.classList.remove("active");
-          document.body.classList.remove("menu-open");
-          menuToggle.setAttribute("aria-expanded", "false");
-        }       
+            offscreenMenu.classList.remove("active");
+            document.body.classList.remove("menu-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
+    
         // Toggle inteligente (abre e fecha com o mesmo botão)
-        menuToggle.addEventListener("click", (e) => {
-          e.stopPropagation();
-          offscreenMenu.classList.contains("active") ? closeMenu() : openMenu();
-        });    
-        
+        if (menuToggle) {
+            menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                offscreenMenu.classList.contains("active") ? closeMenu() : openMenu();
+            });
+        }
+    
         // Botão X (com segurança)
         if (closeBtn) {
-          closeBtn.addEventListener("click", closeMenu);
-        }       
-        // Fecha ao clicar em links
-        offscreenMenu.querySelectorAll("a").forEach(link => {
-          link.addEventListener("click", closeMenu);
-        });
-        // Fecha ao clicar fora do menu
-        document.addEventListener("click", (e) => {
-            if (!offscreenMenu.classList.contains("active")) return;        
-            const clickedInsideMenu = offscreenMenu.contains(e.target);
-            const clickedToggle = menuToggle.contains(e.target);        
-            if (!clickedInsideMenu && !clickedToggle) {
-              closeMenu();
+            closeBtn.addEventListener("click", closeMenu);
         }
-        // Fecha ao clicar fora do menu
+    
+        // Fecha ao clicar em links dentro do menu
+        const menuLinks = offscreenMenu.querySelectorAll("a");
+        menuLinks.forEach(link => {
+            link.addEventListener("click", closeMenu);
+        });
+    
+        // Fecha ao clicar fora do menu (overlay)
         document.addEventListener("click", (e) => {
+            // Se o menu não estiver aberto, não faz nada
             if (!offscreenMenu.classList.contains("active")) return;
+    
             const clickedInsideMenu = offscreenMenu.contains(e.target);
             const clickedToggle = menuToggle.contains(e.target);
+    
+            // Se o clique NÃO foi dentro do menu E NÃO foi no botão de abrir
             if (!clickedInsideMenu && !clickedToggle) {
                 closeMenu();
             }
         });
-
     </script>
 
     <!-- Inserção das variáveis -->

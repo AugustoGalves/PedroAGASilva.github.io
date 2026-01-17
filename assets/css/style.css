@@ -776,17 +776,6 @@ footer section ul{
   stroke-linecap: round;
 }
 
-.offscreen-menu{
-	/*Decoration*/
-	transition: .3s ease;
-	filter: none !important; /*Remove o blur desse elemento*/
-}
-
-.offscreen-menu.active{
-	/*Layout*/
-	right: 0px;
-}
-
 body.menu-open {
 	overflow: hidden;
 }
@@ -803,12 +792,19 @@ body.menu-open::before {
   z-index: 50;
 }
 
-.menu-toggle {
-  display: none;
+.offscreen-menu{
+	/*Decoration*/
+	transition: .3s ease;
+	filter: none !important; /*Remove o blur desse elemento*/
+	display: none;
+	z-index: 100;
 }
 
-.offscreen-menu {
-  display: none;
+.offscreen-menu.active{
+	/*Layout*/
+	right: 0px;
+	visibility: visible;
+	opacity: 1;
 }
 
 .offscreen-menu ul{
@@ -822,6 +818,7 @@ body.menu-open::before {
 }
 
 .menu-toggle {
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
@@ -903,6 +900,8 @@ body.menu-open::before {
 		justify-content: flex-start;
 		align-items: center;
 		text-align: center;
+		/*Animation*/
+		transition: right 0.3s ease;
   }
 
   /* ─── Utilities mobile ──────────────────────────────────────────────────────── ✣ ─ */
