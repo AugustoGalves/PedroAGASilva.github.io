@@ -1,0 +1,54 @@
+{
+  "meta.title": "Pedro Augusto | Ingeniero Mecánico",
+  "meta.description": "Ingeniero mecánico con experiencia en HVAC, mantenimiento industrial, transmisión de potencia y proyectos técnicos. Actuación nacional e internacional, coordinación técnica e ingeniería aplicada.",
+  "meta.keywords": "ingeniero mecánico, ingeniería mecánica, HVAC, climatización, mantenimiento industrial, transmisión de potencia, correas de potencia, engranajes, proyectos mecánicos, ingeniero HVAC, ingeniería industrial, ingeniero colegiado, ingeniero Brasil, ingeniero internacional",
+
+  "nav.home": "Inicio",
+  "nav.portfolio": "Portafolio",
+  "nav.resume": "Currículum",
+  "nav.blog": "Blog",
+  "nav.contact": "Contacto",
+
+  "hero.name": "Pedro Augusto G. A. Silva",
+  "hero.role": "Ingeniero Mecánico y Desarrollador",
+  "hero.specialty": "Especialista en HVAC, proyectos internacionales y sistemas de transmisión de potencia",
+  "hero.cta": "Ver mi trabajo",
+
+  "highlights.card1.title": "Diseñador HVAC",
+  "highlights.card1.desc": "Certificado + 2 años de experiencia",
+
+  "highlights.card2.title": "Proyectos internacionales",
+  "highlights.card2.desc": "Gestión en el sector de reparaciones navales (EN)",
+
+  "highlights.card3.title": "Perfil multidisciplinario",
+  "highlights.card3.desc": "Programación, automatización, IoT y electricidad",
+
+  "portfolio.title": "Portafolio",
+  "portfolio.subtitle": "Proyectos destacados",
+
+  "portfolio.card1.title": "Proyectos de HVAC",
+  "portfolio.card1.desc": "Realizado en AutoCAD",
+
+  "portfolio.card2.title": "Proyectos de Electricidad Residencial",
+  "portfolio.card2.desc": "Realizado en AutoCAD",
+
+  "portfolio.card3.title": "Software – Patente Pendiente",
+  "portfolio.card3.desc": "Ultimate Belt Design and Analysis 2026",
+
+  "portfolio.cta": "Ver portafolio completo",
+
+  "footer.contact.title": "Ponte en contacto",
+  "footer.contact.subtitle": "¿Trabajamos juntos en tu próximo proyecto?",
+  "footer.contact.button": "Enviar mensaje",
+
+  "footer.rights": "© 2026 Pedro Augusto G. A. Silva. Todos los derechos reservados",
+
+  "aria.menu.open": "Abrir menú",
+  "aria.menu.close": "Cerrar menú",
+  "aria.theme.toggle": "Cambiar tema",
+  "aria.email": "Dirección de correo electrónico",
+  "aria.whatsapp": "Chatear por WhatsApp",
+  "aria.phone": "Llamar por teléfono",
+  "aria.github": "Página de GitHub",
+  "aria.linkedin": "Perfil de LinkedIn"
+}

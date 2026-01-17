@@ -1,0 +1,54 @@
+{
+  "meta.title": "Pedro Augusto | Mechanical Engineer",
+  "meta.description": "Mechanical engineer with experience in HVAC, industrial maintenance, power transmission and technical projects. National and international work, technical coordination and applied engineering.",
+  "meta.keywords": "mechanical engineer, mechanical engineering, HVAC, air conditioning, industrial maintenance, power transmission, power belts, gears, mechanical projects, HVAC engineer, industrial engineering, professional engineer, Brazil engineer, international engineer",
+
+  "nav.home": "Home",
+  "nav.portfolio": "Portfolio",
+  "nav.resume": "Resume",
+  "nav.blog": "Blog",
+  "nav.contact": "Contact",
+
+  "hero.name": "Pedro Augusto G. A. Silva",
+  "hero.role": "Mechanical Engineer and Developer",
+  "hero.specialty": "Specialist in HVAC, international projects and power transmission systems",
+  "hero.cta": "View my work",
+
+  "highlights.card1.title": "HVAC Designer",
+  "highlights.card1.desc": "Certified + 2 years of experience",
+
+  "highlights.card2.title": "International projects",
+  "highlights.card2.desc": "Management in the naval repair sector (EN)",
+
+  "highlights.card3.title": "Multidisciplinary profile",
+  "highlights.card3.desc": "Programming, automation, IoT and electrical systems",
+
+  "portfolio.title": "Portfolio",
+  "portfolio.subtitle": "Featured projects",
+
+  "portfolio.card1.title": "HVAC Projects",
+  "portfolio.card1.desc": "Made with AutoCAD",
+
+  "portfolio.card2.title": "Residential Electrical Projects",
+  "portfolio.card2.desc": "Made with AutoCAD",
+
+  "portfolio.card3.title": "Software – Patent Pending",
+  "portfolio.card3.desc": "Ultimate Belt Design and Analysis 2026",
+
+  "portfolio.cta": "View Full Portfolio",
+
+  "footer.contact.title": "Get in touch",
+  "footer.contact.subtitle": "Shall we work together on your next project?",
+  "footer.contact.button": "Send Message",
+
+  "footer.rights": "© 2026 Pedro Augusto G. A. Silva. All rights reserved",
+
+  "aria.menu.open": "Open menu",
+  "aria.menu.close": "Close menu",
+  "aria.theme.toggle": "Toggle theme",
+  "aria.email": "Email address",
+  "aria.whatsapp": "Chat via WhatsApp",
+  "aria.phone": "Call phone number",
+  "aria.github": "GitHub page",
+  "aria.linkedin": "LinkedIn profile"
+}
