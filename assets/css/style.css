@@ -780,15 +780,33 @@ body.menu-open {
 	overflow: hidden;
 }
 
-body.menu-open::before {
+/* 1. Define o overlay no estado "fechado" (invisível, mas existente) */
+body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 50;
-  /*Efeito Blur*/
+
+  /* Estado Inicial: Invisível e sem Blur */
+  opacity: 0;
+  visibility: hidden; /* Importante: impede cliques quando fechado */
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px); /* Safari */
+
+  /* A mágica da animação acontece aqui */
+  transition: 
+    opacity 0.4s ease, 
+    backdrop-filter 0.4s ease, 
+    visibility 0.4s; 
+}
+
+/* 2. Define o estado "aberto" (visível e borrado) */
+body.menu-open::before {
+  opacity: 1;
+  visibility: visible;
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px); /* Necessário para funcionar no Safari/iPhone */
+  -webkit-backdrop-filter: blur(6px); /* Safari */
 }
 
 .offscreen-menu{
