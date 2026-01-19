@@ -557,10 +557,14 @@ footer section ul{
 }
 
 .lang-selector.open .lang-menu {
-  display: block;
+  /*Layout*/
   display: flex;
   flex-direction: column;
   position: absolute;
+  /*Extras*/
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* ─── Geral ──────────────────────────────────────────────────────── ✣ ─ */
@@ -659,6 +663,12 @@ footer section ul{
 	flex-wrap: wrap;
 }
 
+@media (max-width: 992px) {
+  .center-text-mobile{
+  	text-align: center;
+  }
+}
+
 /* Estiliza os Childs do .flex */
 .flex > *{
 	flex-grow: 1;
@@ -666,7 +676,7 @@ footer section ul{
 	flex-basis: 0;
 	min-width: 400px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .flex > * {
     min-width: 100%;
   }
@@ -958,7 +968,7 @@ body.menu-open::before {
 }
 
 /* ─── Mudanças tela pequena ──────────────────────────────────────────────────────── ✣ ─ */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   
 	/* ─── Elements ──────────────────────────────────────────────────────── ✣ ─ */
   
