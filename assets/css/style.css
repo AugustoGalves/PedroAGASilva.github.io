@@ -1075,7 +1075,14 @@ body.menu-open::before {
   }
   
   .lang-selector.open .lang-menu {
-    transform: translateX(-50%) translateY(15px);
+    /* Layout */
+  	display: flex; /* Não precisa de display: block se tem flex */
+  	flex-direction: column;
+  	position: absolute;
+
+  	opacity: 1;
+  	visibility: visible;
+  	transform: translateY(0); /* Reseta a posição para a animação funcionar */
   }
   
   .lang-menu li {
@@ -1098,6 +1105,11 @@ body.menu-open::before {
   .gap4-mobile{
   	gap: var(--spacing4);
   }
+
+
+}
+
+
 
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ████████████████████████  📱ACESSIBILIDADE   █████████████████████████████ */
