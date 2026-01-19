@@ -220,19 +220,19 @@ a{
 }
 
 .center-x{
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .left-x{
-	justify-content: flex-start;
+	justify-content: flex-start !important;
 }
 
 .center-text{ 
-	text-align: center;
+	text-align: center !important;
 }
 
 .left-text{
-	text-align: left;
+	text-align: left !important;
 }
 
 .hidden{
@@ -261,11 +261,11 @@ a{
 }
 
 .reverse{
-	flex-direction: row-reverse;
+	flex-direction: row-reverse !important;
 }
 
 .margintop-small{
-	margin-top: var(--spacing4);
+	margin-top: var(--spacing4) !important;
 }
 
 .widthmax{
@@ -273,159 +273,159 @@ a{
 }
 
 .nopaddingtop{
-	padding-top: 0;
+	padding-top: 0 !important;
 }
 
 .nopaddingbottom{
-	padding-bottom: 0;
+	padding-bottom: 0 !important;
 }
 
 .gap1{
-	gap: var(--spacing1); /*Margin entre itens*/
+	gap: var(--spacing1) !important; /*Margin entre itens*/
 }
 
 .gap2{
-	gap: var(--spacing2); /*Margin entre itens*/
+	gap: var(--spacing2) !important; /*Margin entre itens*/
 }
 
 .gap3{
-	gap: var(--spacing3); /*Margin entre itens*/
+	gap: var(--spacing3) !important; /*Margin entre itens*/
 }
 
 .gap4{
-	gap: var(--spacing4); /*Margin entre itens*/
+	gap: var(--spacing4) !important; /*Margin entre itens*/
 }
 
 .gap45{
-	gap: var(--spacing45); /*Margin entre itens*/
+	gap: var(--spacing45) !important; /*Margin entre itens*/
 }
 
 .gap5{
-	gap: var(--spacing5); /*Margin entre itens*/
+	gap: var(--spacing5) !important; /*Margin entre itens*/
 }
 
 .gap7{
-	gap: var(--spacing7); /*Margin entre itens*/
+	gap: var(--spacing7) !important; /*Margin entre itens*/
 }
 
 .gap8{
-	gap: var(--spacing8); /*Margin entre itens*/
+	gap: var(--spacing8) !important; /*Margin entre itens*/
 }
 
 .gap9{
-	gap: var(--spacing9); /*Margin entre itens*/
+	gap: var(--spacing9) !important; /*Margin entre itens*/
 }
 
 .gap10{
-	gap: var(--spacing10); /*Margin entre itens*/
+	gap: var(--spacing10) !important; /*Margin entre itens*/
 }
 
 .gap11{
-	gap: var(--spacing11); /*Margin entre itens*/
+	gap: var(--spacing11) !important; /*Margin entre itens*/
 }
 
 
 
 .padding0{
-	padding: 0;
+	padding: 0 !important;
 }
 
 .padding1{
-	padding: var(--spacing1) 0;
+	padding: var(--spacing1) 0 !important;
 }
 
 .padding2{
-	padding: var(--spacing2) 0;
+	padding: var(--spacing2) 0 !important;
 }
 
 .padding3{
-	padding: var(--spacing3) 0;
+	padding: var(--spacing3) 0 !important;
 }
 
 .padding4{
-	padding: var(--spacing4) 0;
+	padding: var(--spacing4) 0 !important;
 }
 
 .padding45{
-	padding: var(--spacing45) 0;
+	padding: var(--spacing45) 0 !important;
 }
 
 .padding5{
-	padding: var(--spacing5) 0;
+	padding: var(--spacing5) 0 !important;
 }
 
 .padding6{
-	padding: var(--spacing6) 0;
+	padding: var(--spacing6) 0 !important;
 }
 
 .padding7{
-	padding: var(--spacing7) 0;
+	padding: var(--spacing7) 0 !important;
 }
 
 .padding8{
-	padding: var(--spacing8) 0;
+	padding: var(--spacing8) 0 !important;
 }
 
 .padding9{
-	padding: var(--spacing9) 0;
+	padding: var(--spacing9) 0 !important;
 }
 
 .padding10{
-	padding: var(--spacing10) 0;
+	padding: var(--spacing10) 0 !important;
 }
 
 .padding11{
-	padding: var(--spacing11) 0;
+	padding: var(--spacing11) 0 !important;
 }
 
 
 
 .margin1{
-	margin: var(--spacing1) auto;
+	margin: var(--spacing1) auto !important;
 }
 
 .margin2{
-	margin: var(--spacing2) auto;
+	margin: var(--spacing2) auto !important;
 }
 
 .margin3{
-	margin: var(--spacing3) auto;
+	margin: var(--spacing3) auto !important;
 }
 
 .margin4{
-	margin: var(--spacing4) auto;
+	margin: var(--spacing4) auto !important;
 }
 
 .margin45{
-	margin: var(--spacing45) auto;
+	margin: var(--spacing45) auto !important;
 }
 
 .margin5{
-	margin: var(--spacing5) auto;
+	margin: var(--spacing5) auto !important;
 }
 
 .margin6{
-	margin: var(--spacing6) auto;
+	margin: var(--spacing6) auto !important;
 }
 
 .margin7{
-	margin: var(--spacing7) auto;
+	margin: var(--spacing7) auto !important;
 }
 
 .margin8{
-	margin: var(--spacing8) auto;
+	margin: var(--spacing8) auto !important;
 }
 
 .margin9{
-	margin: var(--spacing9) auto;
+	margin: var(--spacing9) auto !important;
 }
 
 .margin10{
-	margin: var(--spacing10) auto;
+	margin: var(--spacing10) auto !important;
 }
 
 .margin11{
-	margin: var(--spacing11) auto;
+	margin: var(--spacing11) auto !important;
 }
 
 
@@ -532,7 +532,7 @@ footer section ul{
 
 .nav-preferences {
   /* Layout */
-  padding: 2px;
+  padding: var(--spacing1);
   display: flex;
   align-items: center;
   /* Decoration */
@@ -690,7 +690,7 @@ footer section ul{
 	display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing1) var(--spacing4);
+  padding: var(--spacing1) var(--spacing2);
   gap: var(--spacing2);
   /*Resets*/
   background: transparent !important;
@@ -705,12 +705,12 @@ footer section ul{
 
 .btn-settings {
     border-radius: 50px 0 0 50px;
-    padding-left: var(--spacing3); /* 12px */
+    padding-left: var(--spacing2);
 }
 
 .lang-toggle {
     border-radius: 0 50px 50px 0;
-    padding-right: var(--spacing3); /* 12px */
+    padding-right: var(--spacing2);
 }
 
 .btn-settings:hover,
@@ -1008,18 +1008,21 @@ body.menu-open::before {
       display: flex;
       align-items: center;
       gap: var(--spacing4); /* Espaço entre a Pílula e o Hambúrguer */
-  
+  }
+
   .header-controls-mobile .nav-preferences {
       /* Opcional: Reduz levemente padding se faltar espaço em telas muito pequenas */
       transform: scale(0.95); 
       transform-origin: right center;
-  
+  }
+
   .header-controls-mobile .lang-menu {
       right: 0;
       left: auto;
       transform: translateY(10px);
       min-width: 130px;
-  
+  }
+
   .header-controls-mobile .lang-selector.open .lang-menu {
       transform: translateY(14px);
   }
