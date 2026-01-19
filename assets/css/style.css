@@ -211,225 +211,6 @@ a{
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* ██████████████████████   ⚙️ UTILITY CLASSES     ██████████████████████████ */
-/* ────────────────────────────────────────────────────────────────────────── */
-
-.section{
-	padding-top: var(--spacing5);
-	padding-bottom: var(--spacing5);
-}
-
-.center-x{
-  justify-content: center !important;
-}
-
-.left-x{
-	justify-content: flex-start !important;
-}
-
-.center-text{ 
-	text-align: center !important;
-}
-
-.left-text{
-	text-align: left !important;
-}
-
-.hidden{
-	display: none;
-}
-
-.flex{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: var(--spacing4);
-	flex-wrap: wrap;
-}
-
-/* Estiliza os Childs do .flex */
-.flex > *{
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: 0;
-	min-width: 400px;
-}
-@media (max-width: 768px) {
-  .flex > * {
-    min-width: 100%;
-  }
-}
-
-.reverse{
-	flex-direction: row-reverse !important;
-}
-
-.margintop-small{
-	margin-top: var(--spacing4) !important;
-}
-
-.widthmax{
-	width: 100%; 
-}
-
-.nopaddingtop{
-	padding-top: 0 !important;
-}
-
-.nopaddingbottom{
-	padding-bottom: 0 !important;
-}
-
-.gap1{
-	gap: var(--spacing1) !important; /*Margin entre itens*/
-}
-
-.gap2{
-	gap: var(--spacing2) !important; /*Margin entre itens*/
-}
-
-.gap3{
-	gap: var(--spacing3) !important; /*Margin entre itens*/
-}
-
-.gap4{
-	gap: var(--spacing4) !important; /*Margin entre itens*/
-}
-
-.gap45{
-	gap: var(--spacing45) !important; /*Margin entre itens*/
-}
-
-.gap5{
-	gap: var(--spacing5) !important; /*Margin entre itens*/
-}
-
-.gap7{
-	gap: var(--spacing7) !important; /*Margin entre itens*/
-}
-
-.gap8{
-	gap: var(--spacing8) !important; /*Margin entre itens*/
-}
-
-.gap9{
-	gap: var(--spacing9) !important; /*Margin entre itens*/
-}
-
-.gap10{
-	gap: var(--spacing10) !important; /*Margin entre itens*/
-}
-
-.gap11{
-	gap: var(--spacing11) !important; /*Margin entre itens*/
-}
-
-
-
-.padding0{
-	padding: 0 !important;
-}
-
-.padding1{
-	padding: var(--spacing1) 0 !important;
-}
-
-.padding2{
-	padding: var(--spacing2) 0 !important;
-}
-
-.padding3{
-	padding: var(--spacing3) 0 !important;
-}
-
-.padding4{
-	padding: var(--spacing4) 0 !important;
-}
-
-.padding45{
-	padding: var(--spacing45) 0 !important;
-}
-
-.padding5{
-	padding: var(--spacing5) 0 !important;
-}
-
-.padding6{
-	padding: var(--spacing6) 0 !important;
-}
-
-.padding7{
-	padding: var(--spacing7) 0 !important;
-}
-
-.padding8{
-	padding: var(--spacing8) 0 !important;
-}
-
-.padding9{
-	padding: var(--spacing9) 0 !important;
-}
-
-.padding10{
-	padding: var(--spacing10) 0 !important;
-}
-
-.padding11{
-	padding: var(--spacing11) 0 !important;
-}
-
-
-
-.margin1{
-	margin: var(--spacing1) auto !important;
-}
-
-.margin2{
-	margin: var(--spacing2) auto !important;
-}
-
-.margin3{
-	margin: var(--spacing3) auto !important;
-}
-
-.margin4{
-	margin: var(--spacing4) auto !important;
-}
-
-.margin45{
-	margin: var(--spacing45) auto !important;
-}
-
-.margin5{
-	margin: var(--spacing5) auto !important;
-}
-
-.margin6{
-	margin: var(--spacing6) auto !important;
-}
-
-.margin7{
-	margin: var(--spacing7) auto !important;
-}
-
-.margin8{
-	margin: var(--spacing8) auto !important;
-}
-
-.margin9{
-	margin: var(--spacing9) auto !important;
-}
-
-.margin10{
-	margin: var(--spacing10) auto !important;
-}
-
-.margin11{
-	margin: var(--spacing11) auto !important;
-}
-
-
-/* ────────────────────────────────────────────────────────────────────────── */
 /* ████████████████████████████ 🖥️ LAYOUT  █████████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
@@ -581,6 +362,7 @@ footer section ul{
 	justify-content: center;
 	text-align: left;
 	align-items: center;
+	gap: var(--spacing4);
 }
 
 /* O duplo traço no nome indica que é um modificador image para o elemento .card */
@@ -840,6 +622,224 @@ footer section ul{
   pointer-events: none; /* NÃO FAÇO IDEIA DO QUE TA ACONTECENDO AQUI */
 } 
 
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ██████████████████████   ⚙️ UTILITY CLASSES     ██████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+.section{
+	padding-top: var(--spacing5);
+	padding-bottom: var(--spacing5);
+}
+
+.center-x{
+  justify-content: center;
+}
+
+.align-start{
+	align-items: flex-start;
+}
+
+.center-text{ 
+	text-align: center;
+}
+
+.left-text{
+	text-align: left;
+}
+
+.hidden{
+	display: none;
+}
+
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacing4);
+	flex-wrap: wrap;
+}
+
+/* Estiliza os Childs do .flex */
+.flex > *{
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0;
+	min-width: 400px;
+}
+@media (max-width: 768px) {
+  .flex > * {
+    min-width: 100%;
+  }
+}
+
+.reverse{
+	flex-direction: row-reverse;
+}
+
+.margintop-small{
+	margin-top: var(--spacing4);
+}
+
+.widthmax{
+	width: 100%; 
+}
+
+.nopaddingtop{
+	padding-top: 0;
+}
+
+.nopaddingbottom{
+	padding-bottom: 0;
+}
+
+.gap1{
+	gap: var(--spacing1); /*Margin entre itens*/
+}
+
+.gap2{
+	gap: var(--spacing2); /*Margin entre itens*/
+}
+
+.gap3{
+	gap: var(--spacing3); /*Margin entre itens*/
+}
+
+.gap4{
+	gap: var(--spacing4); /*Margin entre itens*/
+}
+
+.gap45{
+	gap: var(--spacing45); /*Margin entre itens*/
+}
+
+.gap5{
+	gap: var(--spacing5); /*Margin entre itens*/
+}
+
+.gap7{
+	gap: var(--spacing7); /*Margin entre itens*/
+}
+
+.gap8{
+	gap: var(--spacing8); /*Margin entre itens*/
+}
+
+.gap9{
+	gap: var(--spacing9); /*Margin entre itens*/
+}
+
+.gap10{
+	gap: var(--spacing10); /*Margin entre itens*/
+}
+
+.gap11{
+	gap: var(--spacing11); /*Margin entre itens*/
+}
+
+
+
+.padding0{
+	padding: 0;
+}
+
+.padding1{
+	padding: var(--spacing1) 0;
+}
+
+.padding2{
+	padding: var(--spacing2) 0;
+}
+
+.padding3{
+	padding: var(--spacing3) 0;
+}
+
+.padding4{
+	padding: var(--spacing4) 0;
+}
+
+.padding45{
+	padding: var(--spacing45) 0;
+}
+
+.padding5{
+	padding: var(--spacing5) 0;
+}
+
+.padding6{
+	padding: var(--spacing6) 0;
+}
+
+.padding7{
+	padding: var(--spacing7) 0;
+}
+
+.padding8{
+	padding: var(--spacing8) 0;
+}
+
+.padding9{
+	padding: var(--spacing9) 0;
+}
+
+.padding10{
+	padding: var(--spacing10) 0;
+}
+
+.padding11{
+	padding: var(--spacing11) 0;
+}
+
+
+
+.margin1{
+	margin: var(--spacing1) auto;
+}
+
+.margin2{
+	margin: var(--spacing2) auto;
+}
+
+.margin3{
+	margin: var(--spacing3) auto;
+}
+
+.margin4{
+	margin: var(--spacing4) auto;
+}
+
+.margin45{
+	margin: var(--spacing45) auto;
+}
+
+.margin5{
+	margin: var(--spacing5) auto;
+}
+
+.margin6{
+	margin: var(--spacing6) auto;
+}
+
+.margin7{
+	margin: var(--spacing7) auto;
+}
+
+.margin8{
+	margin: var(--spacing8) auto;
+}
+
+.margin9{
+	margin: var(--spacing9) auto;
+}
+
+.margin10{
+	margin: var(--spacing10) auto;
+}
+
+.margin11{
+	margin: var(--spacing11) auto;
+}
+
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
@@ -873,8 +873,6 @@ footer section ul{
 }
 
 .menu-close svg {
-  width: var(--spacing5);
-  height: var(--spacing5);
   stroke: currentColor;
   stroke-width: 2;
   fill: none;
@@ -934,7 +932,7 @@ body.menu-open::before {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing4);
-	margin-top: var(--spacing11);
+	margin-top: var(--spacing8);
 	padding: 0;
 	list-style: none;
 	align-items: center;
@@ -973,7 +971,7 @@ body.menu-open::before {
   	justify-content: space-between;
   }
 
-  .card{
+  .card {
   	width: 85%;
   }
 
@@ -1092,12 +1090,14 @@ body.menu-open::before {
     align-items: center;
   }
 
+  .flex-column-reverse-mobile {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   .gap4-mobile{
   	gap: var(--spacing4);
   }
-}
-
-
 
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ████████████████████████  📱ACESSIBILIDADE   █████████████████████████████ */
