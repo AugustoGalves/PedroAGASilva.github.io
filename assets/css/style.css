@@ -223,6 +223,10 @@ a{
   justify-content: center;
 }
 
+.left-x{
+	justify-content: flex-start;
+}
+
 .center-text{ 
 	text-align: center;
 }
@@ -526,6 +530,22 @@ footer section ul{
 	align-items: center;
 }
 
+.nav-preferences {
+  /* Layout */
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  /* Decoration */
+  border: 1px solid var(--color-border-muted); 
+  border-radius: 50px; 
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.nav-preferences:hover {
+    border-color: var(--color-text-primary);
+}
+
 
 /* ─── CARDS ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .card{
@@ -558,8 +578,9 @@ footer section ul{
 .card--emote{
 	/* Layout */
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: center;
 	text-align: left;
+	align-items: center;
 }
 
 /* O duplo traço no nome indica que é um modificador image para o elemento .card */
@@ -664,73 +685,93 @@ footer section ul{
 	transform: translateX(0px);
 }
 
+/* ───  Button settings & Lang Toggle ──────────────────────────────────────────────── ✣ ─ */
+.btn-settings, .lang-toggle{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing1) var(--spacing4);
+  gap: var(--spacing2);
+  /*Resets*/
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  /*Decoration*/
+  color: var(--color-text-primary);
+  font-size: var(--spacing4);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-settings {
+    border-radius: 50px 0 0 50px;
+    padding-left: var(--spacing3); /* 12px */
+}
+
+.lang-toggle {
+    border-radius: 0 50px 50px 0;
+    padding-right: var(--spacing3); /* 12px */
+}
+
+.btn-settings:hover,
+.lang-toggle:hover {
+  background-color: var(--color-bg-dark) !important;
+  color: var(--color-accent1); /* Opcional: Acende a cor com seu accent */
+}
+
+.lang-selector {
+    position: relative;
+    display: flex;
+}
+
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ██████████████████████████  ELEMENTOS (BEM)  █████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
-/* ─── Language Selector ──────────────────────────────────────────────────────── ✣ ─ */
-.lang-selector {
-  position: relative;
-  display: inline-block;
-}
-
-.lang-toggle {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing2); /* Espaço entre globo e texto */
-  
-  background: var(--color-bg-dark);
-  color: var(--color-text-primary);
-  border: 1px solid rgba(0,0,0, 0.1); /* Borda sutil */
-  padding: var(--spacing2) var(--spacing4);
-  border-radius: var(--spacing45); /* Formato Pílula */
-  
-  font-size: var(--spacing4);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.lang-toggle:hover,
-.lang-selector.open .lang-toggle {
-    border-color: var(--color-text-primary);
-    background-color: rgba(0,0,0, 0.02);
-    box-shadow: var(--shadow-hover);
+.pill-divider {
+    width: 1px;
+    height: var(--spacing45); /* 20px */
+    background-color: var(--color-border-muted);
+    margin: 0 2px;
 }
 
 .lang-menu {
-  /* Layout */
-  display: none;
-  gap: var(--spacing1);
-  top: calc(100% + var(--spacing2)); /* 0.5rem abaixo do botão */
-  right: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 140px;
-  padding: var(--spacing2);
-  z-index: 999;
-  /* Decoration */
-  background-color: var(--color-bg-light);
-  border: var(--border);
-  list-style: none;
-  box-shadow: var(--shadow);
-  /* Extras */
-  transition: all 0.2s ease;
+    /* Layout */
+    display: none;
+    position: absolute;
+    /* Sizes */
+    top: calc(100% + var(--spacing3)); 
+    right: 0;
+    min-width: 140px;
+    padding: var(--spacing2); /* 8px */
+    /* Decoration */
+    background-color: var(--color-bg-light); /* Fundo destacado */
+    border: var(--border); /* Sua variável de borda padrão */
+    box-shadow: var(--shadow); /* Sua sombra padrão */
+    border-radius: var(--spacing2);
+    list-style: none;
+    z-index: 999;
+    /* Animação */
+    opacity: 0;
+    transform: translateY(calc(var(--spacing2) * -1));
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .lang-menu li {
   /* Layout */
-  padding: 0.5rem 0.75rem;
+  padding: var(--spacing2) var(--spacing3);
   text-align: left;
   /* Decoration */
   cursor: pointer;
-  border-radius: var(--spacing2);
+  border-radius: var(--spacing1);
   color: var(--color-text-primary);
   /* Extras */
   transition: background 0.2s;
 }
 
 .lang-menu li:hover {
-  background: var(--color-bg-light);
+  background-color: var(--color-bg-dark); 
+  color: var(--color-accent1);
 }
 
 .lang-selector.open .lang-menu {
@@ -752,6 +793,13 @@ footer section ul{
 	/*Size 32px*/
 	width: var(--spacing6);
 	height: var(--spacing6);
+	color: var(--color-text-primary-muted);
+}
+
+.svgicon-xsmall{
+	/*Size 24px*/
+	width: var(--spacing5);
+	height: var(--spacing5);
 	color: var(--color-text-primary-muted);
 }
 
@@ -886,7 +934,7 @@ body.menu-open::before {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing4);
-	margin-top: var(--spacing8);
+	margin-top: var(--spacing11);
 	padding: 0;
 	list-style: none;
 	align-items: center;
@@ -905,6 +953,10 @@ body.menu-open::before {
   background-color: var(--color-text-primary);
   border-radius: 2px;
   transition: 0.3s;
+}
+
+.header-controls-mobile {
+    display: none;
 }
 
 /* ─── Mudanças tela pequena ──────────────────────────────────────────────────────── ✣ ─ */
@@ -951,11 +1003,36 @@ body.menu-open::before {
     display: none;
   }
 
+  /* ─── Header Mobile ──────────────────────────────────────────────────────── ✣ ─ */
+  .header-controls-mobile {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing4); /* Espaço entre a Pílula e o Hambúrguer */
+  
+  .header-controls-mobile .nav-preferences {
+      /* Opcional: Reduz levemente padding se faltar espaço em telas muito pequenas */
+      transform: scale(0.95); 
+      transform-origin: right center;
+  
+  .header-controls-mobile .lang-menu {
+      right: 0;
+      left: auto;
+      transform: translateY(10px);
+      min-width: 130px;
+  
+  .header-controls-mobile .lang-selector.open .lang-menu {
+      transform: translateY(14px);
+  }
+
   /* ─── Hamburguer menu show ──────────────────────────────────────────────────────── ✣ ─ */
   .menu-toggle {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    color: var(--color-text-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
   .offscreen-menu {
@@ -980,20 +1057,29 @@ body.menu-open::before {
   }
   /* ─── Language Selector ──────────────────────────────────────────────────────── ✣ ─ */
   .lang-selector {
-    width: 100%;
+    width: auto; 
     display: flex;
     justify-content: center;
+    position: relative;
   }
   
   .lang-menu {
-    /* No mobile, centraliza o dropdown */
+    /* Layout */
     left: 50%;
     right: auto;
-    transform: translateX(-50%) translateY(-10px);
+    text-align: center; 
+    min-width: 150px;
+    /* Animação */
+    transform: translateX(-50%) translateY(10px);
   }
   
   .lang-selector.open .lang-menu {
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(15px);
+  }
+  
+  .lang-menu li {
+      text-align: center;
+      padding: var(--spacing3);
   }
 
 
