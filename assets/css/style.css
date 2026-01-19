@@ -651,6 +651,10 @@ footer section ul{
 	text-align: left;
 }
 
+.flex-child-left{
+	align-self: start;
+}
+
 .hidden{
 	display: none;
 }
@@ -664,9 +668,13 @@ footer section ul{
 }
 
 @media (max-width: 992px) {
-  .center-text-mobile{
-  	text-align: center;
-  }
+	.center-text-mobile{
+  		text-align: center;
+  	}
+
+	.flex-child-center-mobile{
+		align-self: center;
+	}
 }
 
 /* Estiliza os Childs do .flex */
