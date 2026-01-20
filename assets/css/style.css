@@ -18,6 +18,7 @@
 	--spacing45: 1.25rem; /* 20 px */
 	--spacing5: 1.5rem; /* 24 px */
 	--spacing6: 2rem; /* 32 px */
+	--spacing67: 2.5rem; /* 40 px */
 	--spacing7: 3rem; /* 48 px */
 	--spacing8: 5rem; /* 80 px */
 	--spacing9: 6rem; /* 96 px */
@@ -152,14 +153,14 @@ h1{
 	font-weight: bold;
 	letter-spacing: -0.02em;
 	line-height: 1.1; /*Espaçamento entre linhas*/
-	margin-top:1rem; /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: 0.5rem; /*Espaçamento de paragrafo AFTER*/
+	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
 }
 
 h2{
 	/*Texto*/
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
-	font-size: 2.5rem;/*40px*/
+	font-size: var(--spacing67); /*40px*/
 	font-weight: bold;
 	letter-spacing: -0.01em;
 	line-height: 1.1; /*Espaçamento entre linhas*/
@@ -181,7 +182,7 @@ h3{
 h4{
 	/*Texto*/
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
-	font-size: 1.5rem;/*24px*/
+	font-size: var(--spacing5);/*24px*/
 	font-weight: bold;
 	line-height: 1.1; /*Espaçamento entre linhas*/
 	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
@@ -212,6 +213,53 @@ a{
 .span{
 	white-space: nowrap;
 	padding-bottom: var(--spacing3);
+}
+
+
+/* ─── TIPOGRAFIA MOBILE ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+@media (max-width:992px) {
+	h1{
+		/*Texto*/
+		font-size: var(--spacing6); /*32px*/
+		line-height: 1.1; /*Espaçamento entre linhas*/
+		margin-top: var(--spacing2); /*Espaçamento de paragrafo BEFORE*/
+		margin-bottom: var(--spacing1); /*Espaçamento de paragrafo AFTER*/
+	}
+
+	h2{
+		/*Texto*/
+		font-size: var(--spacing5); /*24px*/
+		margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+		margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+	}
+	
+	h3{
+		/*Texto*/
+		font-size: var(--spacing45);/*20px*/
+		margin-top: var(--spacing3); /*Espaçamento de paragrafo BEFORE*/
+		margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+	}
+	
+	h4{
+		/*Texto*/
+		font-size: var(--spacing4);/*16px*/
+		margin-top: var(--spacing2); /*Espaçamento de paragrafo BEFORE*/
+		margin-bottom: var(--spacing1); /*Espaçamento de paragrafo AFTER*/
+	}
+	
+	p{
+		font-size: var(--spacing4);/*16px*/
+		margin-top: var(--spacing2); /*Espaçamento de paragrafo BEFORE*/
+		margin-bottom: var(--spacing1); /*Espaçamento de paragrafo AFTER*/
+	}
+	
+	a{
+		text-decoration: none;
+		color: var(--color-text-primary); /*Primary TextColor*/
+		font-size: var(--spacing4);/*16px*/
+		font-weight: normal;
+		line-height: 1.4; /*Espaçamento entre linhas*/
+	}
 }
 
 
@@ -329,16 +377,16 @@ footer section ul{
 }
 
 .nav-preferences:hover {
-    border-color: var(--color-text-primary);
+	border-color: var(--color-text-primary);
 }
 
 
 /* ─── CARDS ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .card{
 	/* Decoration */
-  	background-color: var(--gradient-bg); /* Secondary Color */
-  	border-radius: var(--spacing2);
-  	border: var(--border);
+  background-color: var(--gradient-bg); /* Secondary Color */
+  border-radius: var(--spacing2);
+  border: var(--border);
 	border-top: solid 1px var(--color-highlight);
 	box-shadow: var(--shadow);
 	/* Sizing */
@@ -613,9 +661,8 @@ footer section ul{
 .divider-horizontal{
 	width: 100%;
 	height: 1px;
-	margin: var(--spacing0) var(--spacing1);
+	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
 	background-color: var(--color-border-muted);
-	margin: var(--spacing2) 0; /* vertical | horizontal */
 }
 
 .svgicon-small{
@@ -727,6 +774,7 @@ footer section ul{
 	flex-basis: 0;
 	min-width: 400px;
 }
+
 @media (max-width: 992px) {
   .flex > * {
     min-width: 100%;
@@ -1024,11 +1072,11 @@ body.menu-open::before {
 
 /* ─── Mudanças tela pequena ──────────────────────────────────────────────────────── ✣ ─ */
 @media (max-width: 992px) {
-  
+
 	/* ─── Elements ──────────────────────────────────────────────────────── ✣ ─ */
   
   .page-wrapper {
-  	padding: var(--spacing6);
+  	padding: var(--spacing1) var(--spacing6);
   	box-sizing: border-box;
   }
 
