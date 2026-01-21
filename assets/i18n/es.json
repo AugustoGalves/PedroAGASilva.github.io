@@ -10,9 +10,10 @@
   "nav.contact": "Contacto",
 
   "hero.name": "Pedro Augusto G. A. Silva",
-  "hero.role": "Ingeniero Mecánico y Desarrollador",
-  "hero.specialty": "Especialista en HVAC, proyectos internacionales y sistemas de transmisión de potencia",
-  "hero.cta": "Ver mi trabajo",
+  "hero.role": "Ingeniero Mecánico | Diseñador de HVAC | Experiencia Internacional | Automatización, Electricidad y Programación",
+  "hero.specialty": "Ingeniero y jefe de proyecto durante las reparaciones del buque Electra (experiencia internacional). Dos años de experiencia como diseñador de sistemas HVAC, desarrollando soluciones de programación, sistemas eléctricos y automatización",
+  "hero.cta1": "Ver portafolio",
+  "hero.cta2": "Contáctame",
 
   "highlights.card1.title": "Diseñador HVAC",
   "highlights.card1.desc": "Certificado + 2 años de experiencia",

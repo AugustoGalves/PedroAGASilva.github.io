@@ -312,15 +312,32 @@ footer section ul{
 }
 
 .carousel-wrapper{
+	/*Sizing*/
+	width: 100%;
+	/*Layout*/
+	display: flex;
+	flex-direction: row; /*Container pai: linha ou coluna*/
+	align-items: center; /*Children vertical distribuition if flex is row*/
+	/*Extras*/
+	overflow: hidden;
+}
+
+.carousel-track{
 	/*Layout*/
 	display: flex;
 	flex-direction: row; /*Container pai: linha ou coluna*/
 	justify-content: space-around; /*Children horizontal distribuition if flex is row*/
 	align-items: center; /*Children vertical distribuition if flex is row*/
-
-	/*Extras*/	
 	gap: 5%; /*Margin entre itens*/
-	overflow: hidden;
+	/*Extras*/	
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none; /*Esconde a scroll bar no firefox*/
+	overflow-x: auto; /*Esconde o overflow mas mostra um scroll. Mas caso não tenha overflow, o scroll some*/
+}
+
+.carousel-track::-webkit-scrollbar{
+	/*Layout*/
+	display: none;
 }
 
 /* ─── CONTAINERS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
@@ -424,8 +441,8 @@ footer section ul{
 	/* Layout */
 	justify-content: flex-start;
 	overflow: hidden; /* Esconde oq sair do container */
-
   /* Animação */
+  scroll-snap-align: start;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -765,20 +782,6 @@ footer section ul{
 	.flex-child-center-mobile{
 		align-self: center;
 	}
-}
-
-/* Estiliza os Childs do .flex */
-.flex > *{
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: 0;
-	min-width: 400px;
-}
-
-@media (max-width: 992px) {
-  .flex > * {
-    min-width: 100%;
-  }
 }
 
 .reverse{
