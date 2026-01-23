@@ -10,19 +10,19 @@
   "nav.contact": "Contact",
 
   "hero.name": "Pedro Augusto G. A. Silva",
-  "hero.role": "Mechanical Engineer | HVAC Designer | International Experience | Automation, Electrical and Programming",
-  "hero.specialty": "Engineer and project manager during repairs on the Electra ship (international experience). Two years of experience as an HVAC designer developing solutions in programming, electrical systems, and automation",
+  "hero.role": "Mechanical Engineer | HVAC Designer<br>International Experience | Programming, Automation and Electrical",
+  "hero.specialty": "Bilingual Mechanical Engineer (C2) with experience in international technical coordination, HVAC projects, and innovation in engineering and automation software",
   "hero.cta1": "View portfolio",
   "hero.cta2": "Contact me",
 
   "highlights.card1.title": "HVAC Designer",
-  "highlights.card1.desc": "Certified + 2 years of experience",
+  "highlights.card1.desc": "Experience in projects for BMW, TIM, and Rede D'Or, following NBR and ANVISA standards",
 
   "highlights.card2.title": "International projects",
-  "highlights.card2.desc": "Management in the naval repair sector (EN)",
+  "highlights.card2.desc": "Project management in the naval repair sector (EN), increasing operating revenue by 300%",
 
-  "highlights.card3.title": "Multidisciplinary profile",
-  "highlights.card3.desc": "Programming, automation, IoT and electrical systems",
+  "highlights.card3.title": "Innovation, Programming & IoT",
+  "highlights.card3.desc": "Development of embedded solutions with ESP32, RTOS, and Patent-Pending VBA",
 
   "portfolio.title": "Portfolio",
   "portfolio.subtitle": "Featured projects",

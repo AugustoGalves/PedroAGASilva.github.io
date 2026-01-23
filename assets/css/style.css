@@ -303,8 +303,8 @@ footer section ul{
 
 .hero-left{
 	/*Layout*/
-	width: 75%;
-	padding-right: 20%; /*Ocupar menos espaço do container*/
+	width: 80%;
+	padding-right: 10%; /*Ocupar menos espaço do container*/
 	display: flex;
 	flex-direction: column; /*Container pai: linha ou coluna*/
 	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
@@ -854,105 +854,106 @@ footer section ul{
 
 
 
-.padding0{
+.p-0{
 	padding: 0;
 }
 
-.padding1{
+/* py significa Padding do Eixo Y */
+.py-1{
 	padding: var(--spacing1) 0;
 }
 
-.padding2{
+.py-2{
 	padding: var(--spacing2) 0;
 }
 
-.padding3{
+.py-3{
 	padding: var(--spacing3) 0;
 }
 
-.padding4{
+.py-4{
 	padding: var(--spacing4) 0;
 }
 
-.padding45{
+.py-45{
 	padding: var(--spacing45) 0;
 }
 
-.padding5{
+.py-5{
 	padding: var(--spacing5) 0;
 }
 
-.padding6{
+.py-6{
 	padding: var(--spacing6) 0;
 }
 
-.padding7{
+.py-7{
 	padding: var(--spacing7) 0;
 }
 
-.padding8{
+.py-8{
 	padding: var(--spacing8) 0;
 }
 
-.padding9{
+.py-9{
 	padding: var(--spacing9) 0;
 }
 
-.padding10{
+.py-10{
 	padding: var(--spacing10) 0;
 }
 
-.padding11{
+.py-11{
 	padding: var(--spacing11) 0;
 }
 
 
 
-.margin1{
+.my-1{
 	margin: var(--spacing1) auto;
 }
 
-.margin2{
+.my-2{
 	margin: var(--spacing2) auto;
 }
 
-.margin3{
+.my-3{
 	margin: var(--spacing3) auto;
 }
 
-.margin4{
+.my-4{
 	margin: var(--spacing4) auto;
 }
 
-.margin45{
+.my-45{
 	margin: var(--spacing45) auto;
 }
 
-.margin5{
+.my-5{
 	margin: var(--spacing5) auto;
 }
 
-.margin6{
+.my-6{
 	margin: var(--spacing6) auto;
 }
 
-.margin7{
+.my-7{
 	margin: var(--spacing7) auto;
 }
 
-.margin8{
+.my-8{
 	margin: var(--spacing8) auto;
 }
 
-.margin9{
+.my-9{
 	margin: var(--spacing9) auto;
 }
 
-.margin10{
+.my-10{
 	margin: var(--spacing10) auto;
 }
 
-.margin11{
+.my-11{
 	margin: var(--spacing11) auto;
 }
 
@@ -1113,7 +1114,7 @@ body.menu-open::before {
 
   .hero-image img {
     margin-right: 0;
-    margin-top: -10px;
+    margin-top: -5px;
     margin-bottom: -16px;
     max-width: 40%;
     height: auto;

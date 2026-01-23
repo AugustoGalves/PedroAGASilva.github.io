@@ -10,19 +10,19 @@
   "nav.contact": "Contacto",
 
   "hero.name": "Pedro Augusto G. A. Silva",
-  "hero.role": "Ingeniero Mecánico | Diseñador de HVAC | Experiencia Internacional | Automatización, Electricidad y Programación",
-  "hero.specialty": "Ingeniero y jefe de proyecto durante las reparaciones del buque Electra (experiencia internacional). Dos años de experiencia como diseñador de sistemas HVAC, desarrollando soluciones de programación, sistemas eléctricos y automatización",
+  "hero.role": "Ingeniero Mecánico | Diseñador de HVAC<br>Experiencia Internacional | Programación, Automatización y Electricidad",
+  "hero.specialty": "Ingeniero Mecánico Bilingüe (C2) con experiencia en coordinación técnica internacional, proyectos HVAC e innovación en software de ingeniería y automatización",
   "hero.cta1": "Ver portafolio",
   "hero.cta2": "Contáctame",
 
   "highlights.card1.title": "Diseñador HVAC",
-  "highlights.card1.desc": "Certificado + 2 años de experiencia",
+  "highlights.card1.desc": "Experiencia en proyectos para BMW, TIM y Rede D'Or, siguiendo normas NBR y ANVISA",
 
   "highlights.card2.title": "Proyectos internacionales",
-  "highlights.card2.desc": "Gestión en el sector de reparaciones navales (EN)",
+  "highlights.card2.desc": "Gestión de proyectos en el sector de reparaciones navales (EN), incrementando los ingresos operativos en un 300%",
 
-  "highlights.card3.title": "Perfil multidisciplinario",
-  "highlights.card3.desc": "Programación, automatización, IoT y electricidad",
+  "highlights.card3.title": "Engenharia, programação & IoT",
+  "highlights.card3.desc": "Desenvolvimento de soluções embarcadas com ESP32, RTOS e Patentes Pendentes em VBA",
 
   "portfolio.title": "Portafolio",
   "portfolio.subtitle": "Proyectos destacados",
