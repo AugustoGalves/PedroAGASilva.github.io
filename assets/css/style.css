@@ -311,35 +311,6 @@ footer section ul{
 	align-items: start; /*Children vertical distribuition if flex is row*/
 }
 
-.carousel-wrapper{
-	/*Sizing*/
-	width: 100%;
-	/*Layout*/
-	display: flex;
-	flex-direction: row; /*Container pai: linha ou coluna*/
-	align-items: center; /*Children vertical distribuition if flex is row*/
-	/*Extras*/
-	overflow: hidden;
-}
-
-.carousel-track{
-	/*Layout*/
-	display: flex;
-	flex-direction: row; /*Container pai: linha ou coluna*/
-	justify-content: space-around; /*Children horizontal distribuition if flex is row*/
-	align-items: center; /*Children vertical distribuition if flex is row*/
-	gap: 5%; /*Margin entre itens*/
-	/*Extras*/	
-	scroll-snap-type: x mandatory;
-	scrollbar-width: none; /*Esconde a scroll bar no firefox*/
-	overflow-x: auto; /*Esconde o overflow mas mostra um scroll. Mas caso não tenha overflow, o scroll some*/
-}
-
-.carousel-track::-webkit-scrollbar{
-	/*Layout*/
-	display: none;
-}
-
 /* ─── CONTAINERS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .container{
 	/*Sizing*/
@@ -461,6 +432,45 @@ footer section ul{
 	border-top-right-radius: var(--spacing2); /* Arredondamento da borda superior dir. da imagem */
 }
 
+/* ─── CAROUSEL ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+
+.carousel-wrapper{
+	/*Sizing*/
+	width: 100%;
+	/*Layout*/
+	position: relative;
+	/*Extras*/
+	overflow: hidden;
+}
+
+.carousel-track{
+	/*Layout*/
+	display: flex;
+  gap: var(--spacing4); /* 16px de espaço entre cards */
+  padding: var(--spacing2) var(--spacing1) var(--spacing4) var(--spacing1); /* Espaçamento interno para não cortar sombras ou bordas */
+	/*Extras*/	
+	scrollbar-width: none; /*Esconde a scroll bar no firefox*/
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overflow-x: auto; /*Esconde o overflow mas mostra um scroll. Mas caso não tenha overflow, o scroll some*/
+	scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.carousel-track::-webkit-scrollbar{
+	/*Layout*/
+	display: none;
+}
+
+.carousel-track .card--image {
+		/* DESKTOP DEFAULT: 3 itens visíveis */
+    /* Lógica: (100% da tela - 2 espaços de gap) dividido por 3 cards */
+    flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 3);
+    width: auto; /* Reseta o width fixo de 30% antigo */
+    
+    scroll-snap-align: start; /* Alinha o card à esquerda ao parar de rolar */
+    margin: 0; /* Reseta margens externas */
+}
 
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ███████████████████████████  BOTÕES (BEM)  ███████████████████████████████ */
@@ -675,8 +685,15 @@ footer section ul{
 }
 
 /* ─── Geral ──────────────────────────────────────────────────────── ✣ ─ */
-.divider-horizontal{
+.divider-horizontal100{
 	width: 100%;
+	height: 1px;
+	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
+	background-color: var(--color-border-muted);
+}
+
+.divider-horizontal90{
+	width: 90%;
 	height: 1px;
 	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
 	background-color: var(--color-border-muted);
@@ -1103,6 +1120,15 @@ body.menu-open::before {
         background-color: rgba(15, 23, 42, 0.85); /* Tom escuro baseado no seu tema */
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+
+	/* ─── CAROUSEL ──────────────────────────────────────────────────────── ✣ ─ */
+
+  .carousel-track .card--image {
+      /* MOBILE: 2.5 itens visíveis */
+      /* Lógica: Mostra 2 inteiros e metado do terceiro para incentivar o scroll */
+      flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 2.5);
+  }
+
 	/* ─── Elements ──────────────────────────────────────────────────────── ✣ ─ */
   
   .page-wrapper {
@@ -1116,10 +1142,6 @@ body.menu-open::before {
 
   .card--emote{
   	width: 85%;
-  }
-
-  .card--image{
-  	width: 40%;
   }
 
   .container-nav {
