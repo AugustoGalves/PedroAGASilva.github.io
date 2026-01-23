@@ -779,6 +779,10 @@ footer section ul{
   		text-align: center;
   	}
 
+  .center-align-mobile{
+  	justify-content: center;
+  }
+
 	.flex-child-center-mobile{
 		align-self: center;
 	}
@@ -1077,6 +1081,28 @@ body.menu-open::before {
 /* ─── Mudanças tela pequena ──────────────────────────────────────────────────────── ✣ ─ */
 @media (max-width: 992px) {
 
+	/* ─── Sticky header ──────────────────────────────────────────────────────── ✣ ─ */
+	header {
+        position: -webkit-sticky; /* Suporte para Safari antigo */
+        position: sticky;
+        top: 0;
+        z-index: 990; /* Garante que fique acima das imagens do portfólio */
+        
+        /* Efeito Moderno de Vidro (Glassmorphism) */
+        background-color: rgba(255, 255, 255, 0.85); /* Fundo branco translúcido */
+        backdrop-filter: blur(8px); /* Desfoque do conteúdo que passa por trás */
+        -webkit-backdrop-filter: blur(8px);
+        
+        /* Linha sutil para separar o header do conteúdo ao rolar */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        transition: background-color 0.3s ease;
+    }
+
+    /* Ajuste automático para o seu Dark Mode */
+    [data-theme="dark"] header {
+        background-color: rgba(15, 23, 42, 0.85); /* Tom escuro baseado no seu tema */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
 	/* ─── Elements ──────────────────────────────────────────────────────── ✣ ─ */
   
   .page-wrapper {
@@ -1114,7 +1140,7 @@ body.menu-open::before {
 
   .hero-image img {
     margin-right: 0;
-    margin-top: -5px;
+    margin-top: -2px;
     margin-bottom: -16px;
     max-width: 40%;
     height: auto;
