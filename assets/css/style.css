@@ -124,6 +124,11 @@ html{
 	scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden; /* Impede rolagem lateral indesejada */
+    width: 100%;
+}
+
 img{
 	margin: 0;
 }
