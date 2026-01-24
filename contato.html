@@ -1,51 +1,113 @@
-<!doctype html>
-<Html lang="pt-BR">
-<Head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalabre=no">
-
-    <!-- CUSTOMIZING -->
-    <link rel="icon" href="/assets/favicon/Favicon 96.png">
-    <meta name="theme-color" content="#222A35">
-    
-    <!-- SEO SETTINGS -->
-    <title> Pedro Augusto | Engenheiro Mecânico </title>
-    <meta name="description" content="
-            Engenheiro mecânico com experiência em HVAC, manutenção industrial, transmissão de potência e projetos técnicos. Atuação nacional e internacional, coordenação técnica e engenharia aplicada.
-        "/>
-    <meta name="keywords" content="
-            engenheiro mecânico,
-            engenharia mecânica,
-            HVAC,
-            climatização,
-            manutenção industrial,
-            transmissão de potência,
-            correias de potência,
-            engrenagens,
-            projetos mecânicos,
-            engenheiro HVAC,
-            engenharia industrial,
-            engenheiro CREA,
-            engenheiro Brasil,
-            engenheiro internacional
-        "/>
-    <meta name="author" content="Pedro Augusto Gomes Alves Silva"/>
-    <meta name="robots" content="index, follow">
-
-    <!-- DOWNLOADS -->
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
-    <script src="https://kit.fontawesome.com/43dff1e8fb.js" crossorigin="anonymous"></script>
-
-    <!-- Styling Icons SVG -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção Técnica | Pedro Silva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
     <style>
-      .icon {
-        width: 2em;
-        height: 2em;
-        vertical-align: -0.125em;
-      }
+        :root {
+            --primary: #1d3557; /* Seu azul marinho padrão */
+            --accent: #025bb0;  /* Cor de destaque dos botões */
+            --text: #333;
+            --bg: #f8f9fa;
+        }
+
+        /* Suporte ao Dark Mode do sistema */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --text: #e3e3e3;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container { max-width: 600px; }
+
+        /* Animação de Engrenagem (Engineering Coded) */
+        .icon-wrapper {
+            margin-bottom: 30px;
+            animation: rotate 8s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid var(--accent);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+        }
+
+        .contact-links {
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        .contact-links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
     </style>
 </head>
-
 <body>
-	<p>CONTATO</p>
+
+    <div class="container">
+        <div class="icon-wrapper">
+            <svg width="80" height="80" viewBox="0 -960 960 960" fill="currentColor" style="color: var(--accent);">
+                <path d="M150-103v-128h144l-93-317q-45-14-71.5-47.5T103-684q0-56 41-97.5t97-41.5q53 0 89 29t49 80h109v-59q0-17 12-29t29-12q10 0 17.5 7t8.5 17l68-65q11-10 26.5-13.5T681-865l158 76q14 7 19 21t-3 29q-7 13-21 17t-27-4l-147-72-89 90v42l89 95 147-71q15-7 27.5-4t20.5 16q8 15 3 30t-20 22l-150 71q-19 10-35.5 9T623-512l-68-65q-1 14-8 19t-18 5q-17 0-29-12t-12-29v-60H377q-2 17-12.5 38.5T342-586l183 355h184v128H150Zm91-525q24 0 40-16t16-40q0-24-16-40t-40-16q-24 0-40 16t-16 40q0 24 16 40t40 16Zm120 397h97L289-562q-5 3-12.5 5.5T265-553l96 322Zm97 0Z"/>
+            </svg>
+        </div>
+
+        <div class="badge">Ajuste Técnico</div>
+        
+        <h1>Calibrando Sistemas</h1>
+        
+        <p>Estamos realizando uma manutenção preventiva e atualizando nosso portfólio para melhor atender aos requisitos de engenharia e software[cite: 4, 31]. Voltamos em breve com novidades.</p>
+
+        <div class="contact-links">
+            <a href="mailto:PedroAGASilva@gmail.com">E-mail</a> | 
+            <a href="https://linkedin.com/in/augustogomessilva">LinkedIn</a>
+        </div>
+    </div>
+
 </body>
+</html>
