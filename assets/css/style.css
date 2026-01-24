@@ -287,6 +287,20 @@ a{
 	transition: filter 0.3s ease; /*Acontece ao sofrer blur do hamburger menu*/
 }
 
+.header-wrapper{
+  /*Sizing*/
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  /*Layout*/
+  margin: 0 auto;
+  padding: 0 var(--spacing11);
+}
+
+.header{
+	width: 100%;
+}
+
 
 nav ul{
 	list-style: none;
@@ -1061,7 +1075,7 @@ body.menu-open::before {
 	transition: .3s ease;
 	filter: none !important; /*Remove o blur desse elemento*/
 	display: none;
-	z-index: 100;
+	z-index: 998;
 }
 
 .offscreen-menu.active{
@@ -1105,19 +1119,19 @@ body.menu-open::before {
 
 	/* ─── Sticky header ──────────────────────────────────────────────────────── ✣ ─ */
 	header {
-        position: -webkit-sticky; /* Suporte para Safari antigo */
-        position: sticky;
-        top: 0;
-        z-index: 990; /* Garante que fique acima das imagens do portfólio */
-        
-        /* Efeito Moderno de Vidro (Glassmorphism) */
-        background-color: rgba(255, 255, 255, 0.85); /* Fundo branco translúcido */
-        backdrop-filter: blur(8px); /* Desfoque do conteúdo que passa por trás */
-        -webkit-backdrop-filter: blur(8px);
-        
-        /* Linha sutil para separar o header do conteúdo ao rolar */
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        transition: background-color 0.3s ease;
+      position: -webkit-sticky; /* Suporte para Safari antigo */
+      position: sticky;
+      top: 0;
+      z-index: 990; /* Garante que fique acima das imagens do portfólio */
+      
+      /* Efeito Moderno de Vidro (Glassmorphism) */
+      background-color: rgba(255, 255, 255, 0.85); /* Fundo branco translúcido */
+      backdrop-filter: blur(8px); /* Desfoque do conteúdo que passa por trás */
+      -webkit-backdrop-filter: blur(8px);
+      
+      /* Linha sutil para separar o header do conteúdo ao rolar */
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease;
     }
 
     /* Ajuste automático para o seu Dark Mode */
@@ -1139,6 +1153,15 @@ body.menu-open::before {
   .page-wrapper {
   	padding: var(--spacing1) var(--spacing6);
   	box-sizing: border-box;
+  }
+
+  .header-wrapper{
+  	padding: 0 var(--spacing6);
+  }
+
+  .header-wrapper .container {
+        padding-top: var(--spacing1);
+        padding-bottom: var(--spacing1);
   }
 
   .hero-full-line {
@@ -1222,7 +1245,7 @@ body.menu-open::before {
 		position: fixed;
 		top: 0;
 		right: -450px;
-		z-index: 99;
+		z-index: 998;
 		/*Layout*/
 		display: flex;
 		flex-direction: column;
