@@ -376,160 +376,14 @@ footer section ul{
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* ████████████████████████ 📄 PAGE SECTIONS  ██████████████████████████████ */
-/* ────────────────────────────────────────────────────────────────────────── */
-/* Elementos que so aparecem 1 vez na página, são muito especificos */
-
-/* ─── HEADER ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.nav-preferences {
-  /* Layout */
-  display: flex;
-  align-items: center;
-  /* Sizing */
-  padding: var(--spacing1);
-	/* Visuals */
-  background-color: transparent;
-  border: 1px solid var(--color-border-muted); 
-  border-radius: 50px; 
-	/* Effects */
-  transition: border-color 0.3s ease;
-}
-
-.nav-preferences:hover {
-	/* Visuals */
-	border-color: var(--color-text-primary);
-}
-
-.header{
-	/* Sizing */
-	width: 100%;
-}
-
-/* ───  Button settings & Lang Toggle ──────────────────────────────────────────────── ✣ ─ */
-.btn-settings, .lang-toggle{
-	/* Layout */
-	display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing2);
-	/* Sizing */
-  padding: var(--spacing1) var(--spacing2);
-	/* Typograph */
-  font-size: var(--spacing4);
-	/* Visuals */
-  color: var(--color-text-primary);
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-	/* Effects */
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.btn-settings {
-	/* Sizing */
-  padding-left: var(--spacing2);
-	/* Visuals */
-  border-radius: 50px 0 0 50px;
-}
-
-.lang-toggle {
-	/* Sizing */
-  padding-right: var(--spacing2);
-	/* Visuals */
-  border-radius: 0 50px 50px 0;
-}
-
-.btn-settings:hover, .lang-toggle:hover {
-	/* Visuals */
-  color: var(--color-accent1);
-  background-color: var(--color-bg-dark) !important;
-}
-
-.lang-selector {
-  /* Layout */
-  position: relative;
-  display: flex;
-}
-
-.pill-divider {
-    width: 1px;
-    height: var(--spacing45); /* 20px */
-    background-color: var(--color-border-muted);
-    margin: 0 2px;
-}
-
-/* ───  Lang Menu ──────────────────────────────────────────────── ✣ ─ */
-.lang-menu {
-  /* Layout */
-  display: none;
-  top: calc(100% + var(--spacing3)); 
-  right: 0;
-  z-index: 999;
-	/* Sizing */
-  padding: var(--spacing2); /* 8px */
-  min-width: 140px;
-	/* Typograph */
-  position: absolute;
-	/* Visuals */
-  background-color: var(--color-bg-light); /* Fundo destacado */
-  list-style: none;
-  border: var(--border); /* Sua variável de borda padrão */
-  border-radius: var(--spacing2);
-  box-shadow: var(--shadow); /* Sua sombra padrão */
-	/* Effects */
-  transform: translateY(calc(var(--spacing2) * -1));
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.lang-menu li {
-  /* Layout */
-  text-align: left;
-	/* Sizing */
-  padding: var(--spacing2) var(--spacing3);
-	/* Visuals */
-  color: var(--color-text-primary);
-  border-radius: var(--spacing1);
-	/* Effects */
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.lang-menu li:hover {
-	/* Visuals */
-  background-color: var(--color-bg-dark); 
-  color: var(--color-accent1);
-}
-
-.lang-selector.open .lang-menu {
-  /* Layout */
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  /* Effects */
-  transform: translateY(0);
-}
-
-
-/* ─── HERO ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.hero-left{
-	/* Layout */
-	align-items: start; /*Children vertical distribuition if flex is row*/
-	/* Sizing */
-	padding-right: 10%; /*Ocupar menos espaço do container*/
-	width: 80%;
-}
-
-/* ─── MAIN ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-
-/* ─── FOOTER ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-
-
-
-/* ────────────────────────────────────────────────────────────────────────── */
 /* ███████████████████████████  🧩COMPONENTS  ███████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+/* ───  Seção ──────────────────────────────────────────────────────── ✣ ─ */
+.section{
+	padding-top: var(--spacing4);
+	padding-bottom: var(--spacing4);
+}
 
 /* ───  Button ──────────────────────────────────────────────────────── ✣ ─ */
 .btn{
@@ -567,7 +421,7 @@ footer section ul{
 /* ───  Button primary ──────────────────────────────────────────────────────── ✣ ─ */
 .btn--primary{
 	/* Sizing */
-	padding: var(--spacing45) var(--spacing4); /* vertical | horizontal */
+	padding: var(--spacing3) var(--spacing3); /* vertical | horizontal */
 	min-height: var(--spacing6);
 	/* Typograph */
 	font-size: var(--spacing4);
@@ -579,7 +433,7 @@ footer section ul{
 /* ───  Button primary Big Size ──────────────────────────────────────────────────────── ✣ ─ */
 .btn--primary-big{
 	/* Sizing */
-	padding: var(--spacing5) var(--spacing5); /* vertical | horizontal */
+	padding: var(--spacing3) var(--spacing5); /* vertical | horizontal */
 	min-height: var(--spacing7);
 	/* Typograph */
 	font-size: var(--spacing5);
@@ -591,7 +445,7 @@ footer section ul{
 /* ───  Button secondary ──────────────────────────────────────────────────────── ✣ ─ */
 .btn--secondary{
 	/* Sizing */
-	padding: var(--spacing45) var(--spacing3); /* vertical | horizontal */
+	padding: var(--spacing3) var(--spacing3); /* vertical | horizontal */
 	min-height: var(--spacing6);
 	/* Typograph */
 	font-size: var(--spacing4);
@@ -660,6 +514,49 @@ footer section ul{
 }
 
 
+/* ─── Dividers ──────────────────────────────────────────────────────── ✣ ─ */
+.divider-horizontal100{
+	width: 100%;
+	height: 1px;
+	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
+	background-color: var(--color-border-muted);
+}
+
+.divider-horizontal90{
+	width: 90%;
+	height: 1px;
+	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
+	background-color: var(--color-border-muted);
+}
+
+.pill-divider {
+    width: 1px;
+    height: var(--spacing45); /* 20px */
+    background-color: var(--color-border-muted);
+    margin: 0 2px;
+}
+
+/* ─── Icons ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.svgicon-small{
+	/*Size 32px*/
+	width: var(--spacing6);
+	height: var(--spacing6);
+	color: var(--color-text-primary-muted);
+}
+
+.svgicon-xsmall{
+	/*Size 24px*/
+	width: var(--spacing5);
+	height: var(--spacing5);
+	color: var(--color-text-primary-muted);
+}
+
+.btn .svgicon-small path,
+.btn .svgicon-xsmall path{
+	color: var(--color-text-primary);
+}
+
+
 /* ─── CAROUSEL ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .carousel-wrapper{
 	/* Layout */
@@ -703,94 +600,183 @@ footer section ul{
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* ██████████████████████████  ELEMENTOS (BEM)  █████████████████████████████ */
+/* ████████████████████████ 📄 PAGE SECTIONS  ██████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
+/* Elementos que so aparecem 1 vez na página, são muito especificos */
 
-/* ─── PAREI A REFATORAÇÃO AQUI!!!! ──────────────────────────────────────────────────────── ✣ ─ */
-
-
-
-
-
-
-
-
-
-
-/* ─── Geral ──────────────────────────────────────────────────────── ✣ ─ */
-.divider-horizontal100{
+/* ─── HEADER ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.header{
+	/* Sizing */
 	width: 100%;
-	height: 1px;
-	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
-	background-color: var(--color-border-muted);
-}
-
-.divider-horizontal90{
-	width: 90%;
-	height: 1px;
-	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
-	background-color: var(--color-border-muted);
-}
-
-.svgicon-small{
-	/*Size 32px*/
-	width: var(--spacing6);
-	height: var(--spacing6);
-	color: var(--color-text-primary-muted);
-}
-
-.svgicon-xsmall{
-	/*Size 24px*/
-	width: var(--spacing5);
-	height: var(--spacing5);
-	color: var(--color-text-primary-muted);
-}
-
-.btn-primary .svgicon-small path{
-	color: var(--color-text-primary);
 }
 
 .logo-header{
+	/* Sizing */
 	height: var(--spacing8);
 	width: auto
 }
 
-.hero-image{
- 	/*Sizing*/
+/* ─── NAV WIDGETS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.nav-preferences {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  /* Sizing */
+  padding: var(--spacing1);
+	/* Visuals */
+  background-color: transparent;
+  border: 1px solid var(--color-border-muted); 
+  border-radius: 50px; 
+	/* Effects */
+  transition: border-color 0.3s ease;
+}
+
+.nav-preferences:hover {
+	/* Visuals */
+	border-color: var(--color-text-primary);
+}
+
+.btn-settings, 
+.lang-toggle{
+	/* Layout */
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing2);
+	/* Sizing */
+  padding: var(--spacing1) var(--spacing2);
+	/* Typograph */
+  font-size: var(--spacing4);
+  color: var(--color-text-primary);
+	/* Visuals */
+  background: transparent;
+  border: none;
+  box-shadow: none;
+	/* Effects */
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-settings:hover, 
+.lang-toggle:hover {
+	/* Visuals */
+  color: var(--color-accent1);
+  background-color: var(--color-bg-dark);
+}
+
+.btn-settings {
+	/* Sizing */
+  padding-left: var(--spacing2);
+	/* Visuals */
+  border-radius: 50px 0 0 50px;
+}
+
+.lang-toggle {
+	/* Sizing */
+  padding-right: var(--spacing2);
+	/* Visuals */
+  border-radius: 0 50px 50px 0;
+}
+
+
+/* ───  Lang Menu & Selector ──────────────────────────────────────────────── ✣ ─ */
+.lang-selector {
+  /* Layout */
   position: relative;
-  width: 30%;
-  /*Layout*/
   display: flex;
 }
 
+.lang-menu {
+  /* Layout */
+  display: none;
+  position: absolute;
+  top: calc(100% + var(--spacing3)); 
+  right: 0;
+  z-index: 999;
+	/* Sizing */
+  padding: var(--spacing2); /* 8px */
+  min-width: 140px;
+	/* Visuals */
+  background-color: var(--color-bg-light);
+  border: var(--border);
+  border-radius: var(--spacing2);
+  box-shadow: var(--shadow);
+  list-style: none;
+	/* Effects */
+  transform: translateY(calc(var(--spacing2) * -1));
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lang-menu li {
+  /* Layout */
+  text-align: left;
+	/* Sizing */
+  padding: var(--spacing2) var(--spacing3);
+	/* Typograph */
+	/* Visuals */
+  color: var(--color-text-primary);
+  border-radius: var(--spacing1);
+	/* Effects */
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lang-menu li:hover {
+	/* Visuals */
+  background-color: var(--color-bg-dark); 
+  color: var(--color-accent1);
+}
+
+.lang-selector.open .lang-menu {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  /* Effects */
+  transform: translateY(0);
+}
+
+
+/* ─── HERO ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.hero-left{
+	/* Sizing */
+	padding-right: 10%; /*Ocupar menos espaço do container*/
+	width: 80%;
+}
+
+.hero-image{
+ 	/* Layout */
+  position: relative;
+  /* Sizing */
+  width: 30%;
+}
+
 .hero-image img{
-	/*Layout*/
+	/* Layout */
   position: relative;
   z-index: 1;
+  /*Sizing*/
   width: 130%;
 }
 
 .hero-image::before{
+  /* Layout */
   content: ""; /* NÃO FAÇO IDEIA DO QUE TA ACONTECENDO AQUI */
   position: absolute;
   inset: -30% -40%;
-  background: radial-gradient( /* NÃO FAÇO IDEIA DO QUE TA ACONTECENDO AQUI */
+  z-index: 0;
+  /* Visual */
+  background: radial-gradient(
     circle at center,
     rgba(2,91,176,0.15),
     transparent 70% 
   );
-  z-index: 0;
-  pointer-events: none; /* NÃO FAÇO IDEIA DO QUE TA ACONTECENDO AQUI */
+  /* Effects */
+  pointer-events: none; /* O mouse ignora esse elemento, clica direto no que estiver atrás */
 } 
 
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ██████████████████████   ⚙️ UTILITY CLASSES     ██████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
-
-.section{
-	padding-top: var(--spacing4);
-	padding-bottom: var(--spacing4);
-}
 
 .center-x{
   justify-content: center;
@@ -1022,33 +1008,36 @@ footer section ul{
 /* ████████████████████████  📱MOBILE ADJUSTMENTS   █████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
-/* ─── Mudanças gerais ──────────────────────────────────────────────────────── ✣ ─ */
+/* ─── Botão (X) fechar menu  ──────────────────────────────────────────────────────── ✣ ─ */
 .menu-close {
-  /*Layout Self*/
+  /* Layout */
   position: absolute;
   top: var(--spacing4);
   right: var(--spacing4);
-  padding: var(--spacing2);
-  /*Layout Child*/
   display: flex;
   align-items: center;
   justify-content: center;
-  /*Decoration*/
-  background: transparent;
+  /* Sizing */
+  padding: var(--spacing2);
+  /* Visuals */
   color: var(--color-text-primary);
+  background: transparent;
   border: none;
-  cursor: pointer;
-  /*Extras*/
   border-radius: 50%; /* Deixa o hover circular */
+  /* Effects */
+  cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .menu-close:hover {
+    /* Visuals */
     background-color: rgba(0, 0, 0, 0.05); /* Círculo sutil no fundo */
+    /* Effects */
     transform: rotate(90deg); /* Pequena animação de rotação */
 }
 
 .menu-close svg {
+  /* Visuals */
   stroke: currentColor;
   stroke-width: 2;
   fill: none;
@@ -1056,81 +1045,93 @@ footer section ul{
   stroke-linejoin: round;
 }
 
-body.menu-open {
-	overflow: hidden;
+
+/* ─── Botão Hamburguer  ──────────────────────────────────────────────────────── ✣ ─ */
+.menu-toggle {
+  /* Layout */
+  display: none;
+  /* Visuals */
+  background: none;
+  border: none;
+  /* Effects */
+  cursor: pointer;
 }
 
-/* 1. Define o overlay no estado "fechado" (invisível, mas existente) */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 50;
-
-  /* Estado Inicial: Invisível e sem Blur */
-  opacity: 0;
-  visibility: hidden; /* Importante: impede cliques quando fechado */
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px); /* Safari */
-
-  /* A mágica da animação acontece aqui */
-  transition: 
-    opacity 0.4s ease, 
-    backdrop-filter 0.4s ease, 
-    visibility 0.4s; 
+.menu-toggle span {
+  /* Sizing */
+  width: var(--spacing5);
+  height: var(--spacing1);
+  /* Visuals */
+  background-color: var(--color-text-primary);
+  border-radius: 2px;
+  /* Effects */
+  transition: 0.3s;
 }
 
-/* 2. Define o estado "aberto" (visível e borrado) */
-body.menu-open::before {
-  opacity: 1;
-  visibility: visible;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px); /* Safari */
-}
 
+/* ─── Menu offscreen  ──────────────────────────────────────────────────────── ✣ ─ */
 .offscreen-menu{
-	/*Decoration*/
-	transition: .3s ease;
-	filter: none !important; /*Remove o blur desse elemento*/
+	/* Layout */
 	display: none;
+	position: fixed;
+	top: 0;
 	z-index: 998;
+  /* Effects */
+	transition: .3s ease;
+	filter: none; /*Remove o blur desse elemento*/
 }
 
 .offscreen-menu.active{
-	/*Layout*/
+	/* Layout */
 	right: 0px;
+  /* Effects */
 	visibility: visible;
 	opacity: 1;
 }
 
 .offscreen-menu > ul{
+	/* Layout */
 	display: flex;
 	flex-direction: column;
-	gap: var(--spacing4);
-	margin-top: var(--spacing8);
-	padding: 0;
-	list-style: none;
 	align-items: center;
+	margin-top: var(--spacing8);
+	gap: var(--spacing4);
+  /* Sizing */
+	padding: 0;
+  /* Effects */
+	list-style: none;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
+
+/* ─── Overlay Escuro e borrado ao abrir menu  ──────────────────────────────────────────────────────── ✣ ─ */
+body.menu-open {
+	/* Layout */
+	overflow: hidden;
 }
 
-.menu-toggle span {
-  width: var(--spacing5);
-  height: var(--spacing1);
-  background-color: var(--color-text-primary);
-  border-radius: 2px;
-  transition: 0.3s;
+body::before {
+  /* Layout */
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  /* Visuals */
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px); /* Safari */
+  /* Effects */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, backdrop-filter 0.4s ease, visibility 0.4s; 
 }
 
-.header-controls-mobile {
-    display: none;
+body.menu-open::before {
+  /* Visuals */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* Safari */
+  /* Effects */
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ─── Mudanças tela pequena ──────────────────────────────────────────────────────── ✣ ─ */
@@ -1138,144 +1139,162 @@ body.menu-open::before {
 
 	/* ─── Sticky header ──────────────────────────────────────────────────────── ✣ ─ */
 	header {
-      position: -webkit-sticky; /* Suporte para Safari antigo */
-      position: sticky;
-      top: 0;
-      z-index: 990; /* Garante que fique acima das imagens do portfólio */
-      
-      /* Efeito Moderno de Vidro (Glassmorphism) */
-      background-color: rgba(255, 255, 255, 0.85); /* Fundo branco translúcido */
-      backdrop-filter: blur(8px); /* Desfoque do conteúdo que passa por trás */
-      -webkit-backdrop-filter: blur(8px);
-      
-      /* Linha sutil para separar o header do conteúdo ao rolar */
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      transition: background-color 0.3s ease;
-    }
-
-    /* Ajuste automático para o seu Dark Mode */
-    [data-theme="dark"] header {
-        background-color: rgba(15, 23, 42, 0.85); /* Tom escuro baseado no seu tema */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		/* Layout */
+    position: sticky;
+    top: 0;
+    z-index: 990;
+  	/* Visuals */
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  	/* Effects */
+    transition: background-color 0.3s ease;
   }
 
-	/* ─── CAROUSEL ──────────────────────────────────────────────────────── ✣ ─ */
+  [data-theme="dark"] header {
+    /* Visuals */
+    background-color: rgba(15, 23, 42, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+	/* ─── CARDS & CAROUSEL ──────────────────────────────────────────────────────── ✣ ─ */
 
   .carousel-track .card--image {
-      /* MOBILE: 2.5 itens visíveis */
-      /* Lógica: Mostra 2 inteiros e metado do terceiro para incentivar o scroll */
+      /* Sei la qq ta acontecendo aqui */
+      /* Layout */
       flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 2.5);
   }
+
+  .card--emote{
+  	/* Sizing */
+  	width: 85%;
+  }
+
 
 	/* ─── Elements ──────────────────────────────────────────────────────── ✣ ─ */
   
   .page-wrapper {
+  	/* Sizing */
   	padding: var(--spacing1) var(--spacing6);
-  	box-sizing: border-box;
   }
 
   .header-wrapper{
-  	padding: 0 var(--spacing6);
+  	/* Sizing */
+  	padding: var(--spacing0) var(--spacing6);
   }
 
   .header-wrapper .container {
-        padding-top: var(--spacing1);
-        padding-bottom: var(--spacing1);
+  	/* Sizing */
+    padding-top: var(--spacing1);
+    padding-bottom: var(--spacing1);
   }
 
   .hero-full-line {
+  	/* Layout */
   	justify-content: space-between;
   }
 
-  .card--emote{
-  	width: 85%;
-  }
-
   .container-nav {
+    /* Layout */
     display: none;
   }
 
   .hero-left {
-    padding-right: 0;
-    text-align: center;
+    /* Layout */
     align-items: center;
+    text-align: center;
+  	/* Sizing */
+    padding-right: 0;
   }
 
   .hero-image {
-    width: 100%;
+    /* Layout */
     justify-content: center;
     align-items: center;
+  	/* Sizing */
+    width: 100%;
   }
 
   .hero-image img {
+    /* Layout */
     margin-right: 0;
     margin-top: -2px;
     margin-bottom: -16px;
-    max-width: 40%;
+  	/* Sizing */
     height: auto;
+    max-width: 40%;
   }
 
   .hero-image::before {
+    /* Layout */
     display: none;
   }
 
-  /* ─── Header Mobile ──────────────────────────────────────────────────────── ✣ ─ */
+  /* ─── Mobile Controls ──────────────────────────────────────────────────────── ✣ ─ */
   .header-controls-mobile {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing4); /* Espaço entre a Pílula e o Hambúrguer */
+    /* Layout */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing4); /* Espaço entre a Pílula e o Hambúrguer */
   }
 
   .header-controls-mobile .nav-preferences {
-      /* Opcional: Reduz levemente padding se faltar espaço em telas muito pequenas */
-      transform: scale(0.95); 
-      transform-origin: right center;
+    /* Effects */
+    transform: scale(0.95); 
+    transform-origin: right center;
   }
 
   .header-controls-mobile .lang-menu {
-      right: 0;
-      left: auto;
-      transform: translateY(10px);
-      min-width: 130px;
+    /* Layout */
+    right: 0;
+    left: auto;
+  	/* Sizing */
+    min-width: 130px;
+  	/* Effects */
+    transform: translateY(10px);
   }
 
   .header-controls-mobile .lang-selector.open .lang-menu {
-      transform: translateY(14px);
+    /* Effects */
+    transform: translateY(14px);
   }
 
   /* ─── Hamburguer menu show ──────────────────────────────────────────────────────── ✣ ─ */
   .menu-toggle {
+    /* Layout */
     display: flex;
     flex-direction: column;
     gap: 6px;
-    color: var(--color-text-primary);
-    background: none;
-    border: none;
-    cursor: pointer;
   }
 
   .offscreen-menu {
-  	background-color: var(--color-bg-light);
-		/*Sizing*/
-		height: 100vh;
-		width: 100%;
-		max-width: 450px;
-		/*Position*/
-		position: fixed;
-		top: 0;
-		right: -450px;
-		z-index: 998;
-		/*Layout*/
+  	/* Layout */
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
 		text-align: center;
-		/*Animation*/
+		position: fixed;
+		top: 0;
+		right: -450px;
+		z-index: 998;
+  	/* Sizing */
+		height: 100vh;
+		max-width: 450px;
+		width: 100%;
+  	/* Visuals */
+  	background-color: var(--color-bg-light);
+  	/* Effects */
 		transition: right 0.3s ease;
   }
   /* ─── Language Selector ──────────────────────────────────────────────────────── ✣ ─ */
   .lang-selector {
+    /* Layout */
+  	/* Sizing */
+  	/* Visuals */
+  	/* Effects */
+  	/* REFATORAR ISSO */
     width: auto; 
     display: flex;
     justify-content: center;
@@ -1284,16 +1303,23 @@ body.menu-open::before {
   
   .lang-menu {
     /* Layout */
+  	/* Sizing */
+  	/* Visuals */
+  	/* Effects */
+  	/* REFATORAR ISSO */
     left: 50%;
     right: auto;
     text-align: center; 
     min-width: 150px;
-    /* Animação */
     transform: translateX(-50%) translateY(10px);
   }
   
   .lang-selector.open .lang-menu {
     /* Layout */
+  	/* Sizing */
+  	/* Visuals */
+  	/* Effects */
+  	/* REFATORAR ISSO */
   	display: flex; /* Não precisa de display: block se tem flex */
   	flex-direction: column;
   	position: absolute;
@@ -1302,27 +1328,33 @@ body.menu-open::before {
   }
   
   .lang-menu li {
-      text-align: center;
-      padding: var(--spacing3);
+    /* Layout */
+  	/* Sizing */
+  	/* Visuals */
+  	/* Effects */
+  	/* REFATORAR ISSO */
+    text-align: center;
+    padding: var(--spacing3);
   }
 
 
   /* ─── Utilities mobile ──────────────────────────────────────────────────────── ✣ ─ */
   .flex-column-mobile {
+    /* Layout */
     flex-direction: column;
     align-items: center;
   }
 
   .flex-column-reverse-mobile {
+    /* Layout */
     flex-direction: column-reverse;
     align-items: center;
   }
 
   .gap4-mobile{
+  	/* Layout */
   	gap: var(--spacing4);
   }
-
-
 }
 
 
@@ -1334,12 +1366,16 @@ body.menu-open::before {
 
 @media (prefers-reduced-motion: reduce) {
   * {
+  	/* Effects */
     transition: none !important;
   }
 }
 
-
-
+/* ─── refatorar isso ──────────────────────────────────────────────────────── ✣ ─ */
+.header-controls-mobile {
+  /* Layout */
+  display: none;
+}
 
 
 
