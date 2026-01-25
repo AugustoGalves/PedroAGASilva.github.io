@@ -108,12 +108,12 @@
 /* ────────────────────────────────────────────────────────────────────────── */
 
 *{
-/*Layout Padrão*/
+	/* Layout Padrão */
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 
-/*Texto Padrão*/
+	/* Tipografia Padrão */
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
 	font-family: var(--font-body);
 	font-size: 1rem; /*16px*/
@@ -121,29 +121,20 @@
 }
 
 html{
+	/* Effects */
 	scroll-behavior: smooth;
 }
 
-html, body {
-    overflow-x: hidden; /* Impede rolagem lateral indesejada */
-    width: 100%;
-}
-
-img{
-	margin: 0;
-}
-
 body{
-	background-color: var(--color-bg-dark);
+	/* Layout */
+	overflow-x: hidden; /* Esconde tudo que está fora da tela */
+	/* Sizing */
+	width: 100%; /* A página sempre vai ter a largura da tela */
+  min-height: 100vh; /* Altura mínima, garante que rodapé fica colado no final da tela mesmo em páginas curtas */
+	/* Typograph */
 	text-wrap: balance;
-}
-
-a:hover{
-	opacity: 0.8;
-}
-
-button:hover{
-	opacity: 0.8;
+	/* Visuals */
+	background-color: var(--color-bg-dark);
 }
 
 
@@ -152,66 +143,84 @@ button:hover{
 /* ────────────────────────────────────────────────────────────────────────── */
 
 h1{
-	/*Texto*/
-	color: var(--color-text-primary); /*Primary TextColor*/
-	font-size: var(--spacing7); /*48px*/
-	font-weight: bold;
-	letter-spacing: -0.02em;
-	line-height: 1.1; /*Espaçamento entre linhas*/
+	/* Sizing */
 	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+	/* Typography */
+	font-size: var(--spacing7); /*48px*/
+	font-weight: bold;
+	line-height: 1.1; /*Espaçamento entre linhas*/
+	letter-spacing: -0.02em;
+	/* Visuals */
+	color: var(--color-text-primary); /*Primary TextColor*/
 }
 
 h2{
-	/*Texto*/
-	color: var(--color-text-primary-muted); /*Muted TextColor*/
-	font-size: var(--spacing67); /*40px*/
-	font-weight: bold;
-	letter-spacing: -0.01em;
-	line-height: 1.1; /*Espaçamento entre linhas*/
+	/* Sizing */
 	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
-
+	/* Typography */
+	font-size: var(--spacing67); /*40px*/
+	font-weight: bold;
+	line-height: 1.1; /*Espaçamento entre linhas*/
+	letter-spacing: -0.01em;
+	/* Visuals */
+	color: var(--color-text-primary-muted); /*Muted TextColor*/
 }
 
 h3{
-	/*Texto*/
-	color: var(--color-text-primary-muted); /*Muted TextColor*/
+	/* Sizing */
+	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+	/* Typography */
 	font-size: var(--spacing6);/*32px*/
 	font-weight: bold;
 	line-height: 1.1; /*Espaçamento entre linhas*/
-	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+	/* Visuals */
+	color: var(--color-text-primary-muted); /*Muted TextColor*/
 }
 
 h4{
-	/*Texto*/
-	color: var(--color-text-primary-muted); /*Muted TextColor*/
+	/* Sizing */
+	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+	/* Typography */
 	font-size: var(--spacing5);/*24px*/
 	font-weight: bold;
 	line-height: 1.1; /*Espaçamento entre linhas*/
-	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+	/* Visuals */
+	color: var(--color-text-primary-muted); /*Muted TextColor*/
 }
 
 p{
-	color: var(--color-text-primary-muted); /*Muted TextColor*/
+	/* Sizing */
+	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+	/* Typography */
 	font-size: var(--spacing4);/*16px*/
 	font-weight: normal;
 	line-height: 1.4; /*Espaçamento entre linhas*/
-	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+	/* Visuals */
+	color: var(--color-text-primary-muted); /*Muted TextColor*/
 }
 
 a{
-	text-decoration: none;
-	color: var(--color-text-primary); /*Primary TextColor*/
+	/* Typography */
 	font-size: var(--spacing4);/*16px*/
 	font-weight: normal;
 	line-height: 1.4; /*Espaçamento entre linhas*/
+	/* Visuals */
+	color: var(--color-text-primary); /*Primary TextColor*/
+	text-decoration: none;
+}
+
+a:hover{
+	/* Visuals */
+	opacity: 0.8;
 }
 
 .subtext{
+	/* Visuals */
 	color: var(--color-subtext);
 }
 
@@ -224,427 +233,224 @@ a{
 /* ─── TIPOGRAFIA MOBILE ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 @media (max-width:992px) {
 	h1{
-		/*Texto*/
-		font-size: var(--spacing6); /*32px*/
-		line-height: 1.1; /*Espaçamento entre linhas*/
+		/* Sizing */
 		margin-top: var(--spacing2); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: var(--spacing1); /*Espaçamento de paragrafo AFTER*/
+		/* Typography */
+		font-size: var(--spacing6); /*32px*/
+		line-height: 1.1; /*Espaçamento entre linhas*/
 	}
 
 	h2{
-		/*Texto*/
-		font-size: var(--spacing5); /*24px*/
+		/* Sizing */
 		margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+		/* Typography */
+		font-size: var(--spacing5); /*24px*/
 	}
 	
 	h3{
-		/*Texto*/
-		font-size: var(--spacing45);/*20px*/
+		/* Sizing */
 		margin-top: var(--spacing3); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
+		/* Typography */
+		font-size: var(--spacing45);/*20px*/
 	}
 	
 	h4{
-		/*Texto*/
-		font-size: var(--spacing4);/*16px*/
+		/* Sizing */
 		margin-top: var(--spacing2); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: var(--spacing1); /*Espaçamento de paragrafo AFTER*/
+		/* Typography */
+		font-size: var(--spacing4);/*16px*/
 	}
 	
 	p{
-		font-size: var(--spacing4);/*16px*/
+		/* Sizing */
 		margin-top: var(--spacing2); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: var(--spacing1); /*Espaçamento de paragrafo AFTER*/
+		/* Typograph */
+		font-size: var(--spacing4);/*16px*/
 	}
 	
 	a{
-		text-decoration: none;
-		color: var(--color-text-primary); /*Primary TextColor*/
+		/* Typography */
 		font-size: var(--spacing4);/*16px*/
-		font-weight: normal;
-		line-height: 1.4; /*Espaçamento entre linhas*/
 	}
 }
 
 
-/* ────────────────────────────────────────────────────────────────────────── */
-/* ████████████████████████████ 🖥️ LAYOUT  █████████████████████████████████ */
-/* ────────────────────────────────────────────────────────────────────────── */
 
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ████████████████████████ 🖥️ LAYOUT SYSTEM  ██████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Classes que servem apenas para layout */
+
+/* ─── WRAPPERS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .page-wrapper{
-	/*Sizing*/
-	max-width: 1200px; /*Tamanho máximo da largura*/
-	width: 100%;
-	box-sizing: border-box; /*Padding não vai aumentar o tamanho do page wrapper*/
-	/*Layout*/
+	/* Layout */
 	margin: 0 auto;
+	/* Sizing */
 	padding: var(--spacing4) var(--spacing11);
-	display: flex;
-	flex-direction: column; /*Container pai: linha ou coluna*/
-	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
-	/*Animação*/
+	max-width: 1200px; /*Tamanho máximo da largura*/
+	box-sizing: border-box; /*Padding não vai aumentar o tamanho do page wrapper*/
+	/* Effects */
 	transition: filter 0.3s ease; /*Acontece ao sofrer blur do hamburger menu*/
 }
 
 .header-wrapper{
-  /*Sizing*/
-  width: 100%;
+  /* Layout */
+  margin: 0 auto;
+	/* Sizing */
+  padding: 0 var(--spacing11);
   max-width: 1200px;
   box-sizing: border-box;
-  /*Layout*/
-  margin: 0 auto;
-  padding: 0 var(--spacing11);
+  /* Effects */
+	transition: filter 0.3s ease; /*Acontece ao sofrer blur do hamburger menu*/
 }
 
-.header{
+
+/* ─── CONTAINERS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.container{
+	/* Layout */
+	display: flex;
+	flex-direction: column; /*Container pai: linha ou coluna*/
+	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
+	/* Sizing */
+	width: 100%;
+}
+
+.container-full-line{
+	/* Layout */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* Sizing */
+	width: 100%;
+}
+
+.container-nav{
+	/* Layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	/* Sizing */
+	width: 100%;
+}
+
+.container-footer-bottom{
+	/* Layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	/* Sizing */
+	padding-bottom: 0;
 	width: 100%;
 }
 
 
+/* ─── GLOBAL LIST STYLES ─────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 nav ul{
-	list-style: none;
+	/* Layout */
 	display: flex;
 	flex-direction: row; /*Container pai: linha ou coluna*/
 	justify-content: flex-end; /*Children horizontal distribuition if flex is row*/
 	align-items: center; /*Children vertical distribuition if flex is row*/
 	gap: var(--spacing4); /*Margin entre itens*/
+	/* Visuals */
+	list-style: none;
 }
 
 footer section ul{
-	list-style: none;
+	/* Layout */
 	display: flex;
 	flex-direction: row; /*Container pai: linha ou coluna*/
 	justify-content: flex-end; /*Children horizontal distribuition if flex is row*/
 	align-items: center; /*Children vertical distribuition if flex is row*/
 	gap: 5%; /*Margin entre itens*/
+	/* Visuals */
+	list-style: none;
 }
 
-.hero-left{
-	/*Layout*/
-	width: 80%;
-	padding-right: 10%; /*Ocupar menos espaço do container*/
-	display: flex;
-	flex-direction: column; /*Container pai: linha ou coluna*/
-	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
-	align-items: start; /*Children vertical distribuition if flex is row*/
-}
 
-/* ─── CONTAINERS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.container{
-	/*Sizing*/
-	width: 100%;
-	/*Layout*/
-	display: flex;
-	flex-direction: column; /*Container pai: linha ou coluna*/
-	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
-	align-items: center;
-}
 
-.flex-row {flex-direction: row;}
-.flex-spacebetween{justify-content: space-between;}
-.flex-start{justify-content: flex-start;}
-.flex-end{justify-content: flex-end;}
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ████████████████████████ 📄 PAGE SECTIONS  ██████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Elementos que so aparecem 1 vez na página, são muito especificos */
 
-.container-nav{
-	/*Layout*/
-	flex-direction: row; /*Container pai: linha ou coluna*/
-	justify-content: flex-end; /*Children horizontal distribuition if flex is row*/
-}
-
-.container-full-line{
-	/*Sizing*/
-	width: 100%;
-	/*Layout*/
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-.container-footer-bottom{
-	width: 100%;
-	/* Layout */
-	padding-bottom: 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
+/* ─── HEADER ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .nav-preferences {
   /* Layout */
-  padding: var(--spacing1);
   display: flex;
   align-items: center;
-  /* Decoration */
+  /* Sizing */
+  padding: var(--spacing1);
+	/* Visuals */
+  background-color: transparent;
   border: 1px solid var(--color-border-muted); 
   border-radius: 50px; 
-  background-color: transparent;
+	/* Effects */
   transition: border-color 0.3s ease;
 }
 
 .nav-preferences:hover {
+	/* Visuals */
 	border-color: var(--color-text-primary);
 }
 
-
-/* ─── CARDS ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.card{
-	/* Decoration */
-  background-color: var(--gradient-bg); /* Secondary Color */
-  border-radius: var(--spacing2);
-  border: var(--border);
-	border-top: solid 1px var(--color-highlight);
-	box-shadow: var(--shadow);
+.header{
 	/* Sizing */
-	width: 30%;
-	min-height: var(--spacing6);
-	padding: var(--spacing2) var(--spacing0) var(--spacing2) var(--spacing3);
-	/* Layout */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-  	/* Animação */
-  	transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.card:hover{
-	/* Decoration */
-	background-color: var(--gradient-bg-hover); /* Secondary Color */
-}
-
-.card--emote{
-	/* Layout */
-	flex-direction: row;
-	justify-content: center;
-	text-align: left;
-	align-items: center;
-	gap: var(--spacing4);
-}
-
-/* O duplo traço no nome indica que é um modificador image para o elemento .card */
-.card--image{ 
-	gap: var(--spacing4); /* Margin entre texto e imagem */
-	/* Layout */
-	justify-content: flex-start;
-	overflow: hidden; /* Esconde oq sair do container */
-  /* Animação */
-  scroll-snap-align: start;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
-}
-
-/* O duplo underline no nome indica que é uma imagem dentro do elemento .card */
-.card__image{
-	/*Sizing*/
-	width: calc(100% + var(--spacing6));
-	height: auto;
-	margin: -1rem -1rem 0rem -1rem; /* Remover o padding do container pai, sentido do relogio, top right bottom left */
-
-	/*Decoration*/
-	border-top-left-radius: var(--spacing2); /* Arredondamento da borda superior esq. da imagem */
-	border-top-right-radius: var(--spacing2); /* Arredondamento da borda superior dir. da imagem */
-}
-
-/* ─── CAROUSEL ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-
-.carousel-wrapper{
-	/*Sizing*/
 	width: 100%;
-	/*Layout*/
-	position: relative;
-	/*Extras*/
-	overflow: hidden;
-}
-
-.carousel-track{
-	/*Layout*/
-	display: flex;
-  gap: var(--spacing4); /* 16px de espaço entre cards */
-  padding: var(--spacing2) var(--spacing1) var(--spacing4) var(--spacing1); /* Espaçamento interno para não cortar sombras ou bordas */
-	/*Extras*/	
-	scrollbar-width: none; /*Esconde a scroll bar no firefox*/
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	overflow-x: auto; /*Esconde o overflow mas mostra um scroll. Mas caso não tenha overflow, o scroll some*/
-	scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE 10+ */
-}
-
-.carousel-track::-webkit-scrollbar{
-	/*Layout*/
-	display: none;
-}
-
-.carousel-track .card--image {
-		/* DESKTOP DEFAULT: 3 itens visíveis */
-    /* Lógica: (100% da tela - 2 espaços de gap) dividido por 3 cards */
-    flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 3);
-    width: auto; /* Reseta o width fixo de 30% antigo */
-    
-    scroll-snap-align: start; /* Alinha o card à esquerda ao parar de rolar */
-    margin: 0; /* Reseta margens externas */
-}
-
-/* ────────────────────────────────────────────────────────────────────────── */
-/* ███████████████████████████  BOTÕES (BEM)  ███████████████████████████████ */
-/* ────────────────────────────────────────────────────────────────────────── */
-
-/* ───  Button primary ──────────────────────────────────────────────────────── ✣ ─ */
-.btn-primary{
-	/*Typography*/
-	font-size: var(--spacing4);
-	/*Decoration*/
-	background-color: var(--color-accent1); /*CTA Color*/
-	border-radius: var(--spacing2);
-	box-shadow: var(--shadow);
-	/*Layout*/
-	height: var(--spacing4);
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	padding: var(--spacing45) var(--spacing4); /* vertical | horizontal */
-	min-height: var(--spacing6); /* tamanho confortável */
-	white-space: nowrap;
-	/*Configurações das animações do botão*/
-	transition:
-		transform 0.15s ease,
-		box-shadow 0.15s ease,
-		background-color 0.2s ease,
-		color 0.2s ease;
-}
-
-.btn-primary:hover{
-	background-color: var(--color-accent1-hover); /*Hover Elevated CTA Color*/
-	/*Fix size? maybe it is bigger than the text around*/
-	transform: translateY(-1px); /*Leve movimentação para baixo, muito melhor que animação com scale*/
-	box-shadow: var(--shadow-hover);
-}
-
-.btn-primary:active {
-	/*Feedback ao clicar enquanto mantem o hover*/
-	transform: translateY(0);
-	box-shadow: var(--shadow-active);
-}
-
-/* ───  Button primary Big Size ──────────────────────────────────────────────────────── ✣ ─ */
-.btn-primary-big{
-	/*Typography*/
-	font-size: var(--spacing5);
-	/*Decoration*/
-	background-color: var(--color-accent1); /*CTA Color*/
-	border-radius: var(--spacing2);
-	box-shadow: var(--shadow);
-	/*Layout*/
-	height: var(--spacing5);
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	padding: var(--spacing5) var(--spacing5); /* vertical | horizontal */
-	min-height: var(--spacing7); /* tamanho confortável */
-	white-space: nowrap;
-	/*Configurações das animações do botão*/
-	transition:
-		transform 0.15s ease,
-		box-shadow 0.15s ease,
-		background-color 0.2s ease,
-		color 0.2s ease;
-}
-
-.btn-primary-big:hover{
-	background-color: var(--color-accent1-hover); /*Hover Elevated CTA Color*/
-	/*Fix size? maybe it is bigger than the text around*/
-	transform: translateY(-1px); /*Leve movimentação para baixo, muito melhor que animação com scale*/
-	box-shadow: var(--shadow-hover);
-}
-
-.btn-primary-big:active {
-	/*Feedback ao clicar enquanto mantem o hover*/
-	transform: translateY(0);
-	box-shadow: var(--shadow-active);
-}
-
-/* ───  Button secondary ──────────────────────────────────────────────────────── ✣ ─ */
-.btn-secondary{
-	/*Typography*/
-	font-size: 1rem;
-	/*Decoration*/
-	background-color: rgba(0, 0, 0, 0.15); /* Transparent Color */
-	border-radius: var(--spacing2);
-	box-shadow: var(--shadow);
-	/*Layout*/
-	height: 1rem;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	padding: var(--spacing45) var(--spacing3); /* vertical | horizontal */
-	min-height: 2rem; /* tamanho confortável */
-	white-space: nowrap;
-	/*Configurações das animações do botão*/
-	transition:
-		transform 0.15s ease,
-		box-shadow 0.15s ease,
-		background-color 0.2s ease,
-		color 0.2s ease;
-}
-
-.btn-secondary:hover{
-	background-color: rgba(0, 0, 0, 0.30); /* Transparent Secundary Color */
-	transform: translateX(2px);
-}
-
-.btn-secondary:active{
-	/*Feedback ao clicar enquanto mantem o hover*/
-	transform: translateX(0px);
 }
 
 /* ───  Button settings & Lang Toggle ──────────────────────────────────────────────── ✣ ─ */
 .btn-settings, .lang-toggle{
+	/* Layout */
 	display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing1) var(--spacing2);
   gap: var(--spacing2);
-  /*Resets*/
+	/* Sizing */
+  padding: var(--spacing1) var(--spacing2);
+	/* Typograph */
+  font-size: var(--spacing4);
+	/* Visuals */
+  color: var(--color-text-primary);
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  /*Decoration*/
-  color: var(--color-text-primary);
-  font-size: var(--spacing4);
+	/* Effects */
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .btn-settings {
-    border-radius: 50px 0 0 50px;
-    padding-left: var(--spacing2);
+	/* Sizing */
+  padding-left: var(--spacing2);
+	/* Visuals */
+  border-radius: 50px 0 0 50px;
 }
 
 .lang-toggle {
-    border-radius: 0 50px 50px 0;
-    padding-right: var(--spacing2);
+	/* Sizing */
+  padding-right: var(--spacing2);
+	/* Visuals */
+  border-radius: 0 50px 50px 0;
 }
 
-.btn-settings:hover,
-.lang-toggle:hover {
+.btn-settings:hover, .lang-toggle:hover {
+	/* Visuals */
+  color: var(--color-accent1);
   background-color: var(--color-bg-dark) !important;
-  color: var(--color-accent1); /* Opcional: Acende a cor com seu accent */
 }
 
 .lang-selector {
-    position: relative;
-    display: flex;
+  /* Layout */
+  position: relative;
+  display: flex;
 }
-
-/* ────────────────────────────────────────────────────────────────────────── */
-/* ██████████████████████████  ELEMENTOS (BEM)  █████████████████████████████ */
-/* ────────────────────────────────────────────────────────────────────────── */
 
 .pill-divider {
     width: 1px;
@@ -653,55 +459,263 @@ footer section ul{
     margin: 0 2px;
 }
 
+/* ───  Lang Menu ──────────────────────────────────────────────── ✣ ─ */
 .lang-menu {
-    /* Layout */
-    display: none;
-    position: absolute;
-    /* Sizes */
-    top: calc(100% + var(--spacing3)); 
-    right: 0;
-    min-width: 140px;
-    padding: var(--spacing2); /* 8px */
-    /* Decoration */
-    background-color: var(--color-bg-light); /* Fundo destacado */
-    border: var(--border); /* Sua variável de borda padrão */
-    box-shadow: var(--shadow); /* Sua sombra padrão */
-    border-radius: var(--spacing2);
-    list-style: none;
-    z-index: 999;
-    /* Animação */
-    opacity: 0;
-    transform: translateY(calc(var(--spacing2) * -1));
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  /* Layout */
+  display: none;
+  top: calc(100% + var(--spacing3)); 
+  right: 0;
+  z-index: 999;
+	/* Sizing */
+  padding: var(--spacing2); /* 8px */
+  min-width: 140px;
+	/* Typograph */
+  position: absolute;
+	/* Visuals */
+  background-color: var(--color-bg-light); /* Fundo destacado */
+  list-style: none;
+  border: var(--border); /* Sua variável de borda padrão */
+  border-radius: var(--spacing2);
+  box-shadow: var(--shadow); /* Sua sombra padrão */
+	/* Effects */
+  transform: translateY(calc(var(--spacing2) * -1));
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .lang-menu li {
   /* Layout */
-  padding: var(--spacing2) var(--spacing3);
   text-align: left;
-  /* Decoration */
-  cursor: pointer;
-  border-radius: var(--spacing1);
+	/* Sizing */
+  padding: var(--spacing2) var(--spacing3);
+	/* Visuals */
   color: var(--color-text-primary);
-  /* Extras */
+  border-radius: var(--spacing1);
+	/* Effects */
+  cursor: pointer;
   transition: background 0.2s;
 }
 
 .lang-menu li:hover {
+	/* Visuals */
   background-color: var(--color-bg-dark); 
   color: var(--color-accent1);
 }
 
 .lang-selector.open .lang-menu {
-  /*Layout*/
+  /* Layout */
   display: flex;
   flex-direction: column;
   position: absolute;
-  /*Extras*/
-  opacity: 1;
-  visibility: visible;
+  /* Effects */
   transform: translateY(0);
 }
+
+
+/* ─── HERO ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.hero-left{
+	/* Layout */
+	align-items: start; /*Children vertical distribuition if flex is row*/
+	/* Sizing */
+	padding-right: 10%; /*Ocupar menos espaço do container*/
+	width: 80%;
+}
+
+/* ─── MAIN ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+
+/* ─── FOOTER ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+
+
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ███████████████████████████  🧩COMPONENTS  ███████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+
+/* ───  Button ──────────────────────────────────────────────────────── ✣ ─ */
+.btn{
+	/* Layout */
+	white-space: nowrap;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+	/* Visuals */
+  border-radius: var(--spacing2);
+  box-shadow: var(--shadow);
+	/* Effects */
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn:hover{
+	/* Visuals */
+	background-color: var(--color-accent1-hover);
+	box-shadow: var(--shadow-hover);
+	/* Effects */
+	transform: translateY(-1px);
+}
+
+.btn:active {
+	/* Visuals */
+	box-shadow: var(--shadow-active);
+	/* Effects */
+	transform: translateY(0);
+}
+
+/* ───  Button primary ──────────────────────────────────────────────────────── ✣ ─ */
+.btn--primary{
+	/* Sizing */
+	padding: var(--spacing45) var(--spacing4); /* vertical | horizontal */
+	min-height: var(--spacing6);
+	/* Typograph */
+	font-size: var(--spacing4);
+	/* Visuals */
+	background-color: var(--color-accent1); /*CTA Color*/
+}
+
+
+/* ───  Button primary Big Size ──────────────────────────────────────────────────────── ✣ ─ */
+.btn--primary-big{
+	/* Sizing */
+	padding: var(--spacing5) var(--spacing5); /* vertical | horizontal */
+	min-height: var(--spacing7);
+	/* Typograph */
+	font-size: var(--spacing5);
+	/* Visuals */
+	background-color: var(--color-accent1); /*CTA Color*/
+}
+
+
+/* ───  Button secondary ──────────────────────────────────────────────────────── ✣ ─ */
+.btn--secondary{
+	/* Sizing */
+	padding: var(--spacing45) var(--spacing3); /* vertical | horizontal */
+	min-height: var(--spacing6);
+	/* Typograph */
+	font-size: var(--spacing4);
+	/* Visuals */
+	background-color: rgba(0, 0, 0, 0.15); /* Transparent Color */
+}
+
+.btn--secondary:hover{
+	/* Visuals */
+	background-color: rgba(0, 0, 0, 0.30); /* Transparent Secundary Color */
+}
+
+
+/* ─── CARDS ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.card{
+	/* Layout */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: var(--spacing4); /* Margin entre texto e imagem */
+	/* Sizing */
+	padding: var(--spacing2) var(--spacing0) var(--spacing2) var(--spacing3);
+	min-height: var(--spacing6);
+	width: 30%;
+	/* Visuals */
+  background-color: var(--gradient-bg); /* Secondary Color */
+  border: var(--border);
+  border-radius: var(--spacing2);
+	border-top: solid 1px var(--color-highlight);
+	box-shadow: var(--shadow);
+	/* Effects */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover{
+	/* Visuals */
+	background-color: var(--gradient-bg-hover); /* Secondary Color */
+}
+
+.card--emote{
+	/* Layout */
+	flex-direction: row;
+	align-items: center;
+	text-align: left;
+}
+
+/* O duplo traço no nome indica que é um modificador image para o elemento .card */
+.card--image{ 
+	/* Layout */
+	justify-content: flex-start;
+	overflow: hidden; /* Esconde oq sair do container */
+	/* Effects */
+  scroll-snap-align: start;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* O duplo underline no nome indica que é uma imagem dentro do elemento .card */
+.card__image{
+	/* Sizing */
+	width: calc(100% + var(--spacing6));
+	height: auto;
+	margin: -1rem -1rem 0rem -1rem; /* Remover o padding do container pai, sentido do relogio, top right bottom left */
+	/* Visuals */
+	border-top-left-radius: var(--spacing2); /* Arredondamento de borda da imagem */
+	border-top-right-radius: var(--spacing2); /* Arredondamento de borda da imagem */
+}
+
+
+/* ─── CAROUSEL ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.carousel-wrapper{
+	/* Layout */
+	position: relative;
+	overflow: hidden;
+	/* Sizing */
+	width: 100%;
+}
+
+.carousel-track{
+	/* Layout */
+	display: flex;
+  gap: var(--spacing4); /* 16px de espaço entre cards */
+	/* Sizing */
+  padding: var(--spacing2) var(--spacing1) var(--spacing4) var(--spacing1); /* Espaçamento interno para não cortar sombras ou bordas */
+	/* Effects */
+	overflow-x: auto; /*Esconde o overflow mas mostra um scroll. Mas caso não tenha overflow, o scroll some*/
+	scrollbar-width: none; /*Esconde a scroll bar no firefox*/
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;	
+	scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.carousel-track::-webkit-scrollbar{
+	/* Layout */
+	display: none;
+}
+
+.carousel-track .card--image {
+  /* NÃO SEI OQ TA ACONTECENDO AQUI */
+  /* Layout */
+  flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 3);
+  margin: 0; /* Reseta margens externas */
+	/* Sizing */
+  width: auto; /* Reseta o width fixo de 30% antigo */
+	/* Effects */
+  scroll-snap-align: start; /* Alinha o card à esquerda ao parar de rolar */
+}
+
+
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ██████████████████████████  ELEMENTOS (BEM)  █████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ─── PAREI A REFATORAÇÃO AQUI!!!! ──────────────────────────────────────────────────────── ✣ ─ */
+
+
+
+
+
+
+
+
+
 
 /* ─── Geral ──────────────────────────────────────────────────────── ✣ ─ */
 .divider-horizontal100{
@@ -809,6 +823,11 @@ footer section ul{
 	gap: var(--spacing4);
 	flex-wrap: wrap;
 }
+
+.flex-row {flex-direction: row;}
+.flex-spacebetween{justify-content: space-between;}
+.flex-start{justify-content: flex-start;}
+.flex-end{justify-content: flex-end;}
 
 @media (max-width: 992px) {
 	.center-text-mobile{
@@ -1279,8 +1298,6 @@ body.menu-open::before {
   	flex-direction: column;
   	position: absolute;
 
-  	opacity: 1;
-  	visibility: visible;
   	transform: translateY(0); /* Reseta a posição para a animação funcionar */
   }
   
@@ -1353,10 +1370,28 @@ body.menu-open::before {
 
 
 
+/* ─── LISTA DE CATEGORIAS DAS PROPRIEDADES ──────────────────────────────────────────────────────── ✣ ─ */
+
+/*Layout*/
+
+/*Sizing*/
+
+/*Typograph*/
+
+/*Visuals*/
+
+/*Effects*/
 
 
 
 
+
+
+
+
+
+
+/* ─── LISTA DE HEADERS ──────────────────────────────────────────────────────── ✣ ─ */
 
 
 
