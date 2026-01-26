@@ -97,7 +97,7 @@
             </nav>
 
             <!-- ─── HIDDEN NAV SETTINGS MOBILE ────────────────────────────────────────────────────────── ✣ ─ -->
-            <div class="header-controls-mobile">
+            <div class="header-settings-mobile">
                 <!-- NAV SETTINGS DIV -->
                 <div class="nav-preferences">
                     <!-- THEME TOGGLE -->
@@ -375,6 +375,45 @@
         
         document.querySelectorAll(".link-instagram")
           .forEach(el => el.href = CONTACT_INSTAGRAM);
+    </script>
+
+    <!-- Rolagem com mouse do carrossel -->
+    <script>
+        // Seleciona o elemento do carrossel
+        const slider = document.querySelector('.carousel-track');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+    
+        // Quando clica no mouse
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active'); // Muda o cursor e desativa o snap
+            // Pega a posição inicial onde clicou
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+    
+        // Quando o mouse sai da área do carrossel ou solta o botão
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+    
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+    
+        // Quando move o mouse (A mágica acontece aqui)
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return; // Se não estiver clicando, não faz nada
+            e.preventDefault(); // Evita selecionar texto
+            
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // O *2 é a velocidade (maior = mais rápido)
+            slider.scrollLeft = scrollLeft - walk;
+        });
     </script>
 
 </body>
