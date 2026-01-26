@@ -595,8 +595,11 @@ footer section ul{
 }
 
 .carousel-track.active{
+	/* Effects */
 	cursor: grabbing; 
   cursor: -webkit-grabbing;
+  scroll-snap-type: none; 
+  scroll-behavior: auto;
 }
 
 .carousel-track::-webkit-scrollbar{
