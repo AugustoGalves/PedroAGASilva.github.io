@@ -56,9 +56,12 @@
 	--gradient-bg-hover: linear-gradient(0deg, var(--color-bg), var(--color-bg-light));
 
 	/* Properties and Values */
-	--shadow: 0px 2px 2px hsla(0, 0%, 50%, 0.07), 0px 4px 4px hsla(0, 0%, 50%, 0.15); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
-	--shadow-hover: 0px 3px 3px hsla(0, 0%, 50%, 0.07), 0px 3px 3px hsla(0, 0%, 50%, 0.15);
-	--shadow-active: 0px 2px 2px hsla(0, 0%, 50%, 0.07), 0px 2px 2px hsla(0, 0%, 50%, 0.15);
+	--shadow: 0px 2px 4px rgba(2, 91, 176, 0.15), 
+						0px 10px 20px rgba(2, 91, 176, 0.05); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
+	--shadow-hover: 0px 4px 8px rgba(2, 91, 176, 0.4), 
+									0px 15px 30px rgba(2, 91, 176, 0.15);
+	--shadow-active:  0px 0px 5px rgba(2, 91, 176, 0.4),
+        						0px 2px 10px rgba(2, 91, 176, 0.1);
 	--border: solid 1px var(--color-border); /* Borda com cor de borda */
 }
 
@@ -92,9 +95,12 @@
 	--gradient-bg-hover: linear-gradient(0deg, var(--color-bg), var(--color-bg-light));
 
 	/* Properties and Values*/
-	--shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
-	--shadow-hover: 0px 3px 3px hsla(0, 0%, 0%, 0.07), 0px 3px 3px hsla(0, 0%, 0%, 0.15);
-	--shadow-active: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 2px 2px hsla(0, 0%, 0%, 0.15);
+	--shadow: 0px 2px 4px rgba(0, 0, 0, 0.05), 
+						0px 10px 20px rgba(0, 0, 0, 0.08); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
+	--shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.08), 
+									0px 15px 30px rgba(0, 0, 0, 0.12);
+	--shadow-active:  0px 1px 2px rgba(0, 0, 0, 0.1),
+        						0px 2px 4px rgba(0, 0, 0, 0.05);
 	--border: solid 1px var(--color-bg); /* Borda na cor do bg */
 }
 
@@ -1050,22 +1056,14 @@ footer section ul{
 .menu-toggle {
   /* Layout */
   display: none;
+  align-items: center;
+  justify-content: center;
   /* Visuals */
+  color: var(--color-text-primary);
   background: none;
   border: none;
   /* Effects */
   cursor: pointer;
-}
-
-.menu-toggle span {
-  /* Sizing */
-  width: var(--spacing5);
-  height: var(--spacing1);
-  /* Visuals */
-  background-color: var(--color-text-primary);
-  border-radius: 2px;
-  /* Effects */
-  transition: 0.3s;
 }
 
 
@@ -1264,8 +1262,6 @@ body.menu-open::before {
   .menu-toggle {
     /* Layout */
     display: flex;
-    flex-direction: column;
-    gap: 6px;
   }
 
   .offscreen-menu {
@@ -1370,14 +1366,6 @@ body.menu-open::before {
     transition: none !important;
   }
 }
-
-/* ─── refatorar isso ──────────────────────────────────────────────────────── ✣ ─ */
-.header-controls-mobile {
-  /* Layout */
-  display: none;
-}
-
-
 
 
 
