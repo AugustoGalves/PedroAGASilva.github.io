@@ -22,7 +22,8 @@
     <!-- DOWNLOADS INTERNOS (Cuidado com a ordem de download) -->
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
     <script src="/assets/js/config.js"></script>
-    <script src="/assets/js/components.js"></script>
+    <script src="/assets/js/components/header.js"></script>
+    <script src="/assets/js/components/footer.js"></script>
     <script src="/assets/js/i18n.js"></script>
     <script src="/assets/js/main.js"></script>
     <!-- DOWNLOADS EXTERNOS -->
@@ -44,10 +45,10 @@
     <!-- ──────────────────────────────────────────────────────────────────────────-->
     <!-- ─── HIDDEN NAV BAR MOBILE ────────────────────────────────────────────────────────── ✣ ─ -->
     <nav class="offscreen-menu" aria-label="Navegação principal">
-        <ul>
-            <li><button class="menu-close" aria-label="Fechar menu">
+        <button class="menu-close" aria-label="Fechar menu">
                 <svg class="svgicon-small" viewBox="0 0 24 24" aria-hidden="true"><path class="svgicon-small" fill="currentColor" d="M6 6l12 12M18 6l-12 12"/></svg>
-            </button></li>                
+        </button> 
+        <ul>             
             <li><a data-i18n="nav.home" href="/"></a></li>
             <li><a data-i18n="nav.portfolio" href="/portfolio.html"></a></li>
             <li><a data-i18n="nav.resume" href="/curriculo.html"></a></li>
@@ -70,30 +71,28 @@
                     <li><a data-i18n="nav.resume" href="/curriculo.html" class="btn btn--secondary"></a></li>
                     <li><a data-i18n="nav.blog" href="/blog.html" class="btn btn--secondary"></a></li>
                     <li><a data-i18n="nav.contact" href="/contato.html" class="btn btn--primary"></a></li>
-                    <!-- NAV SETTINGS DIV -->
-                    <li>
-                    <div class="nav-preferences">
-                        <!-- THEME TOGGLE -->
-                        <button class="btn-settings theme-toggle" aria-label="Alternar tema">
-                            <svg class="svgicon-xsmall" xmlns="http://www.w3.org/2000/svg"    viewBox="0 0 640 640"><path fill="currentColor" d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320     576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8     463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4   100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
-                        </button>
-                        <!-- PILL DIVIDER -->
-                        <div class="pill-divider"></div>
-                        <!-- LANG SELECTOR -->
-                        <div class="lang-selector">
-                            <button class="lang-toggle"> 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="svgicon-xsmall" viewBox="0 -960 960 960" fill="currentColor"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
-                            PT
-                            </button>
-                            <ul class="lang-menu">
-                                <li data-lang="pt-BR">Português</li>
-                                <li data-lang="en">English</li>
-                                <li data-lang="es">Español</li>
-                            </ul>
-                        </div>
-                    </div>
-                    </li>
                 </ul>
+                <!-- NAV SETTINGS DIV -->
+                <div class="nav-preferences">
+                    <!-- THEME TOGGLE -->
+                    <button class="btn-settings theme-toggle" aria-label="Alternar tema">
+                        <svg class="svgicon-xsmall" xmlns="http://www.w3.org/2000/svg"    viewBox="0 0 640 640"><path fill="currentColor" d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320     576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8     463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4   100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
+                    </button>
+                    <!-- PILL DIVIDER -->
+                    <div class="pill-divider"></div>
+                    <!-- LANG SELECTOR -->
+                    <div class="lang-selector">
+                        <button class="lang-toggle"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svgicon-xsmall" viewBox="0 -960 960 960" fill="currentColor"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+                        PT
+                        </button>
+                        <ul class="lang-menu">
+                            <li data-lang="pt-BR">Português</li>
+                            <li data-lang="en">English</li>
+                            <li data-lang="es">Español</li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
 
             <!-- ─── HIDDEN NAV SETTINGS MOBILE ────────────────────────────────────────────────────────── ✣ ─ -->
@@ -200,23 +199,29 @@
             <div class="section carousel-wrapper">
                 <div class="carousel-track">
                     <!-- Card Projetos HVAC -->
-                    <a href="/portfolio.html" class="card card--image">
+                    <div class="card card--image"> 
                         <img class="card__image" loading="lazy" src="/assets/img/portfolio/HVAC Clean Room.jpeg" alt="Sala de máquinas HVAC">
-                        <strong data-i18n="portfolio.card1.title"></strong>
-                        <span data-i18n="portfolio.card1.desc" class="subtext"></span>
-                    </a>
+                        <a href="/portfolio.html">
+                            <strong data-i18n="portfolio.card1.title"></strong>
+                            <span data-i18n="portfolio.card1.desc" class="subtext"></span>
+                        </a>
+                    </div>    
                     <!-- Card Planta Elétrica -->
-                    <a href="/portfolio.html" class="card card--image">
+                    <div class="card card--image"> 
                         <img class="card__image" loading="lazy" src="/assets/img/portfolio/Planta Elétrica.png" alt="Planta Elétrica sobre a mesa na obra">
-                        <strong data-i18n="portfolio.card2.title"></strong>
-                        <span data-i18n="portfolio.card2.desc" class="subtext"></span>
-                    </a>
+                        <a href="/portfolio.html">
+                            <strong data-i18n="portfolio.card2.title"></strong>
+                            <span data-i18n="portfolio.card2.desc" class="subtext"></span>
+                        </a>
+                    </div> 
                     <!-- Card Excel Correias -->
-                    <a href="/portfolio.html" class="card card--image">
+                    <div class="card card--image"> 
                         <img class="card__image" loading="lazy" src="/assets/img/portfolio/Notebook on the table.png" alt="Notebook com o Software na tela">
-                        <strong data-i18n="portfolio.card3.title"></strong>
-                        <span data-i18n="portfolio.card3.desc" class="subtext"></span>
-                    </a>
+                        <a href="/portfolio.html">
+                            <strong data-i18n="portfolio.card3.title"></strong>
+                            <span data-i18n="portfolio.card3.desc" class="subtext"></span>
+                        </a>
+                    </div> 
                 </div>
             </div>
 

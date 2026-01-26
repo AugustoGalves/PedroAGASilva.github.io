@@ -419,7 +419,7 @@ footer section ul{
 	background-color: var(--color-accent1-hover);
 	box-shadow: var(--shadow-hover);
 	/* Effects */
-	transform: translateY(-1px);
+	transform: translateY(-2px);
 }
 
 .btn:active {
@@ -1247,7 +1247,7 @@ body.menu-open::before {
     display: none;
   }
 
-  /* ─── Mobile Controls ──────────────────────────────────────────────────────── ✣ ─ */
+  /* ─── Mobile Navigation Menu Settings ─────────────────────────────────────────────── ✣ ─ */
   .header-settings-mobile {
     /* Layout */
     display: flex;
