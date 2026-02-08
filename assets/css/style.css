@@ -247,8 +247,12 @@ strong {
 }
 
 .span{
-	white-space: nowrap;
-	padding-bottom: var(--spacing3);
+    /* Layout */
+    display: block; /* Sozinho na linha */
+    /* Sizing */
+    padding-bottom: var(--spacing3);
+    /* Typography */
+    white-space: nowrap;
 }
 
 
@@ -374,7 +378,7 @@ strong {
 	justify-content: space-between;
 	align-items: center;
 	/* Sizing */
-	padding-bottom: 0;
+	padding-bottom: 0 !important;
 	width: 100%;
 }
 
@@ -605,7 +609,7 @@ footer section ul{
 }
 
 .card--carousel:hover .card__image {
-    transform: scale(1.05); /* Zoom suave no hover */
+  transform: scale(1.05); /* Zoom suave no hover */
 }
 
 /* ─── Textos do Carousel ──────────────────────────────────────────────────────── ✣ ─ */
@@ -636,6 +640,21 @@ footer section ul{
 	overflow: hidden;
 	/* Sizing */
 	width: 100%;
+	/* Efeito de fade nas bordas */
+  -webkit-mask-image: linear-gradient(
+      to right, 
+      transparent 0%, 
+      black 5%, 
+      black 95%, 
+      transparent 100%
+  );
+  mask-image: linear-gradient(
+      to right, 
+      transparent 0%, 
+      black 5%, 
+      black 95%, 
+      transparent 100%
+  );
 }
 
 .carousel-track{
@@ -1240,8 +1259,8 @@ body.menu-open::before {
 
   .carousel-track .card--carousel {
     /* Layout */
-    min-width: 85vw; 
-    flex: 0 0 85vw;
+    flex: 0 0 calc((100% - var(--spacing4)) / 2.2);
+    min-width: calc((100% - var(--spacing4)) / 2.2); /* Exibir apenas 2.2 cards */
   }
 
   .card--emote{
