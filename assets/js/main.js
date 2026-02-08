@@ -83,7 +83,7 @@ function setupCarouselFade() {
 
     // --- 1. Lógica do Fade (Visual) ---
     const updateFade = () => {
-        const tolerance = 2; 
+        const tolerance = 15; 
         const scrollLeft = track.scrollLeft;
         const maxScroll = track.scrollWidth - track.clientWidth;
 
