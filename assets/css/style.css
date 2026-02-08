@@ -57,14 +57,14 @@
 
 	/* Properties and Values */
 	--shadow: 
-			0px 8px 24px oklch(0 0 0 / 0.65),
-    	0px 0px 0px 1px oklch(1 0 0 / 0.05); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
+			0px 4px 6px -1px oklch(0 0 0 / 0.65),
+    	0px 2px 4px -1px oklch(0 0 0 / 0.05); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
 	--shadow-hover: 
-			0px 12px 32px oklch(0 0 0 / 0.72),
-    	0px 0px 0px 1px oklch(1 0 0 / 0.08);
+			0px 10px 15px -3px oklch(0 0 0 / 0.72),
+    	0px 0px 0px -2px oklch(0 0 0 / 0.08);
 	--shadow-active:  
 			0px 4px 12px oklch(0 0 0 / 0.55),
-    	0px 0px 0px 1px oklch(1 0 0 / 0.04);
+    	0px 0px 0px 1px oklch(0 0 0 / 0.04);
 	--border: solid 1px var(--color-border); /* Borda com cor de borda */
 }
 
@@ -99,13 +99,13 @@
 
 	/* Properties and Values*/
 	--shadow: 
-			0px 1px 2px oklch(0 0 0 / 0.06),
-    	0px 6px 16px oklch(0 0 0 / 0.08); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
+			0px 4px 6px -1px oklch(0 0 0 / 0.02),
+    	0px 2px 4px -1px oklch(0 0 0 / 0.02); /*Deslocamento X, Deslocamento Y, Blur, Cor da sombra RGBA*/
 	--shadow-hover: 
-			0px 2px 4px oklch(0 0 0 / 0.08),
-    	0px 10px 24px oklch(0 0 0 / 0.12);
+			0px 10px 15px -3px oklch(0 0 0 / 0.08),
+    	0px 4px 6px -2px oklch(0 0 0 / 0.12);
 	--shadow-active:  
-			0px 1px 2px oklch(0 0 0 / 0.10);
+			0px 1px 2px oklch(0 0 0 / 0.05);
 	--border: solid 1px var(--color-bg); /* Borda na cor do bg */
 }
 
@@ -438,6 +438,7 @@ footer section ul{
 	/* Visuals */
 	background-color: var(--color-accent1-hover);
 	box-shadow: var(--shadow-hover);
+	border-color: var(--color-accent1);
 	/* Effects */
 	transform: translateY(-2px);
 }
@@ -481,12 +482,15 @@ footer section ul{
 	/* Typograph */
 	font-size: var(--spacing4);
 	/* Visuals */
-	background-color: rgba(0, 0, 0, 0.15); /* Transparent Color */
+	background-color: rgba(0, 0, 0, 0.00); /* Transparent Color */
+	color: var(--color-text-primary);
+	border: var(--border);
 }
 
 .btn--secondary:hover{
 	/* Visuals */
-	background-color: rgba(0, 0, 0, 0.30); /* Transparent Secundary Color */
+	background-color: var(--color-bg-dark); /* Transparent Secundary Color */
+	color: var(--color-accent1);
 }
 
 
@@ -546,9 +550,9 @@ footer section ul{
 	min-height: var(--spacing6);
 	width: 30%;
 	/* Visuals */
-  background-color: var(--gradient-bg); /* Secondary Color */
+  background-color: var(--color-bg); /* Secondary Color */
   border: var(--border);
-  border-radius: var(--spacing2);
+  border-radius: var(--spacing4);
 	border-top: solid 1px var(--color-highlight);
 	box-shadow: var(--shadow);
 	/* Effects */
@@ -557,7 +561,6 @@ footer section ul{
 
 .card:hover{
 	/* Visuals */
-	background-color: var(--gradient-bg-hover); /* Secondary Color */
   border-color: var(--color-accent1);
 	box-shadow: var(--shadow-hover);
 	transform: translateY(-4px);
