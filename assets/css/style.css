@@ -640,21 +640,37 @@ footer section ul{
 	overflow: hidden;
 	/* Sizing */
 	width: 100%;
-	/* Efeito de fade nas bordas */
+	/* Efeito */
+	transition: -webkit-mask-image 0.3s ease, mask-image 0.3s ease;
+	/* Efeito de fade nas bordas, caso JS não funcione */
   -webkit-mask-image: linear-gradient(
       to right, 
-      transparent 0%, 
-      black 5%, 
-      black 95%, 
+      gray 98%, 
       transparent 100%
   );
   mask-image: linear-gradient(
       to right, 
-      transparent 0%, 
-      black 5%, 
-      black 95%, 
+      gray 98%, 
       transparent 100%
   );
+}
+
+/* ESTADO: Nenhum (Se couber tudo na tela) */
+.carousel-wrapper[data-scroll="none"] {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* ESTADO: Meio (Fade em Ambos os lados) */
+.carousel-wrapper[data-scroll="middle"] {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, gray 2%, gray 98%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, gray 2%, gray 98%, transparent 100%);
+}
+
+/* ESTADO: Fim (Fade apenas na Esquerda) */
+.carousel-wrapper[data-scroll="end"] {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, gray 2%);
+  mask-image: linear-gradient(to right, transparent 0%, gray 2%);
 }
 
 .carousel-track{
