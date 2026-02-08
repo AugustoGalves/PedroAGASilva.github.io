@@ -230,9 +230,20 @@ a:hover{
 	opacity: 0.8;
 }
 
+strong {
+  /* Typography */
+  font-size: var(--spacing45);
+  line-height: 1.1;
+  /* Visuals */
+  color: var(--color-text-primary);
+}
+
 .subtext{
+	/* Typography */
+	font-size: var(--spacing3); /* Levemente menor que o corpo */
 	/* Visuals */
 	color: var(--color-subtext);
+  opacity: 0.8;
 }
 
 .span{
@@ -287,6 +298,11 @@ a:hover{
 	a{
 		/* Typography */
 		font-size: var(--spacing4);/*16px*/
+	}
+
+	strong {
+  	/* Typography */
+  	font-size: var(--spacing45);/*20px*/
 	}
 }
 
@@ -472,6 +488,50 @@ footer section ul{
 }
 
 
+/* ─── Dividers ──────────────────────────────────────────────────────── ✣ ─ */
+.divider-horizontal100{
+	width: 100%;
+	height: 1px;
+	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
+	background-color: var(--color-border-muted);
+}
+
+.divider-horizontal90{
+	width: 90%;
+	height: 1px;
+	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
+	background-color: var(--color-border-muted);
+}
+
+.pill-divider {
+    width: 1px;
+    height: var(--spacing45); /* 20px */
+    background-color: var(--color-border-muted);
+    margin: 0 2px;
+}
+
+
+/* ─── Icons ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.svgicon-small{
+	/*Size 32px*/
+	width: var(--spacing6);
+	height: var(--spacing6);
+	color: var(--color-text-primary-muted);
+}
+
+.svgicon-xsmall{
+	/*Size 24px*/
+	width: var(--spacing5);
+	height: var(--spacing5);
+	color: var(--color-text-primary-muted);
+}
+
+.btn .svgicon-small path,
+.btn .svgicon-xsmall path{
+	color: var(--color-text-primary);
+}
+
+
 /* ─── CARDS ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .card{
 	/* Layout */
@@ -496,6 +556,9 @@ footer section ul{
 .card:hover{
 	/* Visuals */
 	background-color: var(--gradient-bg-hover); /* Secondary Color */
+  border-color: var(--color-accent1);
+	box-shadow: var(--shadow-hover);
+	transform: translateY(-4px);
 }
 
 .card--emote{
@@ -506,10 +569,16 @@ footer section ul{
 }
 
 /* O duplo traço no nome indica que é um modificador image para o elemento .card */
-.card--image{ 
+.card--carousel{ 
 	/* Layout */
 	justify-content: flex-start;
+	gap: var(--spacing0); /* Margin entre texto e imagem */
 	overflow: hidden; /* Esconde oq sair do container */
+	/* Sizing */
+	padding: var(--spacing0);
+	min-width: 280px; /* Garante uma largura mínima elegante */
+	/* Visuals */
+  background-color: var(--color-bg); /* Primary Color */
 	/* Effects */
   scroll-snap-align: start;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -517,13 +586,15 @@ footer section ul{
 
 /* O duplo underline no nome indica que é uma imagem dentro do elemento .card */
 .card__image{
+	/* Layout */
+	width: 100%;
+	aspect-ratio: 16/9; 
+  object-fit: cover;
 	/* Sizing */
-	width: calc(100% + var(--spacing6));
 	height: auto;
-	margin: -1rem -1rem 0rem -1rem; /* Remover o padding do container pai, sentido do relogio, top right bottom left */
+	margin: 0;
 	/* Visuals */
-	border-top-left-radius: var(--spacing2); /* Arredondamento de borda da imagem */
-	border-top-right-radius: var(--spacing2); /* Arredondamento de borda da imagem */
+	transition: transform 0.5s ease;
 	/* Efeitos - Impedir Image Grab e Selection */
   -webkit-user-drag: none;
   user-drag: none; 
@@ -533,47 +604,28 @@ footer section ul{
   user-select: none;
 }
 
-
-/* ─── Dividers ──────────────────────────────────────────────────────── ✣ ─ */
-.divider-horizontal100{
-	width: 100%;
-	height: 1px;
-	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
-	background-color: var(--color-border-muted);
+.card--carousel:hover .card__image {
+    transform: scale(1.05); /* Zoom suave no hover */
 }
 
-.divider-horizontal90{
-	width: 90%;
-	height: 1px;
-	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
-	background-color: var(--color-border-muted);
+/* ─── Textos do Carousel ──────────────────────────────────────────────────────── ✣ ─ */
+.card--carousel strong { /* Titulo */
+  /* Layout */
+  display: block; /* Sozinho na linha */
 }
 
-.pill-divider {
-    width: 1px;
-    height: var(--spacing45); /* 20px */
-    background-color: var(--color-border-muted);
-    margin: 0 2px;
-}
-
-/* ─── Icons ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.svgicon-small{
-	/*Size 32px*/
-	width: var(--spacing6);
-	height: var(--spacing6);
-	color: var(--color-text-primary-muted);
-}
-
-.svgicon-xsmall{
-	/*Size 24px*/
-	width: var(--spacing5);
-	height: var(--spacing5);
-	color: var(--color-text-primary-muted);
-}
-
-.btn .svgicon-small path,
-.btn .svgicon-xsmall path{
-	color: var(--color-text-primary);
+.card--carousel a { /* Área de Texto (Link) */
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing1);
+  /* Sizing */
+  padding: var(--spacing4); /* Espaçamento interno para o texto não colar na borda */
+  flex-grow: 1; /* Ocupa o resto da altura do card */
+  /* Visuals */
+  background: var(--gradient-bg);
+  border-top: 1px solid var(--color-border-muted);
 }
 
 
@@ -616,7 +668,7 @@ footer section ul{
 	display: none;
 }
 
-.carousel-track .card--image {
+.carousel-track .card--carousel {
   /* NÃO SEI OQ TA ACONTECENDO AQUI */
   /* Layout */
   flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 3);
@@ -645,6 +697,7 @@ footer section ul{
 	height: var(--spacing8);
 	width: auto
 }
+
 
 /* ─── NAV WIDGETS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .nav-preferences {
@@ -1185,10 +1238,10 @@ body.menu-open::before {
 
 	/* ─── CARDS & CAROUSEL ──────────────────────────────────────────────────────── ✣ ─ */
 
-  .carousel-track .card--image {
-      /* Sei la qq ta acontecendo aqui */
-      /* Layout */
-      flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 2.5);
+  .carousel-track .card--carousel {
+    /* Layout */
+    min-width: 85vw; 
+    flex: 0 0 85vw;
   }
 
   .card--emote{
