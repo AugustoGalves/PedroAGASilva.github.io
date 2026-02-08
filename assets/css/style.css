@@ -345,6 +345,8 @@ a:hover{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+	align-items: center;
+	gap: var(--spacing4);
 	/* Sizing */
 	width: 100%;
 }
@@ -522,6 +524,13 @@ footer section ul{
 	/* Visuals */
 	border-top-left-radius: var(--spacing2); /* Arredondamento de borda da imagem */
 	border-top-right-radius: var(--spacing2); /* Arredondamento de borda da imagem */
+	/* Efeitos - Impedir Image Grab e Selection */
+  -webkit-user-drag: none;
+  user-drag: none; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 
@@ -1192,7 +1201,7 @@ body.menu-open::before {
   
   .page-wrapper {
   	/* Sizing */
-  	padding: var(--spacing1) var(--spacing6);
+  	padding: var(--spacing0) var(--spacing6);
   }
 
   .header-wrapper{

@@ -13,7 +13,7 @@ customElements.define("t-header", THeader);
 class TFooter extends HTMLElement{
 	connectedCallback() //HTML do THeader vai aqui dentro
 	{ 
-
+		CODIGO HTML AQUI
 	}
 }
 customElements.define("t-footer", TFooter);
