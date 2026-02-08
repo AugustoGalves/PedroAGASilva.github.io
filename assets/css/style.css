@@ -249,8 +249,6 @@ strong {
 .span{
     /* Layout */
     display: block; /* Sozinho na linha */
-    /* Sizing */
-    padding-bottom: var(--spacing3);
     /* Typography */
     white-space: nowrap;
 }
@@ -322,7 +320,7 @@ strong {
 	/* Layout */
 	margin: 0 auto;
 	/* Sizing */
-	padding: var(--spacing4) var(--spacing11);
+	padding: var(--spacing2) var(--spacing10);
 	max-width: 1200px; /*Tamanho máximo da largura*/
 	box-sizing: border-box; /*Padding não vai aumentar o tamanho do page wrapper*/
 	/* Effects */
@@ -333,7 +331,7 @@ strong {
   /* Layout */
   margin: 0 auto;
 	/* Sizing */
-  padding: 0 var(--spacing11);
+  padding: 0 var(--spacing10);
   max-width: 1200px;
   box-sizing: border-box;
   /* Effects */
@@ -683,6 +681,7 @@ footer section ul{
 	overflow-x: auto; /*Esconde o overflow mas mostra um scroll. Mas caso não tenha overflow, o scroll some*/
 	scrollbar-width: none; /*Esconde a scroll bar no firefox*/
 	scroll-snap-type: x mandatory;
+	scroll-padding-inline: var(--spacing1); /*Considera o padding nos snaps*/
 	scroll-behavior: smooth;	
 	scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
@@ -968,6 +967,10 @@ footer section ul{
 
 .nopaddingbottom{
 	padding-bottom: 0;
+}
+
+.nomargintop{
+	margin-top: 0;
 }
 
 .nomarginbottom{
