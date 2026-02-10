@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("Função loadLanguage não encontrada. Verifique se i18n.js foi carregado.");
   }
 
-  // 2. Iniciar Dropdown de idiomas
-  setupLanguageDropdown();
   setupCarouselFade();
 });
 
