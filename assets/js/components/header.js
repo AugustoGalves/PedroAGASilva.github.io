@@ -2,7 +2,7 @@
 
 //Criando Custom HTML Components ─────────────────────────────────────────────────────────────────────────────── ✣ ──
 
-class t-header extends HTMLElement {
+class THeader extends HTMLElement {
     // =======================================
     // Função principal main()
     // =======================================
@@ -263,4 +263,4 @@ class t-header extends HTMLElement {
     }
 }
 
-customElements.define('t-header', t-header);
+customElements.define('t-header', THeader);
