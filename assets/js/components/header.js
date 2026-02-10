@@ -263,4 +263,4 @@ class THeader_1 extends HTMLElement {
     }
     
 
-customElements.define('t-header_1', THeader_1);
+customElements.define('THeader_1', THeader_1);
