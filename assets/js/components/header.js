@@ -51,7 +51,7 @@ class THeader extends HTMLElement {
         
 <header>
 <div class="container flex">   
-    <div class="flex flex-row justify-spacebetween">
+    <div class="flex flex-row justify-spacebetween w-full">
         
         <!-- ─── NAV BAR - LEFT SIDE ──────────────────────────────────────────────────────────────── ✣ ─ -->
         <a href="${links.navbutton1}"><img class="logo-header" src="${links.headerlogo_darktheme}" alt="Pedro AGA Silva, engenheiro mecânico"></a>

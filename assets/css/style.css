@@ -330,21 +330,20 @@ strong {
 
 /* ───  Seção ──────────────────────────────────────────────────────── ✣ ─ */
 .section{
-	margin-top: var(--spacing8);
+	margin-top: var(--spacing6);
 }
 
 
 /* ─── FLEX GERAL ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .flex{
 	display: flex;
-	justify-content: center;
 	gap: var(--spacing4);
 }
 
 .flex-col {flex-direction: column;}
 .flex-row {flex-direction: row;}
-.flex-col-reverse {flex-direction: column-reverse;}
-.flex-row-reverse{flex-direction: row-reverse;}
+.flex-colreverse {flex-direction: column-reverse;}
+.flex-rowreverse{flex-direction: row-reverse;}
 .items-center{align-items: center}
 .items-start{align-items: flex-start;}
 .items-end{align-items: flex-end;}
@@ -355,10 +354,12 @@ strong {
 
 @media (max-width: 992px) {
 	.flex-row-mobile {flex-direction: row;}
+	.flex-rowreverse-mobile{flex-direction: row-reverse;}
+	.flex-col-mobile {flex-direction: column;}
+	.flex-colreverse-mobile{flex-direction: column-reverse;}
 	.flex-spacebetween-mobile{justify-content: space-between;}
 	.flex-start-mobile{justify-content: flex-start;}
 	.flex-end-mobile{justify-content: flex-end;}
-	.flex-reverse-mobile{flex-direction: row-reverse;}
 
 	.center-text-mobile{text-align: center;}
   .center-align-mobile{justify-content: center;}
@@ -546,7 +547,7 @@ footer section ul{
 	text-align: left;
 	gap: var(--spacing4); /* Margin entre texto e imagem */
 	/* Sizing */
-	padding: var(--spacing2) var(--spacing0) var(--spacing2) var(--spacing3);
+	padding: var(--spacing2) var(--spacing2) var(--spacing2) var(--spacing3);
 	min-height: var(--spacing6);
 	width: 30%;
 }
@@ -846,6 +847,9 @@ footer{
 	justify-content: space-between;
 	align-items: center;
 	/* Sizing */
+	margin-top: 20px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	width: 100%;
 }
 
