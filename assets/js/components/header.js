@@ -38,14 +38,29 @@ class THeader extends HTMLElement {
 <!-- ─── HIDDEN NAV BAR MOBILE ────────────────────────────────────────────────────────── ✣ ─ -->
 <nav class="offscreen-menu" aria-label="Navegação principal">
     <button class="menu-close" aria-label="Fechar menu">
-        <svg class="svgicon-small" viewBox="0 0 24 24" aria-hidden="true"><path class="svgicon-small" fill="currentColor" d="M6 6l12 12M18 6l-12 12"/></svg>
+        <svg class="svgicon-small" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12"/></svg>
     </button> 
         <ul>             
-            <li><a data-i18n="nav.home" href="${links.navbutton1}"></a></li>
-            <li><a data-i18n="nav.portfolio" href="${links.navbutton2}"></a></li>
-            <li><a data-i18n="nav.resume" href="${links.navbutton3}"></a></li>
-            <li><a data-i18n="nav.blog" href="${links.navbutton4}"></a></li>
-            <li><a data-i18n="nav.contact" href="${links.navbutton5}"></a></li>
+            <li>
+                <svg class="svgicon-xsmall" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                <a data-i18n="nav.home" href="${links.navbutton1}"></a>
+            </li>
+            <li>
+                <svg class="svgicon-xsmall" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm240-600h160v-80H400v80Zm400 360H600v80H360v-80H160v160h640v-160Zm-360 0h80v-80h-80v80Zm-280-80h200v-80h240v80h200v-200H160v200Zm320 40Z"/></svg>
+                <a data-i18n="nav.portfolio" href="${links.navbutton2}"></a>
+            </li>
+            <li>
+                <svg class="svgicon-small" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q14-36 44-58t68-22q38 0 68 22t44 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm301.5-678.5Q510-807 510-820t-8.5-21.5Q493-850 480-850t-21.5 8.5Q450-833 450-820t8.5 21.5Q467-790 480-790t21.5-8.5ZM579-481q41-41 41-99t-41-99q-41-41-99-41t-99 41q-41 41-41 99t41 99q41 41 99 41t99-41ZM200-200h560v-46q-54-53-125.5-83.5T480-360q-83 0-154.5 30.5T200-246v46Z"/></svg>
+                <a data-i18n="nav.resume" href="${links.navbutton3}"></a>
+            </li>
+            <li>
+                <svg class="svgicon-small" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h440l200 200v440q0 33-23.5 56.5T760-120H200Zm0-80h560v-400H600v-160H200v560Zm80-80h400v-80H280v80Zm0-320h200v-80H280v80Zm0 160h400v-80H280v80Zm-80-320v160-160 560-560Z"/></svg>
+                <a data-i18n="nav.blog" href="${links.navbutton4}"></a>
+            </li>
+            <li>
+                <svg class="svgicon-small" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>
+                <a data-i18n="nav.contact" href="${links.navbutton5}"></a>
+            </li>
         </ul>
 </nav>
         

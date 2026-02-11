@@ -355,6 +355,7 @@ strong {
 .text-left{text-align: left;}
 .text-right{text-align: right;}
 
+.self-start{align-self: start;}
 .self-center{align-self: center;}
 
 @media (max-width: 992px) {
@@ -517,14 +518,14 @@ footer section ul{
 .svgicon-small{
 	/*Size 32px*/
 	width: var(--spacing6);
-	height: var(--spacing6);
+	min-width: var(--spacing6);
 	color: var(--color-text-primary-muted);
 }
 
 .svgicon-xsmall{
 	/*Size 24px*/
 	width: var(--spacing5);
-	height: var(--spacing5);
+	min-width:: var(--spacing5);
 	color: var(--color-text-primary-muted);
 }
 
@@ -777,7 +778,7 @@ t-header{
 .offscreen-menu > ul{
 	/* Layout */
 	display: flex;
-	flex-direction: column;
+	flex-direction: flex-start;
 	align-items: center;
 	margin-top: var(--spacing8);
 	gap: var(--spacing4);
@@ -975,7 +976,7 @@ footer{
 		display: flex;
 		right: -100%;
   	/* Sizing */
-		padding: var(--spacing8) var(--spacing6);
+		padding: var(--spacing0) var(--spacing7);
 		height: 100vh;
 		width: 100%;
 		max-width: 250px;
@@ -1019,26 +1020,6 @@ footer{
 
 .w-90{
 	width: 90%;
-}
-
-.center-x{
-  justify-content: center;
-}
-
-.align-start{
-	align-items: flex-start;
-}
-
-.center-text{ 
-	text-align: center;
-}
-
-.left-text{
-	text-align: left;
-}
-
-.flex-child-left{
-	align-self: start;
 }
 
 .hidden{
@@ -1243,7 +1224,7 @@ footer{
 
 .menu-close:hover {
     /* Visuals */
-    background-color: rgba(0, 0, 0, 0.05); /* Círculo sutil no fundo */
+    background-color: rgba(0, 0, 0, 0.40); /* Círculo sutil no fundo */
     /* Effects */
     transform: rotate(90deg); /* Pequena animação de rotação */
 }
@@ -1455,18 +1436,6 @@ body.menu-open::before {
 
 
   /* ─── Utilities mobile ──────────────────────────────────────────────────────── ✣ ─ */
-  .flex-col-mobile {
-    /* Layout */
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flex-col-reverse-mobile {
-    /* Layout */
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
   .gap4-mobile{
   	/* Layout */
   	gap: var(--spacing4);
