@@ -337,11 +337,34 @@ strong {
 /* ─── FLEX GERAL ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .flex{
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	gap: var(--spacing4);
-	flex-wrap: wrap;
 }
+
+.flex-col {flex-direction: column;}
+.flex-row {flex-direction: row;}
+.flex-col-reverse {flex-direction: column-reverse;}
+.flex-row-reverse{flex-direction: row-reverse;}
+.items-center{align-items: center}
+.items-start{align-items: flex-start;}
+.items-end{align-items: flex-end;}
+.justify-spacebetween{justify-content: space-between;}
+.justify-start{justify-content: flex-start;}
+.justify-end{justify-content: flex-end;}
+
+
+@media (max-width: 992px) {
+	.flex-row-mobile {flex-direction: row;}
+	.flex-spacebetween-mobile{justify-content: space-between;}
+	.flex-start-mobile{justify-content: flex-start;}
+	.flex-end-mobile{justify-content: flex-end;}
+	.flex-reverse-mobile{flex-direction: row-reverse;}
+
+	.center-text-mobile{text-align: center;}
+  .center-align-mobile{justify-content: center;}
+	.flex-child-center-mobile{align-self: center;}
+}
+
 
 
 /* ─── GLOBAL LIST STYLES ─────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
@@ -683,6 +706,11 @@ footer section ul{
 	width: 100%;
 }
 
+t-header{
+	display: block;
+	width: 100%;
+}
+
 .logo-header{
 	/* Sizing */
 	height: var(--spacing8);
@@ -695,8 +723,6 @@ footer section ul{
 	flex-direction: row;
 	align-items: center;
 	gap: var(--spacing4);
-	/* Sizing */
-	width: 100%;
 }
 
 .navbar--desktop{
@@ -810,7 +836,7 @@ footer section ul{
 
 /* ───  FOOTER ──────────────────────────────────────────────── ✣ ─ */
 footer{
-	background-color: var(color-bg-light);
+	background-color: var(--color-bg-light);
 }
 
 .footer-bottom{
@@ -882,6 +908,8 @@ footer{
 
 /* ─── HERO ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .hero-left{
+	/* Layout */
+	align-items: flex-start;
 	/* Sizing */
 	padding-right: 10%; /*Ocupar menos espaço do container*/
 	width: 80%;
@@ -967,6 +995,10 @@ footer{
 	width: 100%;
 }
 
+.w-90{
+	width: 90%;
+}
+
 .center-x{
   justify-content: center;
 }
@@ -991,35 +1023,8 @@ footer{
 	display: none;
 }
 
-.flex-row {flex-direction: row;}
-.flex-spacebetween{justify-content: space-between;}
-.flex-start{justify-content: flex-start;}
-.flex-end{justify-content: flex-end;}
-
-@media (max-width: 992px) {
-	.center-text-mobile{
-  		text-align: center;
-  	}
-
-  .center-align-mobile{
-  	justify-content: center;
-  }
-
-	.flex-child-center-mobile{
-		align-self: center;
-	}
-}
-
-.reverse{
-	flex-direction: row-reverse;
-}
-
 .margintop-small{
 	margin-top: var(--spacing4);
-}
-
-.widthmax{
-	width: 100%; 
 }
 
 .nopaddingtop{
@@ -1428,13 +1433,13 @@ body.menu-open::before {
 
 
   /* ─── Utilities mobile ──────────────────────────────────────────────────────── ✣ ─ */
-  .flex-column-mobile {
+  .flex-col-mobile {
     /* Layout */
     flex-direction: column;
     align-items: center;
   }
 
-  .flex-column-reverse-mobile {
+  .flex-col-reverse-mobile {
     /* Layout */
     flex-direction: column-reverse;
     align-items: center;
