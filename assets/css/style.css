@@ -143,7 +143,7 @@ body{
 	width: 100%; /* A página sempre vai ter a largura da tela */
   min-height: 100vh; /* Altura mínima, garante que rodapé fica colado no final da tela mesmo em páginas curtas */
 	/* Typograph */
-	text-wrap: balance;
+	text-wrap: pretty;
 	/* Visuals */
 	background-color: var(--color-bg-dark);
 }
@@ -315,20 +315,9 @@ strong {
 /* ────────────────────────────────────────────────────────────────────────── */
 /* Classes que servem apenas para layout */
 
-/* ─── WRAPPERS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.page-wrapper{
+/* ─── PAGE WRAPPER ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.container{
 	/* Layout */
-	margin: 0 auto;
-	/* Sizing */
-	padding: var(--spacing2) var(--spacing10);
-	max-width: 1200px; /*Tamanho máximo da largura*/
-	box-sizing: border-box; /*Padding não vai aumentar o tamanho do page wrapper*/
-	/* Effects */
-	transition: filter 0.3s ease; /*Acontece ao sofrer blur do hamburger menu*/
-}
-
-.header-wrapper{
-  /* Layout */
   margin: 0 auto;
 	/* Sizing */
   padding: 0 var(--spacing10);
@@ -339,45 +328,19 @@ strong {
 }
 
 
-/* ─── CONTAINERS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.container{
-	/* Layout */
-	display: flex;
-	flex-direction: column; /*Container pai: linha ou coluna*/
-	justify-content: flex-start; /*Children horizontal distribuition if flex is row*/
-	/* Sizing */
-	width: 100%;
+/* ───  Seção ──────────────────────────────────────────────────────── ✣ ─ */
+.section{
+	margin-top: var(--spacing8);
 }
 
-.container-full-line{
-	/* Layout */
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	/* Sizing */
-	width: 100%;
-}
 
-.container-nav{
-	/* Layout */
+/* ─── FLEX GERAL ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.flex{
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
 	align-items: center;
+	justify-content: center;
 	gap: var(--spacing4);
-	/* Sizing */
-	width: 100%;
-}
-
-.container-footer-bottom{
-	/* Layout */
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	/* Sizing */
-	padding-bottom: 0 !important;
-	width: 100%;
+	flex-wrap: wrap;
 }
 
 
@@ -410,13 +373,7 @@ footer section ul{
 /* ███████████████████████████  🧩COMPONENTS  ███████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
-/* ───  Seção ──────────────────────────────────────────────────────── ✣ ─ */
-.section{
-	padding-top: var(--spacing4);
-	padding-bottom: var(--spacing4);
-}
-
-/* ───  Button ──────────────────────────────────────────────────────── ✣ ─ */
+/* ───  BUTTON ──────────────────────────────────────────────────────── ✣ ─ */
 .btn{
 	/* Layout */
 	white-space: nowrap;
@@ -450,7 +407,7 @@ footer section ul{
 	transform: translateY(0);
 }
 
-/* ───  Button primary ──────────────────────────────────────────────────────── ✣ ─ */
+/* ───  BUTTON PRIMARY ──────────────────────────────────────────────────────── ✣ ─ */
 .btn--primary{
 	/* Sizing */
 	padding: var(--spacing3) var(--spacing3); /* vertical | horizontal */
@@ -462,7 +419,7 @@ footer section ul{
 }
 
 
-/* ───  Button primary Big Size ──────────────────────────────────────────────────────── ✣ ─ */
+/* ───  BUTTON PRIMARY BIG ──────────────────────────────────────────────────────── ✣ ─ */
 .btn--primary-big{
 	/* Sizing */
 	padding: var(--spacing3) var(--spacing5); /* vertical | horizontal */
@@ -474,7 +431,7 @@ footer section ul{
 }
 
 
-/* ───  Button secondary ──────────────────────────────────────────────────────── ✣ ─ */
+/* ───  BUTTON SECUNDARY ──────────────────────────────────────────────────────── ✣ ─ */
 .btn--secondary{
 	/* Sizing */
 	padding: var(--spacing3) var(--spacing3); /* vertical | horizontal */
@@ -540,17 +497,8 @@ footer section ul{
 
 /* ─── CARDS ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .card{
-	/* Layout */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: var(--spacing4); /* Margin entre texto e imagem */
-	/* Sizing */
-	padding: var(--spacing2) var(--spacing0) var(--spacing2) var(--spacing3);
-	min-height: var(--spacing6);
-	width: 30%;
 	/* Visuals */
-  background-color: var(--color-bg); /* Secondary Color */
+  background-color: var(--color-bg);
   border: var(--border);
   border-radius: var(--spacing4);
 	border-top: solid 1px var(--color-highlight);
@@ -568,25 +516,31 @@ footer section ul{
 
 .card--emote{
 	/* Layout */
+	display: flex;
+	justify-content: center;
 	flex-direction: row;
 	align-items: center;
 	text-align: left;
+	gap: var(--spacing4); /* Margin entre texto e imagem */
+	/* Sizing */
+	padding: var(--spacing2) var(--spacing0) var(--spacing2) var(--spacing3);
+	min-height: var(--spacing6);
+	width: 30%;
 }
 
 /* O duplo traço no nome indica que é um modificador image para o elemento .card */
 .card--carousel{ 
 	/* Layout */
+	display: flex;
+	flex-direction: column;
 	justify-content: flex-start;
 	gap: var(--spacing0); /* Margin entre texto e imagem */
 	overflow: hidden; /* Esconde oq sair do container */
 	/* Sizing */
 	padding: var(--spacing0);
+	min-height: var(--spacing6);
 	min-width: 280px; /* Garante uma largura mínima elegante */
-	/* Visuals */
-  background-color: var(--color-bg); /* Primary Color */
-	/* Effects */
-  scroll-snap-align: start;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+	width: 30%;
 }
 
 /* O duplo underline no nome indica que é uma imagem dentro do elemento .card */
@@ -735,8 +689,61 @@ footer section ul{
 	width: auto
 }
 
+.navbar{
+	/* Layout */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: var(--spacing4);
+	/* Sizing */
+	width: 100%;
+}
 
-/* ─── NAV WIDGETS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.navbar--desktop{
+	justify-content: flex-end;
+}
+
+.navbar--mobile{
+	display: none;
+  gap: var(--spacing4); /* Espaço entre a Pílula e o Hambúrguer */ 
+}
+
+
+/* ─── HEADER - Menu offscreen  ──────────────────────────────────────────────────────── ✣ ─ */
+.offscreen-menu{
+	/* Layout */
+	display: none;
+	position: fixed;
+	top: 0;
+	z-index: 998;
+	/* Layout Mobile */
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+ 	/* Effects */
+	filter: none; /*Remove o blur desse elemento*/
+	transition: right 0.3s ease;
+	/* Visuals Legacy Browsers */
+ 	background-color: var(--color-bg-light);
+ 	/* Visuals */
+ 	background-color: color-mix(in srgb, var(--color-bg-light), transparent 15%);;
+}
+
+.offscreen-menu > ul{
+	/* Layout */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: var(--spacing8);
+	gap: var(--spacing4);
+  /* Sizing */
+	padding: 0;
+  /* Effects */
+	list-style: none;
+}
+
+
+/* ─── HEADER - NAV SETTINGS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .nav-preferences {
   /* Layout */
   display: flex;
@@ -756,6 +763,8 @@ footer section ul{
 	border-color: var(--color-text-primary);
 }
 
+
+/* ─── HEADER - Settings Pill ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .btn-settings, 
 .lang-toggle{
 	/* Layout */
@@ -796,6 +805,22 @@ footer section ul{
   padding-right: var(--spacing2);
 	/* Visuals */
   border-radius: 0 50px 50px 0;
+}
+
+
+/* ───  FOOTER ──────────────────────────────────────────────── ✣ ─ */
+footer{
+	background-color: var(color-bg-light);
+}
+
+.footer-bottom{
+	/* Layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	/* Sizing */
+	width: 100%;
 }
 
 
@@ -855,10 +880,6 @@ footer section ul{
   transform: translateY(0);
 }
 
-.header-settings-mobile {
-  display: none; 
-}
-
 /* ─── HERO ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .hero-left{
 	/* Sizing */
@@ -895,11 +916,56 @@ footer section ul{
   );
   /* Effects */
   pointer-events: none; /* O mouse ignora esse elemento, clica direto no que estiver atrás */
+}
+
+@media (max-width: 992px) {
+	/* ─── HEADER  ──────────────────────────────────────────────────────── ✣ ─ */
+	.offscreen-menu {
+		/* Layout */
+		display: flex;
+		right: -100%;
+  	/* Sizing */
+		padding: var(--spacing8) var(--spacing6);
+		height: 100vh;
+		width: 100%;
+		max-width: 250px;
+  }
+
+  .offscreen-menu.active{
+		/* Layout */
+		right: 0px;
+  	/* Effects */
+		visibility: visible;
+		opacity: 1;
+	}
+
+  .navbar--mobile {
+    /* Layout */
+    display: flex;
+  }
+
+  .navbar--mobile .nav-preferences {
+    /* Effects */
+    transform: scale(0.95); 
+    transform-origin: right center;
+  }
+
+  .navbar--mobile .lang-menu {
+    /* Layout */
+    right: 0;
+    left: auto;
+  	/* Sizing */
+    min-width: 130px;
+  }
 } 
 
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ██████████████████████   ⚙️ UTILITY CLASSES     ██████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
+
+.w-full{
+	width: 100%;
+}
 
 .center-x{
   justify-content: center;
@@ -923,14 +989,6 @@ footer section ul{
 
 .hidden{
 	display: none;
-}
-
-.flex{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: var(--spacing4);
-	flex-wrap: wrap;
 }
 
 .flex-row {flex-direction: row;}
@@ -1188,40 +1246,6 @@ footer section ul{
 }
 
 
-/* ─── Menu offscreen  ──────────────────────────────────────────────────────── ✣ ─ */
-.offscreen-menu{
-	/* Layout */
-	display: none;
-	position: fixed;
-	top: 0;
-	z-index: 998;
-  /* Effects */
-	transition: .3s ease;
-	filter: none; /*Remove o blur desse elemento*/
-}
-
-.offscreen-menu.active{
-	/* Layout */
-	right: 0px;
-  /* Effects */
-	visibility: visible;
-	opacity: 1;
-}
-
-.offscreen-menu > ul{
-	/* Layout */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: var(--spacing8);
-	gap: var(--spacing4);
-  /* Sizing */
-	padding: 0;
-  /* Effects */
-	list-style: none;
-}
-
-
 /* ─── Overlay Escuro e borrado ao abrir menu  ──────────────────────────────────────────────────────── ✣ ─ */
 body.menu-open {
 	/* Layout */
@@ -1264,9 +1288,10 @@ body.menu-open::before {
     z-index: 990;
   	/* Visuals */
     background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* Glass Blur Effect */
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
   	/* Effects */
     transition: background-color 0.3s ease;
   }
@@ -1290,20 +1315,14 @@ body.menu-open::before {
   	width: 85%;
   }
 
-
 	/* ─── Elements ──────────────────────────────────────────────────────── ✣ ─ */
   
-  .page-wrapper {
+  .container {
   	/* Sizing */
   	padding: var(--spacing0) var(--spacing6);
   }
 
-  .header-wrapper{
-  	/* Sizing */
-  	padding: var(--spacing0) var(--spacing6);
-  }
-
-  .header-wrapper .container {
+  .container .flex {
   	/* Sizing */
     padding-top: var(--spacing1);
     padding-bottom: var(--spacing1);
@@ -1314,7 +1333,7 @@ body.menu-open::before {
   	justify-content: space-between;
   }
 
-  .container-nav {
+  .navbar--desktop{
     /* Layout */
     display: none;
   }
@@ -1350,34 +1369,7 @@ body.menu-open::before {
     display: none;
   }
 
-  /* ─── Mobile Navigation Menu Settings ─────────────────────────────────────────────── ✣ ─ */
-  .header-settings-mobile {
-    /* Layout */
-    display: flex;
-    align-items: center;
-    gap: var(--spacing4); /* Espaço entre a Pílula e o Hambúrguer */
-  }
 
-  .header-settings-mobile .nav-preferences {
-    /* Effects */
-    transform: scale(0.95); 
-    transform-origin: right center;
-  }
-
-  .header-settings-mobile .lang-menu {
-    /* Layout */
-    right: 0;
-    left: auto;
-  	/* Sizing */
-    min-width: 130px;
-  	/* Effects */
-    transform: translateY(10px);
-  }
-
-  .header-settings-mobile .lang-selector.open .lang-menu {
-    /* Effects */
-    transform: translateY(14px);
-  }
 
   /* ─── Hamburguer menu show ──────────────────────────────────────────────────────── ✣ ─ */
   .menu-toggle {
@@ -1385,26 +1377,6 @@ body.menu-open::before {
     display: flex;
   }
 
-  .offscreen-menu {
-  	/* Layout */
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-		text-align: center;
-		position: fixed;
-		top: 0;
-		right: -450px;
-		z-index: 998;
-  	/* Sizing */
-		height: 100vh;
-		max-width: 450px;
-		width: 100%;
-  	/* Visuals */
-  	background-color: var(--color-bg-light);
-  	/* Effects */
-		transition: right 0.3s ease;
-  }
   /* ─── Language Selector ──────────────────────────────────────────────────────── ✣ ─ */
   .lang-selector {
     /* Layout */
@@ -1479,7 +1451,6 @@ body.menu-open::before {
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ████████████████████████  📱ACESSIBILIDADE   █████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
-
 
 @media (prefers-reduced-motion: reduce) {
   * {
