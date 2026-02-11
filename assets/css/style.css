@@ -1296,6 +1296,12 @@ body.menu-open::before {
 @media (max-width: 992px) {
 
 	/* ─── Sticky header ──────────────────────────────────────────────────────── ✣ ─ */
+	t-header {
+    position: sticky;
+    top: 0;
+    z-index: 990;
+  }
+
 	header {
 		/* Layout */
     position: sticky;
