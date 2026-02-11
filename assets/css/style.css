@@ -155,7 +155,7 @@ body{
 
 h1{
 	/* Sizing */
-	margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
+	margin-top: var(--spacing5); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: var(--spacing2); /*Espaçamento de paragrafo AFTER*/
 	/* Typography */
 	font-size: var(--spacing7); /*48px*/
@@ -258,7 +258,7 @@ strong {
 @media (max-width:992px) {
 	h1{
 		/* Sizing */
-		margin-top: var(--spacing2); /*Espaçamento de paragrafo BEFORE*/
+		margin-top: var(--spacing4); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: var(--spacing1); /*Espaçamento de paragrafo AFTER*/
 		/* Typography */
 		font-size: var(--spacing6); /*32px*/
@@ -334,36 +334,49 @@ strong {
 }
 
 
-/* ─── FLEX GERAL ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.flex{
-	display: flex;
-	gap: var(--spacing4);
-}
+/* ─── FLEX UTILITIES ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.flex{display: flex;}
 
 .flex-col {flex-direction: column;}
 .flex-row {flex-direction: row;}
 .flex-colreverse {flex-direction: column-reverse;}
 .flex-rowreverse{flex-direction: row-reverse;}
+
 .items-center{align-items: center}
 .items-start{align-items: flex-start;}
 .items-end{align-items: flex-end;}
+
 .justify-spacebetween{justify-content: space-between;}
+.justify-center-mobile{justify-content: center;}
 .justify-start{justify-content: flex-start;}
 .justify-end{justify-content: flex-end;}
 
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
+.self-center{align-self: center;}
 
 @media (max-width: 992px) {
 	.flex-row-mobile {flex-direction: row;}
 	.flex-rowreverse-mobile{flex-direction: row-reverse;}
 	.flex-col-mobile {flex-direction: column;}
 	.flex-colreverse-mobile{flex-direction: column-reverse;}
-	.flex-spacebetween-mobile{justify-content: space-between;}
-	.flex-start-mobile{justify-content: flex-start;}
-	.flex-end-mobile{justify-content: flex-end;}
+	
+	.items-center-mobile{align-items: center}
+	.items-start-mobile{align-items: flex-start;}
+	.items-end-mobile{align-items: flex-end;}
 
-	.center-text-mobile{text-align: center;}
-  .center-align-mobile{justify-content: center;}
-	.flex-child-center-mobile{align-self: center;}
+	.justify-spacebetween-mobile{justify-content: space-between;}
+	.justify-center-mobile{justify-content: center;}
+	.justify-start-mobile{justify-content: flex-start;}
+	.justify-end-mobile{justify-content: flex-end;}
+
+	.text-center-mobile{text-align: center;}
+	.text-left-mobile{text-align: left;}
+	.text-right-mobile{text-align: right;}
+
+	.self-center-mobile{align-self: center;}
 }
 
 
@@ -477,6 +490,7 @@ footer section ul{
 
 /* ─── Dividers ──────────────────────────────────────────────────────── ✣ ─ */
 .divider-horizontal100{
+	display: flex;
 	width: 100%;
 	height: 1px;
 	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
@@ -484,6 +498,7 @@ footer section ul{
 }
 
 .divider-horizontal90{
+	display: flex;
 	width: 90%;
 	height: 1px;
 	margin: var(--spacing0) var(--spacing1); /* vertical | horizontal */
@@ -750,6 +765,9 @@ t-header{
  	/* Effects */
 	filter: none; /*Remove o blur desse elemento*/
 	transition: right 0.3s ease;
+	/* Glass Blur Effect */
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px);
 	/* Visuals Legacy Browsers */
  	background-color: var(--color-bg-light);
  	/* Visuals */
