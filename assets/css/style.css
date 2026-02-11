@@ -88,7 +88,7 @@
 	--color-danger: oklch(0.5 0.05 30);
 
 	/* Decoration Colors */
-	--color-highlight: oklch(1 0.03 265);
+	--color-highlight: oklch(0.8 0.015 0 / 1); /* Inventei essa cor*/
 	--color-border: oklch(0.6 0.03 265);
 	--color-border-muted: oklch(0.7 0.03 265);
 	--color-info: oklch(0.5 0.05 260);
@@ -106,7 +106,7 @@
     	0px 4px 6px -2px oklch(0 0 0 / 0.12);
 	--shadow-active:  
 			0px 1px 2px oklch(0 0 0 / 0.05);
-	--border: solid 1px var(--color-bg); /* Borda na cor do bg */
+	--border: solid 1px oklch(0.6 0.015 0 / 1); /* Inventei essa cor*/
 }
 
 :root[data-theme="light"] .logo-header{
@@ -778,14 +778,21 @@ t-header{
 .offscreen-menu > ul{
 	/* Layout */
 	display: flex;
-	flex-direction: flex-start;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
 	margin-top: var(--spacing8);
 	gap: var(--spacing4);
   /* Sizing */
 	padding: 0;
   /* Effects */
 	list-style: none;
+}
+
+.offscreen-menu ul li{
+	/* Layout */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 
@@ -1350,6 +1357,7 @@ body.menu-open::before {
     /* Layout */
     align-items: center;
     text-align: center;
+    margin: 0 auto;
   	/* Sizing */
     padding-right: 0;
   }
