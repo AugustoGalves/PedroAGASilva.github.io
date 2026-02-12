@@ -232,7 +232,7 @@ a:hover{
 
 strong {
   /* Typography */
-  font-size: var(--spacing45);
+  font-size: var(--spacing4);
   line-height: 1.1;
   /* Visuals */
   color: var(--color-text-primary);
@@ -304,7 +304,7 @@ strong {
 
 	strong {
   	/* Typography */
-  	font-size: var(--spacing45);/*20px*/
+  	font-size: var(--spacing4);/*20px*/
 	}
 }
 
@@ -460,7 +460,7 @@ footer section ul{
 /* ───  BUTTON PRIMARY BIG ──────────────────────────────────────────────────────── ✣ ─ */
 .btn--primary-big{
 	/* Sizing */
-	padding: var(--spacing3) var(--spacing5); /* vertical | horizontal */
+	padding: var(--spacing2) var(--spacing3); /* vertical | horizontal */
 	min-height: var(--spacing7);
 	/* Typograph */
 	font-size: var(--spacing5);
@@ -639,7 +639,7 @@ footer section ul{
   justify-content: center;
   gap: var(--spacing1);
   /* Sizing */
-  padding: var(--spacing4); /* Espaçamento interno para o texto não colar na borda */
+  padding: var(--spacing3); /* Espaçamento interno para o texto não colar na borda */
   flex-grow: 1; /* Ocupa o resto da altura do card */
   /* Visuals */
   background: var(--gradient-bg);
@@ -732,7 +732,7 @@ footer section ul{
 /* ─── BADGES ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .badge{
 	/* Visuals */
-  padding: var(--spacing1) var(--spacing2);
+  padding: 2px 4px;
 	/* Typograph */
   font-size: var(--spacing3);
   font-weight: 600;
@@ -1531,10 +1531,71 @@ body.menu-open::before {
 
 
   /* ─── Utilities mobile ──────────────────────────────────────────────────────── ✣ ─ */
+  .gap0-mobile{
+  	/* Layout */
+  	gap: var(--spacing0);
+  }
+
+  .gap1-mobile{
+  	/* Layout */
+  	gap: var(--spacing1);
+  }
+
+  .gap2-mobile{
+  	/* Layout */
+  	gap: var(--spacing2);
+  }
+
+  .gap3-mobile{
+  	/* Layout */
+  	gap: var(--spacing3);
+  }
+
   .gap4-mobile{
   	/* Layout */
   	gap: var(--spacing4);
   }
+
+  .gap45-mobile{
+  	/* Layout */
+  	gap: var(--spacing45);
+  }
+
+  .gap5-mobile{
+  	/* Layout */
+  	gap: var(--spacing5);
+  }
+
+  .gap6-mobile{
+  	/* Layout */
+  	gap: var(--spacing6);
+  }
+
+  .gap7-mobile{
+  	/* Layout */
+  	gap: var(--spacing7);
+  }
+
+  .gap8-mobile{
+  	/* Layout */
+  	gap: var(--spacing8);
+  }
+
+  .gap9-mobile{
+  	/* Layout */
+  	gap: var(--spacing9);
+  }
+
+  .gap10-mobile{
+  	/* Layout */
+  	gap: var(--spacing10);
+  }
+
+  .gap11-mobile{
+  	/* Layout */
+  	gap: var(--spacing11);
+  }
+
 }
 
 
