@@ -562,6 +562,7 @@ footer section ul{
 	align-items: center;
 	text-align: left;
 	gap: var(--spacing4); /* Margin entre texto e imagem */
+	z-index: 2;
 	/* Sizing */
 	padding: var(--spacing2) var(--spacing2) var(--spacing2) var(--spacing3);
 	min-height: var(--spacing6);
