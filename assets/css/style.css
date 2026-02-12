@@ -604,6 +604,24 @@ footer section ul{
   user-select: none;
 }
 
+.card__media{
+	/* Layout */
+	position: relative;
+	overflow: hidden;
+}
+
+.card__badges{
+	/* Layout */
+  display: flex;
+	position: absolute;
+	top: 10px;
+  right: 10px;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  z-index: 5;
+}
+
 .card--carousel:hover .card__image {
   transform: scale(1.05); /* Zoom suave no hover */
 }
@@ -710,6 +728,68 @@ footer section ul{
 	/* Effects */
   scroll-snap-align: start; /* Alinha o card à esquerda ao parar de rolar */
 }
+
+/* ─── BADGES ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.badge{
+	/* Visuals */
+  padding: var(--spacing1) var(--spacing2);
+	/* Typograph */
+  font-size: var(--spacing3);
+  font-weight: 600;
+	/* Visuals */
+  color: white;
+  opacity:.9;
+  background: rgba(20,25,40,0.65);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+	/* Effects */
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+ 	transform:translateY(-2px);
+ 	transition:.25s;
+}
+
+.card:hover .badge{
+ opacity:1;
+ transform:translateY(0);
+}
+
+.badge--autocad{ background:#b91c1c; }      /* vermelho técnico */
+.badge--revit{ background:#0ea5e9; }        /* azul Autodesk */
+.badge--solidworks{ background:#ef4444; }   /* vermelho SW */
+.badge--ansys{ background:#f59e0b; color:#111;} /* amarelo técnico */
+.badge--hap{ background:#0284c7; }          /* azul HVAC */
+.badge--xpress{ background:#2563eb; }       /* azul Daikin */
+.badge--excel{ background:#166534; }        /* verde Excel elegante */
+.badge--vba{ background:#059669; }          /* verde automação */
+.badge--word{ background:#1d4ed8; }         /* azul Word */
+.badge--powerpoint{ background:#ea580c; }   /* laranja PPT */
+.badge--powerbi{ background:#eab308; color:#111;} /* amarelo BI */
+.badge--project{ background:#15803d; }      /* MS Project */
+.badge--office{ background:#334155; }       /* pacote geral */
+.badge--python{ background:#2563eb; }
+.badge--cpp{ background:#1d4ed8; }
+.badge--c{ background:#0f766e; }
+.badge--html{ background:#ea580c; }
+.badge--css{ background:#0284c7; }
+.badge--git{ background:#ef4444; }
+.badge--github{ background:#111827; }
+.badge--iot{ background:#7c3aed; }
+.badge--esp32{ background:#0891b2; }
+.badge--rtos{ background:#9333ea; }
+.badge--automation{ background:#059669; }
+.badge--hvac{ background:#0284c7; }
+.badge--cleanroom{ background:#0ea5e9; }
+.badge--engineering{ background:#334155; }
+.badge--analysis{ background:#7c3aed; }
+.badge--simulation{ background:#f59e0b; color:#111;}
+.badge--management{ background:#475569; }
+.badge--english{ background:#2563eb; }
+.badge--c2{ background:#1d4ed8; }
+.badge--international{ background:#7c3aed; }
+
+
 
 
 
