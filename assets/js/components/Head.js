@@ -2,7 +2,7 @@
 
 //Criando Custom HTML Components ─────────────────────────────────────────────────────────────────────────────── ✣ ──
 
-class TFooter extends HTMLElement {
+class THead extends HTMLElement {
     // =======================================
     // Função principal main()
     // =======================================
@@ -34,4 +34,4 @@ class TFooter extends HTMLElement {
     }
 }
 
-customElements.define('t-footer', TFooter);
+customElements.define('t-head', THead);
