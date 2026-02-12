@@ -123,31 +123,10 @@
 <!-- ──────────────────────────────────────────────────────────────────────────-->
 <!-- ███████████████████████████████  SCRIPTS  ████████████████████████████████-->
 <!-- ──────────────────────────────────────────────────────────────────────────-->
-<!-- Inserção das variáveis -->
-<script>
-    document.querySelectorAll(".link-email")
-      .forEach(el => el.href = CONTACT_EMAIL);
-    
-    document.querySelectorAll(".link-whatsapp")
-      .forEach(el => el.href = CONTACT_WHATSAPP);
-    
-    document.querySelectorAll(".link-phone")
-      .forEach(el => el.href = CONTACT_PHONE);
-    
-    document.querySelectorAll(".link-github")
-      .forEach(el => el.href = CONTACT_GITHUB);
-    
-    document.querySelectorAll(".link-linkedin")
-      .forEach(el => el.href = CONTACT_LINKEDIN);
-    
-    document.querySelectorAll(".link-instagram")
-      .forEach(el => el.href = CONTACT_INSTAGRAM);
-</script>
-
 <!-- Rolagem com mouse do carrossel -->
 <script>
     // Seleciona o elemento do carrossel
-    const slider = document.querySelector('.carousel-track');
+    const slider = this.querySelector('.carousel-track');
     let isDown = false;
     let startX;
     let scrollLeft;

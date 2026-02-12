@@ -195,7 +195,7 @@ class THeader extends HTMLElement {
     // Lógica do Toggle do Modo Escuro
     // ====================================
     initTheme(){
-        const themeToggles = document.querySelectorAll(".theme-toggle");
+        const themeToggles = this.querySelectorAll(".theme-toggle");
         
         const applyTheme = (theme) => {
             document.documentElement.setAttribute("data-theme", theme);
@@ -230,9 +230,9 @@ class THeader extends HTMLElement {
     // Lógica do Toggle do hamburguer menu
     // ====================================
     initHamburguerMenu(){
-        const menuToggle = document.querySelector(".menu-toggle");
-        const offscreenMenu = document.querySelector(".offscreen-menu");
-        const closeBtn = document.querySelector(".menu-close");
+        const menuToggle = this.querySelector(".menu-toggle");
+        const offscreenMenu = this.querySelector(".offscreen-menu");
+        const closeBtn = this.querySelector(".menu-close");
     
         function openMenu() {
             offscreenMenu.classList.add("active");
