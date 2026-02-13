@@ -24,7 +24,7 @@ class TFeaturesSection extends HTMLElement {
         this.innerHTML = `
 
 <!-- ─── EMOTE CARDS SECTION ──────────────────────────────────────────────────────────────── ✣ ─ -->
-<div class="container my-2">
+<div class="container my-2 mx-auto">
 <section class="flex flex-row gap7 justify-spacebetween flex-col-mobile gap3-mobile items-center-mobile">
     <div class="card card--emote">
         <!-- SNOWFLAKE ICON -->

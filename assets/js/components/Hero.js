@@ -28,14 +28,14 @@ class THero extends HTMLElement {
 <div class="container">
     <section class="flex flex-row justify-spacebetween flex-col-mobile">
         <!-- CODE START OF HERO LEFT DIV-->
-        <div class="flex flex-col hero-left">
+        <div class="section flex flex-col hero-left">
             <h1 data-i18n="hero.name"></h1>
-            <p data-i18n-html="hero.role"></p>
-            <span class="divider-horizontal90"></span>
+            <p class="mt-2" data-i18n-html="hero.role"></p>
+            <span class="divider-horizontal90 my3"></span>
             <div class="hero-full-line">
                 <p data-i18n="hero.specialty" class="subtext"></p>
             </div>
-            <div class="flex flex-row gap3 py-2 center-align-mobile">
+            <div class="flex flex-row gap3 py-6 center-align-mobile">
                 <a data-i18n="hero.cta1" href="${links.herobutton1}" class="btn btn--primary"></a>
                 <a data-i18n="hero.cta2" href="${links.herobutton2}" class="btn btn--secondary"></a>
             </div>
