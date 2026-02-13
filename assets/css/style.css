@@ -9,6 +9,7 @@
 	/* Typography Colors */
 	--font-body: "Open Sans", sans-serif;
 	--font-headings: "Open Sans", sans-serif;
+	
 	/* Spacing variables */
 	--spacing0: 0rem; /* 0 px */
 	--spacing1: 0.25rem; /* 4 px */
@@ -26,6 +27,7 @@
 	--spacing10: 8rem; /* 128 px */
 	--spacing11: 10rem; /* 160 px */
 
+	/* Typograph variables */
 	--textsize-1: 0.75rem;   /* 12px */
 	--textsize-2: 0.875rem;  /* 14px */
 	--textsize-3: 1rem;    /* 16px */
@@ -38,6 +40,7 @@
 	--textsize-10: 4rem;     /* 64px */
 	--textsize-11: 5rem;    /* 80px */
 }
+
 
 :root[data-theme="dark"]{
 	/* Typography Colors */
@@ -166,15 +169,19 @@ body{
 /* ██████████████████████████  📝 TIPOGRAFIA  ██████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+/* ─── TIPOGRAFIA GERAL ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 h1, h2, h3, h4{
 	color: var(--color-text-primary);
 	font-family: var(--font-headings);
 }
 
-h1{
+
+.prose h1{
 	/* Sizing */
 	margin-top: calc(var(--textsize-9)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-9)*0.5); /*Espaçamento de paragrafo AFTER*/
+}
+h1{
 	/* Typography */
 	font-size: var(--textsize-9); /*48px*/
 	font-weight: 700;
@@ -184,10 +191,13 @@ h1{
 	color: var(--color-text-primary); /*Primary TextColor*/
 }
 
-h2{
+
+.prose h2{
 	/* Sizing */
 	margin-top: calc(var(--textsize-8)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-8)*0.5); /*Espaçamento de paragrafo AFTER*/
+}
+h2{
 	/* Typography */
 	font-size: var(--textsize-8); /*40px*/
 	font-weight: 600;
@@ -196,10 +206,13 @@ h2{
 	/* Visuals */
 }
 
-h3{
+
+.prose h3{
 	/* Sizing */
 	margin-top: calc(var(--textsize-7)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-7)*0.5); /*Espaçamento de paragrafo AFTER*/
+}
+h3{
 	/* Typography */
 	font-size: var(--textsize-7); /*32px*/
 	font-weight: 600;
@@ -208,10 +221,13 @@ h3{
 	color: var(--color-text-primary); /*Primary TextColor*/
 }
 
-h4{
+
+.prose h4{
 	/* Sizing */
 	margin-top: calc(var(--textsize-6)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-6)*0.5); /*Espaçamento de paragrafo AFTER*/
+}
+h4{
 	/* Typography */
 	font-size: var(--textsize-6);/*24px*/
 	font-weight: 600;
@@ -220,10 +236,13 @@ h4{
 	color: var(--color-text-primary); /*Primary TextColor*/
 }
 
-p{
+
+.prose p{
 	/* Sizing */
 	margin-top: calc(var(--textsize-3)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-3)*0.5); /*Espaçamento de paragrafo AFTER*/
+}
+p{
 	/* Typography */
 	font-size: var(--textsize-3);/*16px*/
 	font-weight: normal;
@@ -232,10 +251,13 @@ p{
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
 }
 
-.text-small{
+
+.prose .text-small{
 	/* Sizing */
 	margin-top: calc(var(--textsize-2)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-2)*0.5); /*Espaçamento de paragrafo AFTER*/
+}
+.text-small{
 	/* Typography */
 	font-size: var(--textsize-2);/*12px*/
 	font-weight: normal;
@@ -244,10 +266,14 @@ p{
 	color: var(--color-text-primary); /*Muted TextColor*/
 }
 
-.text-xsmall{
+
+.prose .text-xsmall{
 	/* Sizing */
 	margin-top: calc(var(--textsize-2)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-2)*0.5); /*Espaçamento de paragrafo AFTER*/
+}
+.text-xsmall{
+
 	/* Typography */
 	font-size: var(--textsize-2);/*12px*/
 	font-weight: normal;
@@ -256,10 +282,28 @@ p{
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
 }
 
+
+/* ─── TIPOGRAFIA DE COMPONENTS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+a{
+	/* Typography */
+	font-size: inherit;/*16px*/
+	font-weight: 500;
+	/* Visuals */
+	color: var(--color-text-primary); /*Primary TextColor*/
+	text-decoration: none;
+	/* Effects */
+	transition: 0.2s ease;
+}
+a:hover{
+	/* Visuals */
+	opacity: 0.7;
+}
+
+
 .card-title{
   /* Typography */
   font-size: var(--textsize-3);/*16px*/
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 1.4; /*Espaçamento entre linhas*/
 	/* Visuals */
 	color: var(--color-text-primary); /*Primary TextColor*/
@@ -271,7 +315,7 @@ p{
 	font-weight: 400;
 	line-height: 1.5; /*Espaçamento entre linhas*/
 	/* Visuals */
-	color: var(--color-text-muted); /*Muted TextColor*/
+	color: var(--color-text-primary-muted); /*Muted TextColor*/
 	text-decoration: none;
 }
 
@@ -283,22 +327,6 @@ p{
 	/* Visuals */
 	color: var(--color-text-primary); /*Primary TextColor*/
 	text-decoration: none;
-}
-
-a{
-	/* Typography */
-	font-size: inherit;/*16px*/
-	font-weight: 500;
-	/* Visuals */
-	color: var(--color-text-primary); /*Primary TextColor*/
-	text-decoration: none;
-	/* Effects */
-	transition: 0.2s ease;
-}
-
-a:hover{
-	/* Visuals */
-	opacity: 0.7;
 }
 
 strong {
@@ -321,61 +349,83 @@ strong {
 
 /* ─── TIPOGRAFIA MOBILE ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 @media (max-width:992px) {
-	h1{
+	
+	.prose h1{
 		/* Sizing */
 		margin-top: calc(var(--textsize-7)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-7)*0.5); /*Espaçamento de paragrafo AFTER*/
+	}
+	h1{
 		/* Typography */
 		font-size: var(--textsize-7); /*32px*/
 	}
 	
-	h2{
+
+	.prose h2{
 		/* Sizing */
 		margin-top: calc(var(--textsize-6)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-6)*0.5); /*Espaçamento de paragrafo AFTER*/
+	}
+	h2{
 		/* Typography */
 		font-size: var(--textsize-6); /*24px*/
 	}
 	
-	h3{
+
+	.prose h3{
 		/* Sizing */
 		margin-top: calc(var(--textsize-5)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-5)*0.5); /*Espaçamento de paragrafo AFTER*/
+	}
+	h3{
 		/* Typography */
 		font-size: var(--textsize-5); /*20px*/
 	}
 	
-	h4{
+
+	.prose h4{
 		/* Sizing */
 		margin-top: calc(var(--textsize-4)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-4)*0.5); /*Espaçamento de paragrafo AFTER*/
+	}
+	h4{
 		/* Typography */
 		font-size: var(--textsize-4);/*18px*/
 	}
 	
-	p{
+
+	.prose p{
 		/* Sizing */
 		margin-top: calc(var(--textsize-3)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-3)*0.5); /*Espaçamento de paragrafo AFTER*/
+	}
+	p{
 		/* Typography */
 		font-size: var(--textsize-3);/*16px*/
 	}
 	
-	.text-small{
+
+	.prose .text-small{
 		/* Sizing */
 		margin-top: calc(var(--textsize-2)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-2)*0.5); /*Espaçamento de paragrafo AFTER*/
+	}
+	.text-small{
 		/* Typography */
 		font-size: var(--textsize-2);/*12px*/
 	}
 
-	.text-xsmall{
+
+	.prose .text-xsmall{
 		/* Sizing */
 		margin-top: calc(var(--textsize-2)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-2)*0.5); /*Espaçamento de paragrafo AFTER*/
+	}
+	.text-xsmall{
 		/* Typography */
 		font-size: var(--textsize-2);/*12px*/
 	}
+
 
 	.card-title{
 	  /* Typography */
@@ -400,7 +450,7 @@ strong {
 /* ────────────────────────────────────────────────────────────────────────── */
 /* Classes que servem apenas para layout */
 
-/* ─── PAGE WRAPPER ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+/* ─── PAGE WRAPPERS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 .container{
 	/* Layout */
   margin: 0 auto;
@@ -513,7 +563,6 @@ footer section ul{
     background-color 0.2s ease,
     color 0.2s ease;
 }
-
 .btn:hover{
 	/* Visuals */
 	background-color: var(--color-accent1-hover);
@@ -522,7 +571,6 @@ footer section ul{
 	/* Effects */
 	transform: translateY(-2px);
 }
-
 .btn:active {
 	/* Visuals */
 	box-shadow: var(--shadow-active);
@@ -533,26 +581,13 @@ footer section ul{
 /* ───  BUTTON PRIMARY ──────────────────────────────────────────────────────── ✣ ─ */
 .btn--primary{
 	/* Sizing */
-	padding: var(--spacing3) var(--spacing3); /* vertical | horizontal */
+	padding: var(--spacing3) calc(var(--spacing3)*1.5); /* vertical | horizontal */
 	min-height: var(--spacing6);
 	/* Typograph */
 	font-size: var(--spacing4);
 	/* Visuals */
 	background-color: var(--color-accent1); /*CTA Color*/
 }
-
-
-/* ───  BUTTON PRIMARY BIG ──────────────────────────────────────────────────────── ✣ ─ */
-.btn--primary-big{
-	/* Sizing */
-	padding: var(--spacing2) var(--spacing3); /* vertical | horizontal */
-	min-height: var(--spacing7);
-	/* Typograph */
-	font-size: var(--spacing5);
-	/* Visuals */
-	background-color: var(--color-accent1); /*CTA Color*/
-}
-
 
 /* ───  BUTTON SECUNDARY ──────────────────────────────────────────────────────── ✣ ─ */
 .btn--secondary{
@@ -566,7 +601,6 @@ footer section ul{
 	color: var(--color-text-primary);
 	border: var(--border);
 }
-
 .btn--secondary:hover{
 	/* Visuals */
 	background-color: var(--color-bg-dark); /* Transparent Secundary Color */
@@ -631,7 +665,6 @@ footer section ul{
 	/* Effects */
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
-
 .card:hover{
 	/* Visuals */
   border-color: var(--color-accent1);
@@ -639,10 +672,11 @@ footer section ul{
 	transform: translateY(-4px);
 }
 
+
 .card--emote{
 	/* Layout */
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-direction: row;
 	align-items: center;
 	text-align: left;
@@ -688,6 +722,10 @@ footer section ul{
   -ms-user-select: none;
   user-select: none;
 }
+.card--carousel:hover .card__image {
+  transform: scale(1.05); /* Zoom suave no hover */
+}
+
 
 .card__media{
 	/* Layout */
@@ -707,9 +745,6 @@ footer section ul{
   z-index: 5;
 }
 
-.card--carousel:hover .card__image {
-  transform: scale(1.05); /* Zoom suave no hover */
-}
 
 /* ─── Textos do Carousel ──────────────────────────────────────────────────────── ✣ ─ */
 .card--carousel strong { /* Titulo */
@@ -840,19 +875,19 @@ footer section ul{
  transform:translateY(0);
 }
 
-.badge--autocad{ background:#b91c1c; }      /* vermelho técnico */
-.badge--revit{ background:#0ea5e9; }        /* azul Autodesk */
-.badge--solidworks{ background:#ef4444; }   /* vermelho SW */
-.badge--ansys{ background:#f59e0b; color:#111;} /* amarelo técnico */
-.badge--hap{ background:#0284c7; }          /* azul HVAC */
-.badge--xpress{ background:#2563eb; }       /* azul Daikin */
-.badge--excel{ background:#166534; }        /* verde Excel elegante */
-.badge--vba{ background:#059669; }          /* verde automação */
-.badge--word{ background:#1d4ed8; }         /* azul Word */
-.badge--powerpoint{ background:#ea580c; }   /* laranja PPT */
-.badge--powerbi{ background:#eab308; color:#111;} /* amarelo BI */
-.badge--project{ background:#15803d; }      /* MS Project */
-.badge--office{ background:#334155; }       /* pacote geral */
+.badge--autocad{ background:#b91c1c; }
+.badge--revit{ background:#0ea5e9; }
+.badge--solidworks{ background:#ef4444; }
+.badge--ansys{ background:#f59e0b; color:#111; }
+.badge--hap{ background:#0284c7; }
+.badge--xpress{ background:#2563eb; }
+.badge--excel{ background:#166534; }
+.badge--vba{ background:#059669; }
+.badge--word{ background:#1d4ed8; }
+.badge--powerpoint{ background:#ea580c; }
+.badge--powerbi{ background:#eab308; color:#111; }
+.badge--project{ background:#15803d; }
+.badge--office{ background:#334155; }
 .badge--python{ background:#2563eb; }
 .badge--cpp{ background:#1d4ed8; }
 .badge--c{ background:#0f766e; }
@@ -868,13 +903,11 @@ footer section ul{
 .badge--cleanroom{ background:#0ea5e9; }
 .badge--engineering{ background:#334155; }
 .badge--analysis{ background:#7c3aed; }
-.badge--simulation{ background:#f59e0b; color:#111;}
+.badge--simulation{ background:#f59e0b; color:#111; }
 .badge--management{ background:#475569; }
 .badge--english{ background:#2563eb; }
 .badge--c2{ background:#1d4ed8; }
 .badge--international{ background:#7c3aed; }
-
-
 
 
 
@@ -976,7 +1009,6 @@ t-header{
 	/* Effects */
   transition: border-color 0.3s ease;
 }
-
 .nav-preferences:hover {
 	/* Visuals */
 	border-color: var(--color-text-primary);
@@ -1004,7 +1036,6 @@ t-header{
   cursor: pointer;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
-
 .btn-settings:hover, 
 .lang-toggle:hover {
 	/* Visuals */
@@ -1219,55 +1250,19 @@ footer{
 	margin-bottom: 0;
 }
 
-.gap1{
-	gap: var(--spacing1); /*Margin entre itens*/
-}
+.gap1{gap: var(--spacing1); }
+.gap2{gap: var(--spacing2); }
+.gap3{gap: var(--spacing3); }
+.gap4{gap: var(--spacing4); }
+.gap45{gap: var(--spacing45); }
+.gap5{gap: var(--spacing5); }
+.gap7{gap: var(--spacing7); }
+.gap8{gap: var(--spacing8); }
+.gap9{gap: var(--spacing9); }
+.gap10{gap: var(--spacing10); }
+.gap11{gap: var(--spacing11); }
 
-.gap2{
-	gap: var(--spacing2); /*Margin entre itens*/
-}
-
-.gap3{
-	gap: var(--spacing3); /*Margin entre itens*/
-}
-
-.gap4{
-	gap: var(--spacing4); /*Margin entre itens*/
-}
-
-.gap45{
-	gap: var(--spacing45); /*Margin entre itens*/
-}
-
-.gap5{
-	gap: var(--spacing5); /*Margin entre itens*/
-}
-
-.gap7{
-	gap: var(--spacing7); /*Margin entre itens*/
-}
-
-.gap8{
-	gap: var(--spacing8); /*Margin entre itens*/
-}
-
-.gap9{
-	gap: var(--spacing9); /*Margin entre itens*/
-}
-
-.gap10{
-	gap: var(--spacing10); /*Margin entre itens*/
-}
-
-.gap11{
-	gap: var(--spacing11); /*Margin entre itens*/
-}
-
-
-
-.p-0{
-	padding: 0;
-}
+.p-0{padding: 0; }
 
 /* py significa Padding do Eixo Y */
 .py-1{
