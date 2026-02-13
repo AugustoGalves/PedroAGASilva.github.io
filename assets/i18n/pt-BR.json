@@ -10,16 +10,16 @@
   "nav.contact": "Contato",
 
   "hero.name": "Pedro Augusto G. A. Silva",
-  "hero.role": "Engenheiro Mecânico | Projetista HVAC<br>Experiência internacional | Programação, Automação e Elétrica",
-  "hero.specialty": "Engenheiro Mecânico Bilingue (C2) com experiência em coordenação técnica internacional, projetos HVAC e inovação em softwares de engenharia e automação",
+  "hero.role": "Engenheiro Mecânico | HVAC & Automação",
+  "hero.specialty": "Inglês Fluente (C2) · Experiência internacional como engenheiro de projetos",
   "hero.cta1": "Ver portfólio",
   "hero.cta2": "Entrar em contato",
 
   "highlights.card1.title": "Projetista HVAC",
-  "highlights.card1.desc": "Experiência em projetos para BMW, TIM e Rede D'Or seguindo normas NBR e ANVISA",
+  "highlights.card1.desc": "Participação direta em projetos para BMW, TIM e Rede D'Or seguindo normas NBR e ANVISA",
 
-  "highlights.card2.title": "Projetos internacionais",
-  "highlights.card2.desc": "Gerenciamento de projeto no setor de reparos navais (EN), aumentando receita da operação em 300%",
+  "highlights.card2.title": "Engenharia Internacional",
+  "highlights.card2.desc": "Experiência no setor de reparos navais (EN), aumentando receita da operação em 300%",
 
   "highlights.card3.title": "Inovação, programação & IoT",
   "highlights.card3.desc": "Desenvolvimento de soluções embarcadas com ESP32, RTOS e softwares patenteados",
