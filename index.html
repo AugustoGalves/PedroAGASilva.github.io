@@ -9,14 +9,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <!-- CUSTOMIZING -->
     <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
     <meta name="theme-color" content="#222A35">
-    
+    <!-- PRECONNECT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- SEO SETTINGS -->
-    <title data-i18n="meta.title"></title>
-    <meta data-i18n="meta.description" name="description" content=""/>
-    <meta data-i18n="meta.keywords" name="keywords" content=""/>
+    <title data-i18n="meta.title">Pedro Augusto | Engenheiro Mecânico</title>
+    <meta data-i18n="meta.description" name="description" content="Engenheiro mecânico com experiência em HVAC, manutenção industrial, transmissão de potência e projetos técnicos. Atuação nacional e internacional, coordenação técnica e engenharia aplicada."/>
     <meta name="author" content="Pedro Augusto Gomes Alves Silva"/>
-    <meta name="robots" content="index, follow">    
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://pedroagasilva.github.io/" />
+    <!-- OG TAGS -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pedroagasilva.github.io/">
+    <meta property="og:title" content="Pedro Augusto | Engenharia & Code">
+    <meta property="og:description" content="Engenheiro Mecânico e Desenvolvedor. Confira meus projetos em IoT e Automação.">
+    <meta property="og:image" content="https://pedroagasilva.github.io/assets/img/LogoLight_Pedro AGA Silva Engenheiro Mecânico.png">
+    <!-- SEI LAAAAAAAAAAAA OQ  EH ISSO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pedro Augusto Gomes Alves Silva",
+      "url": "https://www.seusite.com.br",
+      "jobTitle": "Mechanical Engineer",
+      "knowsAbout": ["IoT", "Mechanical Engineering", "Web Development", "Automation"],
+      "image": "https://www.seusite.com.br/assets/img/foto-perfil.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/seu-perfil",
+        "https://github.com/seu-github"
+      ]
+    }
+    </script>    
     <!-- DOWNLOADS INTERNOS (Cuidado com a ordem de download) -->
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
     <script src="/assets/js/config.js"></script>
@@ -29,7 +54,7 @@
     <script src="/assets/js/i18n.js"></script>
     <script src="/assets/js/main.js"></script>
     <!-- DOWNLOADS EXTERNOS -->
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/43dff1e8fb.js" crossorigin="anonymous"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
@@ -60,12 +85,12 @@
     ></t-features-section>
 
 
-<!-- ─── PORTFOLIO PREVIEW SECTION ──────────────────────────────────────────────────────────────── ✣ ─ -->
+<!-- ─── PORTFOLIO CAROUSEL SECTION ──────────────────────────────────────────────────────────────── ✣ ─ -->
 <div class="container">
 <section class="flex flex-col">
     <h2 class="self-start" data-i18n="portfolio.title"></h2>
     <div class="flex w-full">
-        <span data-i18n="portfolio.subtitle" class="subtext span"></span>
+        <span data-i18n="portfolio.subtitle" class="subtext span-nowrap"></span>
         <span class="divider-horizontal100"></span>
     </div>
     <!-- CARROSSEL -->
@@ -84,8 +109,8 @@
             </div>    
             <!-- CARD BOTTOM -->
             <a href="/portfolio.html">
-                <strong data-i18n="portfolio.card1.title"></strong>
-                <span data-i18n="portfolio.card1.desc" class="subtext"></span>
+                <span class="card-title" data-i18n="portfolio.card1.title"></span>
+                <span class="card-content" data-i18n="portfolio.card1.desc"></span>
             </a>
         </div>    
         <!-- Card Planta Elétrica -->
@@ -101,8 +126,8 @@
             </div>
             <!-- CARD BOTTOM -->
             <a href="/portfolio.html">
-                <strong data-i18n="portfolio.card2.title"></strong>
-                <span data-i18n="portfolio.card2.desc" class="subtext"></span>
+                <span class="card-title" data-i18n="portfolio.card2.title"></span>
+                <span class="card-content" data-i18n="portfolio.card2.desc"></span>
             </a>
         </div> 
         <!-- Card Excel Correias -->
@@ -118,8 +143,8 @@
             </div>
             <!-- CARD BOTTOM -->
             <a href="/portfolio.html">
-                <strong data-i18n="portfolio.card3.title"></strong>
-                <span data-i18n="portfolio.card3.desc" class="subtext"></span>
+                <span class="card-title" data-i18n="portfolio.card3.title"></span>
+                <span class="card-content" data-i18n="portfolio.card3.desc"></span>
             </a>
         </div> 
     </div>
