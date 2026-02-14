@@ -31,7 +31,7 @@
   "portfolio.card1.desc": "Especialista em VRV, split e água gelada",
 
   "portfolio.card2.title": "Projetos de Elétrica",
-  "portfolio.card2.desc": "Predial e Residencial",
+  "portfolio.card2.desc": "Baixa tensão | NBR 5410",
 
   "portfolio.card3.title": "Software Patenteado",
   "portfolio.card3.desc": "Ultimate Belt Design and Analysis 2026",
@@ -42,7 +42,7 @@
   "footer.contact.subtitle": "Vamos trabalhar juntos em seu próximo projeto?",
   "footer.contact.button": "Enviar Mensagem",
 
-  "footer.rights": "© 2026 Pedro Augusto G. A. Silva. Todos os direitos reservados",
+  "footer.copyright": "© 2026 Pedro Augusto G. A. Silva. Todos os direitos reservados",
 
   "aria.menu.open": "Abrir menu",
   "aria.menu.close": "Fechar menu",

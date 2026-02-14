@@ -23,6 +23,7 @@ class TFooter extends HTMLElement {
             linkedinbutton: this.getAttribute("link_linkedinbutton"),
             githubbutton: this.getAttribute("link_githubbutton"),
             instagrambutton: this.getAttribute("link_instagrambutton")
+
         }
         
         // Template Stamper (So insere o HTML) ────────────────────────────────────────────────────── ✣ ──
@@ -32,7 +33,7 @@ class TFooter extends HTMLElement {
 <!-- ──────────────────────────────────────────────────────────────────────────-->
 <footer class="footer-bottom">
     <section class="container flex flex-row justify-spacebetween items-center w-full flex-colreverse-mobile">
-        <span class="subtext">© 2026 Pedro Augusto G. A. Silva. Todos os direitos reservados</span>
+        <span class="text-xsmall" data-i18n="footer.copyright"></span>
         <!-- Icones minúsculos -->
         <ul>
             <!-- Whatsapp -->

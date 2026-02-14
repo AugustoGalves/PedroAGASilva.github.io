@@ -1,7 +1,7 @@
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* ███████████████████████████ ♻️ VARIÁVEIS  ███████████████████████████████ */
+/* ██████████████████████ ♻️ DESIGN TOKENS  █████████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
 /* BEST COLOR PICKER WEBSITE: https://www.iamsajid.com/ui-colors/ */
@@ -124,6 +124,36 @@
 
 :root[data-theme="light"] .logo-header{
 	content: url("/assets/img/LogoDark_Pedro AGA Silva Engenheiro Mecânico.png");
+}
+
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* █████████████████████  📝 COMPONENTS CLS FIX  ███████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+t-header,
+t-hero,
+t-features-section,
+t-cta,
+t-footer{display:block; }
+
+
+/* ===== MOBILE FIRST ===== */
+t-header{min-height:95px; }
+t-hero{min-height:570px; }
+t-features-section{min-height:430px; }
+t-card-carousel{min-height:375px; }
+t-cta{min-height:170px; }
+t-footer{min-height:80px; }
+
+/* ===== DESKTOP ===== */
+@media (min-width: 992px){
+  t-header{min-height:90px; }
+  t-hero{min-height:400px; }
+  t-features-section{min-height:150px; } 
+  t-card-carousel{min-height:400px; }
+  t-cta{min-height:180px; }
+  t-footer{min-height:60px; }
 }
 
 
@@ -1571,11 +1601,12 @@ body.menu-open::before {
   .hero-image img {
     /* Layout */
     margin-right: 0;
-    margin-top: -2px;
-    margin-bottom: -16px;
+    margin-top: -10px;
+    margin-bottom: -20px;
   	/* Sizing */
     height: auto;
     max-width: 40%;
+    min-width: 180px;
   }
 
   .hero-image::before {

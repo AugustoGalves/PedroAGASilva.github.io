@@ -20,6 +20,7 @@ class THero extends HTMLElement {
         const links = {
             herobutton1: this.getAttribute("link_herobutton1"),
             herobutton2: this.getAttribute("link_herobutton2"),
+            heroimage: this.getAttribute("link_heroimage"),
         }
         
         // Template Stamper (So insere o HTML) ────────────────────────────────────────────────────── ✣ ──
@@ -31,7 +32,7 @@ class THero extends HTMLElement {
         <div class="section flex flex-col hero-left">
             <h1 data-i18n="hero.name"></h1>
             <p class="mt-2" data-i18n-html="hero.role"></p>
-            <span class="divider-horizontal90 my3"></span>
+            <span class="divider-horizontal90 my-3 my-2-mobile"></span>
             <div class="hero-full-line">
                 <p data-i18n="hero.specialty" class="subtext"></p>
             </div>
@@ -42,7 +43,7 @@ class THero extends HTMLElement {
         </div>
         <!-- CODE START OF HERO RIGHT DIV -->
         <div class="flex hero-image">
-            <img decoding="async" src="/assets/img/HeroMainImage.png" alt="Pedro Augusto Selfie Photo">
+            <img decoding="async" fetchpriority="high" src="${links.heroimage}" alt="Pedro Augusto Selfie Photo">
         </div>
     </section>
 </div>

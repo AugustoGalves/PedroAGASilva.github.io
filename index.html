@@ -54,9 +54,7 @@
     <script src="/assets/js/i18n.js"></script>
     <script src="/assets/js/main.js"></script>
     <!-- DOWNLOADS EXTERNOS -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/43dff1e8fb.js" crossorigin="anonymous"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 
@@ -78,6 +76,7 @@
     <t-hero
         link_herobutton1 = "/portfolio.html"
         link_herobutton2 = "/contato.html"
+        link_heroimage = "/assets/img/HeroMainImage.png"
     ></t-hero>
         
     <t-features-section
@@ -100,7 +99,7 @@
         <div class="card card--carousel"> 
             <!-- CARD TOP -->
             <div class="card__media">
-                <img class="card__image" loading="lazy" src="/assets/img/portfolio/HVAC Clean Room.jpeg" alt="Sala de máquinas HVAC">
+                <img class="card__image" loading="lazy" src="/assets/img/portfolio/HVAC Clean Room.jpeg" alt="Projeto de HVAC AutoCAD e Revit">
                 <!-- BADGES -->
                 <div class="card__badges">
                     <span class="badge badge--autocad">AutoCAD</span>
@@ -110,14 +109,14 @@
             <!-- CARD BOTTOM -->
             <a href="/portfolio.html">
                 <span class="card-title" data-i18n="portfolio.card1.title"></span>
-                <span class="card-card-subtitle" data-i18n="portfolio.card1.desc"></span>
+                <span class="card-subtitle" data-i18n="portfolio.card1.desc"></span>
             </a>
         </div>    
         <!-- Card Planta Elétrica -->
         <div class="card card--carousel"> 
             <!-- CARD TOP -->
             <div class="card__media">
-                <img class="card__image" loading="lazy" src="/assets/img/portfolio/Planta Elétrica.png" alt="Planta Elétrica sobre a mesa na obra">
+                <img class="card__image" loading="lazy" src="/assets/img/portfolio/Planta Elétrica.png" alt="Projeto de Elétrica Residencial feito com AutoCAD e HAP">
                 <!-- BADGES -->
                 <div class="card__badges">
                     <span class="badge badge--autocad">AutoCAD</span>
@@ -127,14 +126,14 @@
             <!-- CARD BOTTOM -->
             <a href="/portfolio.html">
                 <span class="card-title" data-i18n="portfolio.card2.title"></span>
-                <span class="card-card-subtitle" data-i18n="portfolio.card2.desc"></span>
+                <span class="card-subtitle" data-i18n="portfolio.card2.desc"></span>
             </a>
         </div> 
         <!-- Card Excel Correias -->
         <div class="card card--carousel"> 
             <!-- CARD TOP -->
             <div class="card__media">
-                <img class="card__image" loading="lazy" src="/assets/img/portfolio/Notebook on the table.png" alt="Notebook com o Software na tela">
+                <img class="card__image" loading="lazy" src="/assets/img/portfolio/Notebook on the table.png" alt="Planilha excel patenteada de dimensionamento de correias de transmissão de potência">
                 <!-- BADGES -->
                 <div class="card__badges">
                     <span class="badge badge--excel">Excel</span>
