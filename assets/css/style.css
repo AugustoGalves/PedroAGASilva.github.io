@@ -141,7 +141,7 @@ t-footer{display:block; }
 /* ===== MOBILE FIRST ===== */
 t-header{min-height:95px; }
 t-hero{min-height:430px; }
-t-features-section{min-height:430px; }
+t-features-section{min-height:240px; }
 t-card-carousel{min-height:375px; }
 t-cta{min-height:170px; }
 t-footer{min-height:80px; }

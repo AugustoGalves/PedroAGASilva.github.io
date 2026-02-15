@@ -1,55 +1,87 @@
 {
-  "meta.title": "Pedro Augusto | Engenheiro Mecânico",
-  "meta.description": "Engenheiro mecânico com experiência em HVAC, manutenção industrial, transmissão de potência e projetos técnicos. Atuação nacional e internacional, coordenação técnica e engenharia aplicada.",
-  "meta.keywords": "engenheiro mecânico, engenharia mecânica, HVAC, climatização, manutenção industrial, transmissão de potência, correias de potência, engrenagens, projetos mecânicos, engenheiro HVAC, engenharia industrial, engenheiro CREA, engenheiro Brasil, engenheiro internacional",
+  "global": {
+    "nav": {
+      "home": "Início",
+      "portfolio": "Portfólio",
+      "resume": "Currículo",
+      "blog": "Blog",
+      "contact": "Contato"
+    },
+    "footer": {
+      "ctaTitle": "Entre em contato",
+      "ctaSubtitle": "Vamos trabalhar juntos em seu próximo projeto",
+      "ctaButton": "Enviar Mensagem",
+      "copyright": "© 2026 Augusto Galves. Todos os direitos reservados"
+    },
+    "aria": {
+      "menu": {
+        "open": "Abrir menu",
+        "close": "Fechar menu",
+        "navMain": "Navegação principal"
+      },
+      "theme": {
+        "toggle": "Alternar tema"
+      },
+      "email": "Endereço de email",
+      "whatsapp": "Conversar via Whatsapp",
+      "phone": "Ligar para telefone",
+      "github": "Página do Github",
+      "linkedin": "Perfil do Linkedin",
+      "instagram": "Perfil do Instagram"
+    }
+  },
 
-  "nav.home": "Início",
-  "nav.portfolio": "Portfólio",
-  "nav.resume": "Currículo",
-  "nav.blog": "Blog",
-  "nav.contact": "Contato",
 
-  "hero.name": "Pedro Augusto G. A. Silva",
-  "hero.role": "Engenheiro Mecânico | HVAC & Automação",
-  "hero.specialty": "Inglês Fluente (C2) · Experiência internacional como engenheiro de projetos",
-  "hero.cta1": "Ver portfólio",
-  "hero.cta2": "Entrar em contato",
 
-  "highlights.card1.title": "Projetista HVAC",
-  "highlights.card1.desc": "Participação direta em projetos para BMW, TIM e Rede D'Or seguindo normas NBR e ANVISA",
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "Augusto Galves | Engenheiro Mecânico & HVAC",
+        "description": "Engenheiro mecânico e desenvolvedor com experiência em HVAC, projetos e gerência internacional."
+      },
+      "hero": {
+        "name": "Augusto Galves",
+        "role": "Engenheiro Mecânico | HVAC & Automação",
+        "specialty": "Inglês Fluente (C2) · Experiência internacional como engenheiro de projetos",
+        "cta1": "Ver portfólio",
+        "cta2": "Entrar em contato"
+      },
+      "highlights": {
+        "card1": {
+          "title": "Projetista HVAC",
+          "desc": "Participação direta em projetos para BMW, TIM e Rede D'Or seguindo normas NBR e ANVISA"
+        },
+        "card2": {
+          "title": "Engenharia Internacional",
+          "desc": "Experiência no setor de reparos navais (EN), aumentando receita da operação em 300%"
+        },
+        "card3": {
+          "title": "Inovação, programação & IoT",
+          "desc": "Desenvolvimento de soluções embarcadas com ESP32, RTOS e softwares patenteados"
+        }
+      },
+      "portfolio": {
+        "title": "Portfólio",
+        "subtitle": "Projetos em destaque",
+        "card1": {
+          "title": "Projetos de HVAC",
+          "desc": "Especialista em VRV, split e água gelada"
+        },
+        "card2": {
+          "title": "Projetos de Elétrica",
+          "desc": "Baixa tensão | NBR 5410"
+        },
+        "card3": {
+          "title": "Software Patenteado",
+          "desc": "Ultimate Belt Design and Analysis 2026"
+        },
+        "cta": "Ver Portfólio Completo"
+      }
+    },
 
-  "highlights.card2.title": "Engenharia Internacional",
-  "highlights.card2.desc": "Experiência no setor de reparos navais (EN), aumentando receita da operação em 300%",
 
-  "highlights.card3.title": "Inovação, programação & IoT",
-  "highlights.card3.desc": "Desenvolvimento de soluções embarcadas com ESP32, RTOS e softwares patenteados",
 
-  "portfolio.title": "Portfólio",
-  "portfolio.subtitle": "Projetos em destaque",
-
-  "portfolio.card1.title": "Projetos de HVAC",
-  "portfolio.card1.desc": "Especialista em VRV, split e água gelada",
-
-  "portfolio.card2.title": "Projetos de Elétrica",
-  "portfolio.card2.desc": "Baixa tensão | NBR 5410",
-
-  "portfolio.card3.title": "Software Patenteado",
-  "portfolio.card3.desc": "Ultimate Belt Design and Analysis 2026",
-
-  "portfolio.cta": "Ver Portfólio Completo",
-
-  "footer.contact.title": "Entre em contato",
-  "footer.contact.subtitle": "Vamos trabalhar juntos em seu próximo projeto?",
-  "footer.contact.button": "Enviar Mensagem",
-
-  "footer.copyright": "© 2026 Pedro Augusto G. A. Silva. Todos os direitos reservados",
-
-  "aria.menu.open": "Abrir menu",
-  "aria.menu.close": "Fechar menu",
-  "aria.theme.toggle": "Alternar tema",
-  "aria.email": "Endereço de email",
-  "aria.whatsapp": "Conversar via Whatsapp",
-  "aria.phone": "Ligar para telefone",
-  "aria.github": "Página do Github",
-  "aria.linkedin": "Perfil do Linkedin"
+    "curriculo": {
+    }
+  }
 }

@@ -32,16 +32,16 @@ window.loadLanguage = async function (lang) {
 
 /**
  * Busca a tradução.
- * Como seu JSON usa chaves "planas" ("hero.name"), a busca é direta.
+ * Usando "reduce" para navegar no JSON aninhado (ex: "global.nav.home")
  */
 window.t = function (key) {
-  return window.I18N[key] || key;
+  return key.split('.').reduce((obj, i) => (obj ? obj[i] : null), window.I18N) || key;
 };
 
 /**
  * Aplica as traduções em todos os elementos da página
  */
-function applyTranslations() {
+window.applyTranslations = function() {
   // 1. Tradução de Texto Simples e Meta Tags
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;

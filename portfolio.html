@@ -1,113 +1,217 @@
-<!DOCTYPE html>
+<!-- ──────────────────────────────────────────────────────────────────────────-->
+<!-- ██████████████████████████████  HEAD START  ██████████████████████████████-->
+<!-- ──────────────────────────────────────────────────────────────────────────-->
+
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em manutenção</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1d3557; /* Seu azul marinho padrão */
-            --accent: #025bb0;  /* Cor de destaque dos botões */
-            --text: #333;
-            --bg: #f8f9fa;
-        }
-
-        /* Suporte ao Dark Mode do sistema */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0f172a;
-                --text: #e3e3e3;
-            }
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container { max-width: 600px; }
-
-        /* Animação de Engrenagem (Engineering Coded) */
-        .icon-wrapper {
-            margin-bottom: 30px;
-            animation: rotate 8s linear infinite;
-            display: inline-block;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--accent);
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 8px 16px;
-            border: 1px solid var(--accent);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent);
-        }
-
-        .contact-links {
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
-
-        .contact-links a {
-            color: var(--accent);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-    </style>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <!-- CUSTOMIZING -->
+    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+    <meta name="theme-color" content="#222A35">
+    <!-- PRECONNECT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- SEO SETTINGS -->
+    <title data-i18n="meta.title">Portfólio | Pedro Augusto</title>
+    <meta data-i18n="meta.description" name="description" content="Portfolio do Augusto Galves, engenheiro mecânico e desenvolvedor. Projetos de HVAC, automação, elétrica e IoT"/>
+    <meta name="author" content="Augusto Galves"/>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://pedroagasilva.github.io/" />
+    <!-- OG TAGS -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pedroagasilva.github.io/">
+    <meta property="og:title" content="Pedro Augusto | Engenharia & Code">
+    <meta property="og:description" content="Portfolio do Augusto Galves, engenheiro mecânico e desenvolvedor. Projetos de HVAC, automação, elétrica e IoT.">
+    <meta property="og:image" content="https://pedroagasilva.github.io/assets/img/LogoLight_Pedro AGA Silva Engenheiro Mecânico.png">
+    <!-- SEI LAAAAAAAAAAAA OQ  EH ISSO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pedro Augusto Gomes Alves Silva",
+      "url": "https://www.seusite.com.br",
+      "jobTitle": "Mechanical Engineer",
+      "knowsAbout": ["IoT", "Mechanical Engineering", "Web Development", "Automation"],
+      "image": "https://www.seusite.com.br/assets/img/foto-perfil.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/seu-perfil",
+        "https://github.com/seu-github"
+      ]
+    }
+    </script>    
+    <!-- DOWNLOADS INTERNOS (Cuidado com a ordem de download) -->
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/components/Header.js"></script>
+    <script src="/assets/js/components/Hero.js"></script>
+    <script src="/assets/js/components/FeaturesSection.js"></script>
+    <script src="/assets/js/components/CardCarousel.js"></script>
+    <script src="/assets/js/components/CTA.js"></script>
+    <script src="/assets/js/components/Footer.js"></script>
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <!-- DOWNLOADS EXTERNOS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
+
+
+
+
 <body>
 
-    <div class="container">
-        <div class="icon-wrapper">
-            <svg width="80" height="80" viewBox="0 -960 960 960" fill="currentColor" style="color: var(--accent);">
-                <path d="M150-103v-128h144l-93-317q-45-14-71.5-47.5T103-684q0-56 41-97.5t97-41.5q53 0 89 29t49 80h109v-59q0-17 12-29t29-12q10 0 17.5 7t8.5 17l68-65q11-10 26.5-13.5T681-865l158 76q14 7 19 21t-3 29q-7 13-21 17t-27-4l-147-72-89 90v42l89 95 147-71q15-7 27.5-4t20.5 16q8 15 3 30t-20 22l-150 71q-19 10-35.5 9T623-512l-68-65q-1 14-8 19t-18 5q-17 0-29-12t-12-29v-60H377q-2 17-12.5 38.5T342-586l183 355h184v128H150Zm91-525q24 0 40-16t16-40q0-24-16-40t-40-16q-24 0-40 16t-16 40q0 24 16 40t40 16Zm120 397h97L289-562q-5 3-12.5 5.5T265-553l96 322Zm97 0Z"/>
-            </svg>
-        </div>
+<t-header
+    link_navbutton1 = "/"
+    link_navbutton2 = "/portfolio.html"
+    link_navbutton3 = "/curriculo.html"
+    link_navbutton4 = "/blog.html"
+    link_navbutton5 = "/contato.html"
+    link_headerlogo_darktheme = "/assets/img/LogoLight_Pedro AGA Silva Engenheiro Mecânico.png"
+></t-header>
 
-        <div class="badge">Ajuste Técnico</div>
-        
-        <h1>Calibrando Sistemas</h1>
-        
-        <p>Estamos realizando uma manutenção no site para atualização do portfólio. Voltamos em breve com novidades.</p>
 
-        <div class="contact-links">
-            <a href="mailto:AugustoGalves.eng@gmail.com">E-mail</a> | 
-            <a href="https://linkedin.com/in/AugustoGalves">LinkedIn</a>
-        </div>
+<main>
+    <t-hero
+        link_herobutton1 = "/portfolio.html"
+        link_herobutton2 = "/contato.html"
+        link_heroimage = "/assets/img/HeroMainImage.png"
+    ></t-hero>
+        
+    <t-features-section
+        class=""
+    ></t-features-section>
+
+
+<!-- ─── PORTFOLIO CAROUSEL SECTION ──────────────────────────────────────────────────────────────── ✣ ─ -->
+<div class="container section">
+<section class="flex flex-col">
+    <h2 class="self-start" data-i18n="portfolio.title"></h2>
+    <div class="flex w-full">
+        <span data-i18n="portfolio.subtitle" class="subtext span-nowrap"></span>
+        <span class="divider-horizontal100"></span>
     </div>
+    <!-- CARROSSEL -->
+    <div class="carousel-wrapper">
+    <div class="carousel-track">
+        <!-- Card Projetos HVAC -->
+        <div class="card card--carousel"> 
+            <!-- CARD TOP -->
+            <div class="card__media">
+                <img class="card__image" loading="lazy" decoding="async" src="/assets/img/portfolio/HVAC Clean Room.jpeg" alt="Projeto de HVAC AutoCAD e Revit">
+                <!-- BADGES -->
+                <div class="card__badges">
+                    <span class="badge badge--autocad">AutoCAD</span>
+                    <span class="badge badge--hap">HAP</span>
+                </div>
+            </div>    
+            <!-- CARD BOTTOM -->
+            <a href="/portfolio.html">
+                <span class="card-title" data-i18n="portfolio.card1.title"></span>
+                <span class="card-subtitle" data-i18n="portfolio.card1.desc"></span>
+            </a>
+        </div>    
+        <!-- Card Planta Elétrica -->
+        <div class="card card--carousel"> 
+            <!-- CARD TOP -->
+            <div class="card__media">
+                <img class="card__image" loading="lazy" decoding="async" src="/assets/img/portfolio/Planta Elétrica.png" alt="Projeto de Elétrica Residencial feito com AutoCAD e HAP">
+                <!-- BADGES -->
+                <div class="card__badges">
+                    <span class="badge badge--autocad">AutoCAD</span>
+                    <span class="badge badge--revit">Revit</span>
+                </div>
+            </div>
+            <!-- CARD BOTTOM -->
+            <a href="/portfolio.html">
+                <span class="card-title" data-i18n="portfolio.card2.title"></span>
+                <span class="card-subtitle" data-i18n="portfolio.card2.desc"></span>
+            </a>
+        </div> 
+        <!-- Card Excel Correias -->
+        <div class="card card--carousel"> 
+            <!-- CARD TOP -->
+            <div class="card__media">
+                <img class="card__image" loading="lazy" decoding="async" src="/assets/img/portfolio/Notebook on the table.png" alt="Planilha excel patenteada de dimensionamento de correias de transmissão de potência">
+                <!-- BADGES -->
+                <div class="card__badges">
+                    <span class="badge badge--excel">Excel</span>
+                    <span class="badge badge--VBA">VBA</span>
+                </div>
+            </div>
+            <!-- CARD BOTTOM -->
+            <a href="/portfolio.html">
+                <span class="card-title" data-i18n="portfolio.card3.title"></span>
+                <span class="card-subtitle" data-i18n="portfolio.card3.desc"></span>
+            </a>
+        </div> 
+    </div>
+    </div>
+    <!-- Botão -->
+    <div class="text-center">
+        <a data-i18n="portfolio.cta" class="btn btn--primary" href="/portfolio.html"><svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="currentColor" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg></a>
+    </div>           
+</section>
+</div>
+
+</main>
+
+
+
+<t-cta
+    link_ctabutton1 = "/contato.html"
+></t-cta>
+
+<t-footer
+    link_whatsappbutton = "https://api.whatsapp.com/send/?phone=5521984095043"
+    link_emailbutton = "AugustoGalves.eng@gmail.com"
+    link_linkedinbutton = "https://www.linkedin.com/in/augustogalves/"
+    link_githubbutton = "https://github.com/PedroAGASilva"
+    link_instagrambutton = "https://www.instagram.com/augusto_galves/"
+></t-footer>
+
+<!-- ──────────────────────────────────────────────────────────────────────────-->
+<!-- ███████████████████████████████  SCRIPTS  ████████████████████████████████-->
+<!-- ──────────────────────────────────────────────────────────────────────────-->
+<!-- Rolagem com mouse do carrossel -->
+<script>
+    // Seleciona o elemento do carrossel
+    const slider = this.querySelector('.carousel-track');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    // Quando clica no mouse
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active'); // Muda o cursor e desativa o snap
+        // Pega a posição inicial onde clicou
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    // Quando o mouse sai da área do carrossel ou solta o botão
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+
+    // Quando move o mouse (A mágica acontece aqui)
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return; // Se não estiver clicando, não faz nada
+        e.preventDefault(); // Evita selecionar texto
+        
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // O *2 é a velocidade (maior = mais rápido)
+        slider.scrollLeft = scrollLeft - walk;
+    });
+</script>
 
 </body>
 </html>
