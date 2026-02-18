@@ -17,6 +17,7 @@ class THero extends HTMLElement {
     // ====================================
     renderizador(){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
+        const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
         const links = {
             herobutton1: this.getAttribute("link_herobutton1"),
             herobutton2: this.getAttribute("link_herobutton2"),
@@ -30,15 +31,15 @@ class THero extends HTMLElement {
     <section class="flex flex-row justify-spacebetween flex-col-mobile">
         <!-- CODE START OF HERO LEFT DIV-->
         <div class="section flex flex-col hero-left">
-            <h1 data-i18n="hero.name"></h1>
-            <p class="mt-2" data-i18n-html="hero.role"></p>
+            <h1 data-i18n="pages.${PAGINA_ATUAL}.hero.name"></h1>
+            <p class="mt-2" data-i18n-html="pages.${PAGINA_ATUAL}.hero.role"></p>
             <span class="divider-horizontal90 my-3 my-2-mobile"></span>
             <div class="hero-full-line">
-                <p data-i18n="hero.specialty" class="subtext"></p>
+                <p data-i18n="pages.${PAGINA_ATUAL}.hero.specialty" class="subtext"></p>
             </div>
             <div class="flex flex-row gap3 py-6 center-align-mobile">
-                <a data-i18n="hero.cta1" href="${links.herobutton1}" class="btn btn--primary"></a>
-                <a data-i18n="hero.cta2" href="${links.herobutton2}" class="btn btn--secondary"></a>
+                <a data-i18n="pages.${PAGINA_ATUAL}.hero.cta1" href="${links.herobutton1}" class="btn btn--primary"></a>
+                <a data-i18n="pages.${PAGINA_ATUAL}.hero.cta2" href="${links.herobutton2}" class="btn btn--secondary"></a>
             </div>
         </div>
         <!-- CODE START OF HERO RIGHT DIV -->
