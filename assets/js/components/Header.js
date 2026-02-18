@@ -12,9 +12,6 @@ class THeader extends HTMLElement {
         this.initLanguageDropdown();
         this.initTheme();
         this.initHamburguerMenu();
-        if (typeof window.applyTranslations === 'function') {
-            window.applyTranslations(); // Traduz o header
-        }
     }
     	
 
@@ -23,6 +20,7 @@ class THeader extends HTMLElement {
     // ====================================
     renderizador(){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
+        const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
         const links = {
             navbutton1: this.getAttribute("link_navbutton1"),
             navbutton2: this.getAttribute("link_navbutton2"),
@@ -39,30 +37,30 @@ class THeader extends HTMLElement {
 <!-- ████████████████████████████  HEADER SECTION  ████████████████████████████-->
 <!-- ──────────────────────────────────────────────────────────────────────────-->
 <!-- ─── HIDDEN NAV BAR MOBILE ────────────────────────────────────────────────────────── ✣ ─ -->
-<nav class="offscreen-menu" aria-label="Navegação principal">
-    <button class="menu-close" aria-label="global.aria.menu.close">
+<nav class="offscreen-menu" data-i18n-aria="global.aria.navMain">
+    <button class="menu-close" data-i18n-aria="global.aria.menu.close">
         <svg class="svgicon-small" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12"/></svg>
-    </button> 
+    </button>
         <ul>             
             <li>
                 <svg class="svgicon-xsmall" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
-                <a data-i18n="global.nav.home" href="${links.navbutton1}"></a>
+                <a href="${links.navbutton1}" data-i18n="global.nav.home"></a>
             </li>
             <li>
                 <svg class="svgicon-xsmall" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm240-600h160v-80H400v80Zm400 360H600v80H360v-80H160v160h640v-160Zm-360 0h80v-80h-80v80Zm-280-80h200v-80h240v80h200v-200H160v200Zm320 40Z"/></svg>
-                <a data-i18n="global.nav.portfolio" href="${links.navbutton2}"></a>
+                <a href="${links.navbutton2}" data-i18n="global.nav.portfolio"></a>
             </li>
             <li>
                 <svg class="svgicon-xsmall" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q14-36 44-58t68-22q38 0 68 22t44 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm301.5-678.5Q510-807 510-820t-8.5-21.5Q493-850 480-850t-21.5 8.5Q450-833 450-820t8.5 21.5Q467-790 480-790t21.5-8.5ZM200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm379-235q41-41 41-99t-41-99q-41-41-99-41t-99 41q-41 41-41 99t41 99q41 41 99 41t99-41ZM280-200h400v-10q-42-35-93-52.5T480-280q-56 0-107 17.5T280-210v10Zm157.5-337.5Q420-555 420-580t17.5-42.5Q455-640 480-640t42.5 17.5Q540-605 540-580t-17.5 42.5Q505-520 480-520t-42.5-17.5ZM480-503Z"/></svg>
-                <a data-i18n="global.nav.resume" href="${links.navbutton3}"></a>
+                <a href="${links.navbutton3}" data-i18n="global.nav.resume"></a>
             </li>
             <li>
                 <svg class="svgicon-xsmall" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h440l200 200v440q0 33-23.5 56.5T760-120H200Zm0-80h560v-400H600v-160H200v560Zm80-80h400v-80H280v80Zm0-320h200v-80H280v80Zm0 160h400v-80H280v80Zm-80-320v160-160 560-560Z"/></svg>
-                <a data-i18n="global.nav.blog" href="${links.navbutton4}"></a>
+                <a href="${links.navbutton4}" data-i18n="global.nav.blog"></a>
             </li>
             <li>
                 <svg class="svgicon-xsmall" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>
-                <a data-i18n="global.nav.contact" href="${links.navbutton5}"></a>
+                <a href="${links.navbutton5}" data-i18n="global.nav.contact"></a>
             </li>
         </ul>
 </nav>
@@ -78,23 +76,23 @@ class THeader extends HTMLElement {
         <nav class="navbar navbar--desktop">
             <!-- LINKS -->
             <ul>
-                <li><a data-i18n="global.nav.home" href="${links.navbutton1}" class="btn btn--secondary"></a></li>
-                <li><a data-i18n="global.nav.portfolio" href="${links.navbutton2}" class="btn btn--secondary"></a></li>
-                <li><a data-i18n="global.nav.resume" href="${links.navbutton3}" class="btn btn--secondary"></a></li>
-                <li><a data-i18n="global.nav.blog" href="${links.navbutton4}" class="btn btn--secondary"></a></li>
-                <li><a data-i18n="global.nav.contact" href="${links.navbutton5}" class="btn btn--primary"></a></li>
+                <li><a class="btn btn--secondary" href="${links.navbutton1}" data-i18n="global.nav.home"></a></li>
+                <li><a class="btn btn--secondary" href="${links.navbutton2}" data-i18n="global.nav.portfolio"></a></li>
+                <li><a class="btn btn--secondary" href="${links.navbutton3}" data-i18n="global.nav.resume"></a></li>
+                <li><a class="btn btn--secondary" href="${links.navbutton4}" data-i18n="global.nav.blog"></a></li>
+                <li><a class="btn btn--primary" href="${links.navbutton5}" data-i18n="global.nav.contact"></a></li>
             </ul>    
             <!-- NAV SETTINGS -->
             <div class="nav-preferences">
                 <!-- THEME TOGGLE -->
-                <button class="btn-settings theme-toggle" aria-label="global.aria.theme.toggle">
+                <button class="btn-settings theme-toggle" data-i18n-aria="global.aria.theme.toggle">
                     <svg class="svgicon-xsmall" xmlns="http://www.w3.org/2000/svg"    viewBox="0 0 640 640"><path fill="currentColor" d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320     576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8     463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4   100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
                 </button>
                 <!-- PILL DIVIDER -->
                 <div class="pill-divider"></div>
                 <!-- LANG SELECTOR -->
                 <div class="lang-selector">
-                    <button class="lang-toggle"> 
+                    <button class="lang-toggle" data-i18n-aria="global.aria.language.toggle"> 
                         <svg xmlns="http://www.w3.org/2000/svg" class="svgicon-xsmall" viewBox="0 -960 960 960" fill="currentColor"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
                         PT
                     </button>
@@ -112,14 +110,14 @@ class THeader extends HTMLElement {
             <!-- NAV SETTINGS -->
             <div class="nav-preferences">
                 <!-- THEME TOGGLE -->
-                <button class="btn-settings theme-toggle" aria-label="global.aria.theme.toggle">
-                    <svg class="svgicon-xsmall" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path   fill="currentColor" d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8     576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6     478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4   382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2  339.4 64 320 64z"/></svg>
+                <button class="btn-settings theme-toggle" data-i18n-aria="global.aria.theme.toggle">
+                    <svg class="svgicon-xsmall" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="currentColor" d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8     576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6     478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4   382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2  339.4 64 320 64z"/></svg>
                 </button>
                 <!-- PILL DIVIDER -->
                 <div class="pill-divider"></div>
                 <!-- LANG SELECTOR -->
                 <div class="lang-selector">
-                    <button class="lang-toggle"> 
+                    <button class="lang-toggle" data-i18n-aria="global.aria.language.toggle"> 
                         <svg xmlns="http://www.w3.org/2000/svg" class="svgicon-xsmall" viewBox="0 -960 960 960" fill="currentColor"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
                             PT
                     </button>
@@ -132,7 +130,7 @@ class THeader extends HTMLElement {
             </div>
                         
             <!-- HAMBURGUER MENU BUTTON --> 
-                <button data-i18n-aria="global.aria.menu.open" class="menu-toggle" aria-label="" aria-expanded="false">
+                <button class="menu-toggle" data-i18n-aria="global.aria.menu.open" aria-expanded="false">
                     <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="currentColor" d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
                 </button>
         </div>

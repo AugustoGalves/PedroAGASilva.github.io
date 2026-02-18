@@ -22,6 +22,9 @@
       "theme": {
         "toggle": "Alternar tema"
       },
+      "language":{
+        "toggle": "Trocar Idioma"
+      },
       "email": "Endereço de email",
       "whatsapp": "Conversar via Whatsapp",
       "phone": "Ligar para telefone",
@@ -34,7 +37,7 @@
 
 
   "pages": {
-    "home": {
+    "index": {
       "meta": {
         "title": "Augusto Galves | Engenheiro Mecânico & HVAC",
         "description": "Engenheiro mecânico e desenvolvedor com experiência em HVAC, projetos e gerência internacional."
@@ -75,7 +78,12 @@
           "title": "Software Patenteado",
           "desc": "Ultimate Belt Design and Analysis 2026"
         },
-        "cta": "Ver Portfólio Completo"
+        "cta":"Ver projetos"
+      },
+      "cta":{
+        "title": "Entre em contato",
+        "subtitle": "Vamos trabalhar juntos em seu próximo projeto?",
+        "action": "Enviar Mensagem"
       }
     },
 
