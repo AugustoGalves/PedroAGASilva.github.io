@@ -36,7 +36,7 @@ class TFooter extends HTMLElement {
 <!-- ──────────────────────────────────────────────────────────────────────────-->
 <footer class="footer-bottom">
     <section class="container flex flex-row justify-spacebetween items-center w-full flex-colreverse-mobile">
-        <span class="text-xsmall" data-i18n-aria="global.footer.copyright"></span>
+        <span class="text-xsmall" data-i18n="global.footer.copyright"></span>
         <!-- Icones minúsculos -->
         <ul>
             <!-- Whatsapp -->

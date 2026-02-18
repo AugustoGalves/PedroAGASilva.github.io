@@ -38,8 +38,8 @@ class THero extends HTMLElement {
                 <p data-i18n="pages.${PAGINA_ATUAL}.hero.specialty" class="subtext"></p>
             </div>
             <div class="flex flex-row gap3 py-6 center-align-mobile">
-                <a data-i18n="pages.${PAGINA_ATUAL}.hero.cta1" href="${links.herobutton1}" class="btn btn--primary"></a>
-                <a data-i18n="pages.${PAGINA_ATUAL}.hero.cta2" href="${links.herobutton2}" class="btn btn--secondary"></a>
+                <a class="btn btn--primary" href="${links.herobutton1}" data-i18n="pages.${PAGINA_ATUAL}.hero.cta1"></a>
+                <a class="btn btn--secondary" href="${links.herobutton2}" data-i18n="pages.${PAGINA_ATUAL}.hero.cta2"></a>
             </div>
         </div>
         <!-- CODE START OF HERO RIGHT DIV -->
