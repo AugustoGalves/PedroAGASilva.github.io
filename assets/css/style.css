@@ -869,14 +869,16 @@ footer section ul{
 	display: none;
 }
 
+.carousel-track t-card-media {
+    flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 3);
+    display: flex; /* Isso é crucial para permitir que o card interno estique */
+}
+
 .carousel-track t-card-media .card--carousel {
-  /* Layout */
-  flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 3);
-  margin: 0; /* Reseta margens externas */
-	/* Sizing */
-  width: auto; /* Reseta o width fixo de 30% antigo */
-	/* Effects */
-  scroll-snap-align: start; /* Alinha o card à esquerda ao parar de rolar */
+    flex: 1; /* Faz todos os cards ficarem com a mesma altura */
+    width: 100%;
+    min-width: 100%; /* Sobrescreve o 280px antigo da classe .card--carousel */
+    margin: 0;
 }
 
 /* ─── BADGES ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
@@ -1550,7 +1552,7 @@ body.menu-open::before {
 
 	/* ─── CARDS & CAROUSEL ──────────────────────────────────────────────────────── ✣ ─ */
 
-  .carousel-track t-card-media .card--carousel {
+  .carousel-track t-card-media {
     /* Layout */
     flex: 0 0 calc((100% - var(--spacing4)) / 2.2);
     min-width: calc((100% - var(--spacing4)) / 2.2); /* Exibir apenas 2.2 cards */
