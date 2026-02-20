@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- SEO SETTINGS -->
-    <title data-i18n="pages.index.meta.title">Pedro Augusto | Engenheiro Mecânico</title>
-    <meta data-i18n="pages.index.meta.description" name="description" content="Engenheiro mecânico com experiência em HVAC, manutenção industrial, transmissão de potência e projetos técnicos. Atuação nacional e internacional, coordenação técnica e engenharia aplicada."/>
+    <title data-i18n="pages.portfolio.meta.title">Augusto Galves | Engenheiro Mecânico</title>
+    <meta data-i18n="pages.portfolio.meta.description" name="description" content="Engenheiro mecânico com experiência em HVAC, manutenção industrial, transmissão de potência e projetos técnicos. Atuação nacional e internacional, coordenação técnica e engenharia aplicada."/>
     <meta name="author" content="Pedro Augusto Gomes Alves Silva"/>
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://pedroagasilva.github.io/" />
@@ -78,83 +78,6 @@
         link_herobutton2 = "/contato.html"
         link_heroimage = "/assets/img/HeroMainImage.png"
     ></t-hero>
-        
-    <t-features-section
-        class=""
-    ></t-features-section>
-
-
-<!-- ─── PORTFOLIO CAROUSEL SECTION ──────────────────────────────────────────────────────────────── ✣ ─ -->
-<div class="container section">
-<section class="flex flex-col">
-    <h2 class="self-start" data-i18n="pages.index.portfolio.title"></h2>
-    <div class="flex w-full">
-        <span class="subtext span-nowrap" data-i18n="pages.index.portfolio.subtitle"></span>
-        <span class="divider-horizontal100"></span>
-    </div>
-    <!-- CARROSSEL -->
-    <div class="carousel-wrapper">
-    <div class="carousel-track">
-        <!-- Card Projetos HVAC -->
-        <div class="card card--carousel"> 
-            <!-- CARD TOP -->
-            <div class="card__media">
-                <img class="card__image" src="/assets/img/portfolio/HVAC Clean Room.jpeg" loading="lazy" decoding="async" alt="Projeto de HVAC AutoCAD e Revit">
-                <!-- BADGES -->
-                <div class="card__badges">
-                    <span class="badge badge--autocad">AutoCAD</span>
-                    <span class="badge badge--hap">HAP</span>
-                </div>
-            </div>    
-            <!-- CARD BOTTOM -->
-            <a href="/portfolio.html">
-                <span class="card-title" data-i18n="pages.index.portfolio.card1.title"></span>
-                <span class="card-subtitle" data-i18n="pages.index.portfolio.card1.desc"></span>
-            </a>
-        </div>    
-        <!-- Card Planta Elétrica -->
-        <div class="card card--carousel"> 
-            <!-- CARD TOP -->
-            <div class="card__media">
-                <img class="card__image" src="/assets/img/portfolio/Planta Elétrica.png" loading="lazy" decoding="async" alt="Projeto de Elétrica Residencial feito com AutoCAD e HAP">
-                <!-- BADGES -->
-                <div class="card__badges">
-                    <span class="badge badge--autocad">AutoCAD</span>
-                    <span class="badge badge--revit">Revit</span>
-                </div>
-            </div>
-            <!-- CARD BOTTOM -->
-            <a href="/portfolio.html">
-                <span class="card-title" data-i18n="pages.index.portfolio.card2.title"></span>
-                <span class="card-subtitle" data-i18n="pages.index.portfolio.card2.desc"></span>
-            </a>
-        </div> 
-        <!-- Card Excel Correias -->
-        <div class="card card--carousel"> 
-            <!-- CARD TOP -->
-            <div class="card__media">
-                <img class="card__image" src="/assets/img/portfolio/Notebook on the table.png" loading="lazy" decoding="async" alt="Planilha excel patenteada de dimensionamento de correias de transmissão de potência">
-                <!-- BADGES -->
-                <div class="card__badges">
-                    <span class="badge badge--excel">Excel</span>
-                    <span class="badge badge--VBA">VBA</span>
-                </div>
-            </div>
-            <!-- CARD BOTTOM -->
-            <a href="/portfolio.html">
-                <span class="card-title" data-i18n="pages.index.portfolio.card3.title"></span>
-                <span class="card-subtitle" data-i18n="pages.index.portfolio.card3.desc"></span>
-            </a>
-        </div> 
-    </div>
-    </div>
-    <!-- Botão -->
-    <div class="text-center">
-        <a class="btn btn--primary" href="/portfolio.html" data-i18n="pages.index.portfolio.cta"><svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="currentColor" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg></a>
-    </div>           
-</section>
-</div>
-
 </main>
 
 
@@ -176,41 +99,6 @@
 <!-- ──────────────────────────────────────────────────────────────────────────-->
 <!-- Rolagem com mouse do carrossel -->
 <script>
-    // Seleciona o elemento do carrossel
-    const slider = this.querySelector('.carousel-track');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    // Quando clica no mouse
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active'); // Muda o cursor e desativa o snap
-        // Pega a posição inicial onde clicou
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-
-    // Quando o mouse sai da área do carrossel ou solta o botão
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    // Quando move o mouse (A mágica acontece aqui)
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return; // Se não estiver clicando, não faz nada
-        e.preventDefault(); // Evita selecionar texto
-        
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // O *2 é a velocidade (maior = mais rápido)
-        slider.scrollLeft = scrollLeft - walk;
-    });
 </script>
 
 </body>

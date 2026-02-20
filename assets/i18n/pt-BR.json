@@ -2,35 +2,27 @@
   "global": {
     "nav": {
       "home": "Início",
-      "portfolio": "Portfólio",
+      "portfolio": "Projetos",
       "resume": "Currículo",
       "blog": "Blog",
       "contact": "Contato"
     },
     "footer": {
-      "ctaTitle": "Entre em contato",
-      "ctaSubtitle": "Vamos trabalhar juntos em seu próximo projeto",
+      "ctaTitle": "Vamos conversar?",
+      "ctaSubtitle": "Disponível para projetos de engenharia e soluções de software.",
       "ctaButton": "Enviar Mensagem",
-      "copyright": "© 2026 Augusto Galves. Todos os direitos reservados"
+      "copyright": "© 2026 Augusto Galves. Engenharia Mecânica & Soluções Digitais."
     },
     "aria": {
-      "menu": {
-        "open": "Abrir menu",
-        "close": "Fechar menu",
-        "navMain": "Navegação principal"
-      },
-      "theme": {
-        "toggle": "Alternar tema"
-      },
-      "language":{
-        "toggle": "Trocar Idioma"
-      },
-      "email": "Endereço de email",
+      "menu": { "open": "Abrir menu de navegação", "close": "Fechar menu de navegação", "navMain": "Navegação principal" },
+      "theme": { "toggle": "Alternar tema entre modo claro e escuro" },
+      "language":{ "toggle": "Alterar idioma" },
+      "email": "Enviar e-mail profissional",
       "whatsapp": "Conversar via Whatsapp",
       "phone": "Ligar para telefone",
       "github": "Página do Github",
       "linkedin": "Perfil do Linkedin",
-      "instagram": "Perfil do Instagram"
+      "instagram": "Perfil pessoal do Instagram"
     }
   },
 
@@ -39,32 +31,85 @@
   "pages": {
     "index": {
       "meta": {
-        "title": "Augusto Galves | Engenheiro Mecânico & HVAC",
-        "description": "Engenheiro mecânico e desenvolvedor com experiência em HVAC, projetos e gerência internacional."
+        "title": "Augusto Galves | Engenheiro Mecânico & Soluções Internacionais",
+        "description": "Engenheiro Mecânico, especialista em HVAC Corporativo, projetos internacionais, operações marítimas, coordenação Técnica de Projetos."
       },
       "hero": {
         "name": "Augusto Galves",
-        "role": "Engenheiro Mecânico | HVAC & Automação",
-        "specialty": "Inglês Fluente (C2) · Experiência internacional como engenheiro de projetos",
-        "cta1": "Ver portfólio",
+        "role": "Engenheiro Mecânico | Projetos Internacionais | HVAC Corporativo",
+        "specialty": "Inglês Fluente (C2) · Operações Marítimas • Coordenação de Projetos",
+        "cta1": "Ver projetos",
         "cta2": "Entrar em contato"
       },
       "highlights": {
         "card1": {
-          "title": "Projetista HVAC",
-          "desc": "Participação direta em projetos para BMW, TIM e Rede D'Or seguindo normas NBR e ANVISA"
+          "title": "HVAC Corporativo",
+          "desc": "Projetos para BMW, TIM e Rede D’Or seguindo normas NBR e ANVISA"
         },
         "card2": {
           "title": "Engenharia Internacional",
-          "desc": "Experiência no setor de reparos navais (EN), aumentando receita da operação em 300%"
+          "desc": "Coordenação no setor de reparos navais (EN), aumentando receita da operação em <bold>300%</bold>"
         },
         "card3": {
-          "title": "Inovação, programação & IoT",
-          "desc": "Desenvolvimento de soluções embarcadas com ESP32, RTOS e softwares patenteados"
+          "title": "Programação, Automação & IoT",
+          "desc": "Desenvolvimento de softwares patenteados e soluções com ESP32 e RTOS"
         }
       },
-      "portfolio": {
+      "carousel1": {
         "title": "Portfólio",
+        "subtitle": "Projetos em destaque",
+        "card1": {
+          "title": "Projetos de HVAC",
+          "desc": "Especialista em VRV, split e água gelada"
+        },
+        "card2": {
+          "title": "Projetos de Elétrica",
+          "desc": "Baixa tensão | NBR 5410"
+        },
+        "card3": {
+          "title": "Softwares de Engenharia",
+          "desc": "Planilha VBA patenteada e Dashboard SaaS"
+        },
+        "cta":"Explorar Portfólio"
+      },
+      "cta":{
+        "title": "Tem um desafio técnico?",
+        "subtitle": "Entre em contato para discutirmos a melhor solução",
+        "action": "Enviar Mensagem"
+      }
+    },
+
+
+
+    "portfolio": {
+      "meta": {
+        "title": "Augusto Galves | Portfólio",
+        "description": "Portfólio técnico detalhado: HVAC, Elétrica, Automação, Programação de Software e Gestão Internacional."
+      },
+      "hero": {
+        "name": "Portfolio",
+        "role": "Coleção de todos os projetos desenvolvidos por mim",
+        "specialty": "Aplicações práticas de engenharia e tecnologia",
+        "cta1": "Entrar em contato",
+        "cta2": ""
+      },
+      "carousel1": {
+        "title": "Projetos de HVAC",
+        "subtitle": "Projetos de climatização para o setor corporativo e hospitalar",
+        "card1": {
+          "title": "BMW",
+          "desc": "Split asdasda 2025"
+        },
+        "card2": {
+          "title": "Ternium",
+          "desc": "VRV 2024"
+        },
+        "card3": {
+          "title": "Software Patenteado",
+          "desc": "Ultimate Belt Design and Analysis 2026"
+      },
+      "carousel2": {
+        "title": "Projetos de HVAC",
         "subtitle": "Projetos em destaque",
         "card1": {
           "title": "Projetos de HVAC",
@@ -77,14 +122,27 @@
         "card3": {
           "title": "Software Patenteado",
           "desc": "Ultimate Belt Design and Analysis 2026"
+      },
+      "carousel3": {
+        "title": "Projetos de HVAC",
+        "subtitle": "Projetos em destaque",
+        "card1": {
+          "title": "Projetos de HVAC",
+          "desc": "Especialista em VRV, split e água gelada"
         },
-        "cta":"Ver projetos"
+        "card2": {
+          "title": "Projetos de Elétrica",
+          "desc": "Baixa tensão | NBR 5410"
+        },
+        "card3": {
+          "title": "Software Patenteado",
+          "desc": "Ultimate Belt Design and Analysis 2026"
       },
       "cta":{
         "title": "Entre em contato",
         "subtitle": "Vamos trabalhar juntos em seu próximo projeto?",
         "action": "Enviar Mensagem"
-      }
+      },
     },
 
 

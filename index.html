@@ -85,16 +85,7 @@
 
 
 <!-- ─── PORTFOLIO CAROUSEL SECTION ──────────────────────────────────────────────────────────────── ✣ ─ -->
-<div class="container section">
-<section class="flex flex-col">
-    <h2 class="self-start" data-i18n="pages.index.portfolio.title"></h2>
-    <div class="flex w-full">
-        <span class="subtext span-nowrap" data-i18n="pages.index.portfolio.subtitle"></span>
-        <span class="divider-horizontal100"></span>
-    </div>
-    <!-- CARROSSEL -->
-    <div class="carousel-wrapper">
-    <div class="carousel-track">
+    <t-card-carousel carousel-id = "1">
         <!-- Card Projetos HVAC -->
         <div class="card card--carousel"> 
             <!-- CARD TOP -->
@@ -108,8 +99,8 @@
             </div>    
             <!-- CARD BOTTOM -->
             <a href="/portfolio.html">
-                <span class="card-title" data-i18n="pages.index.portfolio.card1.title"></span>
-                <span class="card-subtitle" data-i18n="pages.index.portfolio.card1.desc"></span>
+                <span class="card-title" data-i18n="pages.index.carousel1.card1.title"></span>
+                <span class="card-subtitle" data-i18n="pages.index.carousel1.card1.desc"></span>
             </a>
         </div>    
         <!-- Card Planta Elétrica -->
@@ -125,8 +116,8 @@
             </div>
             <!-- CARD BOTTOM -->
             <a href="/portfolio.html">
-                <span class="card-title" data-i18n="pages.index.portfolio.card2.title"></span>
-                <span class="card-subtitle" data-i18n="pages.index.portfolio.card2.desc"></span>
+                <span class="card-title" data-i18n="pages.index.carousel1.card2.title"></span>
+                <span class="card-subtitle" data-i18n="pages.index.carousel1.card2.desc"></span>
             </a>
         </div> 
         <!-- Card Excel Correias -->
@@ -142,19 +133,11 @@
             </div>
             <!-- CARD BOTTOM -->
             <a href="/portfolio.html">
-                <span class="card-title" data-i18n="pages.index.portfolio.card3.title"></span>
-                <span class="card-subtitle" data-i18n="pages.index.portfolio.card3.desc"></span>
+                <span class="card-title" data-i18n="pages.index.carousel1.card3.title"></span>
+                <span class="card-subtitle" data-i18n="pages.index.carousel1.card3.desc"></span>
             </a>
         </div> 
-    </div>
-    </div>
-    <!-- Botão -->
-    <div class="text-center">
-        <a class="btn btn--primary" href="/portfolio.html" data-i18n="pages.index.portfolio.cta"><svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="currentColor" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg></a>
-    </div>           
-</section>
-</div>
-
+    </t-card-carousel>
 </main>
 
 
@@ -174,44 +157,5 @@
 <!-- ──────────────────────────────────────────────────────────────────────────-->
 <!-- ███████████████████████████████  SCRIPTS  ████████████████████████████████-->
 <!-- ──────────────────────────────────────────────────────────────────────────-->
-<!-- Rolagem com mouse do carrossel -->
-<script>
-    // Seleciona o elemento do carrossel
-    const slider = this.querySelector('.carousel-track');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    // Quando clica no mouse
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active'); // Muda o cursor e desativa o snap
-        // Pega a posição inicial onde clicou
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-
-    // Quando o mouse sai da área do carrossel ou solta o botão
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    // Quando move o mouse (A mágica acontece aqui)
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return; // Se não estiver clicando, não faz nada
-        e.preventDefault(); // Evita selecionar texto
-        
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // O *2 é a velocidade (maior = mais rápido)
-        slider.scrollLeft = scrollLeft - walk;
-    });
-</script>
-
 </body>
 </html>
