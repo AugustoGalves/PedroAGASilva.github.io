@@ -48,6 +48,7 @@
     <script src="/assets/js/components/Header.js"></script>
     <script src="/assets/js/components/Hero.js"></script>
     <script src="/assets/js/components/FeaturesSection.js"></script>
+    <script src="/assets/js/components/CardMedia.js"></script>
     <script src="/assets/js/components/CardCarousel.js"></script>
     <script src="/assets/js/components/CTA.js"></script>
     <script src="/assets/js/components/Footer.js"></script>
@@ -83,60 +84,37 @@
         class=""
     ></t-features-section>
 
-
-<!-- ─── PORTFOLIO CAROUSEL SECTION ──────────────────────────────────────────────────────────────── ✣ ─ -->
     <t-card-carousel carousel-id = "1">
-        <!-- Card Projetos HVAC -->
-        <div class="card card--carousel"> 
-            <!-- CARD TOP -->
-            <div class="card__media">
-                <img class="card__image" src="/assets/img/portfolio/HVAC Clean Room.jpeg" loading="lazy" decoding="async" alt="Projeto de HVAC AutoCAD e Revit">
-                <!-- BADGES -->
-                <div class="card__badges">
-                    <span class="badge badge--autocad">AutoCAD</span>
-                    <span class="badge badge--hap">HAP</span>
-                </div>
-            </div>    
-            <!-- CARD BOTTOM -->
-            <a href="/portfolio.html">
-                <span class="card-title" data-i18n="pages.index.carousel1.card1.title"></span>
-                <span class="card-subtitle" data-i18n="pages.index.carousel1.card1.desc"></span>
-            </a>
-        </div>    
-        <!-- Card Planta Elétrica -->
-        <div class="card card--carousel"> 
-            <!-- CARD TOP -->
-            <div class="card__media">
-                <img class="card__image" src="/assets/img/portfolio/Planta Elétrica.png" loading="lazy" decoding="async" alt="Projeto de Elétrica Residencial feito com AutoCAD e HAP">
-                <!-- BADGES -->
-                <div class="card__badges">
-                    <span class="badge badge--autocad">AutoCAD</span>
-                    <span class="badge badge--revit">Revit</span>
-                </div>
-            </div>
-            <!-- CARD BOTTOM -->
-            <a href="/portfolio.html">
-                <span class="card-title" data-i18n="pages.index.carousel1.card2.title"></span>
-                <span class="card-subtitle" data-i18n="pages.index.carousel1.card2.desc"></span>
-            </a>
-        </div> 
-        <!-- Card Excel Correias -->
-        <div class="card card--carousel"> 
-            <!-- CARD TOP -->
-            <div class="card__media">
-                <img class="card__image" src="/assets/img/portfolio/Notebook on the table.png" loading="lazy" decoding="async" alt="Planilha excel patenteada de dimensionamento de correias de transmissão de potência">
-                <!-- BADGES -->
-                <div class="card__badges">
-                    <span class="badge badge--excel">Excel</span>
-                    <span class="badge badge--VBA">VBA</span>
-                </div>
-            </div>
-            <!-- CARD BOTTOM -->
-            <a href="/portfolio.html">
-                <span class="card-title" data-i18n="pages.index.carousel1.card3.title"></span>
-                <span class="card-subtitle" data-i18n="pages.index.carousel1.card3.desc"></span>
-            </a>
-        </div> 
+        <t-card-media
+            carousel-id = "1"
+            card-id = "1"
+            link_image = "/assets/img/portfolio/HVAC Clean Room.jpeg"
+            link_click = "/portfolio.html"
+            badge-name1 = "AutoCAD"
+            badge_class1 = "badge--autocad"
+            badge-name2 = "HAP"
+            badge_class2 = "badge--hap"
+        ></t-card-media>
+        <t-card-media
+            carousel-id = "1"
+            card-id = "2"
+            link_image = "/assets/img/portfolio/Planta Elétrica.png"
+            link_click = "/portfolio.html"
+            badge-name1 = "AutoCAD"
+            badge_class1 = "badge--autocad"
+            badge-name2 = "Revit"
+            badge_class2 = "badge--revit"
+        ></t-card-media>
+        <t-card-media
+            carousel-id = "1"
+            card-id = "3"
+            link_image = "/assets/img/portfolio/Notebook on the table.png"
+            link_click = "/portfolio.html"
+            badge-name1 = "Excel"
+            badge_class1 = "badge--excel"
+            badge-name2 = "VBA"
+            badge_class2 = "badge--VBA"
+        ></t-card-media>
     </t-card-carousel>
 </main>
 
