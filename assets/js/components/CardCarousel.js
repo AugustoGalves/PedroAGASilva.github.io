@@ -8,9 +8,11 @@ class TCardCarousel extends HTMLElement {
     // =======================================
     //Navegador executa automaticamente a função connectedCallback ao baixar o script
     connectedCallback() {
-        const Cards_HTML = this.innerHTML; // Salva os <t-cards> dentro do <t-card-carousel>
-        this.renderizador(Cards_HTML); //Inicia o script de carimbar o HTML na página
-        this.initDragToScroll() // Código drag to scroll do carousel
+        setTimeout(() => { // Timeout, esse Callback so vai rodar depois do HTML da pagina ser baixado por inteiro. 
+            const Cards_HTML = this.innerHTML; // Salva os <t-cards> dentro do <t-card-carousel>
+            this.renderizador(Cards_HTML); //Inicia o script de carimbar o HTML na página
+            this.initDragToScroll() // Código drag to scroll do carousel
+        }, 0);
     }
     	
 
