@@ -134,6 +134,8 @@
 t-header,
 t-hero,
 t-features-section,
+t-card-carousel,
+t-card-media,
 t-cta,
 t-footer{display:block; }
 
@@ -143,6 +145,7 @@ t-header{min-height:95px; }
 t-hero{min-height:430px; }
 t-features-section{min-height:240px; }
 t-card-carousel{min-height:375px; }
+t-card-media{min-height:32px; } /* Ajustar esse valor */
 t-cta{min-height:170px; }
 t-footer{min-height:80px; }
 
@@ -152,6 +155,7 @@ t-footer{min-height:80px; }
   t-hero{min-height:330px; }
   t-features-section{min-height:125px; } 
   t-card-carousel{min-height:385px; }
+  t-card-media{min-height:32px; } /* Ajustar esse valor */
   t-cta{min-height:155px; }
   t-footer{min-height:35px; }
 }
@@ -865,8 +869,7 @@ footer section ul{
 	display: none;
 }
 
-.carousel-track .card--carousel {
-  /* NÃO SEI OQ TA ACONTECENDO AQUI */
+.carousel-track t-card-media .card--carousel {
   /* Layout */
   flex: 0 0 calc((100% - (var(--spacing4) * 2)) / 3);
   margin: 0; /* Reseta margens externas */
@@ -1547,7 +1550,7 @@ body.menu-open::before {
 
 	/* ─── CARDS & CAROUSEL ──────────────────────────────────────────────────────── ✣ ─ */
 
-  .carousel-track .card--carousel {
+  .carousel-track t-card-media .card--carousel {
     /* Layout */
     flex: 0 0 calc((100% - var(--spacing4)) / 2.2);
     min-width: calc((100% - var(--spacing4)) / 2.2); /* Exibir apenas 2.2 cards */
