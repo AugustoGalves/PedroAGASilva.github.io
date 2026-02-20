@@ -86,6 +86,7 @@
         "title": "Augusto Galves | Portfólio",
         "description": "Portfólio técnico detalhado: HVAC, Elétrica, Automação, Programação de Software e Gestão Internacional."
       },
+      
       "hero": {
         "name": "Portfolio",
         "role": "Coleção de todos os projetos desenvolvidos por mim",
@@ -93,6 +94,7 @@
         "cta1": "Entrar em contato",
         "cta2": ""
       },
+      
       "carousel1": {
         "title": "Projetos de HVAC",
         "subtitle": "Projetos de climatização para o setor corporativo e hospitalar",
@@ -107,7 +109,9 @@
         "card3": {
           "title": "Software Patenteado",
           "desc": "Ultimate Belt Design and Analysis 2026"
+        }
       },
+      
       "carousel2": {
         "title": "Projetos de HVAC",
         "subtitle": "Projetos em destaque",
@@ -122,7 +126,9 @@
         "card3": {
           "title": "Software Patenteado",
           "desc": "Ultimate Belt Design and Analysis 2026"
+        }
       },
+      
       "carousel3": {
         "title": "Projetos de HVAC",
         "subtitle": "Projetos em destaque",
@@ -137,12 +143,14 @@
         "card3": {
           "title": "Software Patenteado",
           "desc": "Ultimate Belt Design and Analysis 2026"
+        }
       },
+      
       "cta":{
         "title": "Entre em contato",
         "subtitle": "Vamos trabalhar juntos em seu próximo projeto?",
         "action": "Enviar Mensagem"
-      },
+      }
     },
 
 
