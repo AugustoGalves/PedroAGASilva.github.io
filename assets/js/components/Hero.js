@@ -32,10 +32,10 @@ class THero extends HTMLElement {
         <!-- CODE START OF HERO LEFT DIV-->
         <div class="section flex flex-col hero-left">
             <h1 data-i18n="pages.${PAGINA_ATUAL}.hero.name"></h1>
-            <p class="mt-2" data-i18n-html="pages.${PAGINA_ATUAL}.hero.role"></p>
+            <h2 class="mt-2" data-i18n-html="pages.${PAGINA_ATUAL}.hero.role"></h2>
             <span class="divider-horizontal90 my-3 my-2-mobile"></span>
             <div class="hero-full-line">
-                <p data-i18n="pages.${PAGINA_ATUAL}.hero.specialty" class="subtext"></p>
+                <h3 data-i18n="pages.${PAGINA_ATUAL}.hero.specialty" class="subtext"></h3>
             </div>
             <div class="flex flex-row gap3 py-6 center-align-mobile">
                 <a class="btn btn--primary" href="${links.herobutton1}" data-i18n="pages.${PAGINA_ATUAL}.hero.cta1"></a>
