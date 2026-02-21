@@ -1228,7 +1228,7 @@ footer{
 	/* Layout */
 	align-items: flex-start;
 	/* Sizing */
-	padding-right: 10%; /*Ocupar menos espaço do container*/
+	padding-right: 5%; /*Ocupar menos espaço do container*/
 	width: 80%;
 }
 
