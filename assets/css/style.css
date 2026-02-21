@@ -7,8 +7,9 @@
 /* BEST COLOR PICKER WEBSITE: https://www.iamsajid.com/ui-colors/ */
 :root {
 	/* Typography Colors */
-	--font-body: "Open Sans", sans-serif;
-	--font-headings: "Open Sans", sans-serif;
+	--font-body: "Inter", sans-serif;
+	--font-headings: "Plus Jakarta Sans", sans-serif;
+	--font-mono: "JetBrains Mono", monospace;
 	
 	/* Spacing variables */
 	--spacing0: 0rem; /* 0 px */
@@ -200,6 +201,30 @@ body{
 /* ██████████████████████████  📝 TIPOGRAFIA  ██████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+/* ─── CSS CLASS FOR VARIABLE STYLE ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.plus-jakarta-sans-<uniquifier> {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+.jetbrains-mono-<uniquifier> {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 /* ─── TIPOGRAFIA GERAL ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 h1, h2, h3, h4{
 	color: var(--color-text-primary);
@@ -330,11 +355,24 @@ a:hover{
 	opacity: 0.7;
 }
 
+.hero-left h1{
+	/* Typography */
+	font-size: var(--textsize-10); /*64px*/
+
+.hero-left h2{
+	/* Typography */
+	font-size: var(--textsize-5);
+  font-weight: 100;
+
+.hero-left h3{
+	/* Typography */
+	font-size: var(--textsize-4);
+  font-weight: 600;
 
 .card-title{
   /* Typography */
   font-size: var(--textsize-3);/*16px*/
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1.4; /*Espaçamento entre linhas*/
 	/* Visuals */
 	color: var(--color-text-primary); /*Primary TextColor*/
@@ -449,12 +487,12 @@ strong {
 
 	.prose .text-xsmall{
 		/* Sizing */
-		margin-top: calc(var(--textsize-2)*1.0); /*Espaçamento de paragrafo BEFORE*/
-		margin-bottom: calc(var(--textsize-2)*0.5); /*Espaçamento de paragrafo AFTER*/
+		margin-top: calc(var(--textsize-1)*1.0); /*Espaçamento de paragrafo BEFORE*/
+		margin-bottom: calc(var(--textsize-1)*0.5); /*Espaçamento de paragrafo AFTER*/
 	}
 	.text-xsmall{
 		/* Typography */
-		font-size: var(--textsize-2);/*12px*/
+		font-size: var(--textsize-1);/*px*/
 	}
 
 
@@ -465,12 +503,29 @@ strong {
 
 	.card-subtitle{
 	  /* Typography */
-	  font-size: var(--textsize-2);/*14px*/
+	  font-size: var(--textsize-1);/*px*/
 	}
 
 	.card-content{
 	  /* Typography */
-	  font-size: var(--textsize-2);/*14px*/
+	  font-size: var(--textsize-1);/*px*/
+	}
+
+	.hero-left h1{
+		/* Typography */
+		font-size: var(--textsize-8);
+	}
+	
+	.hero-left h2{
+		/* Typography */
+		font-size: var(--textsize-4);
+	  font-weight: 100;
+	}
+	
+	.hero-left h3{
+		/* Typography */
+		font-size: var(--textsize-3);
+	  font-weight: 500;
 	}
 }
 
@@ -714,7 +769,7 @@ footer section ul{
 	gap: var(--spacing4); /* Margin entre texto e imagem */
 	z-index: 2;
 	/* Sizing */
-	padding: var(--spacing2) var(--spacing2) var(--spacing2) var(--spacing3);
+	padding: var(--spacing4) calc(var(--spacing4) * 1.5);
 	min-height: var(--spacing6);
 	width: 30%;
 }
@@ -787,10 +842,10 @@ footer section ul{
   /* Layout */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--spacing1);
   /* Sizing */
-  padding: var(--spacing3); /* Espaçamento interno para o texto não colar na borda */
+  padding: var(--spacing4) calc(var(--spacing4)*1.5); /* Espaçamento interno para o texto não colar na borda */
   flex-grow: 1; /* Ocupa o resto da altura do card */
   /* Visuals */
   background: var(--gradient-bg);
@@ -1554,8 +1609,12 @@ body.menu-open::before {
 
   .carousel-track t-card-media {
     /* Layout */
-    flex: 0 0 calc((100% - var(--spacing4)) / 2.2);
-    min-width: calc((100% - var(--spacing4)) / 2.2); /* Exibir apenas 2.2 cards */
+    flex: 0 0 calc((100% - var(--spacing4)) / 1.4);
+    min-width: calc((100% - var(--spacing4)) / 1.4); /* Exibir apenas 1.4 cards */
+  }
+
+  .card--carousel a{
+  	padding: var(--spacing3) calc(var(--spacing3) * 1.5);
   }
 
   .card--emote{
