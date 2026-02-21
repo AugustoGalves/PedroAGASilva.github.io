@@ -358,16 +358,19 @@ a:hover{
 .hero-left h1{
 	/* Typography */
 	font-size: var(--textsize-10); /*64px*/
+}
 
 .hero-left h2{
 	/* Typography */
 	font-size: var(--textsize-5);
   font-weight: 100;
+}
 
 .hero-left h3{
 	/* Typography */
 	font-size: var(--textsize-4);
   font-weight: 600;
+}
 
 .card-title{
   /* Typography */
