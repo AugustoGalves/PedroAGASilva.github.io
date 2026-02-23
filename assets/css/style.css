@@ -44,13 +44,13 @@
 	/* Typography Colors */
 	--color-text-primary: oklch(0.96 0.03 265); /* White */
 	--color-text-primary-muted: oklch(0.76 0.03 265); /* Off white */
-	--color-subtext: oklch(0.72 0.02 265 / 0.8); /* Subtext */
+	--color-text-terciary: oklch(0.72 0.02 265 / 0.8); /* Subtext */
 
 	/* Brand Colors */
 	--color-bg-dark: oklch(0.2 0.015 265); /* Plano de fundo */ /* old color oklch(0.1 0.015 265)*/
 	--color-bg: oklch(0.25 0.015 265); /* Plano de fundo */ /* old color oklch(0.15 0.015 265)*/
 	--color-bg-light: oklch(0.3 0.015 265); /* old color oklch(0.2 0.015 265)*/
-	--color-accent1: #025bb0; /* CTA Button ou oklch(0.76 0.1 265)*/
+	--color-accent1: #0f3377; /* CTA Button ou oklch(0.76 0.1 265)*/
 	--color-accent1-hover: #0372db; /* CTA Button brighter*/
 	--color-accent2: oklch(0.76 0.1 85); /* Hover amarelo */
 
@@ -86,13 +86,13 @@
 	/* Typography Colors */
 	--color-text-primary: oklch(0.15 0.03 265);   /* White */
 	--color-text-primary-muted: oklch(0.4 0.03 265);     /* Off white */
-	--color-subtext: oklch(0.50 0.02 265); /* Subtext */
+	--color-text-terciary: oklch(0.50 0.02 265); /* Subtext */
 
 	/* Brand Colors */
 	--color-bg-dark: oklch(0.92 0.015 265);   /* Plano de fundo */
 	--color-bg: oklch(0.96 0.015 265);   /* Plano de fundo */
 	--color-bg-light: oklch(1 0.015 265);
-	--color-accent1: oklch(0.66 0.1 265); /* CTA Button, find #025bb0 for light mode later */
+	--color-accent1: oklch(0.7 0.15 265); /* CTA Button, find #025bb0 for light mode later */
 	--color-accent1-hover: #0372db; /* CTA Button brighter*/
 	--color-accent2: oklch(0.4 0.1 85); /* Hover amarelo */
 
@@ -123,9 +123,17 @@
 	--border: solid 1px oklch(0.6 0.015 0 / 1); /* Inventei essa cor*/
 }
 
-:root[data-theme="light"] .logo-header{
-	content: url("/assets/img/LogoDark_Pedro AGA Silva Engenheiro Mecânico.png");
-}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ███████████████████████  🖼️ ICONS CHANGES   █████████████████████████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+:root[data-theme="light"] .logo-header{content: url("/assets/img/LogoDark_Pedro AGA Silva Engenheiro Mecânico.png"); }
+
+:root[data-theme="dark"] .icon-moon {display: block; }
+:root[data-theme="dark"] .icon-sun {display: none; }
+:root[data-theme="light"] .icon-moon {display: none; }
+:root[data-theme="light"] .icon-sun {display: block; }
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
@@ -143,9 +151,9 @@ t-footer{display:block; }
 
 /* ===== MOBILE FIRST ===== */
 t-header{min-height:95px; }
-t-hero{min-height:430px; }
+t-hero{min-height:360px; }
 t-features-section{min-height:240px; }
-t-card-carousel{min-height:375px; }
+t-card-carousel{min-height:365px; }
 t-card-media{min-height:32px; } /* Ajustar esse valor */
 t-cta{min-height:170px; }
 t-footer{min-height:80px; }
@@ -180,6 +188,8 @@ html{
 
 body{
 	/* Layout */
+	display: flex;
+	flex-direction: column;
 	overflow-x: hidden; /* Esconde tudo que está fora da tela */
 	width: 100%; /* A página sempre vai ter a largura da tela */
   min-height: 100vh; /* Altura mínima, garante que rodapé fica colado no final da tela mesmo em páginas curtas */
@@ -369,7 +379,7 @@ a:hover{
 .hero-left h3{
 	/* Typography */
 	font-size: var(--textsize-4);
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .card-title{
@@ -408,7 +418,7 @@ strong {
 
 .subtext{
 	/* Visuals */
-	color: var(--color-subtext);
+	color: var(--color-text-terciary);
 }
 
 .span-nowrap{
@@ -1147,8 +1157,16 @@ t-header{
   border-radius: 0 50px 50px 0;
 }
 
+/* ───  CTA ──────────────────────────────────────────────── ✣ ─ */
+t-cta{
+	margin-top: auto;
+}
 
 /* ───  FOOTER ──────────────────────────────────────────────── ✣ ─ */
+t-footer{
+	margin-bottom: 20px;
+}
+
 footer{
 	background-color: var(--color-bg-light);
 }
@@ -1165,7 +1183,6 @@ footer{
 	padding-bottom: 4px;
 	width: 100%;
 }
-
 
 /* ───  Lang Menu & Selector ──────────────────────────────────────────────── ✣ ─ */
 .lang-selector {
@@ -1237,6 +1254,9 @@ footer{
   position: relative;
   /* Sizing */
   width: 35%;
+  /* Effects */
+  mask-image: linear-gradient(to bottom right, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom right, black 60%, transparent 100%);
 }
 
 .hero-image img{

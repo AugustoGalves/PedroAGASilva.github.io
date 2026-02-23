@@ -33,8 +33,7 @@ class THero extends HTMLElement {
         <div class="section flex flex-col hero-left">
             <h1 data-i18n="pages.${PAGINA_ATUAL}.hero.name"></h1>
             <h2 class="mt-2" data-i18n-html="pages.${PAGINA_ATUAL}.hero.role"></h2>
-            <span class="divider-horizontal90 my-3 my-2-mobile"></span>
-            <div class="hero-full-line">
+            <div class="hero-full-line my-1">
                 <h3 data-i18n="pages.${PAGINA_ATUAL}.hero.specialty" class="subtext"></h3>
             </div>
             <div class="flex flex-row gap3 py-6 center-align-mobile">
@@ -44,7 +43,7 @@ class THero extends HTMLElement {
         </div>
         <!-- CODE START OF HERO RIGHT DIV -->
         <div class="flex hero-image">
-            <img decoding="async" fetchpriority="high" src="${links.heroimage}" alt="Pedro Augusto Selfie Photo">
+            <img decoding="async" fetchpriority="high" src="${links.heroimage}" alt="Augusto Galves Selfie Photo">
         </div>
     </section>
 </div>
