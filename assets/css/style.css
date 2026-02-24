@@ -811,6 +811,7 @@ footer section ul{
 	/* Sizing */
 	height: auto;
 	margin: 0;
+	margin-bottom: -4px; /* A transição scale deixa um white space embaixo da foto, que removemos usando essa margin negativa */
 	/* Visuals */
 	transition: transform 0.5s ease;
 	/* Efeitos - Impedir Image Grab e Selection */
@@ -1164,7 +1165,7 @@ t-cta{
 
 /* ───  FOOTER ──────────────────────────────────────────────── ✣ ─ */
 t-footer{
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 }
 
 footer{
@@ -1254,9 +1255,6 @@ footer{
   position: relative;
   /* Sizing */
   width: 35%;
-  /* Effects */
-  mask-image: linear-gradient(to bottom right, black 60%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom right, black 60%, transparent 100%);
 }
 
 .hero-image img{
@@ -1265,22 +1263,37 @@ footer{
   z-index: 1;
   /*Sizing*/
   width: 110%;
+  /* Effects */
+	-webkit-mask-image: 
+    linear-gradient(to bottom, black 65%, rgba(0,0,0,0.5) 85%, transparent 100%), 
+    linear-gradient(to right, black 65%, rgba(0,0,0,0.5) 85%, transparent 100%);
+  -webkit-mask-composite: source-in;  
+  mask-image: 
+    linear-gradient(to bottom, black 65%, rgba(0,0,0,0.5) 85%, transparent 100%), 
+    linear-gradient(to right, black 65%, rgba(0,0,0,0.5) 85%, transparent 100%);
+  mask-composite: intersect;
 }
 
 .hero-image::before{
   /* Layout */
-  content: ""; /* NÃO FAÇO IDEIA DO QUE TA ACONTECENDO AQUI */
+  content: "";
   position: absolute;
   inset: -30% -35%;
   z-index: 0;
   /* Visual */
   background: radial-gradient(
     circle at center,
-    rgba(2,91,176,0.15),
+    var(--color-accent1, rgba(2,91,176,0.15)), /* Usando sua variável de cor principal se possível */
     transparent 70% 
   );
   /* Effects */
-  pointer-events: none; /* O mouse ignora esse elemento, clica direto no que estiver atrás */
+  pointer-events: none;
+  animation: glowPulse 6s ease-in-out infinite alternate; /* Respiração Premium */
+}
+
+@keyframes glowPulse {
+    0% { opacity: 0.5; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1.05); }
 }
 
 @media (max-width: 992px) {
