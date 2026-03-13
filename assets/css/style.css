@@ -1011,40 +1011,67 @@ footer section ul{
 .badge--international{ background:#7c3aed; }
 
 
-/* ─── CARDS ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.form-group {
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing2);
+/* ─── FORMS ─────────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+.contact-form {
+    /* Glassmorphism sutil baseado no seu t-header */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: color-mix(in srgb, var(--color-bg), transparent 10%);
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
 }
 
 .form-input {
-	width: 100%;
-	padding: var(--spacing3) var(--spacing4);
-	background-color: var(--color-bg-dark); /* Reflete o contraste inverso do card */
-	border: var(--border);
-	border-color: var(--color-border-muted);
-	border-radius: var(--spacing2);
-	color: var(--color-text-primary);
-	font-family: var(--font-body);
-	font-size: var(--textsize-3);
-	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    padding: var(--spacing4);
+    /* Design focado em oklch para profundidade */
+    background-color: var(--color-bg-dark);
+    border: 1px solid var(--color-border-muted);
+    border-radius: var(--spacing3);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    font-size: var(--textsize-3);
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0 2px 4px oklch(0 0 0 / 0.1);
 }
 
 .form-input::placeholder {
-	color: var(--color-text-terciary);
-	opacity: 0.6;
+    color: var(--color-text-terciary);
+    opacity: 0.5;
 }
 
+/* Efeito de iluminação ativa no focus */
 .form-input:focus {
-	outline: none;
-	border-color: var(--color-accent1);
-	box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-accent1), transparent 80%);
+    border-color: var(--color-accent1);
+    background-color: var(--color-bg);
+    box-shadow: 
+        0 0 0 4px color-mix(in srgb, var(--color-accent1), transparent 90%),
+        inset 0 2px 4px oklch(0 0 0 / 0.05);
+    transform: translateY(-1px);
 }
 
 .form-textarea {
-	min-height: 150px;
-	resize: vertical;
+    min-height: 180px;
+    line-height: 1.6;
+    resize: none; /* Mantém o layout limpo */
+}
+
+/* Micro-animação para as labels ao focar no campo */
+.form-group:focus-within .card-title {
+    color: var(--color-accent1);
+    transition: color 0.3s ease;
+}
+
+/* Botão ajustado para maior impacto visual */
+.contact-form .btn--primary {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: var(--textsize-2);
 }
 
 
