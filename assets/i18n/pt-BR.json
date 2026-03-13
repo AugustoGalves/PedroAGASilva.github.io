@@ -172,11 +172,11 @@
         "card2": {
           "title": "WhatsApp",
           "desc": "+55 (21) 98409-5043"
-        }
+        },
         "card3": {
           "title": "Localização",
           "desc": "Ilha do Governador, Rio de Janeiro"
-        },
+        }
       },
       "form": {
         "name": "Nome",
