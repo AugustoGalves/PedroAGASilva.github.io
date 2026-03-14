@@ -653,6 +653,7 @@ footer section ul{
   justify-content: center;
   align-items: center;
 	/* Visuals */
+  border: none;
   border-radius: var(--spacing2);
   box-shadow: var(--shadow);
 	/* Effects */
