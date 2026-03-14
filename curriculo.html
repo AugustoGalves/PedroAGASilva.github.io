@@ -1,113 +1,293 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em manutenção</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1d3557; /* Seu azul marinho padrão */
-            --accent: #025bb0;  /* Cor de destaque dos botões */
-            --text: #333;
-            --bg: #f8f9fa;
-        }
-
-        /* Suporte ao Dark Mode do sistema */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0f172a;
-                --text: #e3e3e3;
-            }
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container { max-width: 600px; }
-
-        /* Animação de Engrenagem (Engineering Coded) */
-        .icon-wrapper {
-            margin-bottom: 30px;
-            animation: rotate 8s linear infinite;
-            display: inline-block;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--accent);
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 8px 16px;
-            border: 1px solid var(--accent);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent);
-        }
-
-        .contact-links {
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
-
-        .contact-links a {
-            color: var(--accent);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-    </style>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <!-- CUSTOMIZING -->
+    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+    <meta name="theme-color" content="#222A35">
+    <!-- PRECONNECT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- SEO SETTINGS -->
+    <title data-i18n="pages.curriculo.meta.title">Currículo | Augusto Galves</title>
+    <meta data-i18n="pages.curriculo.meta.description" name="description" content="Currículo técnico detalhado do Engenheiro Mecânico Augusto Galves. Especialista em HVAC, Automação e Projetos Internacionais."/>
+    <meta name="author" content="Augusto Galves"/>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.augustogalves.com/curriculo" />
+    <!-- OG TAGS -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://augustogalves.com/curriculo.html">
+    <meta property="og:title" content="Currículo | Augusto Galves">
+    <meta property="og:description" content="Currículo do Engenheiro Mecânico e Desenvolvedor Augusto Galves. Especialista em HVAC, Automação e Projetos Internacionais.">
+    <meta property="og:image" content="https://augustogalves.com/assets/img/LogoLight_Pedro AGA Silva Engenheiro Mecânico.png">
+    <!-- SEI LAAAAAAAAAAAA OQ  EH ISSO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Augusto Galves",
+      "url": "https://augustogalves.com/",
+      "jobTitle": "Mechanical Engineer",
+      "knowsAbout": ["IoT", "Mechanical Engineering", "Web Development", "Automation"],
+      "image": "https://augustogalves.com/assets/img/LogoLight_Pedro AGA Silva Engenheiro Mecânico.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/augustogalves/",
+        "https://github.com/AugustoGalves"
+      ]
+    }
+    </script>    
+    <!-- DOWNLOADS EXTERNOS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- DOWNLOADS INTERNOS (Cuidado com a ordem de download) -->
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/components/Header.js"></script>
+    <script src="/assets/js/components/Hero.js"></script>
+    <script src="/assets/js/components/CardRow.js"></script>
+    <script src="/assets/js/components/CardCol.js"></script>
+    <script src="/assets/js/components/CardIcon.js"></script>
+    <script src="/assets/js/components/CardMedia.js"></script>
+    <script src="/assets/js/components/CardCarousel.js"></script>
+    <script src="/assets/js/components/CTA.js"></script>
+    <script src="/assets/js/components/Footer.js"></script>
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/main.js"></script>
 </head>
+
+
+
+
 <body>
 
-    <div class="container">
-        <div class="icon-wrapper">
-            <svg width="80" height="80" viewBox="0 -960 960 960" fill="currentColor" style="color: var(--accent);">
-                <path d="M150-103v-128h144l-93-317q-45-14-71.5-47.5T103-684q0-56 41-97.5t97-41.5q53 0 89 29t49 80h109v-59q0-17 12-29t29-12q10 0 17.5 7t8.5 17l68-65q11-10 26.5-13.5T681-865l158 76q14 7 19 21t-3 29q-7 13-21 17t-27-4l-147-72-89 90v42l89 95 147-71q15-7 27.5-4t20.5 16q8 15 3 30t-20 22l-150 71q-19 10-35.5 9T623-512l-68-65q-1 14-8 19t-18 5q-17 0-29-12t-12-29v-60H377q-2 17-12.5 38.5T342-586l183 355h184v128H150Zm91-525q24 0 40-16t16-40q0-24-16-40t-40-16q-24 0-40 16t-16 40q0 24 16 40t40 16Zm120 397h97L289-562q-5 3-12.5 5.5T265-553l96 322Zm97 0Z"/>
-            </svg>
+<t-header
+    link_navbutton1 = "/"
+    link_navbutton2 = "/portfolio.html"
+    link_navbutton3 = "/curriculo.html"
+    link_navbutton4 = "/blog.html"
+    link_navbutton5 = "/contato.html"
+    link_headerlogo_darktheme = "/assets/img/LogoLight_Pedro AGA Silva Engenheiro Mecânico.png"
+></t-header>
+
+<main>
+    <div class="container mt-6">
+        <div class="flex items-center gap2 text-small mb-4 subtext">
+            <a href="/" class="subtext">Início</a>
+            <svg class="svgicon-xsmall" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+            <span class="card-title">Currículo</span>
         </div>
-
-        <div class="badge">Ajuste Técnico</div>
         
-        <h1>Calibrando Sistemas</h1>
-        
-        <p>Estamos realizando uma manutenção no site para atualização do portfólio. Voltamos em breve com novidades.</p>
+        <section class="flex flex-row flex-col-mobile justify-spacebetween items-center gap8">
+            <div class="flex flex-col gap2 w-60 w-full-mobile">
+                <h1>Pedro Augusto G. A. Silva</h1>
+                <h2 class="subtext mt-1">Engenheiro Mecânico & Desenvolvedor</h2>
+                <p class="mt-2 text-primary-muted">Engenheiro Mecânico (CREA-RJ) com inglês Fluente C2. Especialista em HVAC, transmissão de potência, automação e operações internacionais.</p>
+                
+                <div class="flex flex-row flex-col-mobile gap4 mt-5">
+                    <a href="/assets/Currículo Augusto Galves - 2026.pdf" target="_blank" class="btn btn--primary">
+                        <svg class="svgicon-xsmall mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+                        <span>Baixar Currículo (PDF)</span>
+                    </a>
+                    <a href="/contato.html" class="btn btn--secondary">
+                        <svg class="svgicon-xsmall mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                        <span>Entre em Contato</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="w-40 w-full-mobile flex justify-center">
+                <img src="/assets/img/HeroMainImage.png" class="resume-hero-img" alt="Foto de Augusto Galves">
+            </div>
+        </section>
+    </div>
 
-        <div class="contact-links">
-            <a href="mailto:AugustoGalves.eng@gmail.com">E-mail</a> | 
-            <a href="https://linkedin.com/in/AugustoGalves">LinkedIn</a>
+    <div class="container mt-8">
+        <div class="flex flex-row flex-col-mobile justify-spacebetween gap4">
+            <div class="card flex flex-row items-center p-4 gap4 w-full">
+                <svg class="svgicon-small" style="color: var(--color-accent1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="m422-232 207-248H469l29-227-185 267h139l-30 208ZM320-80l40-280H160l360-520h80l-40 320h240L400-80h-80Zm151-396Z"/></svg>
+                <div class="flex flex-col">
+                    <span class="card-title">C2 Fluente</span>
+                    <span class="card-subtitle">Certificado EF SET</span>
+                </div>
+            </div>
+            <div class="card flex flex-row items-center p-4 gap4 w-full">
+                <svg class="svgicon-small" style="color: var(--color-accent1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400ZM386-400h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400ZM654-400h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+                <div class="flex flex-col">
+                    <span class="card-title">Projetos</span>
+                    <span class="card-subtitle">Internacionais</span>
+                </div>
+            </div>
+            <div class="card flex flex-row items-center p-4 gap4 w-full">
+                <svg class="svgicon-small" style="color: var(--color-accent1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M320-200h320v-120H320v120ZM160-120q-33 0-56.5-23.5T80-200v-560q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v560q0 33-23.5 56.5T800-120H160Zm0-80h640v-400H160v400Zm0-480h640v-80H160v80Zm0 0v-80 80Z"/></svg>
+                <div class="flex flex-col">
+                    <span class="card-title">Especialista em</span>
+                    <span class="card-subtitle">Software & Automação</span>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="container mt-9 mb-11">
+        <div class="resume-grid">
+            
+            <div class="flex flex-col gap8">
+                
+                <div class="flex flex-row gap6 resume-tabs">
+                    <a href="#resumo" class="card-title active">Resumo</a>
+                    <a href="#experiencia" class="card-title subtext">Experiência</a>
+                    <a href="#formacao" class="card-title subtext">Formação</a>
+                    <a href="#habilidades" class="card-title subtext">Habilidades</a>
+                </div>
+
+                <section id="resumo" class="flex flex-col gap3">
+                    <h2>Resumo</h2>
+                    <p>Engenheiro Mecânico (CREA-RJ) com inglês Fluente C2 e experiência em coordenação técnica de operações navais internacionais, liderando reparos e a comunicação com clientes globais. Participação em projetos HVAC para empresas como BMW, TIM e Rede D'Or. Experiência no desenvolvimento de ferramentas de engenharia, incluindo planilha VBA para dimensionamento de correias (patente pendente) e dashboards em ambiente web.</p>
+                </section>
+
+                <section id="experiencia" class="flex flex-col gap4">
+                    <h2>Experiência</h2>
+                    
+                    <div class="resume-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="card p-5 w-full">
+                                <div class="flex flex-row flex-col-mobile justify-spacebetween items-start gap2-mobile">
+                                    <div class="flex flex-col">
+                                        <h3 class="card-title">Engenheiro Mecânico - Operações Navais Internacionais</h3>
+                                        <span class="card-subtitle mt-1">Buena Vista Shipping (Dubai) / Electra M/T</span>
+                                    </div>
+                                    <span class="badge badge--international">02/2025 – 05/2025</span>
+                                </div>
+                                <ul class="resume-list subtext text-small mt-4">
+                                    <li>Contrato inicialmente previsto para 3 dias de operação, estendido para 3 meses, elevando em aproximadamente 300% a receita projetada da operação.</li>
+                                    <li>Interface técnica direta com tripulação multinacional (Rússia, Índia, Mianmar, Tailândia), garantindo comunicação clara em ambiente multicultural e sob pressão.</li>
+                                    <li>Condução de reuniões com o cliente internacional, elaboração de orçamentos, precificação, invoices e Service Completion Dossier.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="card p-5 w-full">
+                                <div class="flex flex-row flex-col-mobile justify-spacebetween items-start gap2-mobile">
+                                    <div class="flex flex-col">
+                                        <h3 class="card-title">Pesquisa e Desenvolvimento Tecnológico Independente</h3>
+                                        <span class="card-subtitle mt-1">Projeto Independente</span>
+                                    </div>
+                                    <span class="badge badge--python">06/2025 – Presente</span>
+                                </div>
+                                <ul class="resume-list subtext text-small mt-4">
+                                    <li>Desenvolvimento de planilha Excel com VBA para dimensionamento automático de transmissões mecânicas (Patente Pendente).</li>
+                                    <li>Desenvolvimento de Dashboard online para visualização e análise de dados.</li>
+                                    <li>Implementação de automatizações usando o microcontrolador ESP32-C6.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="card p-5 w-full">
+                                <div class="flex flex-row flex-col-mobile justify-spacebetween items-start gap2-mobile">
+                                    <div class="flex flex-col">
+                                        <h3 class="card-title">Estagiário de Projetos HVAC</h3>
+                                        <span class="card-subtitle mt-1">Axem Engenharia e Arquitetura</span>
+                                    </div>
+                                    <span class="badge badge--hvac">11/2023 – 07/2024</span>
+                                </div>
+                                <ul class="resume-list subtext text-small mt-4">
+                                    <li>Desenvolvimento de projetos completos de climatização (HVAC) para clientes corporativos e industriais, utilizando AutoCAD, Excel e Word diariamente.</li>
+                                    <li>Dimensionamento de carga térmica, vazões, seleção de equipamentos, dutos e redes frigorígenas.</li>
+                                    <li>Elaboração de memoriais técnicos, plantas e documentação conforme NBR 16401, ANVISA RE-09 e NBR 7256.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="formacao" class="flex flex-col gap4">
+                    <h2>Formação</h2>
+                    <div class="card p-5 w-full">
+                        <div class="flex flex-row justify-spacebetween items-start flex-col-mobile gap2-mobile">
+                            <div class="flex flex-col">
+                                <h3 class="card-title">Bacharelado em Engenharia Mecânica</h3>
+                                <span class="card-subtitle mt-1">CEFET-RJ, Rio de Janeiro</span>
+                            </div>
+                            <span class="badge badge--engineering">Concluído</span>
+                        </div>
+                        <ul class="resume-list subtext text-small mt-4">
+                            <li>Engenheiro Mecânico com registro ativo no CREA-RJ | Registro nº 2025102465.</li>
+                            <li>Aptidão para emissão de ARTs e demais documentos técnicos.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="habilidades" class="flex flex-col gap4">
+                    <h2>Habilidades Técnicas</h2>
+                    <div class="flex resume-flex-wrap gap2">
+                        <span class="badge badge--hvac">Projetos HVAC</span>
+                        <span class="badge badge--autocad">AutoCAD 2D/3D</span>
+                        <span class="badge badge--revit">Revit</span>
+                        <span class="badge badge--solidworks">SolidWorks</span>
+                        <span class="badge badge--excel">Excel Avançado</span>
+                        <span class="badge badge--vba">VBA / Macros</span>
+                        <span class="badge badge--python">Python</span>
+                        <span class="badge badge--cpp">C / C++</span>
+                        <span class="badge badge--esp32">ESP32 & IoT</span>
+                        <span class="badge badge--international">Inglês C2 (Fluente)</span>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="resume-sidebar">
+                <div class="card p-6 flex flex-col gap6 sticky-sidebar">
+                    
+                    <div class="flex flex-col gap4">
+                        <div class="flex flex-row items-center gap3">
+                            <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                            <span class="card-subtitle">augusto@augustogalves.com</span>
+                        </div>
+                        <div class="flex flex-row items-center gap3">
+                            <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-75.5-184.5T480-812q-89 0-164.5 75.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                            <span class="card-subtitle">Rio de Janeiro, RJ - Brasil</span>
+                        </div>
+                        <div class="flex flex-row items-center gap3">
+                            <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+                            <span class="card-subtitle">+55 (21) 98409-5043</span>
+                        </div>
+                    </div>
+
+                    <span class="divider-horizontal100"></span>
+
+                    <div class="flex flex-col gap3">
+                        <a href="/assets/Currículo Augusto Galves - 2026.pdf" target="_blank" class="btn btn--primary w-full">
+                            <svg class="svgicon-xsmall mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+                            <span>Download PDF</span>
+                        </a>
+                        <a href="/contato.html" class="btn btn--secondary w-full">
+                            <svg class="svgicon-xsmall mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path fill="currentColor" d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                            <span>Entre em Contato</span>
+                        </a>
+                    </div>
+
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</main>
+
+<t-cta 
+    link_ctabutton1="/contato.html"
+></t-cta>
+
+<t-footer
+    link_whatsappbutton="https://api.whatsapp.com/send/?phone=5521984095043"
+    link_emailbutton="augusto@augustogalves.com"
+    link_linkedinbutton="https://www.linkedin.com/in/augustogalves/"
+    link_githubbutton="https://github.com/AugustoGalves"
+    link_instagrambutton="https://www.instagram.com/augusto_galves/"
+></t-footer>
 
 </body>
 </html>
