@@ -20,7 +20,7 @@ class TCardIcon extends HTMLElement {
         const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
         const card_group_id = this.getAttribute("card-group-id")
         const card_id = this.getAttribute("card-id")
-        const icon_svg = this.getAttribute("icon-svg")
+        const icon_svg = this.getAttribute("icon-svg") || ""
         const links = {
         }
         

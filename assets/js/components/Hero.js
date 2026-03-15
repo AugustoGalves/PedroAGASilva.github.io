@@ -18,17 +18,17 @@ class THero extends HTMLElement {
     renderizador(){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
         const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
-        const icon_svg1 = this.getAttribute("icon-svg1")
-        const icon_svg2 = this.getAttribute("icon-svg2")
+        const icon_svg1 = this.getAttribute("icon-svg1") || "";
+        const icon_svg2 = this.getAttribute("icon-svg2") || "";
         const extraAttributes = {
-            herobutton1: this.getAttribute("extraAttributes-herobutton1")
-            herobutton2: this.getAttribute("extraAttributes-herobutton2")
-        }
+            herobutton1: this.getAttribute("extraattributes-herobutton1") || "",
+            herobutton2: this.getAttribute("extraattributes-herobutton2") || ""
+        };
         const links = {
-            herobutton1: this.getAttribute("link-herobutton1"),
-            herobutton2: this.getAttribute("link-herobutton2"),
-            heroimage: this.getAttribute("link-heroimage"),
-        }
+            herobutton1: this.getAttribute("link-herobutton1") || "",
+            herobutton2: this.getAttribute("link-herobutton2") || "",
+            heroimage: this.getAttribute("link-heroimage") || ""
+        };
         
         // Template Stamper (So insere o HTML) ────────────────────────────────────────────────────── ✣ ──
         this.innerHTML = `

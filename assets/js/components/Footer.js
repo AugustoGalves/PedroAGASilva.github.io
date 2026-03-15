@@ -22,12 +22,12 @@ class TFooter extends HTMLElement {
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
         const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
         const links = {
-            whatsappbutton: this.getAttribute("link_whatsappbutton"),
-            emailbutton: this.getAttribute("link_emailbutton"),
-            linkedinbutton: this.getAttribute("link_linkedinbutton"),
-            githubbutton: this.getAttribute("link_githubbutton"),
-            instagrambutton: this.getAttribute("link_instagrambutton")
-        }
+            whatsappbutton: this.getAttribute("link_whatsappbutton") || "",
+            emailbutton: this.getAttribute("link_emailbutton") || "",
+            linkedinbutton: this.getAttribute("link_linkedinbutton") || "",
+            githubbutton: this.getAttribute("link_githubbutton") || "",
+            instagrambutton: this.getAttribute("link_instagrambutton") || ""
+        };
         
         // Template Stamper (So insere o HTML) ────────────────────────────────────────────────────── ✣ ──
         this.innerHTML = `
