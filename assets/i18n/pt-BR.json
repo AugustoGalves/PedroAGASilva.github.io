@@ -28,7 +28,11 @@
 
 
 
+  "_sectiondivider1_": "███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
   "pages": {
+    
+
+    "_pagedivider1_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
     "index": {
       "meta": {
         "title": "Augusto Galves | Engenheiro Mecânico & Soluções Internacionais",
@@ -80,7 +84,7 @@
     },
 
 
-
+    "_pagedivider2_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
     "projects": {
       "meta": {
         "title": "Portfólio | Augusto Galves",
@@ -154,39 +158,7 @@
     },
 
 
-
-    "contact": {
-      "meta": {
-        "title": "Contato | Augusto Galves",
-        "description": "Entre em contato com Augusto Galves para projetos de Engenharia Mecânica, Automação e Desenvolvimento Web."
-      },
-      "hero": {
-        "title": "Vamos conversar?",
-        "subtitle": "Adoraria ouvir sobre seu projeto ou desafio técnico. Minha equipe está pronta para ajudar."
-      },
-      "cardgroup1": {
-        "card1": {
-          "title": "E-mail",
-          "desc": "augusto@augustogalves.com"
-        },
-        "card2": {
-          "title": "WhatsApp",
-          "desc": "+55 (21) 98409-5043"
-        },
-        "card3": {
-          "title": "Localização",
-          "desc": "Rio de Janeiro - RJ, Brasil"
-        }
-      },
-      "form": {
-        "name": "Nome",
-        "email": "E-mail",
-        "message": "Mensagem",
-        "submit": "Enviar Mensagem"
-      }
-    },
-
-
+    "_pagedivider3_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
     "cv": {
       "meta": {
         "title": "Currículo | Augusto Galves",
@@ -218,6 +190,75 @@
         "subtitle": "Vamos trabalhar juntos em seu próximo projeto?",
         "action": "Enviar Mensagem"
       }
+    },
+
+    "_pagedivider4_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "blog": {
+      "meta": {
+        "title": "Currículo | Augusto Galves",
+        "description": "Currículo do Engenheiro Mecânico e Desenvolvedor Augusto Galves. Especialista em HVAC, Automação e Projetos Internacionais."
+      },
+      "hero": {
+        "name": "Augusto Galves",
+        "role": "Engenheiro Mecânico · Projetos Internacionais · HVAC Corporativo",
+        "specialty": "Engenheiro Mecânico (CREA-RJ) com inglês Fluente C2. Especialista em HVAC, transmissão de potência, automação e operações internacionais.",
+        "cta1": "Baixar Currículo (PDF)",
+        "cta2": "Entre em Contato"
+      },
+      "cardgroup1": {
+        "card1": {
+          "title": "Inglês C2 Fluente",
+          "desc": "Certificado EF SET"
+        },
+        "card2": {
+          "title": "Profissional Internacional",
+          "desc": "Gerência, projetos e consultoria"
+        },
+        "card3": {
+          "title": "Especialista em",
+          "desc": "Mecânica, Software & Automação"
+        }
+      },
+      "cta":{
+        "title": "Entre em contato",
+        "subtitle": "Vamos trabalhar juntos em seu próximo projeto?",
+        "action": "Enviar Mensagem"
+      }
+    },
+    
+
+    "_pagedivider5_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "contact": {
+      "meta": {
+        "title": "Contato | Augusto Galves",
+        "description": "Entre em contato com Augusto Galves para projetos de Engenharia Mecânica, Automação e Desenvolvimento Web."
+      },
+      "hero": {
+        "title": "Vamos conversar?",
+        "subtitle": "Adoraria ouvir sobre seu projeto ou desafio técnico. Minha equipe está pronta para ajudar."
+      },
+      "cardgroup1": {
+        "card1": {
+          "title": "E-mail",
+          "desc": "augusto@augustogalves.com"
+        },
+        "card2": {
+          "title": "WhatsApp",
+          "desc": "+55 (21) 98409-5043"
+        },
+        "card3": {
+          "title": "Localização",
+          "desc": "Rio de Janeiro - RJ, Brasil"
+        }
+      },
+      "form": {
+        "name": "Nome",
+        "email": "E-mail",
+        "message": "Mensagem",
+        "submit": "Enviar Mensagem"
+      }
     }
+
+
   }
 }

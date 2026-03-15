@@ -20,10 +20,15 @@ class TCardRow extends HTMLElement {
     // ====================================
     renderizador(Cards_HTML){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
-        const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
-        const card_group_id = this.getAttribute("card-group-id")
+        const PAGINA_ATUAL =
+            window.location.pathname
+            .split("/")
+            .filter(Boolean)
+            .pop()
+            ?.replace(".html", "") || "index";
+        const card_group_id = this.getAttribute("card-group-id");
         const links = {
-        }
+        };
         
         // Template Stamper (So insere o HTML) ────────────────────────────────────────────────────── ✣ ──
         this.innerHTML = `

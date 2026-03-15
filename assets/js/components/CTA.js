@@ -17,7 +17,12 @@ class TCTA extends HTMLElement {
     // ====================================
     renderizador(){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
-        const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
+        const PAGINA_ATUAL =
+            window.location.pathname
+            .split("/")
+            .filter(Boolean)
+            .pop()
+            ?.replace(".html", "") || "index";
         const links = {
             ctabutton1: this.getAttribute("link_ctabutton1") || "",
         };

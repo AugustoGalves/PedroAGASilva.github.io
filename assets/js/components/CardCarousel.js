@@ -21,7 +21,12 @@ class TCardCarousel extends HTMLElement {
     // ====================================
     renderizador(Cards_HTML){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
-        const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
+        const PAGINA_ATUAL =
+            window.location.pathname
+            .split("/")
+            .filter(Boolean)
+            .pop()
+            ?.replace(".html", "") || "index";
         const carousel_id = this.getAttribute("carousel-id")
         const links = {
         }

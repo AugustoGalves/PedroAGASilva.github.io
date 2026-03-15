@@ -17,7 +17,12 @@ class THero extends HTMLElement {
     // ====================================
     renderizador(){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
-        const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
+        const PAGINA_ATUAL =
+            window.location.pathname
+            .split("/")
+            .filter(Boolean)
+            .pop()
+            ?.replace(".html", "") || "index";
         const icon_svg1 = this.getAttribute("icon-svg1") || "";
         const icon_svg2 = this.getAttribute("icon-svg2") || "";
         const extraAttributes = {

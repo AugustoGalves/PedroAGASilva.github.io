@@ -17,12 +17,17 @@ class TCardIcon extends HTMLElement {
     // ====================================
     renderizador(){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
-        const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
-        const card_group_id = this.getAttribute("card-group-id")
-        const card_id = this.getAttribute("card-id")
-        const icon_svg = this.getAttribute("icon-svg") || ""
+        const PAGINA_ATUAL =
+            window.location.pathname
+            .split("/")
+            .filter(Boolean)
+            .pop()
+            ?.replace(".html", "") || "index";
+        const card_group_id = this.getAttribute("card-group-id");
+        const card_id = this.getAttribute("card-id");
+        const icon_svg = this.getAttribute("icon-svg") || "";
         const links = {
-        }
+        };
         
         // Template Stamper (So insere o HTML) ────────────────────────────────────────────────────── ✣ ──
         this.innerHTML = `

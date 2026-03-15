@@ -20,7 +20,12 @@ class THeader extends HTMLElement {
     // ====================================
     renderizador(){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
-        const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
+        const PAGINA_ATUAL =
+            window.location.pathname
+            .split("/")
+            .filter(Boolean)
+            .pop()
+            ?.replace(".html", "") || "index";
         const links = {
             navbutton1: this.getAttribute("link_navbutton1") || "",
             navbutton2: this.getAttribute("link_navbutton2") || "",

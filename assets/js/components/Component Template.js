@@ -17,6 +17,12 @@ class TFooter extends HTMLElement {
     // ====================================
     renderizador(){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
+        const PAGINA_ATUAL =
+            window.location.pathname
+            .split("/")
+            .filter(Boolean)
+            .pop()
+            ?.replace(".html", "") || "index";
         const links = {
             navbutton1: this.getAttribute("link_navbutton1"),
             navbutton2: this.getAttribute("link_navbutton2"),
@@ -24,7 +30,7 @@ class TFooter extends HTMLElement {
             navbutton4: this.getAttribute("link_navbutton4"),
             navbutton5: this.getAttribute("link_navbutton5"),
             headerlogo_darktheme: this.getAttribute("link_headerlogo_darktheme")
-        }
+        };
         
         // Template Stamper (So insere o HTML) ────────────────────────────────────────────────────── ✣ ──
         this.innerHTML = `

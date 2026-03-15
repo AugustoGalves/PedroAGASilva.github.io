@@ -17,19 +17,24 @@ class TCardMedia extends HTMLElement {
     // ====================================
     renderizador(){
         // Declaração das variáveis capturadas no HTML ────────────────────────────────────────────────────── ✣ ──
-        const PAGINA_ATUAL = window.location.pathname.split("/").pop().replace(".html", "") || "index";
-        const carousel_id = this.getAttribute("carousel-id")
-        const card_id = this.getAttribute("card-id")
+        const PAGINA_ATUAL =
+            window.location.pathname
+            .split("/")
+            .filter(Boolean)
+            .pop()
+            ?.replace(".html", "") || "index";
+        const carousel_id = this.getAttribute("carousel-id");
+        const card_id = this.getAttribute("card-id");
         const badge = {
             class1: this.getAttribute("badge_class1") || "",
             class2: this.getAttribute("badge_class2") || "",
             text1: this.getAttribute("badge-name1") || "",
             text2: this.getAttribute("badge-name2") || "",
-        }
+        };
         const links = {
             image: this.getAttribute("link_image") || "",
             click: this.getAttribute("link_click") || "#",
-        }
+        };
         
         // Template Stamper (So insere o HTML) ────────────────────────────────────────────────────── ✣ ──
         this.innerHTML = `
