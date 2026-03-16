@@ -29,6 +29,9 @@ class THeroReverse extends HTMLElement {
             herobutton1: this.getAttribute("extraattributes-herobutton1") || "",
             herobutton2: this.getAttribute("extraattributes-herobutton2") || ""
         };
+        const extraClasses = {
+            heroimage: this.getAttribute("extraclasses-heroimage") || ""
+        };
         const links = {
             herobutton1: this.getAttribute("link-herobutton1") || "",
             herobutton2: this.getAttribute("link-herobutton2") || "",
@@ -41,7 +44,7 @@ class THeroReverse extends HTMLElement {
 <div class="container">
     <section class="flex flex-rowreverse justify-spacebetween flex-col-mobile">
         <!-- CODE START OF HERO LEFT DIV-->
-        <div class="section flex flex-col hero-left">
+        <div class="section flex flex-col hero-left mr-0 ml-6">
             <h1 data-i18n="pages.${PAGINA_ATUAL}.hero.name"></h1>
             <h2 class="mt-2" data-i18n-html="pages.${PAGINA_ATUAL}.hero.role"></h2>
             <div class="hero-full-line my-1">
@@ -59,7 +62,7 @@ class THeroReverse extends HTMLElement {
             </div>
         </div>
         <!-- CODE START OF HERO RIGHT DIV -->
-        <div class="flex hero-image">
+        <div class="flex hero-image ${extraClasses.heroimage}">
             <img class="hero-image2" decoding="async" fetchpriority="high" src="${links.heroimage}" alt="Augusto Galves Selfie Photo">
         </div>
     </section>
