@@ -55,6 +55,7 @@
     <script src="/assets/js/components/CardIcon.js"></script>
     <script src="/assets/js/components/CardMedia.js"></script>
     <script src="/assets/js/components/CardCarousel.js"></script>
+    <script src="/assets/js/components/CardCarouselReduced.js"></script>
     <script src="/assets/js/components/CTA.js"></script>
     <script src="/assets/js/components/Footer.js"></script>
     <script src="/assets/js/i18n.js"></script>
@@ -84,14 +85,14 @@
         link-herobutton2 = "/contact/"
         extraattributes-herobutton2 = ''
         icon-svg2 = '<svg class="svgicon-xsmall mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>'
-        link-heroimage = "/assets/images/computersetup.webp"
+        link-heroimage = "/projects/computersetup.webp"
         extraclasses-heroimage = ""
     ></t-hero-reverse>
 
 
 <section class="container featured-projects">
-    <h2>Projetos de Destaque</h2>
-    <t-card-carousel carousel-id="1">
+    <h2 class="mt-4">Projetos de Destaque</h2>
+    <t-card-carousel-reduced carousel-id="1">
         <t-card-media
             carousel-id = "1"
             card-id = "1"
@@ -125,14 +126,14 @@
             badge-name2 = "HAP"
             badge_class2 = "badge--hap"
         ></t-card-media>  
-    </t-card-carousel>
+    </t-card-carousel-reduced>
 </section>
 
 
 <section class="container gallery-section">
-    <h2>Galeria com todos os projetos</h2>
+    <h2 class="mt-4">Galeria com todos os projetos</h2>
         
-    <t-card-carousel carousel-id="2">
+    <t-card-carousel-reduced carousel-id="2">
         <t-card-media
             carousel-id = "2"
             card-id = "1"
@@ -166,13 +167,13 @@
             badge-name2 = "HAP"
             badge_class2 = "badge--hap"
         ></t-card-media>
-    </t-card-carousel>
+    </t-card-carousel-reduced>
 
-    <t-card-carousel carousel-id="3">
+    <t-card-carousel-reduced carousel-id="3">
         <t-card-media
             carousel-id = "3"
             card-id = "1"
-            link_image = "/projects/planta-elétrica.png"
+            link_image = "/projects/planta-elétrica.webp"
             link_click = "/projects/"
             alt-text = "Projeto de MEP Residencial - São Pedro da Aldeia - RJ"
             badge-name1 = "AutoCAD"
@@ -183,7 +184,7 @@
         <t-card-media
             carousel-id = "3"
             card-id = "2"
-            link_image = "/projects/planta-elétrica.png"
+            link_image = "/projects/planta-detalhes-elétricos.webp"
             link_click = "/projects/"
             alt-text = "Projeto de geração de energia fotovoltaica"
             badge-name1 = "AutoCAD"
@@ -194,7 +195,7 @@
         <t-card-media
             carousel-id = "3"
             card-id = "3"
-            link_image = "/projects/notebook-on-the-table.png"
+            link_image = "/assets/images/coming-soon.webp"
             link_click = "/projects/"
             alt-text = "Notebook na mesa"
             badge-name1 = "Excel"
@@ -202,13 +203,13 @@
             badge-name2 = "VBA"
             badge_class2 = "badge--VBA"
         ></t-card-media>
-    </t-card-carousel>
+    </t-card-carousel-reduced>
 
-    <t-card-carousel carousel-id="4">
+    <t-card-carousel-reduced carousel-id="4">
         <t-card-media
             carousel-id = "4"
             card-id = "1"
-            link_image = "/projects/notebook-on-the-table.png"
+            link_image = "/projects/dev-belt-system-design/cover.jpg"
             link_click = "/projects/"
             alt-text = "Planilha excel VBA Patenteada"
             badge-name1 = "Excel"
@@ -219,7 +220,7 @@
         <t-card-media
             carousel-id = "4"
             card-id = "2"
-            link_image = "/projects/planta-elétrica.png"
+            link_image = "/projects/dev-portfolio-website/cover.webp"
             link_click = "/projects/"
             alt-text = "Site"
             badge-name1 = "HTML/CSS"
@@ -230,14 +231,14 @@
         <t-card-media
             carousel-id = "4"
             card-id = "3"
-            link_image = "/projects/notebook-on-the-table.png"
+            link_image = "/projects/dev-pianotiles/cover.webp"
             link_click = "/projects/"
             badge-name1 = "Python"
             badge_class1 = "badge--python"
             badge-name2 = "C++"
             badge_class2 = "badge--VBA"
         ></t-card-media>
-    </t-card-carousel>
+    </t-card-carousel-reduced>
 
 </section>
 
