@@ -67,12 +67,12 @@
           "desc": "Especialista em VRV, split e água gelada"
         },
         "card2": {
-          "title": "Projetos de Elétrica",
-          "desc": "Baixa tensão | ABNT NBR 5410"
+          "title": "Projetos MEP",
+          "desc": "Elétrica, hidráulica e arquitetura"
         },
         "card3": {
-          "title": "Softwares de Engenharia",
-          "desc": "Planilha VBA patenteada e Dashboard SaaS"
+          "title": "Automação e Programação",
+          "desc": "Desenvolvimento de softwares para engenharia"
         },
         "cta":"Explorar Portfólio"
       },
@@ -96,24 +96,7 @@
         "role": "Coleção de todos os projetos desenvolvidos por mim",
         "specialty": "ㅤㅤㅤ",
         "cta1": "Entrar em contato",
-        "cta2": "Ver currículo"
-      },
-      
-      "carousel1": {
-        "title": "Projetos de Destaque",
-        "subtitle": "Atuações internacionais e inovações em engenharia",
-        "card1": {
-          "title": "BMW - Projeto de climatização e exaustão (HVAC)",
-          "desc": "Exaustão de gases veiculares, ventilação de galpão e resfriamento com VRV LG"
-        },
-        "card2": {
-          "title": "MEP Residencial",
-          "desc": "Projeto completo para cliente em São Pedro da Aldeia - RJ"
-        },
-        "card3": {
-          "title": "Planilha VBA Patenteada",
-          "desc": "Ultimate Belt Design and Analysis 2026"
-        }
+        "cta2": "Projetos em Andamento ↗"
       },
       
       "carousel2": {
