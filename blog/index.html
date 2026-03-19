@@ -82,10 +82,15 @@
         extraclasses-heroimage = ""
     ></t-hero>
 
-    <section id="artigos">
-        <t-card-carousel-reduced carousel-id="blog-posts">
+    <section id="artigos" class="container mt-8 mb-8">
+        <div class="mb-4">
+            <h2 class="card-title" data-i18n="pages.blog.list_posts.title">Últimas Publicações</h2>
+            <p class="subtext mt-1" data-i18n="pages.blog.list_posts.subtitle">Artigos recentes sobre engenharia, código e gestão</p>
+        </div>
+
+        <t-card-col card-group-id="blog-posts">
             <t-card-media
-                carousel-id = "blog-posts"
+                card-group-id = "blog-posts"
                 card-id = "1"
                 link_image = "/projects/dev-portfolio-website/cover.webp"
                 link_click = "/blog/criando-componentes-js/"
@@ -97,7 +102,7 @@
             ></t-card-media>        
             
             <t-card-media
-                carousel-id = "blog-posts"
+                card-group-id = "blog-posts"
                 card-id = "2"
                 link_image = "/projects/dev-belt-system-design/notebook-spreadsheet.webp"
                 link_click = "/blog/gestao-conhecimento-obsidian/"
@@ -109,7 +114,7 @@
             ></t-card-media>              
             
             <t-card-media
-                carousel-id = "blog-posts"
+                card-group-id = "blog-posts"
                 card-id = "3"
                 link_image = "/assets/images/thumbnail-HVAC.webp"
                 link_click = "/blog/eficiencia-sistemas-hvac/"
@@ -119,7 +124,7 @@
                 badge-name2 = "HVAC"
                 badge_class2 = "badge--autocad"
             ></t-card-media>
-        </t-card-carousel-reduced>
+        </t-card-col>
     </section>
 
 </main>
