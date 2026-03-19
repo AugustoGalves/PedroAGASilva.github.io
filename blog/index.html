@@ -3,111 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em manutenção</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1d3557; /* Seu azul marinho padrão */
-            --accent: #025bb0;  /* Cor de destaque dos botões */
-            --text: #333;
-            --bg: #f8f9fa;
-        }
-
-        /* Suporte ao Dark Mode do sistema */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0f172a;
-                --text: #e3e3e3;
-            }
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container { max-width: 600px; }
-
-        /* Animação de Engrenagem (Engineering Coded) */
-        .icon-wrapper {
-            margin-bottom: 30px;
-            animation: rotate 8s linear infinite;
-            display: inline-block;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--accent);
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 8px 16px;
-            border: 1px solid var(--accent);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent);
-        }
-
-        .contact-links {
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
-
-        .contact-links a {
-            color: var(--accent);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#222A35">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title data-i18n="pages.blog.meta.title">Blog | Augusto Galves</title>
+    <meta data-i18n="pages.blog.meta.description" name="description" content="Artigos sobre Engenharia Mecânica, Desenvolvimento Web, Automação e Produtividade."/>
+    <meta name="author" content="Augusto Galves"/>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://augustogalves.com/blog/" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://augustogalves.com/blog/">
+    <meta property="og:title" content="Blog | Augusto Galves">
+    <meta property="og:description" content="Artigos sobre Engenharia Mecânica, Desenvolvimento Web, Automação e Produtividade.">
+    <meta property="og:image" content="https://augustogalves.com/assets/images/logo-light.svg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Augusto Galves",
+      "url": "https://augustogalves.com/",
+      "jobTitle": "Mechanical Engineer",
+      "knowsAbout": ["IoT", "Mechanical Engineering", "Web Development", "Automation"],
+      "image": "https://augustogalves.com/assets/images/logo-light.svg",
+      "sameAs": [
+        "https://www.linkedin.com/in/augustogalves/",
+        "https://github.com/AugustoGalves"
+      ]
+    }
+    </script>    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/components/Header.js"></script>
+    <script src="/assets/js/components/Hero.js"></script>
+    <script src="/assets/js/components/HeroReverse.js"></script>
+    <script src="/assets/js/components/CardRow.js"></script>
+    <script src="/assets/js/components/CardCol.js"></script>
+    <script src="/assets/js/components/CardIcon.js"></script>
+    <script src="/assets/js/components/CardMedia.js"></script>
+    <script src="/assets/js/components/CardCarousel.js"></script>
+    <script src="/assets/js/components/CardCarouselReduced.js"></script>
+    <script src="/assets/js/components/CTA.js"></script>
+    <script src="/assets/js/components/Footer.js"></script>
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/main.js"></script>
 </head>
+
 <body>
 
+<t-header
+    link_navbutton1 = "/"
+    link_navbutton2 = "/projects/"
+    link_navbutton3 = "/cv/"
+    link_navbutton4 = "/blog/"
+    link_navbutton5 = "/contact/"
+    link_headerlogo_darktheme = "/assets/images/logo-light.svg"
+></t-header>
+
+<main>
     <div class="container">
-        <div class="icon-wrapper">
-            <svg width="80" height="80" viewBox="0 -960 960 960" fill="currentColor" style="color: var(--accent);">
-                <path d="M150-103v-128h144l-93-317q-45-14-71.5-47.5T103-684q0-56 41-97.5t97-41.5q53 0 89 29t49 80h109v-59q0-17 12-29t29-12q10 0 17.5 7t8.5 17l68-65q11-10 26.5-13.5T681-865l158 76q14 7 19 21t-3 29q-7 13-21 17t-27-4l-147-72-89 90v42l89 95 147-71q15-7 27.5-4t20.5 16q8 15 3 30t-20 22l-150 71q-19 10-35.5 9T623-512l-68-65q-1 14-8 19t-18 5q-17 0-29-12t-12-29v-60H377q-2 17-12.5 38.5T342-586l183 355h184v128H150Zm91-525q24 0 40-16t16-40q0-24-16-40t-40-16q-24 0-40 16t-16 40q0 24 16 40t40 16Zm120 397h97L289-562q-5 3-12.5 5.5T265-553l96 322Zm97 0Z"/>
-            </svg>
-        </div>
-
-        <div class="badge">Ajuste Técnico</div>
-        
-        <h1>Calibrando Sistemas</h1>
-        
-        <p>Estamos realizando uma manutenção no site para atualização do portfólio. Voltamos em breve com novidades.</p>
-
-        <div class="contact-links">
-            <a href="mailto:AugustoGalves.eng@gmail.com">E-mail</a> | 
-            <a href="https://linkedin.com/in/AugustoGalves">LinkedIn</a>
+        <div class="flex items-center gap2 text-small my-4 subtext">
+            <a href="/" class="subtext" data-i18n="pages.blog.breadcrumb.home">Início</a>
+            <svg class="svgicon-xsmall" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+            <span class="card-title" data-i18n="pages.blog.breadcrumb.current">Blog</span>
         </div>
     </div>
+
+    <t-hero
+        link-herobutton1 = "#artigos"
+        extraattributes-herobutton1 = ''
+        icon-svg1 = '<svg class="svgicon-xsmall mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Z"/></svg>'
+        link-herobutton2 = "/contact/"
+        extraattributes-herobutton2 = ''
+        icon-svg2 = '<svg class="svgicon-xsmall mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>'
+        link-heroimage = "/projects/notebook-on-the-table.webp"
+        extraclasses-heroimage = ""
+    ></t-hero>
+
+    <section id="artigos">
+        <t-card-carousel-reduced carousel-id="blog-posts">
+            <t-card-media
+                carousel-id = "blog-posts"
+                card-id = "1"
+                link_image = "/projects/dev-portfolio-website/cover.webp"
+                link_click = "/blog/criando-componentes-js/"
+                alt-text = "Construindo um portfólio com Vanilla JS e Web Components"
+                badge-name1 = "HTML/CSS"
+                badge_class1 = "badge--autocad"
+                badge-name2 = "JS"
+                badge_class2 = "badge--revit"
+            ></t-card-media>        
+            
+            <t-card-media
+                carousel-id = "blog-posts"
+                card-id = "2"
+                link_image = "/projects/dev-belt-system-design/notebook-spreadsheet.webp"
+                link_click = "/blog/gestao-conhecimento-obsidian/"
+                alt-text = "Gestão de Conhecimento com Obsidian e Markdown"
+                badge-name1 = "Obsidian"
+                badge_class1 = "badge--excel"
+                badge-name2 = "Markdown"
+                badge_class2 = "badge--autocad"
+            ></t-card-media>              
+            
+            <t-card-media
+                carousel-id = "blog-posts"
+                card-id = "3"
+                link_image = "/assets/images/thumbnail-HVAC.webp"
+                link_click = "/blog/eficiencia-sistemas-hvac/"
+                alt-text = "Eficiência Energética em Sistemas HVAC"
+                badge-name1 = "Engenharia"
+                badge_class1 = "badge--hap"
+                badge-name2 = "HVAC"
+                badge_class2 = "badge--autocad"
+            ></t-card-media>
+        </t-card-carousel-reduced>
+    </section>
+
+</main>
+
+<t-cta
+    link_ctabutton1 = "/contact/"
+></t-cta>
+
+<t-footer
+    link_whatsappbutton = "https://api.whatsapp.com/send/?phone=5521984095043"
+    link_emailbutton = "augusto@augustogalves.com"
+    link_linkedinbutton = "https://www.linkedin.com/in/augustogalves/"
+    link_githubbutton = "https://github.com/AugustoGalves"
+    link_instagrambutton = "https://www.instagram.com/augusto_galves/"
+></t-footer>
 
 </body>
 </html>
