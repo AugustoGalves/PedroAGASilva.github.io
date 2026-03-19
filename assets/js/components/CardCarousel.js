@@ -29,7 +29,7 @@ class TCardCarousel extends HTMLElement {
             ?.replace(".html", "") || "index";
         const carousel_id = this.getAttribute("carousel-id")
         const links = {
-            button1 = this.getAttribute("link-button1") || "";
+            button1: this.getAttribute("link-button1") || "";
         }
         
         // Template Stamper (So insere o HTML) ────────────────────────────────────────────────────── ✣ ──
