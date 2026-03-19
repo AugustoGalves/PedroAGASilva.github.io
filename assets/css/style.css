@@ -866,7 +866,6 @@ t-card-col {
 	gap: var(--spacing4);
 	/* Sizing */
 	width: 100%; 
-	max-width: 400px; /* Aqui você limita a largura caso não queira que o card vertical fique gigante na tela */
 }
 
 t-card-icon {
