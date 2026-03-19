@@ -43,6 +43,7 @@
     <script src="/assets/js/components/CardCol.js"></script>
     <script src="/assets/js/components/CardIcon.js"></script>
     <script src="/assets/js/components/CardMedia.js"></script>
+    <script src="/assets/js/components/CardHorizontal.js"></script>
     <script src="/assets/js/components/CardCarousel.js"></script>
     <script src="/assets/js/components/CardCarouselReduced.js"></script>
     <script src="/assets/js/components/CTA.js"></script>
@@ -88,9 +89,9 @@
             <p class="subtext mt-1" data-i18n="pages.blog.list_posts.subtitle">Artigos recentes sobre engenharia, código e gestão</p>
         </div>
 
-        <t-card-col card-group-id="blog-posts">
-            <t-card-media
-                card-group-id = "blog-posts"
+        <t-card-col card-group-id="list_posts1">
+            <t-card-horizontal
+                card-group-id = "list_posts1"
                 card-id = "1"
                 link_image = "/projects/dev-portfolio-website/cover.webp"
                 link_click = "/blog/criando-componentes-js/"
@@ -99,10 +100,10 @@
                 badge_class1 = "badge--autocad"
                 badge-name2 = "JS"
                 badge_class2 = "badge--revit"
-            ></t-card-media>        
+            ></t-card-horizontal>        
             
-            <t-card-media
-                card-group-id = "blog-posts"
+            <t-card-horizontal
+                card-group-id = "list_posts1"
                 card-id = "2"
                 link_image = "/projects/dev-belt-system-design/notebook-spreadsheet.webp"
                 link_click = "/blog/gestao-conhecimento-obsidian/"
@@ -111,10 +112,10 @@
                 badge_class1 = "badge--excel"
                 badge-name2 = "Markdown"
                 badge_class2 = "badge--autocad"
-            ></t-card-media>              
+            ></t-card-horizontal>              
             
-            <t-card-media
-                card-group-id = "blog-posts"
+            <t-card-horizontal
+                card-group-id = "list_posts1"
                 card-id = "3"
                 link_image = "/assets/images/thumbnail-HVAC.webp"
                 link_click = "/blog/eficiencia-sistemas-hvac/"
@@ -123,7 +124,7 @@
                 badge_class1 = "badge--hap"
                 badge-name2 = "HVAC"
                 badge_class2 = "badge--autocad"
-            ></t-card-media>
+            ></t-card-horizontal>
         </t-card-col>
     </section>
 

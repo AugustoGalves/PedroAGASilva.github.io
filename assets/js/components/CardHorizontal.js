@@ -10,7 +10,7 @@ class TCardHorizontal extends HTMLElement {
     connectedCallback() {
         this.renderizador(); //Inicia o script de carimbar o HTML na página
     }
-    	
+        
 
     // ====================================
     // Função que faz o HTML Stamping
