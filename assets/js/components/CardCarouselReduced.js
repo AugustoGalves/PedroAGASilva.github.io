@@ -35,7 +35,7 @@ class TCardCarouselReduced extends HTMLElement {
         this.innerHTML = `
 <div class="container section">
 <section class="flex flex-col">
-    <h3 class="self-start" data-i18n="pages.${PAGINA_ATUAL}.carousel${carousel_id}.title"></h2>
+    <h3 class="self-start" data-i18n="pages.${PAGINA_ATUAL}.carousel${carousel_id}.title"></h3>
     <span class="subtext span-nowrap" data-i18n="pages.${PAGINA_ATUAL}.carousel${carousel_id}.subtitle"></span>
 
     <!-- CARROSSEL -->
