@@ -11,9 +11,6 @@
     <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
     <meta name="theme-color" content="#222A35">
-    <!-- PRECONNECT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- SEO SETTINGS -->
     <title data-i18n="projectPages.hvac_bmw.meta.title">HVAC - BMW Project | Augusto Galves</title>
     <meta data-i18n="projectPages.hvac_bmw.meta.description" name="description" content="Detalhes técnicos do projeto de exaustão e climatização para a BMW."/>
@@ -42,25 +39,32 @@
       ]
     }
     </script>    
+    <!-- PRECONNECT EXTERNOS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- PRELOAD INTERNO -->
+    <link rel="preload" as="image" href="" fetchpriority="high">
     <!-- DOWNLOADS EXTERNOS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <!-- DOWNLOADS INTERNOS (Cuidado com a ordem de download) -->
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
-    <script src="/assets/js/config.js"></script>
-    <script src="/assets/js/components/Header.js"></script>
-    <script src="/assets/js/components/Hero.js"></script>
-    <script src="/assets/js/components/HeroReverse.js"></script>
-    <script src="/assets/js/components/CardRow.js"></script>
-    <script src="/assets/js/components/CardCol.js"></script>
-    <script src="/assets/js/components/CardIcon.js"></script>
-    <script src="/assets/js/components/CardMedia.js"></script>
-    <script src="/assets/js/components/ImageGallery.js"></script>
-    <script src="/assets/js/components/CardCarousel.js"></script>
-    <script src="/assets/js/components/CardCarouselReduced.js"></script>
-    <script src="/assets/js/components/CTA.js"></script>
-    <script src="/assets/js/components/Footer.js"></script>
-    <script src="/assets/js/i18n.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/config.js" defer></script>
+    <script src="/assets/js/components/Header.js" defer></script>
+    <script src="/assets/js/components/Hero.js" defer></script>
+    <script src="/assets/js/components/HeroReverse.js" defer></script>
+    <script src="/assets/js/components/IndexBar.js" defer></script>
+    <script src="/assets/js/components/CardRow.js" defer></script>
+    <script src="/assets/js/components/CardCol.js" defer></script>
+    <script src="/assets/js/components/CardIcon.js" defer></script>
+    <script src="/assets/js/components/ImageGallery.js" defer></script>
+    <script src="/assets/js/components/CardCarousel.js" defer></script>
+    <script src="/assets/js/components/CardCarouselReduced.js" defer></script>
+    <script src="/assets/js/components/CardMedia.js" defer></script>
+    <script src="/assets/js/components/CardHorizontal.js" defer></script>
+    <script src="/assets/js/components/CTA.js" defer></script>
+    <script src="/assets/js/components/Footer.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
 </head>
 
 
@@ -94,16 +98,100 @@
     </t-image-gallery>
 
 
-    <article class="container">    
-        
-        <h2 class="prose">O Desafio</h2>
-        <p class="prose">Descreva aqui o contexto e os problemas que precisavam ser resolvidos. Este texto usa a classe pprose para manter a leitura agradável.</p>
-        
-        <h2 class="prose">Solução Desenvolvida</h2>
-        <p class="prose">Detalhes técnicos da execução do projeto.</p>  
-        
-        <h2 class="prose">Resultados</h2>
-        <p class="prose">Impacto gerado, métricas ou conclusão do projeto.</p>
+    <!-- CONTEÚDO -->
+    <article class="mx-auto mt-10">
+
+        <!-- CONTEXTO -->
+        <section>
+            <h2 class="prose">Contexto do Projeto</h2>
+            <p class="prose">
+                Projeto de climatização e ventilação para concessionária BMW no Rio de Janeiro,
+                contemplando áreas administrativas, atendimento ao cliente e oficina técnica.
+                O sistema foi projetado para garantir conforto térmico, qualidade do ar e 
+                eficiência operacional.
+            </p>
+        </section>
+
+        <!-- DESAFIO -->
+        <section>
+            <h2 class="prose">Desafio</h2>
+            <p class="prose">
+                O principal desafio foi atender simultaneamente requisitos de conforto térmico,
+                renovação de ar e exaustão de gases em ambientes com diferentes cargas térmicas,
+                incluindo áreas críticas como oficina e áreas de atendimento.
+            </p>
+
+            <ul class="prose ml-5 mt-3">
+                <li>Controle térmico em clima quente (até 38°C externo)</li>
+                <li>Exaustão de gases veiculares em ambiente fechado</li>
+                <li>Atendimento às normas ABNT e ANVISA</li>
+            </ul>
+        </section>
+
+        <!-- SOLUÇÃO -->
+        <section>
+            <h2 class="prose">Solução Desenvolvida</h2>
+
+            <p class="prose">
+                Foi projetado um sistema híbrido utilizando VRF e Split System,
+                com rede de dutos em aço galvanizado e renovação de ar mecânica.
+            </p>
+
+            <ul class="prose ml-5 mt-3">
+                <li>Dimensionamento térmico via Carrier HAP :contentReference[oaicite:0]{index=0}</li>
+                <li>Sistema VRF com múltiplas evaporadoras</li>
+                <li>Rede de dutos TDC conforme SMACNA</li>
+                <li>Ventilação com filtragem e difusão controlada</li>
+                <li>Exaustão de gases com braços articulados (Nederman) :contentReference[oaicite:1]{index=1}</li>
+            </ul>
+        </section>
+
+        <!-- DADOS TÉCNICOS -->
+        <section>
+            <h2 class="prose">Dados Técnicos</h2>
+
+            <div class="grid gap-4 mt-4">
+
+                <div class="card">
+                    <span class="label">Temperatura interna</span>
+                    <strong>22–23°C</strong>
+                </div>
+
+                <div class="card">
+                    <span class="label">Carga térmica (oficina)</span>
+                    <strong>86 kW</strong>
+                </div>
+
+                <div class="card">
+                    <span class="label">Vazão de insuflamento</span>
+                    <strong>25.798 m³/h</strong>
+                </div>
+
+                <div class="card">
+                    <span class="label">Exaustão total</span>
+                    <strong>2.142 m³/h</strong>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RESULTADOS -->
+        <section>
+            <h2 class="prose">Resultados</h2>
+
+            <p class="prose">
+                O sistema garante conforto térmico estável, renovação de ar conforme normas e
+                remoção eficiente de gases, proporcionando segurança operacional e melhor
+                experiência para clientes e equipe.
+            </p>
+
+            <ul class="prose list-disc ml-5 mt-3">
+                <li>Ambientes mantidos dentro da faixa de conforto térmico</li>
+                <li>Qualidade do ar conforme ANVISA e ABNT</li>
+                <li>Redução de riscos operacionais na oficina</li>
+            </ul>
+        </section>
+
     </article>
 </main>
 

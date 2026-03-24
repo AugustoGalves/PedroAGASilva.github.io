@@ -11,9 +11,6 @@
     <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
     <meta name="theme-color" content="#222A35">
-    <!-- PRECONNECT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- SEO SETTINGS -->
     <title data-i18n="pages.blog.meta.title">Blog | Augusto Galves</title>
     <meta data-i18n="pages.blog.meta.description" name="description" content="Artigos sobre Engenharia Mecânica, Desenvolvimento Web, Automação e Produtividade."/>
@@ -42,26 +39,32 @@
       ]
     }
     </script>    
+    <!-- PRECONNECT EXTERNOS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- PRELOAD INTERNO -->
+    <link rel="preload" as="image" href="/projects/notebook-on-the-table.webp" fetchpriority="high">
     <!-- DOWNLOADS EXTERNOS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <!-- DOWNLOADS INTERNOS (Cuidado com a ordem de download) -->
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
-    <script src="/assets/js/config.js"></script>
-    <script src="/assets/js/components/Header.js"></script>
-    <script src="/assets/js/components/Hero.js"></script>
-    <script src="/assets/js/components/HeroReverse.js"></script>
-    <script src="/assets/js/components/IndexBar.js"></script>
-    <script src="/assets/js/components/CardRow.js"></script>
-    <script src="/assets/js/components/CardCol.js"></script>
-    <script src="/assets/js/components/CardIcon.js"></script>
-    <script src="/assets/js/components/CardCarousel.js"></script>
-    <script src="/assets/js/components/CardCarouselReduced.js"></script>
-    <script src="/assets/js/components/CardMedia.js"></script>
-    <script src="/assets/js/components/CardHorizontal.js"></script>
-    <script src="/assets/js/components/CTA.js"></script>
-    <script src="/assets/js/components/Footer.js"></script>
-    <script src="/assets/js/i18n.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" defer>
+    <script src="/assets/js/config.js" defer></script>
+    <script src="/assets/js/components/Header.js" defer></script>
+    <script src="/assets/js/components/Hero.js" defer></script>
+    <script src="/assets/js/components/HeroReverse.js" defer></script>
+    <script src="/assets/js/components/IndexBar.js" defer></script>
+    <script src="/assets/js/components/CardRow.js" defer></script>
+    <script src="/assets/js/components/CardCol.js" defer></script>
+    <script src="/assets/js/components/CardIcon.js" defer></script>
+    <script src="/assets/js/components/ImageGallery.js" defer></script>
+    <script src="/assets/js/components/CardCarousel.js" defer></script>
+    <script src="/assets/js/components/CardCarouselReduced.js" defer></script>
+    <script src="/assets/js/components/CardMedia.js" defer></script>
+    <script src="/assets/js/components/CardHorizontal.js" defer></script>
+    <script src="/assets/js/components/CTA.js" defer></script>
+    <script src="/assets/js/components/Footer.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
 </head>
 
 <body>

@@ -219,31 +219,6 @@ body{
 /* ────────────────────────────────────────────────────────────────────────── */
 /* ██████████████████████████  📝 TIPOGRAFIA  ██████████████████████████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
-
-/* ─── CSS CLASS FOR VARIABLE STYLE ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
-.plus-jakarta-sans-<uniquifier> {
-	font-family: "Plus Jakarta Sans", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: <weight>;
-	font-style: normal;
-}
-
-
-.inter-<uniquifier> {
-	font-family: "Inter", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: <weight>;
-	font-style: normal;
-}
-
-
-.jetbrains-mono-<uniquifier> {
-	font-family: "JetBrains Mono", monospace;
-	font-optical-sizing: auto;
-	font-weight: <weight>;
-	font-style: normal;
-}
-
 /* ─── TIPOGRAFIA GERAL ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 h1, h2, h3, h4{
 	color: var(--color-text-primary);
@@ -753,7 +728,7 @@ footer section ul{
 .svgicon-xsmall{
 	/*Size 24px*/
 	width: var(--spacing5);
-	min-width:: var(--spacing5);
+	min-width: var(--spacing5);
 	color: var(--color-text-primary-muted);
 }
 
@@ -951,11 +926,10 @@ t-card-icon {
 	padding: var(--spacing2) var(--spacing1) var(--spacing4) var(--spacing1); /* Espaçamento interno para não cortar sombras ou bordas */
 	/* Effects */
 	overflow-x: auto; /*Esconde o overflow mas mostra um scroll. Mas caso não tenha overflow, o scroll some*/
-	scrollbar-width: none; /*Esconde a scroll bar no firefox*/
+	scrollbar-width: none; /* Firefox */
 	scroll-snap-type: x mandatory;
 	scroll-padding-inline: var(--spacing1); /*Considera o padding nos snaps*/
 	scroll-behavior: smooth;	
-	scrollbar-width: none; /* Firefox */
 	-ms-overflow-style: none; /* IE 10+ */
 	cursor: grab;
 	user-select: none;
@@ -1080,13 +1054,13 @@ t-card-icon {
 }
 .image-gallery__thumb-image.is-active {
 	opacity: 1;
-	border-color: #4299E1;
+	border-color: var(--color-accent1);
 }
 
 @media (hover: hover) and (pointer: fine) {
 	.image-gallery__thumb-image:hover {
 		opacity: 1;
-		border-color: rgba(66, 153, 225, 0.5);
+		border-color: color-mix(in srgb, var(--color-accent1), transparent 50%);
 	}
 }
 
@@ -1584,7 +1558,7 @@ button span:hover{
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* ████████████████  📄 RENOMEAR ESSAS CLASSES ABAIXO E REORGANIZAR  ████████ */
+/* ████  📄 REFATORAR SEÇÃO ABAIXO. ADICIONAR ANIMAÇÃO GLOW NA LINHA VERTICAL  █████████ */
 /* ────────────────────────────────────────────────────────────────────────── */
 
 /* ─── Grid Principal (2 Colunas) ─────────────────────────────────────── ✣ ─ */

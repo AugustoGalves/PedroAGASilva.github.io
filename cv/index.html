@@ -7,9 +7,6 @@
     <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
     <meta name="theme-color" content="#222A35">
-    <!-- PRECONNECT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- SEO SETTINGS -->
     <title data-i18n="pages.cv.meta.title">Currículo | Augusto Galves</title>
     <meta data-i18n="pages.cv.meta.description" name="description" content="Currículo técnico detalhado do Engenheiro Mecânico Augusto Galves. Especialista em HVAC, Automação e Projetos Internacionais."/>
@@ -38,26 +35,32 @@
       ]
     }
     </script>    
+    <!-- PRECONNECT EXTERNOS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- PRELOAD INTERNO -->
+    <link rel="preload" as="image" href="" fetchpriority="high">
     <!-- DOWNLOADS EXTERNOS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <!-- DOWNLOADS INTERNOS (Cuidado com a ordem de download) -->
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
-    <script src="/assets/js/config.js"></script>
-    <script src="/assets/js/components/Header.js"></script>
-    <script src="/assets/js/components/Hero.js"></script>
-    <script src="/assets/js/components/HeroReverse.js"></script>
-    <script src="/assets/js/components/IndexBar.js"></script>
-    <script src="/assets/js/components/CardRow.js"></script>
-    <script src="/assets/js/components/CardCol.js"></script>
-    <script src="/assets/js/components/CardIcon.js"></script>
-    <script src="/assets/js/components/CardCarousel.js"></script>
-    <script src="/assets/js/components/CardCarouselReduced.js"></script>
-    <script src="/assets/js/components/CardMedia.js"></script>
-    <script src="/assets/js/components/CardHorizontal.js"></script>
-    <script src="/assets/js/components/CTA.js"></script>
-    <script src="/assets/js/components/Footer.js"></script>
-    <script src="/assets/js/i18n.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/config.js" defer></script>
+    <script src="/assets/js/components/Header.js" defer></script>
+    <script src="/assets/js/components/Hero.js" defer></script>
+    <script src="/assets/js/components/HeroReverse.js" defer></script>
+    <script src="/assets/js/components/IndexBar.js" defer></script>
+    <script src="/assets/js/components/CardRow.js" defer></script>
+    <script src="/assets/js/components/CardCol.js" defer></script>
+    <script src="/assets/js/components/CardIcon.js" defer></script>
+    <script src="/assets/js/components/ImageGallery.js" defer></script>
+    <script src="/assets/js/components/CardCarousel.js" defer></script>
+    <script src="/assets/js/components/CardCarouselReduced.js" defer></script>
+    <script src="/assets/js/components/CardMedia.js" defer></script>
+    <script src="/assets/js/components/CardHorizontal.js" defer></script>
+    <script src="/assets/js/components/CTA.js" defer></script>
+    <script src="/assets/js/components/Footer.js" defer></script>
+    <script src="/assets/js/i18n.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
 </head>
 
 
@@ -224,7 +227,7 @@
                     <span class="divider-horizontal100"></span>
 
                     <div class="flex flex-col gap3">
-                        <a href="cv/pt/Augusto-Galves-CV-2026.pdf" class="btn btn--primary w-full" download="Augusto Galves - CV 2026.pdf">
+                        <a href="/cv/pt/Augusto-Galves-CV-2026.pdf" class="btn btn--primary w-full" download="Augusto Galves - CV 2026.pdf">
                             <svg class="svgicon-xsmall mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
                             <span>Download PDF</span>
                         </a>
