@@ -1,6 +1,3 @@
-
-
-
 //Criando Custom HTML Components ─────────────────────────────────────────────────────────────────────────────── ✣ ──
 
 class TImageGallery extends HTMLElement {
@@ -9,22 +6,62 @@ class TImageGallery extends HTMLElement {
     // =======================================
     connectedCallback() {
         setTimeout(() => { 
-            // 1. Apenas seleciona os elementos que já estão no HTML da página
-            this.mainSlider = this.querySelector('.image-gallery__main-container');
-            this.thumbSlider = this.querySelector('.image-gallery__thumb-container');
+            // 1. Captura as imagens originais que você digitou no HTML
+            const originalImages = Array.from(this.querySelectorAll('img'));
             
-            if (!this.mainSlider || !this.thumbSlider) {
-                console.warn("⚠️ t-image-gallery: Estrutura da galeria não encontrada no HTML.");
+            if (originalImages.length === 0) {
+                console.warn("⚠️ t-image-gallery: Nenhuma tag <img> encontrada dentro do componente.");
                 return;
             }
 
-            // 2. Inicia as funções diretamente nas tags reais da tela!
+            // 2. Extrai os dados (src e alt) de cada imagem
+            const imageData = originalImages.map(img => ({
+                src: img.getAttribute('src'),
+                alt: img.getAttribute('alt') || 'Imagem do projeto'
+            }));
+
+            // 3. Renderiza a estrutura completa na tela
+            this.renderizador(imageData);
+
+            // 4. AGORA SIM, com os elementos novos na tela, nós os selecionamos
+            this.mainSlider = this.querySelector('.image-gallery__main-container');
+            this.thumbSlider = this.querySelector('.image-gallery__thumb-container');
+            
+            if (!this.mainSlider || !this.thumbSlider) return;
+
+            // 5. Inicia as lógicas de interação
             this.initDragToScroll(this.mainSlider);
             this.initThumbnailClickNav();
             this.initScrollSyncObserver();
         }, 0);
     }
         
+    // ====================================
+    // Função que faz o HTML Stamping
+    // ====================================
+    renderizador(images){
+        // Constrói o HTML das imagens principais
+        const mainImagesHTML = images.map(img => 
+            `<img src="${img.src}" alt="${img.alt}" class="image-gallery__main-image" loading="lazy">`
+        ).join('');
+
+        // Constrói o HTML das miniaturas (adicionando 'is-active' na primeira)
+        const thumbImagesHTML = images.map((img, index) => {
+            const activeClass = index === 0 ? 'is-active' : '';
+            return `<img src="${img.src}" alt="Miniatura: ${img.alt}" class="image-gallery__thumb-image ${activeClass}" loading="lazy">`;
+        }).join('');
+        
+        // Carimba a estrutura final no HTML
+        this.innerHTML = `
+<section class="image-gallery image-gallery__main-container mb-2 flex gap3 pb-1">
+                ${mainImagesHTML}
+            </section>
+            
+            <nav class="image-gallery image-gallery__thumb-container flex gap2 pb-2">
+                ${thumbImagesHTML}
+            </nav>
+`;
+    }
 
     // ====================================
     // 1. Lógica de Scroll com o Mouse
@@ -36,7 +73,7 @@ class TImageGallery extends HTMLElement {
 
         slider.addEventListener('mousedown', (e) => {
             isDown = true;
-            slider.classList.add('active');
+            slider.classList.add('active'); 
             startX = e.pageX - slider.offsetLeft;
             scrollLeft = slider.scrollLeft;
         });
@@ -87,7 +124,7 @@ class TImageGallery extends HTMLElement {
     }
 
     // ====================================
-    // 3. Lógica de Sincronização de Rolagem (IntersectionObserver)
+    // 3. Lógica de Sincronização de Rolagem
     // ====================================
     initScrollSyncObserver() {
         const thumbs = this.thumbSlider.querySelectorAll('.image-gallery__thumb-image');
@@ -113,7 +150,6 @@ class TImageGallery extends HTMLElement {
         mainImages.forEach(img => observer.observe(img));
     }
 
-    // Função auxiliar para atualizar as classes
     updateActiveThumbnail(thumbs, activeIndex) {
         thumbs.forEach((thumb, index) => {
             if (index === activeIndex) {
