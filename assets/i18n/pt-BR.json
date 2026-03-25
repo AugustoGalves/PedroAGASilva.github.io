@@ -285,18 +285,17 @@
         "title": "HVAC - BMW Project | Augusto Galves",
         "description": "Detalhes técnicos do projeto de exaustão e climatização para a BMW."
       },
+      "indexbar":{
+        "path1": "Início",
+        "path2": "Projetos",
+        "path3": "Projeto HVAC - BMW"
+      },
       "title": "Projeto Executivo HVAC — BMW",
       "category": "Climatização · Exaustão Veicular",
       "tech": "AutoCAD · Carrier HAP · SMACNA",
-      "sections": {
-        "context": {
-          "title": "Contexto do Projeto",
-          "content": "Projeto de climatização e ventilação para concessionária BMW no Rio de Janeiro, contemplando áreas administrativas, atendimento ao cliente e oficina técnica. O sistema foi projetado para garantir conforto térmico, qualidade do ar e eficiência operacional em todos os ambientes."
-        },
-        "desafio": {
-          "title": "Desafio",
-          "content": "O principal desafio foi atender simultaneamente requisitos de conforto térmico, renovação de ar e exaustão de gases em ambientes com diferentes cargas térmicas, incluindo áreas críticas como oficina e salas de atendimento ao cliente.",
-          "card1": {
+      
+      "cardgroupdesafio":{
+        "card1": {
             "title": "Controle térmico em clima quente",
             "desc": "Temperatura externa de até 38 °C no Rio de Janeiro"
           },
@@ -308,22 +307,35 @@
             "title": "Atendimento às normas vigentes",
             "desc": "ABNT NBR e ANVISA RDC 09/2003"
           }
+      },
+      
+      "cardgroupsolucao":{
+        "card1": {
+            "title": "Controle térmico em clima quente",
+            "desc": "Temperatura externa de até 38 °C no Rio de Janeiro"
+          },
+          "card2": {
+            "title": "Exaustão de gases veiculares",
+            "desc": "Ambiente fechado com circulação de automóveis em operação"
+          },
+          "card3": {
+            "title": "Atendimento às normas vigentes",
+            "desc": "ABNT NBR e ANVISA RDC 09/2003"
+          }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Contexto do Projeto",
+          "content": "Projeto de climatização e ventilação para concessionária BMW no Rio de Janeiro, contemplando áreas administrativas, atendimento ao cliente e oficina técnica. O sistema foi projetado para garantir conforto térmico, qualidade do ar e eficiência operacional em todos os ambientes."
+        },  
+        "desafio": {
+          "title": "Desafio",
+          "content": "O principal desafio foi atender simultaneamente requisitos de conforto térmico, renovação de ar e exaustão de gases em ambientes com diferentes cargas térmicas, incluindo áreas críticas como oficina e salas de atendimento ao cliente.",
         },
         "solucao": {
           "title": "Solução Desenvolvida",
           "content": "Foi projetado um sistema híbrido utilizando VRF e Split System, com rede de dutos em aço galvanizado e renovação de ar mecânica, garantindo eficiência energética e conforto em todas as zonas do edifício.",
-          "card1": {
-            "title": "Sistema VRF LG",
-            "desc": "Múltiplas evaporadoras com controle por zona"
-          },
-          "card2": {
-            "title": "Rede de Dutos TDC",
-            "desc": "Aço galvanizado conforme SMACNA"
-          },
-          "card3": {
-            "title": "Exaustão Nederman",
-            "desc": "Braços articulados para gases veiculares"
-          },
           "list": [
             "Dimensionamento térmico via software Carrier HAP",
             "Renovação de ar mecânica com filtragem e difusão controlada",
@@ -341,6 +353,7 @@
           ]
         }
       },
+      
       "sidebar": {
         "technical_data": {
           "title": "Dados Técnicos",
