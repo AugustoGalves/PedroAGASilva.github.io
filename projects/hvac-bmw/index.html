@@ -82,117 +82,288 @@
 ></t-header>
 
 <main class="container py-8">
+   <!-- ── BREADCRUMB ──────────────────────────────────────────────── -->
+   <t-index-bar
+        link-path1 = "/"
+        link-path2 = "/projects/"
+        show-path3 = "true"
+        link-path3 = "/projects/hvac-bmw/"
+    ></t-index-bar>
 
-    <section class="mb-4">
-        <h1 class="prose" data-i18n="pages.hvac-bmw.title">Título do Projeto</h1>
+    <!-- ── TÍTULO + META ──────────────────────────────────────────── -->
+    <section class="mb-6">
+        <h1 class="prose" data-i18n="pages.hvac-bmw.title">
+            Projeto Executivo HVAC — BMW
+        </h1>
         <p class="subtext mt-1">
-                <strong data-i18n="pages.hvac-bmw.category">Categoria</strong> • 
-                <span data-i18n="pages.hvac-bmw.tech">Tecnologias Utilizadas</span>
+            <strong data-i18n="pages.hvac-bmw.category">Climatização · Exaustão Veicular</strong>
+            &nbsp;·&nbsp;
+            <span data-i18n="pages.hvac-bmw.tech">AutoCAD · Carrier HAP · SMACNA</span>
         </p>
+        <div class="flex gap2 mt-3" style="flex-wrap: wrap;">
+            <span class="badge badge--autocad">AutoCAD</span>
+            <span class="badge badge--hap">Carrier HAP</span>
+            <span class="badge badge--hvac">HVAC</span>
+            <span class="badge badge--engineering">SMACNA</span>
+            <span class="badge badge--cleanroom">ANVISA</span>
+        </div>
     </section>
 
-    <t-image-gallery>
-        <img src="/projects/hvac-bmw/cover.webp" alt="Visão geral do sistema BMW">
-        <img src="/projects/hvac-bmw/cover.webp" alt="Detalhes da instalação dos dutos">
-        <img src="/projects/hvac-bmw/cover.webp" alt="Painel de controle finalizado">
+
+    <!-- ── GALERIA ─────────────────────────────────────────────────── -->
+    <t-image-gallery class="mb-8">
+        <img src="/projects/hvac-bmw/cover.webp"    alt="Visão geral do sistema HVAC BMW">
+        <img src="/projects/hvac-bmw/detail-1.webp" alt="Detalhes da instalação dos dutos">
+        <img src="/projects/hvac-bmw/detail-2.webp" alt="Painel de controle finalizado">
     </t-image-gallery>
 
 
-    <!-- CONTEÚDO -->
-    <article class="mx-auto mt-10">
+    <!-- ── LAYOUT PRINCIPAL: Texto + Sidebar ──────────────────────── -->
+    <div class="resume-grid mt-8">
 
-        <!-- CONTEXTO -->
-        <section>
-            <h2 class="prose">Contexto do Projeto</h2>
-            <p class="prose">
-                Projeto de climatização e ventilação para concessionária BMW no Rio de Janeiro,
-                contemplando áreas administrativas, atendimento ao cliente e oficina técnica.
-                O sistema foi projetado para garantir conforto térmico, qualidade do ar e 
-                eficiência operacional.
-            </p>
-        </section>
+        <!-- ── COLUNA ESQUERDA: Texto narrativo ─────────────────── -->
+        <article class="flex flex-col gap7">
 
-        <!-- DESAFIO -->
-        <section>
-            <h2 class="prose">Desafio</h2>
-            <p class="prose">
-                O principal desafio foi atender simultaneamente requisitos de conforto térmico,
-                renovação de ar e exaustão de gases em ambientes com diferentes cargas térmicas,
-                incluindo áreas críticas como oficina e áreas de atendimento.
-            </p>
+            <!-- CONTEXTO -->
+            <section>
+                <h2 class="prose">Contexto do Projeto</h2>
+                <p class="prose">
+                    Projeto de climatização e ventilação para concessionária BMW no Rio de Janeiro,
+                    contemplando áreas administrativas, atendimento ao cliente e oficina técnica.
+                    O sistema foi projetado para garantir conforto térmico, qualidade do ar e
+                    eficiência operacional em todos os ambientes.
+                </p>
+            </section>
 
-            <ul class="prose ml-5 mt-3">
-                <li>Controle térmico em clima quente (até 38°C externo)</li>
-                <li>Exaustão de gases veiculares em ambiente fechado</li>
-                <li>Atendimento às normas ABNT e ANVISA</li>
-            </ul>
-        </section>
+            <div class="divider-horizontal100"></div>
 
-        <!-- SOLUÇÃO -->
-        <section>
-            <h2 class="prose">Solução Desenvolvida</h2>
+            <!-- DESAFIO -->
+            <section>
+                <h2 class="prose">Desafio</h2>
+                <p class="prose">
+                    O principal desafio foi atender simultaneamente requisitos de conforto térmico,
+                    renovação de ar e exaustão de gases em ambientes com diferentes cargas térmicas,
+                    incluindo áreas críticas como oficina e salas de atendimento ao cliente.
+                </p>
 
-            <p class="prose">
-                Foi projetado um sistema híbrido utilizando VRF e Split System,
-                com rede de dutos em aço galvanizado e renovação de ar mecânica.
-            </p>
+                <div class="flex flex-col gap3 mt-5">
 
-            <ul class="prose ml-5 mt-3">
-                <li>Dimensionamento térmico via Carrier HAP :contentReference[oaicite:0]{index=0}</li>
-                <li>Sistema VRF com múltiplas evaporadoras</li>
-                <li>Rede de dutos TDC conforme SMACNA</li>
-                <li>Ventilação com filtragem e difusão controlada</li>
-                <li>Exaustão de gases com braços articulados (Nederman) :contentReference[oaicite:1]{index=1}</li>
-            </ul>
-        </section>
+                    <div class="card card--emote">
+                        <!-- Thermometer icon -->
+                        <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                            <path d="M480-80q-83 0-141.5-58.5T280-280q0-48 18.5-90.5T352-446l128-130 128 130q35 37 53.5 79.5T680-280q0 83-58.5 141.5T480-80Zm0-80q50 0 85-35t35-85q0-29-10.5-55.5T558-390l-78-80-78 80q-21 22-31.5 48.5T360-280q0 50 35 85t85 35Zm160-560h-80v-80h80v80Zm0 160h-80v-80h80v80ZM320-560h-80v-80h80v80Zm0 160h-80v-80h80v80Z"/>
+                        </svg>
+                        <div>
+                            <p class="card-title">Controle térmico em clima quente</p>
+                            <p class="card-subtitle">Temperatura externa de até 38 °C no Rio de Janeiro</p>
+                        </div>
+                    </div>
 
-        <!-- DADOS TÉCNICOS -->
-        <section>
-            <h2 class="prose">Dados Técnicos</h2>
+                    <div class="card card--emote">
+                        <!-- Exhaust / air icon -->
+                        <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                            <path d="M80-240q0-66 47-113t113-47q44 0 81 19.5t62 52.5q20-56 68-90.5t108-34.5q71 0 120.5 44T736-300q4 0 7.5-.5t7.5-.5q50 0 84.5 34.5T880-182q0 49-34.5 85.5T760-60H240q-66 0-113-47T80-240Zm80 0q0 33 23.5 56.5T240-160h520q17 0 28.5-11.5T800-200q0-17-11.5-28.5T760-240h-64v-60q0-42-29-71t-71-29q-35 0-61 19t-39 50l-20 56-38-46q-16-19-38-29.5T360-360q-33 0-56.5 23.5T280-280v40h-40q-33 0-56.5 23.5T160-240Z"/>
+                        </svg>
+                        <div>
+                            <p class="card-title">Exaustão de gases veiculares</p>
+                            <p class="card-subtitle">Ambiente fechado com circulação de automóveis em operação</p>
+                        </div>
+                    </div>
 
-            <div class="grid gap-4 mt-4">
+                    <div class="card card--emote">
+                        <!-- Shield / compliance icon -->
+                        <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                            <path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/>
+                        </svg>
+                        <div>
+                            <p class="card-title">Atendimento às normas vigentes</p>
+                            <p class="card-subtitle">ABNT NBR e ANVISA RDC 09/2003</p>
+                        </div>
+                    </div>
 
-                <div class="card">
-                    <span class="label">Temperatura interna</span>
-                    <strong>22–23°C</strong>
                 </div>
+            </section>
 
-                <div class="card">
-                    <span class="label">Carga térmica (oficina)</span>
-                    <strong>86 kW</strong>
+            <div class="divider-horizontal100"></div>
+
+            <!-- SOLUÇÃO -->
+            <section>
+                <h2 class="prose">Solução Desenvolvida</h2>
+                <p class="prose">
+                    Foi projetado um sistema híbrido utilizando VRF e Split System,
+                    com rede de dutos em aço galvanizado e renovação de ar mecânica,
+                    garantindo eficiência energética e conforto em todas as zonas do edifício.
+                </p>
+
+                <t-card-row card-group-id="hvac-solution" class="mt-5">
+
+                    <t-card-icon card-group-id="hvac-solution" card-id="1">
+                        <div class="card card--emote w-full">
+                            <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                                <path d="M480-427.69 80.92-634.1 480-840l400 205.9-400 206.41Zm0 153.59L104.59-467.77l34.87-19.02L480-312.59l341.46-174.2 35.39 19.02L480-274.1Zm0 154.1L104.59-314.18l34.87-19.03L480-158.49l341.46-174.72 35.39 19.03L480-120Z"/>
+                            </svg>
+                            <div>
+                                <p class="card-title">Sistema VRF LG</p>
+                                <p class="card-subtitle">Múltiplas evaporadoras com controle por zona</p>
+                            </div>
+                        </div>
+                    </t-card-icon>
+
+                    <t-card-icon card-group-id="hvac-solution" card-id="2">
+                        <div class="card card--emote w-full">
+                            <!-- Duct / grid icon -->
+                            <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                                <path d="M160-160v-640h640v640H160Zm80-80h200v-200H240v200Zm0-280h200v-200H240v200Zm280 280h200v-200H520v200Zm0-280h200v-200H520v200Z"/>
+                            </svg>
+                            <div>
+                                <p class="card-title">Rede de Dutos TDC</p>
+                                <p class="card-subtitle">Aço galvanizado conforme SMACNA</p>
+                            </div>
+                        </div>
+                    </t-card-icon>
+
+                    <t-card-icon card-group-id="hvac-solution" card-id="3">
+                        <!-- Exhaust arm icon -->
+                        <div class="card card--emote w-full">
+                            <svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                                <path d="M440-80v-166q-54-14-91-57t-37-97q0-54 34.5-94.5T440-542v-238h80v238q59 13 99.5 57T660-400q0 57-38.5 99.5T520-246v166h-80Zm40-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280Z"/>
+                            </svg>
+                            <div>
+                                <p class="card-title">Exaustão Nederman</p>
+                                <p class="card-subtitle">Braços articulados para gases veiculares</p>
+                            </div>
+                        </div>
+                    </t-card-icon>
+
+                </t-card-row>
+
+                <ul class="prose resume-list mt-5">
+                    <li>Dimensionamento térmico via software Carrier HAP</li>
+                    <li>Renovação de ar mecânica com filtragem e difusão controlada</li>
+                    <li>Insuflamento total de <strong>25.798 m³/h</strong> para toda a edificação</li>
+                    <li>Sistema de exaustão de <strong>2.142 m³/h</strong> na área de oficina</li>
+                </ul>
+            </section>
+
+            <div class="divider-horizontal100"></div>
+
+            <!-- RESULTADOS -->
+            <section>
+                <h2 class="prose">Resultados</h2>
+                <p class="prose">
+                    O sistema garante conforto térmico estável, renovação de ar conforme as normas
+                    e remoção eficiente de gases, proporcionando segurança operacional e melhor
+                    experiência tanto para clientes quanto para a equipe técnica.
+                </p>
+                <ul class="prose resume-list mt-3">
+                    <li>Ambientes mantidos entre <strong>22–23 °C</strong> independente da carga externa</li>
+                    <li>Qualidade do ar conforme padrões ANVISA e ABNT</li>
+                    <li>Redução de riscos operacionais na área de oficina</li>
+                </ul>
+            </section>
+
+        </article>
+
+
+        <!-- ── COLUNA DIREITA: Sidebar com dados técnicos ──────────── -->
+        <aside class="sticky-sidebar flex flex-col gap5">
+
+            <!-- Dados numéricos -->
+            <div class="card p-5">
+                <h3 class="mb-4">Dados Técnicos</h3>
+                <div class="divider-horizontal100 mb-4"></div>
+                <div class="flex flex-col gap4">
+
+                    <div>
+                        <p class="text-small subtext">Temperatura interna projetada</p>
+                        <p class="card-title mt-1" style="font-size: var(--textsize-7);">22–23 °C</p>
+                    </div>
+
+                    <div class="divider-horizontal90"></div>
+
+                    <div>
+                        <p class="text-small subtext">Carga térmica total (oficina)</p>
+                        <p class="card-title mt-1" style="font-size: var(--textsize-7);">86 kW</p>
+                    </div>
+
+                    <div class="divider-horizontal90"></div>
+
+                    <div>
+                        <p class="text-small subtext">Vazão de insuflamento</p>
+                        <p class="card-title mt-1" style="font-size: var(--textsize-7);">25.798 m³/h</p>
+                    </div>
+
+                    <div class="divider-horizontal90"></div>
+
+                    <div>
+                        <p class="text-small subtext">Exaustão total</p>
+                        <p class="card-title mt-1" style="font-size: var(--textsize-7);">2.142 m³/h</p>
+                    </div>
+
                 </div>
-
-                <div class="card">
-                    <span class="label">Vazão de insuflamento</span>
-                    <strong>25.798 m³/h</strong>
-                </div>
-
-                <div class="card">
-                    <span class="label">Exaustão total</span>
-                    <strong>2.142 m³/h</strong>
-                </div>
-
             </div>
-        </section>
 
-        <!-- RESULTADOS -->
-        <section>
-            <h2 class="prose">Resultados</h2>
+            <!-- Ficha do projeto -->
+            <div class="card p-5">
+                <h3 class="mb-4">Ficha do Projeto</h3>
+                <div class="divider-horizontal100 mb-4"></div>
+                <div class="flex flex-col gap3">
 
-            <p class="prose">
-                O sistema garante conforto térmico estável, renovação de ar conforme normas e
-                remoção eficiente de gases, proporcionando segurança operacional e melhor
-                experiência para clientes e equipe.
-            </p>
+                    <div class="flex justify-spacebetween items-center">
+                        <p class="card-subtitle">Categoria</p>
+                        <p class="card-content">HVAC · Exaustão</p>
+                    </div>
 
-            <ul class="prose list-disc ml-5 mt-3">
-                <li>Ambientes mantidos dentro da faixa de conforto térmico</li>
-                <li>Qualidade do ar conforme ANVISA e ABNT</li>
-                <li>Redução de riscos operacionais na oficina</li>
-            </ul>
-        </section>
+                    <div class="divider-horizontal90"></div>
 
-    </article>
+                    <div class="flex justify-spacebetween items-center">
+                        <p class="card-subtitle">Localização</p>
+                        <p class="card-content">Rio de Janeiro, RJ</p>
+                    </div>
+
+                    <div class="divider-horizontal90"></div>
+
+                    <div class="flex justify-spacebetween items-center">
+                        <p class="card-subtitle">Cliente</p>
+                        <p class="card-content">BMW Concessionária</p>
+                    </div>
+
+                    <div class="divider-horizontal90"></div>
+
+                    <div class="flex justify-spacebetween items-center">
+                        <p class="card-subtitle">Normas</p>
+                        <p class="card-content">ABNT · ANVISA</p>
+                    </div>
+
+                    <div class="divider-horizontal90"></div>
+
+                    <div class="flex justify-spacebetween items-center">
+                        <p class="card-subtitle">Software</p>
+                        <p class="card-content">Carrier HAP · AutoCAD</p>
+                    </div>
+
+                    <div class="divider-horizontal90"></div>
+
+                    <div class="flex justify-spacebetween items-center">
+                        <p class="card-subtitle">Revisão</p>
+                        <p class="card-content">R0 — Entregue</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Botão voltar ao portfólio -->
+            <a href="/projects/" class="btn btn--secondary flex items-center justify-center gap2">
+                <svg class="svgicon-xsmall" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                    <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/>
+                </svg>
+                Ver todos os projetos
+            </a>
+
+        </aside>
+
+    </div><!-- /.resume-grid -->
+
 </main>
 
 
