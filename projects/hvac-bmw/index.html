@@ -81,8 +81,8 @@
     link_headerlogo_darktheme = "/assets/images/logo-light.svg"
 ></t-header>
 
-<main class="container py-8">
-   <!-- ── BREADCRUMB ──────────────────────────────────────────────── -->
+<main >
+
    <t-index-bar
         link-path1 = "/"
         link-path2 = "/projects/"
@@ -90,6 +90,8 @@
         link-path3 = "/projects/hvac-bmw/"
     ></t-index-bar>
 
+
+<div class="container py-8">
     <!-- ── TÍTULO + META ──────────────────────────────────────────── -->
     <section class="mb-6">
         <h1 class="prose" data-i18n="pages.hvac-bmw.title">
@@ -178,25 +180,23 @@
                     garantindo eficiência energética e conforto em todas as zonas do edifício.
                 </p>
 
-                <t-card-row card-group-id="solucao" class="mt-5">
+                <div class="flex flex-col gap3 mt-5">
                     <t-card-icon 
                         card-group-id="solucao" 
                         card-id="1" 
                         icon-svg='<svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="M480-427.69 80.92-634.1 480-840l400 205.9-400 206.41Zm0 153.59L104.59-467.77l34.87-19.02L480-312.59l341.46-174.2 35.39 19.02L480-274.1Zm0 154.1L104.59-314.18l34.87-19.03L480-158.49l341.46-174.72 35.39 19.03L480-120Z"/></svg>'
                     ></t-card-icon>
-
                     <t-card-icon 
                         card-group-id="solucao" 
                         card-id="2" 
                         icon-svg='<svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="M160-160v-640h640v640H160Zm80-80h200v-200H240v200Zm0-280h200v-200H240v200Zm280 280h200v-200H520v200Zm0-280h200v-200H520v200Z"/></svg>'
                     ></t-card-icon>
-
                     <t-card-icon 
                         card-group-id="solucao" 
                         card-id="3" 
                         icon-svg='<svg class="svgicon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="M440-80v-166q-54-14-91-57t-37-97q0-54 34.5-94.5T440-542v-238h80v238q59 13 99.5 57T660-400q0 57-38.5 99.5T520-246v166h-80Zm40-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280Z"/></svg>'
                     ></t-card-icon>
-                </t-card-row>
+                </div>
 
                 <ul class="prose resume-list mt-5">
                     <li>Dimensionamento térmico via software Carrier HAP</li>
@@ -325,6 +325,7 @@
 
     </div><!-- /.resume-grid -->
 
+</div>
 </main>
 
 
