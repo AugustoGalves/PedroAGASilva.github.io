@@ -722,6 +722,8 @@ footer section ul{
 	/*Size 32px*/
 	width: var(--spacing6);
 	min-width: var(--spacing6);
+	height: var(--spacing6);
+	min-height: var(--spacing6);
 	color: var(--color-text-primary-muted);
 }
 
@@ -729,6 +731,8 @@ footer section ul{
 	/*Size 24px*/
 	width: var(--spacing5);
 	min-width: var(--spacing5);
+	height: var(--spacing5);
+	min-height: var(--spacing5);
 	color: var(--color-text-primary-muted);
 }
 
