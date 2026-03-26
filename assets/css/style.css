@@ -1680,6 +1680,98 @@ button span:hover{
 	}
 }
 
+/* ────────────────────────────────────────────────────────────────────────── */
+/* ████  📄 REFATORAR SEÇÃO ABAIXO.   █████████ */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+/* ─── MODIFICADOR: CARD HORIZONTAL (Estilo Youtube/Lista) ─────────────────────────── ✣ ─ */
+.card--horizontal {
+    /* Layout Base */
+    display: flex;
+    flex-direction: row; /* Força sempre ficar na horizontal */
+    align-items: flex-start;
+    gap: var(--spacing4);
+    /* Sizing */
+    padding: var(--spacing3);
+    width: 100%;
+    margin-bottom: var(--spacing4);
+    /* Correção de comportamento de Link */
+    color: inherit;
+}
+
+/* ─── Thumbnail (Imagem à esquerda) ─── */
+.card--horizontal .card__media {
+    width: 200px; /* Largura fixa no desktop */
+    aspect-ratio: 16/9; /* Proporção exata de thumbnail */
+    border-radius: var(--spacing2); /* Bordas levemente arredondadas internamente */
+    overflow: hidden;
+    background-color: var(--color-bg-dark); /* Fundo caso a imagem demore a carregar */
+}
+
+.card--horizontal .card__image {
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Reseta as margens negativas usadas em outros cards */
+}
+
+/* Reduz o tamanho da badge para caber na thumbnail compacta */
+.card--horizontal .card__badges--compact {
+    top: 6px;
+    right: 6px;
+    transform: scale(0.8);
+    transform-origin: top right;
+}
+
+/* ─── Conteúdo Textual (À direita) ─── */
+.card--horizontal .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--spacing1);
+    flex-grow: 1; /* Ocupa o restante do espaço */
+    min-width: 0; /* CRÍTICO: Permite que o texto seja cortado pelos "..." sem quebrar o Flexbox */
+}
+
+/* Remove a margem inferior que a tag strong costuma ter */
+.card--horizontal .card-title {
+    margin-bottom: 0; 
+}
+
+
+/* ─── UTILITIES: TRUNCAR TEXTO (Adicione junto com suas classes utilitárias) ──────── ✣ ─ */
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ─── RESPONSIVIDADE (MOBILE) ─────────────────────────────────────────────────────────── ✣ ─ */
+@media (max-width: 992px) {
+    .card--horizontal {
+        padding: var(--spacing2); /* Mais colado nas bordas da tela */
+        gap: var(--spacing3);     /* Imagem mais perto do texto */
+    }
+
+    .card--horizontal .card__media {
+        width: 120px; /* Thumbnail bem compacta para telas de celular */
+    }
+
+    /* Ocultamos as badges no celular para focar apenas na miniatura e não poluir */
+    .card--horizontal .card__badges--compact {
+        display: none; 
+    }
+}
 
 
 /* ────────────────────────────────────────────────────────────────────────── */
