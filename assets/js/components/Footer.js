@@ -45,20 +45,20 @@ class TFooter extends HTMLElement {
         
         <!-- Icones -->
         <ul>
+            <li><a class="" href="${links.emailbutton}" target="_blank" data-i18n-aria="global.aria.email">
+                <svg class="svgicon-xsmall"><use href="/assets/icons/brand-icons.svg#icon-email"></use></svg></a></li>
+
             <li><a class="" href="${links.whatsappbutton}" target="_blank" data-i18n-aria="global.aria.whatsapp">
                 <svg class="svgicon-xsmall"><use href="/assets/icons/brand-icons.svg#icon-whatsapp"></use></svg></a></li>
 
-            <li><a class="" href="${links.emailbutton}" target="_blank" data-i18n-aria="global.aria.email">
-                <svg class="svgicon-xsmall"><use href="/assets/icons/brand-icons.svg#icon-email"></use></svg></a></li>
+            <li><a class="" href="${links.instagrambutton}" target="_blank" data-i18n-aria="global.aria.instagram">
+                <svg class="svgicon-xsmall"><use href="/assets/icons/brand-icons.svg#icon-instagram"></use></svg></a></li>
             
             <li><a class="" href="${links.linkedinbutton}" target="_blank" data-i18n-aria="global.aria.linkedin">
                 <svg class="svgicon-xsmall"><use href="/assets/icons/brand-icons.svg#icon-linkedin"></use></svg></a></li>
             
             <li><a class="" href="${links.githubbutton}" target="_blank" data-i18n-aria="global.aria.github">
                 <svg class="svgicon-xsmall"><use href="/assets/icons/brand-icons.svg#icon-github"></use></svg></a></li>
-            
-            <li><a class="" href="${links.instagrambutton}" target="_blank" data-i18n-aria="global.aria.instagram">
-                <svg class="svgicon-xsmall"><use href="/assets/icons/brand-icons.svg#icon-instagram"></use></svg></a></li>
         </ul>
     </section>                
 </footer>
