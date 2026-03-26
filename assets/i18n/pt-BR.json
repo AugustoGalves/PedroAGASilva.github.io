@@ -379,6 +379,208 @@
         "subtitle": "Entre em contato para discutirmos ideias ou oportunidades.",
         "action": "Enviar Mensagem"
       }
+    },
+    "_pagedivider7_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "hvac-agco": {
+      "meta": {
+        "title": "Projeto Executivo HVAC - AGCO Academy | Augusto Galves",
+        "description": "Projeto executivo de climatização corporativa (HVAC) para a AGCO Academy. Foco em eficiência energética, conforto térmico e adequação às normas ABNT e ANVISA."
+      },
+      "indexbar":{
+        "path1": "Início",
+        "path2": "Projetos",
+        "path3": "Projeto HVAC - AGCO"
+      },
+      "title": "Projeto Executivo HVAC — AGCO Academy",
+      "category": "Climatização Corporativa · Eficiência Energética",
+      "tech": "AutoCAD · Carrier HAP · ASHRAE",
+      
+      "cardgroupdesafio":{
+        "card1": {
+          "title": "Múltiplos Perfis de Ocupação",
+          "desc": "Compatibilização térmica entre áreas de alta densidade e salas isoladas."
+        },
+        "card2": {
+          "title": "Alta Exigência Normativa",
+          "desc": "Rigoroso controle de Qualidade do Ar Interno (QAI) e salubridade."
+        },
+        "card3": {
+          "title": "Otimização de Consumo",
+          "desc": "Necessidade de alto desempenho atrelado à eficiência energética."
+        }
+      },
+      
+      "cardgroupsolucao":{
+        "card1": {
+          "title": "Modelagem Avançada",
+          "desc": "Dimensionamento preciso de carga térmica utilizando Carrier HAP."
+        },
+        "card2": {
+          "title": "Zoneamento Inteligente",
+          "desc": "Divisão estratégica em 23 sistemas independentes de climatização."
+        },
+        "card3": {
+          "title": "Renovação Integrada",
+          "desc": "Sistemas mecânicos de insuflamento e exaustão 100% adequados à norma."
+        }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Visão Geral do Projeto",
+          "content": "Projeto Executivo de Climatização (HVAC) para as instalações da AGCO Academy em Jundiaí-SP, desenvolvido em parceria estratégica com a AKMX Arquitetura. O escopo abrangeu o dimensionamento completo do sistema de ar-condicionado e ventilação mecânica para ambientes corporativos críticos, exigindo soluções de engenharia que aliassem alto desempenho e viabilidade executiva."
+        },  
+        "desafio": {
+          "title": "O Desafio",
+          "content": "O grande obstáculo técnico foi compatibilizar zonas térmicas com perfis de uso extremos no mesmo pavimento — desde auditórios e refeitórios lotados até ilhas de trabalho abertas. Era imperativo garantir a excelência na qualidade do ar interno e o conforto absoluto, mantendo estrita conformidade com as regulamentações da ANVISA, ABNT NBR 16401 e diretrizes ASHRAE."
+        },
+        "solucao": {
+          "title": "Solução de Engenharia",
+          "content": "Utilizando modelagem computacional avançada, desenvolvi um projeto focado em modularidade e eficiência. A planta foi dividida em um zoneamento térmico inteligente composto por 23 sistemas otimizados, garantindo que o dimensionamento mecânico respondesse dinamicamente às demandas de cada ambiente.",
+          "list": [
+            "Modelagem térmica e simulação de cargas via Carrier HAP",
+            "Zoneamento estratégico para redução de desperdício energético",
+            "Dimensionamento exato da rede de dutos para renovação e exaustão de ar",
+            "Compatibilização arquitetônica para integração visual dos sistemas"
+          ]
+        },
+        "results": {
+          "title": "Impacto e Resultados",
+          "content": "Entrega de uma infraestrutura robusta, confiável e pronta para execução. O projeto assegura um ambiente corporativo salubre, mitigando riscos operacionais e entregando ao cliente final um sistema que equilibra perfeitamente conforto térmico, segurança sanitária e eficiência de recursos.",
+          "list": [
+            "Estabilidade térmica garantida (22°C) independente das flutuações externas",
+            "Aprovação e conformidade total com os padrões ANVISA e ABNT",
+            "Entrega de documentação executiva clara, otimizando o tempo de instalação"
+          ]
+        }
+      },
+      
+      "sidebar": {
+        "technical_data": {
+          "title": "Highlights Técnicos",
+          "temp_internal": "Estabilidade Térmica",
+          "thermal_load": "Controle de Alta Carga (Workplaces)",
+          "flow_rate": "Gestão de Vazão e Insuflamento",
+          "total_exhaust": "Exaustão Estratégica"
+        },
+        "project_info": {
+          "title": "Ficha do Projeto",
+          "category": "Categoria",
+          "location": "Localização",
+          "client": "Cliente final",
+          "norms": "Compliance",
+          "software": "Ferramentas",
+          "revision": "Status",
+          "back_button": "Ver todos os projetos"
+        }
+      },
+
+      "cta": {
+        "title": "Buscando soluções eficientes em engenharia?",
+        "subtitle": "Vamos conversar sobre como posso agregar valor técnico ao seu próximo desafio.",
+        "action": "Entrar em Contato"
+      }
+    },
+    "_pagedivider8_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "hvac-neogas": {
+      "meta": {
+        "title": "Retrofit HVAC - Sede Corporativa NEOGÁS | Augusto Galves",
+        "description": "Projeto executivo de Retrofit HVAC para a sede da NEOGÁS no Rio de Janeiro. Otimização de CAPEX, eficiência energética e adequação ANVISA[cite: 4, 5]."
+      },
+      "indexbar":{
+        "path1": "Início",
+        "path2": "Projetos",
+        "path3": "Projeto Retrofit HVAC - NEOGÁS"
+      },
+      "title": "Retrofit HVAC — Sede Corporativa NEOGÁS",
+      "category": "Retrofit Corporativo · Eficiência de CAPEX",
+      "tech": "AutoCAD · Carrier HAP · SMACNA",
+      
+      "cardgroupdesafio":{
+        "card1": {
+          "title": "Integração de Ativos",
+          "desc": "Compatibilização de sistemas novos, remanejados e mantidos no mesmo ecossistema[cite: 4]."
+        },
+        "card2": {
+          "title": "Conformidade e QAI",
+          "desc": "Garantir a salubridade e 1.650 m³/h de renovação de ar no padrão ANVISA[cite: 5]."
+        },
+        "card3": {
+          "title": "Operação Silenciosa",
+          "desc": "Atenuação mecânica rigorosa para manter o padrão corporativo de alto nível[cite: 4]."
+        }
+      },
+      
+      "cardgroupsolucao":{
+        "card1": {
+          "title": "Modelagem Carrier HAP",
+          "desc": "Validação técnica para o reuso seguro dos maquinários existentes[cite: 5]."
+        },
+        "card2": {
+          "title": "Protocolos de T.A.B.",
+          "desc": "Procedimentos de Teste, Ajuste e Balanceamento definidos em projeto[cite: 4]."
+        },
+        "card3": {
+          "title": "Difusão Inteligente",
+          "desc": "Distribuição por dutos TDC com dampers de regulagem de precisão[cite: 4]."
+        }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Visão Estratégica do Projeto",
+          "content": "Projeto Executivo de Retrofit de Climatização (HVAC) para o 13º andar da sede corporativa da NEOGÁS, no centro do Rio de Janeiro[cite: 4, 5]. O escopo exigia uma abordagem de alto nível técnico para modernizar a infraestrutura térmica, assegurando a continuidade operacional e promovendo o reuso inteligente de ativos existentes para otimização de investimentos[cite: 4]."
+        },  
+        "desafio": {
+          "title": "O Desafio",
+          "content": "O principal obstáculo foi realizar o retrofit em um ambiente de alto padrão corporativo, integrando unidades novas com equipamentos remanejados e mantidos, sem sacrificar a eficiência energética ou a Qualidade do Ar Interno (QAI)[cite: 4]. A compatibilização exigiu precisão absoluta para atender simultaneamente às diretrizes da ANVISA e aos requisitos acústicos e de conforto térmico[cite: 4, 5]."
+        },
+        "solucao": {
+          "title": "Solução de Engenharia",
+          "content": "A aplicação de inteligência de engenharia permitiu a readequação do parque térmico através de simulações rigorosas no software Carrier HAP v4.90[cite: 5]. O projeto previu a integração de 7 novos sistemas inverter, o remanejamento de 2 unidades e a manutenção estratégica de 6 máquinas existentes, garantindo o melhor custo-benefício (CAPEX/OPEX) para o cliente[cite: 4].",
+          "list": [
+            "Simulação térmica avançada via Carrier HAP v4.90 para validação de capacidades[cite: 5].",
+            "Design de rede de dutos em chapa de aço galvanizado otimizada para baixa perda de carga (SMACNA)[cite: 4].",
+            "Integração de micro ventiladores in-line com caixas filtrantes G1/M5 para insuflamento de ar exterior[cite: 4].",
+            "Especificação de rotinas de TAB (Testes, Ajustes e Balanceamento) para validação do comissionamento[cite: 4]."
+          ]
+        },
+        "results": {
+          "title": "Impacto e Resultados",
+          "content": "A entrega de um projeto executivo focado em mitigação de falhas reduziu significativamente os riscos e custos de instalação. O sistema garante o bem-estar ocupacional e atende a todas as demandas de salubridade exigidas no cenário corporativo atual.",
+          "list": [
+            "Redução de CAPEX comprovada através do reuso justificado de maquinário existente[cite: 4].",
+            "Garantia de 1.650 m³/h de ar exterior renovado e filtrado para o pavimento[cite: 5].",
+            "Sistema termicamente estável a 22,0°C, assegurando conforto em áreas críticas como o Staff (5,26 TR)[cite: 5]."
+          ]
+        }
+      },
+      
+      "sidebar": {
+        "technical_data": {
+          "title": "Highlights Técnicos",
+          "temp_internal": "Renovação de Ar",
+          "thermal_load": "Gerenciamento de Ativos",
+          "flow_rate": "Estabilidade Térmica",
+          "total_exhaust": "Maior Zona (Staff)"
+        },
+        "project_info": {
+          "title": "Ficha do Projeto",
+          "category": "Categoria",
+          "location": "Localização",
+          "client": "Cliente final",
+          "norms": "Compliance",
+          "software": "Ferramentas",
+          "revision": "Status",
+          "back_button": "Ver todos os projetos"
+        }
+      },
+
+      "cta": {
+        "title": "Buscando visão estratégica para seus projetos?",
+        "subtitle": "Vamos conversar sobre otimização de recursos, CAPEX e soluções definitivas de engenharia.",
+        "action": "Agendar Reunião"
+      }
     }
   }
 }
