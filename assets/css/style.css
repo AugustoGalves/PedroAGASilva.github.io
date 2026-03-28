@@ -226,7 +226,7 @@ h1, h2, h3, h4{
 }
 
 
-.prose h1{
+h1.prose{
 	/* Sizing */
 	margin-top: calc(var(--textsize-9)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-9)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -242,7 +242,7 @@ h1{
 }
 
 
-.prose h2{
+h2.prose{
 	/* Sizing */
 	margin-top: calc(var(--textsize-8)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-8)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -257,7 +257,7 @@ h2{
 }
 
 
-.prose h3{
+h3.prose{
 	/* Sizing */
 	margin-top: calc(var(--textsize-7)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-7)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -272,7 +272,7 @@ h3{
 }
 
 
-.prose h4{
+h4.prose{
 	/* Sizing */
 	margin-top: calc(var(--textsize-6)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-6)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -287,7 +287,7 @@ h4{
 }
 
 
-.prose p{
+p.prose{
 	/* Sizing */
 	margin-top: calc(var(--textsize-3)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-3)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -301,33 +301,8 @@ p{
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
 }
 
-.prose ul{
-	/* Sizing */
-	margin-top: calc(var(--textsize-3)*1.0); /*Espaçamento de paragrafo BEFORE*/
-	margin-bottom: calc(var(--textsize-3)*0.5); /*Espaçamento de paragrafo AFTER*/
-}
-.prose ul li{
-	/* Sizing */
-	margin-bottom: var(--spacing2); /* Espaçamento entre itens da lista */
-	/* Typography */
-	font-size: var(--textsize-3);/*16px*/
-	font-weight: normal;
-	line-height: 1.4; /*Espaçamento entre linhas*/
-	/* Visuals */
-	color: var(--color-text-primary-muted); /*Muted TextColor*/
-}
-.prose ul li strong {
-	/* Visuals */
-	color: var(--color-text-primary);
-}
-.prose ul li:last-child{
-	/* Sizing */
-	margin-bottom: var(--spacing0); /* Para não duplicar o espaçamento AFTER */
-}
 
-
-
-.prose .text-small{
+.text-small.prose {
 	/* Sizing */
 	margin-top: calc(var(--textsize-2)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-2)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -342,7 +317,7 @@ p{
 }
 
 
-.prose .text-xsmall{
+.text-xsmall.prose {
 	/* Sizing */
 	margin-top: calc(var(--textsize-2)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-2)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -355,6 +330,32 @@ p{
 	line-height: 1.5; /*Espaçamento entre linhas*/
 	/* Visuals */
 	color: var(--color-text-primary-muted); /*Muted TextColor*/
+}
+
+
+/* ─── TIPOGRAFIA DE LISTAS ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
+ul.prose{
+	/* Sizing */
+	margin-top: calc(var(--textsize-3)*1.0); /*Espaçamento de paragrafo BEFORE*/
+	margin-bottom: calc(var(--textsize-3)*0.5); /*Espaçamento de paragrafo AFTER*/
+}
+ul.prose li{
+	/* Sizing */
+	margin-bottom: var(--spacing2); /* Espaçamento entre itens da lista */
+	/* Typography */
+	font-size: var(--textsize-3);/*16px*/
+	font-weight: normal;
+	line-height: 1.4; /*Espaçamento entre linhas*/
+	/* Visuals */
+	color: var(--color-text-primary-muted); /*Muted TextColor*/
+}
+ul.prose li strong {
+	/* Visuals */
+	color: var(--color-text-primary);
+}
+ul.prose li:last-child{
+	/* Sizing */
+	margin-bottom: var(--spacing0); /* Para não duplicar o espaçamento AFTER */
 }
 
 
@@ -441,7 +442,7 @@ strong {
 /* ─── TIPOGRAFIA MOBILE ───────────────────────────────────────────────────────────────────────────────────────── ✣ ─ */
 @media (max-width:992px) {
 	
-	.prose h1{
+	h1.prose {
 		/* Sizing */
 		margin-top: calc(var(--textsize-7)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-7)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -452,7 +453,7 @@ strong {
 	}
 	
 
-	.prose h2{
+	h2.prose {
 		/* Sizing */
 		margin-top: calc(var(--textsize-6)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-6)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -463,7 +464,7 @@ strong {
 	}
 	
 
-	.prose h3{
+	h3.prose {
 		/* Sizing */
 		margin-top: calc(var(--textsize-5)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-5)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -474,7 +475,7 @@ strong {
 	}
 	
 
-	.prose h4{
+	h4.prose {
 		/* Sizing */
 		margin-top: calc(var(--textsize-4)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-4)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -485,7 +486,7 @@ strong {
 	}
 	
 
-	.prose p{
+	p.prose {
 		/* Sizing */
 		margin-top: calc(var(--textsize-3)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-3)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -496,7 +497,7 @@ strong {
 	}
 	
 
-	.prose .text-small{
+	.text-small.prose {
 		/* Sizing */
 		margin-top: calc(var(--textsize-2)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-2)*0.5); /*Espaçamento de paragrafo AFTER*/
@@ -507,7 +508,7 @@ strong {
 	}
 
 
-	.prose .text-xsmall{
+	.text-xsmall.prose {
 		/* Sizing */
 		margin-top: calc(var(--textsize-1)*1.0); /*Espaçamento de paragrafo BEFORE*/
 		margin-bottom: calc(var(--textsize-1)*0.5); /*Espaçamento de paragrafo AFTER*/
