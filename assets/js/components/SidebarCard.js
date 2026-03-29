@@ -30,15 +30,15 @@ class TSidebarCard extends HTMLElement {
         
         items.forEach((item, index) => {
             if (layout === "col") {
-                // Layout vertical (ex: Dados Técnicos)
+                // Layout vertical
                 itemsHtml += `
                     <div>
                         <p class="text-small subtext">${item.chave}</p>
-                        <p class="card-title mt-1" style="font-size: var(--textsize-3);">${item.valor}</p>
+                        <p class="card-title mt-1">${item.valor}</p>
                     </div>
                 `;
             } else {
-                // Layout horizontal (ex: Ficha do Projeto)
+                // Layout horizontal
                 itemsHtml += `
                     <div class="flex justify-spacebetween items-center">
                         <p class="card-subtitle">${item.chave}</p>

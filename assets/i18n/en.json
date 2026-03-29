@@ -1,55 +1,903 @@
 {
-  "meta.title": "Pedro Augusto | Mechanical Engineer",
-  "meta.description": "Mechanical engineer with experience in HVAC, industrial maintenance, power transmission and technical projects. National and international work, technical coordination and applied engineering.",
-  "meta.keywords": "mechanical engineer, mechanical engineering, HVAC, air conditioning, industrial maintenance, power transmission, power belts, gears, mechanical projects, HVAC engineer, industrial engineering, professional engineer, Brazil engineer, international engineer",
+  "global": {
+    "nav": {
+      "home": "Home",
+      "portfolio": "Projects",
+      "resume": "Resume",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "footer": {
+      "ctaTitle": "Let's talk?",
+      "ctaSubtitle": "Available for engineering projects and software solutions.",
+      "ctaButton": "Send Message",
+      "copyright": "© 2026 Augusto Galves. Mechanical Engineering & Digital Solutions."
+    },
+    "aria": {
+      "menu": { "open": "Open navigation menu", "close": "Close navigation menu", "navMain": "Main navigation" },
+      "theme": { "toggle": "Toggle theme between light and dark mode" },
+      "language":{ "toggle": "Change language" },
+      "email": "Send professional e-mail",
+      "whatsapp": "Chat via Whatsapp",
+      "phone": "Call phone number",
+      "github": "Github page",
+      "linkedin": "Linkedin profile",
+      "instagram": "Personal Instagram profile"
+    }
+  },
 
-  "nav.home": "Home",
-  "nav.portfolio": "Portfolio",
-  "nav.resume": "Resume",
-  "nav.blog": "Blog",
-  "nav.contact": "Contact",
+  "_sectiondivider1_": "███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
+  "pages": {
+    
+    "_pagedivider1_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "index": {
+      "meta": {
+        "title": "Augusto Galves | Mechanical Engineer & International Solutions",
+        "description": "Mechanical Engineer, specialist in Corporate HVAC, international projects, maritime operations, Technical Project Coordination."
+      },
+      "hero": {
+        "name": "Augusto Galves",
+        "role": "Mechanical Engineer · International Projects · Corporate HVAC",
+        "specialty": "Fluent English (C2) · Maritime Operations · Project Coordination",
+        "cta1": "View projects",
+        "cta2": "Get in touch"
+      },
+      "cardgroup1": {
+        "card1": {
+          "title": "Corporate HVAC",
+          "desc": "Projects for BMW, TIM and Rede D’Or following NBR and ANVISA standards"
+        },
+        "card2": {
+          "title": "International Engineering",
+          "desc": "Coordination in the naval repair sector (EN), increasing operation revenue by 300%"
+        },
+        "card3": {
+          "title": "Programming, Automation & IoT",
+          "desc": "Development of patented software and solutions with ESP32 and RTOS"
+        }
+      },
+      "carousel1": {
+        "title": "Portfolio",
+        "subtitle": "Featured projects",
+        "card1": {
+          "title": "HVAC Projects",
+          "desc": "Specialist in VRF, split and chilled water"
+        },
+        "card2": {
+          "title": "MEP Projects",
+          "desc": "Electrical, plumbing and architecture"
+        },
+        "card3": {
+          "title": "Automation and Programming",
+          "desc": "Development of engineering software"
+        },
+        "cta":"Explore Portfolio"
+      },
+      "cta":{
+        "title": "Have a technical challenge?",
+        "subtitle": "Get in touch to discuss the best solution",
+        "action": "Send Message"
+      }
+    },
 
-  "hero.name": "Pedro Augusto G. A. Silva",
-  "hero.role": "Mechanical Engineer | HVAC Designer<br>International Experience | Programming, Automation and Electrical",
-  "hero.specialty": "Bilingual Mechanical Engineer (C2) with experience in international technical coordination, HVAC projects, and innovation in engineering and automation software",
-  "hero.cta1": "View portfolio",
-  "hero.cta2": "Contact me",
+    "_pagedivider2_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "projects": {
+      "meta": {
+        "title": "Projects | Augusto Galves",
+        "description": "Detailed technical portfolio: HVAC, Electrical, Automation, Software Programming and International Management."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Projects"
+      },
+      
+      "hero": {
+        "name": "My Projects",
+        "role": "Collection of all projects developed by me",
+        "specialty": "ㅤㅤㅤ",
+        "cta1": "Get in touch",
+        "cta2": "In progress ↗"
+      },
+      
+      "carousel2": {
+        "title": "HVAC Engineering",
+        "subtitle": "Projects for the corporate, hospital and industrial sectors",
+        "card1": {
+          "title": "Executive Project - BMW - R0",
+          "desc": "Vehicle exhaust, workshop ventilation and cooling with LG VRF"
+        },
+        "card2": {
+          "title": "Executive Project - AGCO - R1",
+          "desc": "Air conditioning with split system, mechanical exhaust and outdoor air renewal"
+        },
+        "card3": {
+          "title": "Executive Project - NEOgás - R1",
+          "desc": "Air conditioning with split system, mechanical exhaust and outdoor air renewal"
+        }
+      },
+      
+      "carousel3": {
+        "title": "Residential MEP",
+        "subtitle": "Electrical, plumbing installations and architectural base",
+        "card1": {
+          "title": "Residential MEP",
+          "desc": "Residence in São Pedro da Aldeia - RJ"
+        },
+        "card2": {
+          "title": "Coming soon",
+          "desc": "Project in progress"
+        },
+        "card3": {
+          "title": "Coming soon",
+          "desc": "Project in progress"
+        }
+      },
+      "carousel4": {
+        "title": "Automation & Programming",
+        "subtitle": "Web Development, Python, C++ and Assembly",
+        "card1": {
+          "title": "Patented VBA Spreadsheet",
+          "desc": "Ultimate Belt Design and Analysis 2026"
+        },
+        "card2": {
+          "title": "Handcoded portfolio website",
+          "desc": "Vanilla HTML/CSS/JS for frontend and backend"
+        },
+        "card3": {
+          "title": "Visual recognition bot (Piano Tiles)",
+          "desc": "Visual recognition and autoclick. Executes up to 29 keys per second"
+        }
+      },
+      
+      "cta":{
+        "title": "Get in touch",
+        "subtitle": "Let's work together on your next project?",
+        "action": "Send Message"
+      }
+    },
 
-  "highlights.card1.title": "HVAC Designer",
-  "highlights.card1.desc": "Experience in projects for BMW, TIM, and Rede D'Or, following NBR and ANVISA standards",
+    "_pagedivider3_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "cv": {
+      "meta": {
+        "title": "Resume | Augusto Galves",
+        "description": "Resume of Mechanical Engineer and Developer Augusto Galves. Specialist in HVAC, Automation and International Projects."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Resume"
+      },
+      "hero": {
+        "name": "Resume",
+        "role": "ㅤㅤㅤ",
+        "specialty": "Mechanical Engineer (CREA-RJ) with Fluent English C2. Specialist in HVAC, power transmission, automation and international operations.",
+        "cta1": "Download Resume (PDF)",
+        "cta2": "Get in touch"
+      },
+      "cardgroup1": {
+        "card1": {
+          "title": "Fluent English C2",
+          "desc": "EF SET Certificate"
+        },
+        "card2": {
+          "title": "International Professional",
+          "desc": "Management, projects and consulting"
+        },
+        "card3": {
+          "title": "Specialist in",
+          "desc": "Mechanics, Software & Automation"
+        }
+      },
+      "cta":{
+        "title": "Get in touch",
+        "subtitle": "Let's work together on your next project?",
+        "action": "Send Message"
+      }
+    },
 
-  "highlights.card2.title": "International projects",
-  "highlights.card2.desc": "Project management in the naval repair sector (EN), increasing operating revenue by 300%",
+    "_pagedivider4_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "blog": {
+      "meta": {
+        "title": "Blog | Augusto Galves",
+        "description": "Articles about Mechanical Engineering, Web Development, Automation and Productivity."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Blog"
+      },
+      "hero": {
+        "name": "Blog",
+        "role": "Articles and Reflections",
+        "specialty": "Sharing practical knowledge about Mechanical Engineering, Web Development, Automation and Knowledge Management.",
+        "cta1": "Explore Articles",
+        "cta2": "Get in touch"
+      },
+      "list_posts1": {
+        "title": "Latest Publications",
+        "subtitle": "Recent articles about engineering, code and management",
+        "card1": {
+          "title": "Portfolio with Vanilla JS",
+          "desc": "Building Web Components from scratch and front-end architecture."
+        },
+        "card2": {
+          "title": "Management with Obsidian",
+          "desc": "Organization of ideas and productivity using Markdown."
+        },
+        "card3": {
+          "title": "Efficiency in HVAC Systems",
+          "desc": "Good engineering practices, energy efficiency and corporate climate control."
+        }
+      },
+      "cta": {
+        "title": "Did you like the content?",
+        "subtitle": "Get in touch to discuss ideas or opportunities.",
+        "action": "Send Message"
+      }
+    },
+    
+    "_pagedivider5_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "contact": {
+      "meta": {
+        "title": "Contact | Augusto Galves",
+        "description": "Get in touch with Augusto Galves for Mechanical Engineering, Automation and Web Development projects."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Contact"
+      },
+      "hero": {
+        "title": "Let's talk?",
+        "subtitle": "I would love to hear about your project or technical challenge. My team is ready to help."
+      },
+      "cardgroup1": {
+        "card1": {
+          "title": "E-mail",
+          "desc": "augusto@augustogalves.com"
+        },
+        "card2": {
+          "title": "WhatsApp",
+          "desc": "+55 (21) 98409-5043"
+        },
+        "card3": {
+          "title": "Location",
+          "desc": "Rio de Janeiro - RJ, Brazil"
+        }
+      },
+      "form": {
+        "name": "Name",
+        "email": "E-mail",
+        "message": "Message",
+        "submit": "Send Message"
+      }
+    },
+    
+    "_sectiondivider2_": "███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████",
+    "_pagedivider6_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "hvac-bmw": {
+      "meta": {
+        "title": "HVAC - BMW Project | Augusto Galves",
+        "description": "Technical details of the exhaust and air conditioning project for BMW."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Projects",
+        "path3": "HVAC Project - BMW"
+      },
+      "title": "HVAC Executive Project — BMW",
+      "category": "HVAC",
+      "tech": "Vehicle Exhaust · Workshop Ventilation",
+      
+      "cardgroupdesafio":{
+        "card1": {
+          "title": "Thermal control in hot climate",
+          "desc": "External temperature up to 42 °C in Rio de Janeiro"
+        },
+        "card2": {
+          "title": "Vehicle exhaust",
+          "desc": "Closed environment with operating cars"
+        },
+        "card3": {
+          "title": "Compliance with current standards",
+          "desc": "ABNT NBR 16401 and ANVISA RDC 09/2003"
+        }
+      },
+      
+      "cardgroupsolucao":{
+        "card1": {
+          "title": "LG VRF System",
+          "desc": "Multiple evaporators with zone control"
+        },
+        "card2": {
+          "title": "Nederman Exhaust",
+          "desc": "Articulated arms for vehicle gases"
+        },
+        "card3": {
+          "title": "TDC Duct Network",
+          "desc": "Sized using the Velocity Method"
+        }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Project Context",
+          "content": "HVAC project for a BMW dealership with distinct areas, including a vehicle workshop and customer service spaces."
+        },  
+        "desafio": {
+          "title": "Challenge",
+          "content": "Guarantee thermal comfort and air quality in a large volume warehouse with high thermal load and emissions, without exorbitant costs."
+        },
+        "solucao": {
+          "title": "Developed Solution",
+          "content": "Combination of VRF system, splits and dedicated mechanical ventilation/exhaust to efficiently serve each environment.",
+          "list": [
+            "Thermal load calculation done with Carrier HAP software",
+            "Mechanical air renewal with filtration and controlled diffusion",
+            "Thermal load (excluding workshop): 43.1 TR",
+            "Workshop thermal load: 21.6 TR"
+          ]
+        },
+        "results": {
+          "title": "Results",
+          "content": "The system guarantees stable thermal comfort, air renewal according to standards and efficient gas removal, providing operational safety and a better experience for both customers and the technical team.",
+          "list": [
+            "Environments maintained between 22–23 °C even under high external load",
+            "Air quality in compliance with ANVISA and ABNT standards",
+            "Thermal comfort in the workshop area"
+          ]
+        }
+      },
+      
+      "sidebar": {
+        "technical_data": {
+          "title": "Technical Data",
+          "temp_internal": "Projected internal temperature",
+          "thermal_load": "Total thermal load (workshop)",
+          "flow_rate": "Supply airflow",
+          "total_exhaust": "Total exhaust"
+        },
+        "project_info": {
+          "title": "Project Details",
+          "category": "Category",
+          "location": "Location",
+          "client": "Client",
+          "norms": "Standards",
+          "software": "Software",
+          "revision": "Revision",
+          "back_button": "View all projects"
+        }
+      },
 
-  "highlights.card3.title": "Innovation, Programming & IoT",
-  "highlights.card3.desc": "Development of embedded solutions with ESP32, RTOS, and Patent-Pending VBA",
+      "cta": {
+        "title": "Did you like the project?",
+        "subtitle": "Get in touch to discuss ideas or opportunities.",
+        "action": "Send Message"
+      }
+    },
+    "_pagedivider7_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "hvac-agco": {
+      "meta": {
+        "title": "HVAC Executive Project - AGCO Academy | Augusto Galves",
+        "description": "Corporate HVAC executive project for AGCO Academy. Focus on energy efficiency, thermal comfort and compliance with ABNT and ANVISA standards."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Projects",
+        "path3": "HVAC Project - AGCO"
+      },
+      "title": "HVAC Executive Project — AGCO Academy",
+      "category": "HVAC",
+      "tech": "AutoCAD · Carrier HAP",
+      
+      "cardgroupdesafio":{ 
+        "card1": {
+          "title": "Huge project area",
+          "desc": "About 3,719 m² air-conditioned."
+        },
+        "card2": {
+          "title": "Refrigerant piping limits",
+          "desc": "Large distances of refrigerant piping."
+        },
+        "card3": {
+          "title": "Pressure drop in ducts",
+          "desc": "Very extensive ducts have reduced efficiency."
+        }
+      },
+      
+      "cardgroupsolucao":{
+        "card1": {
+          "title": "Equipment Selection",
+          "desc": "Splits compatible with large lengths of refrigerant piping."
+        },
+        "card2": {
+          "title": "Re-use",
+          "desc": "Integration of existing equipment to reduce costs."
+        },
+        "card3": {
+          "title": "Network Optimization",
+          "desc": "Division of outdoor air and exhaust systems for lower pressure drop."
+        }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Project Overview",
+          "content": "Executive air conditioning and mechanical ventilation project for AGCO Academy, in Jundiaí-SP, developed in partnership with AKMX Architecture and Engineering. The scope covers warehouse 2 and the administrative building, with full sizing of the HVAC systems."
+        },  
+        "desafio": {
+          "title": "The Challenge",
+          "content": "Serve environments with distinct occupancy profiles in more than 3,700 m², with extensive networks of ducts and refrigerant piping far from the condensing units, respecting length limits and controlling pressure drops."
+        },
+        "solucao": {
+          "title": "Developed Solution",
+          "content": "System based on 23 splits for large lengths of piping, with re-use of equipment and optimized mechanical ventilation.",
+          "list": [
+            "Thermal load calculation via Carrier HAP software",
+            "Re-use of 7 existing equipment units (3 relocated and 4 maintained)",
+            "Dedicated high-capacity split for the auditorium with a mechanical room",
+            "Duct networks sized for low pressure drop"
+          ]
+        },
+        "results": {
+          "title": "Results",
+          "content": "The system guarantees stable thermal comfort and efficient operation, meeting normative requirements and the physical limitations of the project.",
+          "list": [
+            "Environments maintained between 22–23 °C",
+            "Pressure drop control in extensive networks",
+            "Cost reduction with equipment re-use"
+          ]
+        }
+      },
 
-  "portfolio.title": "Portfolio",
-  "portfolio.subtitle": "Featured projects",
+      "cta": {
+        "title": "Did you like the project?",
+        "subtitle": "Get in touch to discuss ideas or opportunities.",
+        "action": "Send Message"
+      }
+    },
+    "_pagedivider8_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "hvac-neogas": {
+      "meta": {
+        "title": "HVAC Retrofit - NEOGÁS Corporate Headquarters | Augusto Galves",
+        "description": "HVAC Retrofit executive project for NEOGÁS headquarters in Rio de Janeiro."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Projects",
+        "path3": "HVAC Retrofit Project - NEOGÁS"
+      },
+      "title": "HVAC Retrofit — NEOGÁS Corporate Headquarters",
+      "category": "HVAC",
+      "tech": "Retrofit",
+      
+      "cardgroupdesafio":{
+        "card1": {
+          "title": "Asset Integration",
+          "desc": "Compatibility of new, relocated and maintained systems in the same ecosystem."
+        },
+        "card2": {
+          "title": "Compliance and IAQ",
+          "desc": "Ensure healthiness and 1,650 m³/h of air renewal at the ANVISA standard."
+        },
+        "card3": {
+          "title": "Silent Operation",
+          "desc": "Rigorous mechanical attenuation to maintain a high-level corporate standard."
+        }
+      },
+      
+      "cardgroupsolucao":{
+        "card1": {
+          "title": "Thermal load calculation",
+          "desc": "Thermal load calculation using Carrier HAP software."
+        },
+        "card2": {
+          "title": "T.A.B. Protocols",
+          "desc": "Testing, Adjusting, and Balancing procedures detailed in the project."
+        },
+        "card3": {
+          "title": "Optimized Diffusion",
+          "desc": "Distribution via TDC ducts with precision control dampers."
+        }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Project Strategic Vision",
+          "content": "Executive Air Conditioning Retrofit Project (HVAC) for the 13th floor of the NEOGÁS corporate headquarters, in downtown Rio de Janeiro. The scope required a high-level technical approach to modernize the thermal infrastructure, ensuring operational continuity and promoting the intelligent re-use of existing assets to optimize investments."
+        },  
+        "desafio": {
+          "title": "The Challenge",
+          "content": "The main obstacle was to carry out the retrofit in a high-standard corporate environment, integrating new units with relocated and maintained equipment, without sacrificing energy efficiency or Indoor Air Quality (IAQ). The compatibility required absolute precision to simultaneously meet ANVISA guidelines and acoustic and thermal comfort requirements."
+        },
+        "solucao": {
+          "title": "Engineering Solution",
+          "content": "The application of engineering intelligence allowed the readjustment of the thermal park through rigorous simulations in the Carrier HAP v4.90 software. The project foresaw the integration of 7 new inverter systems, the relocation of 2 units and the strategic maintenance of 6 existing machines, ensuring the best cost-benefit (CAPEX/OPEX) for the client.",
+          "list": [
+            "Advanced thermal simulation via Carrier HAP v4.90 for capacity validation.",
+            "Design of galvanized steel duct network optimized for low pressure drop (SMACNA).",
+            "Integration of in-line micro fans with G1/M5 filter boxes for outdoor air supply.",
+            "Specification of TAB (Testing, Adjusting, and Balancing) routines for commissioning validation."
+          ]
+        },
+        "results": {
+          "title": "Impact and Results",
+          "content": "Delivering an executive project focused on failure mitigation significantly reduced risks and installation costs. The system guarantees occupational well-being and meets all the health demands required in the current corporate scenario.",
+          "list": [
+            "Proven CAPEX reduction through the justified re-use of existing machinery.",
+            "Guarantee of 1,650 m³/h of renewed and filtered outdoor air for the floor.",
+            "Thermally stable system at 22.0°C, ensuring comfort in critical areas like the Staff (5.26 TR)."
+          ]
+        }
+      },
+      
+      "sidebar": {
+        "project_info": {
+          "title": "Project Details",
+          "category": "Category",
+          "location": "Location",
+          "client": "Final Client",
+          "norms": "Compliance",
+          "software": "Tools",
+          "revision": "Status",
+          "back_button": "View all projects"
+        }
+      },
 
-  "portfolio.card1.title": "HVAC Projects",
-  "portfolio.card1.desc": "Made with AutoCAD",
+      "cta": {
+        "title": "Did you like the project?",
+        "subtitle": "Get in touch to discuss ideas or opportunities.",
+        "action": "Send Message"
+      }
+    },
+    "_pagedivider9_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "mep-res-spa-01": {
+      "meta": {
+        "title": "MEP Project - Beach House | Augusto Galves",
+        "description": "Electrical installations project (MEP) for a high-end residence. Focus on safety, panel detailing (QDC) and compliance with IECC 2023."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Projects",
+        "path3": "MEP Project - Beach House"
+      },
+      "title": "MEP Executive Project — Beach House",
+      "category": "MEP · Architecture",
+      "tech": "AutoCAD",
+      
+      "cardgroupdesafio":{
+        "card1": {
+          "title": "Limited Budget",
+          "desc": "Maximize quality without exceeding the cost defined by the client."
+        },
+        "card2": {
+          "title": "Existing Masonry",
+          "desc": "Masonry already executed, requiring adaptation of solutions without demolitions."
+        },
+        "card3": {
+          "title": "Field Execution",
+          "desc": "Reduce errors with clear technical detailing to guide the construction site."
+        }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Project Vision",
+          "content": "Executive MEP installations project for a residence in São Pedro da Aldeia–RJ. The focus was to align the aesthetics of a beach house with a low execution cost, maintaining safety and functionality."
+        },  
+        "desafio": {
+          "title": "The Challenge",
+          "content": "Elevate quality without exceeding the budget, with the masonry already executed. The solutions needed to adapt to the existing structure, avoiding demolitions and layout limitations."
+        },
+        "solucao": {
+          "title": "Adopted Solution",
+          "content": "Detailed executive project to reduce improvisation on site, with solutions adapted to the existing structure and a focus on simple execution.",
+          "list": [
+            "Technical detailing with guidance per construction stage",
+            "Distribution of points and circuits compatible with existing masonry",
+            "Layout resolved with strategic use of furniture",
+            "Standardization to facilitate execution and reduce errors"
+          ]
+        },
+        "results": {
+          "title": "Impact and Results",
+          "content": "The detailing of the project reduced improvisations on site and allowed for more controlled execution, even with cost limitations and existing structure.",
+          "list": [
+            "Less need for adjustments in the field",
+            "Execution guided by clear instructions in the project",
+            "Compatibility with existing masonry without demolitions"
+          ]
+        }
+      },
+      
+      "sidebar": {
+        "project_info": {
+          "title": "Project Details",
+          "category": "Category",
+          "location": "Location",
+          "client": "Base Project",
+          "norms": "Compliance",
+          "software": "Tools",
+          "revision": "Status",
+          "back_button": "View all projects"
+        }
+      },
 
-  "portfolio.card2.title": "Residential Electrical Projects",
-  "portfolio.card2.desc": "Made with AutoCAD",
+      "cta": {
+        "title": "Did you like the project?",
+        "subtitle": "Get in touch to discuss ideas or opportunities.",
+        "action": "Send Message"
+      }
+    },
+    
+    "_pagedivider10_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "dev-pianotiles": {
+      "meta": {
+        "title": "Autoclick - Piano Tiles | Augusto Galves",
+        "description": "Development of an autoclick bot in Python using real-time image processing to break records in Piano Tiles."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Projects",
+        "path3": "Automation - Piano Tiles"
+      },
+      "title": "Autoclick Bot — Piano Tiles",
+      "category": "Programming",
+      "tech": "Python",
+      
+      "cardgroupdesafio":{
+        "card1": {
+          "title": "Screen capture FPS",
+          "desc": "Capture and analyze the highest amount of frames per second."
+        },
+        "card2": {
+          "title": "Identification Accuracy",
+          "desc": "Zero out the number of false positives in identification due to the blur of the keys at high speed"
+        },
+        "card3": {
+          "title": "Click Latency",
+          "desc": "Deal with game acceleration, click latency, game engine latency, and script latency."
+        }
+      },
+      
+      "cardgroupsolucao":{
+        "card1": {
+          "title": "Capturing only a fraction of the screen",
+          "desc": "Capturing only one rectangle, and analyzing only 1 pixel in the row of each key."
+        },
+        "card2": {
+          "title": "Consistent recognition",
+          "desc": "Minimum color intervals to trigger the click. Only shades very close to black."
+        },
+        "card3": {
+          "title": "Y-Offset",
+          "desc": "Anticipation of reading coordinates based on the current speed of the loop."
+        }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Project Strategic Vision",
+          "content": "Development of a Python script focused on high performance and ultra-low latency. The technical goal was to create an algorithm capable of \"playing\" Piano Tiles at superhuman speeds, utilizing real-time matricial image processing and direct integration with the operating system for mechanical click simulation."
+        },  
+        "desafio": {
+          "title": "The Challenge",
+          "content": "The game accelerates exponentially, making conventional automation approaches obsolete due to processing overhead. The algorithm needed to capture the screen, transform the visual data into computational matrices, analyze color limits (thresholding), and fire hardware commands — all in the range of milliseconds, before the game key disappeared from the screen."
+        },
+        "solucao": {
+          "title": "Solution",
+          "content": "The architected solution did not focus on increasing computational power, but on anticipating the system's behavior. To compensate for the speed increase (and the inherent processing latency), I programmed a dynamic variation in the vertical displacement (Y-offset). As the loop advanced, the bot \"looked\" further up the screen, intercepting the target at the perfect time.",
+          "list": [
+            "Screen conversion via PIL into structured NumPy arrays for optimized pixel extraction.",
+            "Modulation of repetition loops, dynamically altering the scanning coordinates according to acceleration (Slow, Fast, and Super Fast Modes).",
+            "Low-level interaction with `win32api` guaranteeing a click response time (`0.001s`) straight to the hardware."
+          ]
+        },
+        "results": {
+          "title": "Impact and Results",
+          "content": "This project is a proof of concept that understanding the physical limits of hardware and language (Python) allows bypassing performance bottlenecks with logical creativity.",
+          "list": [
+            "Registered record of processing and screen response: 28,927 keys mapped and clicked per second.",
+            "Stability in a \"Hyper Speed\" environment, without overloading memory or causing OS crashes.",
+            "Practical proof of knowledge in matrix manipulation and native Windows APIs."
+          ]
+        }
+      },
+      
+      "sidebar": {
+        "project_info": {
+          "title": "Project Details",
+          "category": "Category",
+          "location": "Language / Stack",
+          "client": "Base Libraries",
+          "norms": "Environment",
+          "software": "Frameworks",
+          "revision": "Status",
+          "back_button": "View all projects"
+        }
+      },
 
-  "portfolio.card3.title": "Software – Patent Pending",
-  "portfolio.card3.desc": "Ultimate Belt Design and Analysis 2026",
+      "cta": {
+        "title": "Looking for a developer?",
+        "subtitle": "Get in touch to discuss ideas.",
+        "action": "Schedule meeting"
+      }
+    },
 
-  "portfolio.cta": "View Full Portfolio",
+    "_pagedivider11_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "dev-belt-system-design": {
+      "meta": {
+        "title": "Ultimate Belt Design | Augusto Galves",
+        "description": "Patented engineering software for belt sizing. Includes automated calculations and full system validation."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Projects",
+        "path3": "Ultimate Belt Design & Automation"
+      },
+      "title": "Patented Software: Ultimate Belt Design",
+      "category": "Engineering · Automation",
+      "tech": "Automatic belt sizing",
+      
+      "cardgroupdesafio":{
+        "card1": {
+          "title": "Manual Iterations",
+          "desc": "Belt sizing requires multiple catalog consultations and dozens of interpolations."
+        },
+        "card2": {
+          "title": "Literary Inconsistency",
+          "desc": "Identification of inaccuracies in the standard bibliography."
+        }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Precision Engineering and Automation",
+          "content": "Modern engineering demands speed without giving up technical rigor. The Ultimate Belt Design and Analysis 2026 is a patented software developed to eliminate repetitive human effort in the design of machine elements."
+        },  
+        "academic_validation": {
+          "title": "Technical Audit: Correcting the Literature",
+          "content": "To guarantee the reliability of the algorithm, I conducted a thorough review of Chapter 17 of the renowned book 'Shigley's Mechanical Engineering Design'. I identified several inconsistencies in the official resolutions of the literature.",
+          "list": [
+            "Premise Failures Identified: linear velocity limits and vibration",
+            "Accuracy Validation and implementation of safety locks",
+            "Scientific Production documenting the development and audit"
+          ]
+        },
+        "desafio": {
+          "title": "The Design Challenge",
+          "content": "Manual sizing involves extensive consultations with physical catalogs, interpolations susceptible to errors, and complex fatigue calculations. The goal was to transform hours of iterative calculations and safety validations into an execution of a few seconds."
+        },
+        "results": {
+          "title": "Results and Delivery",
+          "content": "The tool delivers sizing instantly. The main impact is the mitigation of human mathematical error and savings on repairs due to the correct specification of components."
+        }
+      },
+      
+      "sidebar": {
+        "technical_data": {
+          "title": "Technical Highlights",
+          "temp_internal": "Computational Calculation",
+          "thermal_load": "Literature Audit",
+          "flow_rate": "Automatic Validation",
+          "total_exhaust": "Documentation"
+        },
+        "project_info": {
+          "title": "Overview",
+          "category": "Field",
+          "location": "Author",
+          "client": "Status",
+          "norms": "Focus",
+          "software": "Version",
+          "revision": "Revision",
+          "back_button": "View all projects"
+        }
+      },
 
-  "footer.contact.title": "Get in touch",
-  "footer.contact.subtitle": "Shall we work together on your next project?",
-  "footer.contact.button": "Send Message",
+      "cta": {
+        "title": "Did you like the content?",
+        "subtitle": "Get in touch to discuss engineering and automation solutions.",
+        "action": "Send Message"
+      }
+    },
 
-  "footer.copyright": "© 2026 Pedro Augusto G. A. Silva. All rights reserved",
+    "_pagedivider12_": "—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————",
+    "dev-portfolio-website": {
+      "meta": {
+        "title": "Personal Portfolio Website - Vanilla Web Dev | Augusto Galves",
+        "description": "Full-stack development from scratch of my portfolio website. Vanilla HTML/CSS/JS architecture, deployment via GitHub Pages, Cloudflare management and extreme SEO optimization."
+      },
+      "indexbar":{
+        "path1": "Home",
+        "path2": "Projects",
+        "path3": "Web Portfolio"
+      },
+      "title": "Web Development - Personal Portfolio",
+      "category": "Programming · Web Developer",
+      "tech": "Vanilla JS · GitHub Pages · Cloudflare Domains",
+      
+      "cardgroupdesafio":{
+        "card1": {
+          "title": "Zero Frameworks",
+          "desc": "Build a scalable application using exclusively vanilla HTML/CSS/JS."
+        },
+        "card2": {
+          "title": "Modularity",
+          "desc": "Develop a system of templates and Web Components without external libraries like React."
+        },
+        "card3": {
+          "title": "Integrated Infrastructure",
+          "desc": "Configure domain, CDN, security, and professional e-mail from scratch via DNS managers."
+        }
+      },
+      
+      "cardgroupsolucao":{
+        "card1": {
+          "title": "Custom JS Components",
+          "desc": "Architecture based on native components for maximum performance and reusability."
+        },
+        "card2": {
+          "title": "Cloudflare & Deploy",
+          "desc": "Continuous integration (CI/CD) with GitHub Pages and advanced routing through Cloudflare."
+        },
+        "card3": {
+          "title": "Extreme Optimization",
+          "desc": "Code without redundancies, maximum page-speed, and high SEO metrics."
+        }
+      },
+      
+      "sections": {
+        "context": {
+          "title": "Web Engineering from Scratch",
+          "content": "To establish my digital presence solidly, I decided to design and develop this portfolio site by programming from scratch, without the help of any framework. The project was executed between December 2025 and April 2026, with over 200 commits on GitHub. The focus was to have total control of the infrastructure and ensure it is fully optimized."
+        },  
+        "desafio": {
+          "title": "The Technical Challenge",
+          "content": "The most critical decision was to forego modern frameworks (like React, Vue, or Tailwind). The challenge was to build a modular, scalable, and extremely fast system, using exclusively native web technologies."
+        },
+        "solucao": {
+          "title": "Architecture and Implementation",
+          "content": "I developed a robust solution focused on the fundamentals, ranging from the creation of logical components to the management of DNS records, guaranteeing a professional and secure digital presence.",
+          "list": [
+            "Custom Web Components: Creation of reusable JS components",
+            "Exclusive UI/UX Design with a personal exclusive icon library",
+            "SEO & Performance with integration of JSON-LD and Open Graph",
+            "Infrastructure with Cloudflare and professional e-mail configured via DNS redirection"
+          ]
+        },
+        "results": {
+          "title": "Results",
+          "content": "The result is a personal branding platform of the highest technological performance. The absence of third-party dependencies ensures that the site will never become obsolete due to framework updates.",
+          "list": [
+            "Loading time and FCP with maximum score on Google Lighthouse",
+            "Practical proof of fluency in front-end algorithms and infrastructure management",
+            "Modular code base ready for quick expansion of new projects"
+          ]
+        }
+      },
+      
+      "sidebar": {
+        "technical_data": {
+          "title": "Technology Stack",
+          "temp_internal": "Front-End",
+          "thermal_load": "Hosting",
+          "flow_rate": "DNS & CDN",
+          "total_exhaust": "Design / E-mail"
+        },
+        "project_info": {
+          "title": "Project Details",
+          "category": "Category",
+          "location": "Location",
+          "client": "Duration",
+          "norms": "Commits",
+          "software": "Repository",
+          "revision": "Revision",
+          "back_button": "View all projects"
+        }
+      },
 
-  "aria.menu.open": "Open menu",
-  "aria.menu.close": "Close menu",
-  "aria.theme.toggle": "Toggle theme",
-  "aria.email": "Email address",
-  "aria.whatsapp": "Chat via WhatsApp",
-  "aria.phone": "Call phone number",
-  "aria.github": "GitHub page",
-  "aria.linkedin": "LinkedIn profile"
+      "cta": {
+        "title": "Did you like the code?",
+        "subtitle": "Explore the public repository on GitHub or get in touch to discuss digital solutions.",
+        "action": "Send Message"
+      }
+    }
+  }
 }
