@@ -1,5 +1,3 @@
-
-
 // Criando Custom HTML Components ─────────────────────────────────────────────────────────────────────────────── ✣ ──
 
 class TImageGallery extends HTMLElement {
@@ -125,4 +123,95 @@ class TImageGallery extends HTMLElement {
             e.preventDefault(); 
             
             const x = e.pageX - this.mainSlider.offsetLeft;
-            const
+            const walk = (x - startX) * 2; 
+            
+            if (Math.abs(walk) > 5) hasDragged = true; 
+            this.mainSlider.scrollLeft = scrollLeft - walk;
+        });
+        
+        this.mainSlider.addEventListener('dragstart', (e) => e.preventDefault());
+
+        // --- Delegação de Eventos (Clicks) ---
+        this.addEventListener('click', (e) => {
+            const target = e.target;
+            const arrowBtn = target.closest('.image-gallery__nav-arrow');
+
+            // 1. Clique nas setas de navegação
+            if (arrowBtn) {
+                const activeThumb = this.thumbSlider.querySelector('.is-active');
+                let index = Array.from(this.thumbSlider.children).indexOf(activeThumb);
+                
+                if (arrowBtn.classList.contains('next')) {
+                    index = Math.min(index + 1, this.mainSlider.children.length - 1);
+                } else {
+                    index = Math.max(index - 1, 0);
+                }
+                
+                const targetMainMedia = this.mainSlider.children[index];
+                if (targetMainMedia) {
+                    this.mainSlider.scrollTo({
+                        left: targetMainMedia.offsetLeft - this.mainSlider.offsetLeft,
+                        behavior: 'smooth'
+                    });
+                }
+                return;
+            }
+
+            // 2. Clique em uma miniatura
+            if (target.classList.contains('image-gallery__thumb-image')) {
+                const index = Array.from(this.thumbSlider.children).indexOf(target);
+                const targetMainMedia = this.mainSlider.children[index];
+                
+                if (targetMainMedia) {
+                    this.mainSlider.scrollTo({
+                        left: targetMainMedia.offsetLeft - this.mainSlider.offsetLeft,
+                        behavior: 'smooth'
+                    });
+                }
+                return;
+            }
+
+            // 3. Clique na imagem principal para ampliar
+            if (target.classList.contains('image-gallery__main-image') && target.tagName === 'IMG') {
+                if (hasDragged) return; 
+                this.modalImg.src = target.src;
+                this.modal.style.display = 'flex';
+                return;
+            }
+
+            // 4. Clique no modal para fechar
+            if (target === this.modal || target === this.modalImg) {
+                this.modal.style.display = 'none';
+                this.modalImg.src = ''; 
+            }
+        });
+    }
+
+    // ====================================
+    // Lógica de Sincronização de Rolagem
+    // ====================================
+    initScrollSyncObserver() {
+        const observerOptions = {
+            root: this.mainSlider, 
+            threshold: 0.6 
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = Array.from(this.mainSlider.children).indexOf(entry.target);
+                    if (index !== -1) {
+                        Array.from(this.thumbSlider.children).forEach((thumb, i) => {
+                            thumb.classList.toggle('is-active', i === index);
+                        });
+                    }
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        Array.from(this.mainSlider.children).forEach(media => observer.observe(media));
+    }
+}
+
+customElements.define('t-image-gallery', TImageGallery);
