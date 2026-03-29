@@ -567,8 +567,8 @@
         "path3": "Projeto MEP - Casa de Praia"
       },
       "title": "Projeto Executivo MEP — Residência litorânea",
-      "category": "MEP · Instalações Elétricas",
-      "tech": "AutoCAD · IECC 2023",
+      "category": "MEP · Arquitetura",
+      "tech": "AutoCAD",
       
       "cardgroupdesafio":{
         "card1": {
@@ -648,7 +648,7 @@
       },
       "title": "Bot autoclick — Piano Tiles",
       "category": "Programação",
-      "tech": "Python · NumPy · Win32API",
+      "tech": "Python",
       
       "cardgroupdesafio":{
         "card1": {
@@ -666,8 +666,7 @@
       },
       
       "cardgroupsolucao":{
-        
-        "card2": {
+        "card1": {
           "title": "Captura de apenas uma fração da tela",
           "desc": "Capturando apenas um retângulo, e análise apenas de 1 pixel na fileira de cada tecla."
         },
@@ -734,7 +733,7 @@
     "dev-belt-system-design": {
       "meta": {
         "title": "Ultimate Belt Design & Shigley Review | Augusto Galves",
-        "description": "Software patenteado de engenharia para dimensionamento de correias. Automação de cálculos e revisão técnica de inconsistências na literatura de Shigley."
+        "description": "Software patenteado de engenharia para dimensionamento de correias. Inclui automação de cálculos e validação completa do sistema."
       },
       "indexbar":{
         "path1": "Início",
@@ -742,17 +741,17 @@
         "path3": "Ultimate Belt Design & Automação"
       },
       "title": "Software Patenteado: Ultimate Belt Design",
-      "category": "Engenharia · Programação",
+      "category": "Engenharia · Automação",
       "tech": "Dimensionamento automático de correias",
       
       "cardgroupdesafio":{
         "card1": {
           "title": "Iterações Manuais",
-          "desc": "O dimensionamento de correias exige múltiplas consultas a catálogos e dezenas de cálculos."
+          "desc": "O dimensionamento de correias exige múltiplas consultas a catálogos e dezenas de interpolações."
         },
         "card2": {
           "title": "Inconsistência Literária",
-          "desc": "Identificação de falhas na bibliografia padrão, além de tópicos confusos."
+          "desc": "Identificação de imprecisões na bibliografia padrão."
         }
       },
       
@@ -772,11 +771,11 @@
         },
         "desafio": {
           "title": "O Desafio de Projeto",
-          "content": "Transformar horas de cálculos iterativos e validações de segurança suscetíveis a erros em uma execução precisa de poucos segundos."
+          "content": "Dimensionamentos manuais envolvem consultas extensas a catálogos físicos, interpolações suscetíveis a erros e cálculos de fadiga complexos. O objetivo foi transformar horas de cálculos iterativos e validações de segurança em uma execução de poucos segundos."
         },
         "results": {
           "title": "Resultados e Entrega",
-          "content": "A ferramenta entrega dimensionamentos normatizados instantaneamente, mitigando erros humanos matemáticos e otimizando os custos industriais."
+          "content": "A ferramenta entrega dimensionamentos instantaneamente. O impacto principal é a mitigação do erro humano matemático e a economia com reparos devido a especificação correta de componentes."
         }
       },
       

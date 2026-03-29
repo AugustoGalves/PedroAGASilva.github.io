@@ -338,6 +338,7 @@ ul.prose{
 	/* Sizing */
 	margin-top: calc(var(--textsize-3)*1.0); /*Espaçamento de paragrafo BEFORE*/
 	margin-bottom: calc(var(--textsize-3)*0.5); /*Espaçamento de paragrafo AFTER*/
+	padding-left: var(--spacing4);
 }
 ul.prose li{
 	/* Sizing */
